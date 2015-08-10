@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMaterial'
+    'ngMaterial',
+    'angular-carousel'
   ])
   .config(function ($routeProvider) {
     $routeProvider

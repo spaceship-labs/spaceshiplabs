@@ -122,6 +122,22 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   font-weight: 500;
 }
 
+/*-----------------/
+  #PORTFOLIO-LANDING
+/*----------------*/
+.portfolio-landing h1{color: #7C7C7C;}
+.portfolio-landing .action-btn{
+  color: #2294D0;
+  border: 1px solid #2294D0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.portfolio-landing .portfolio-item{
+  background-size: cover!important;
+  min-height: 450px;
+}
+
 
 /*-----------------/
   #MAP
@@ -431,6 +447,48 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   border-bottom: 0;
 }
 
+/*----------------/
+  #CLIENTS-LANDING
+/*----------------*/
+.clients-landing{
+  background: #00C5D8; /* Old browsers */
+  background: -moz-linear-gradient(top,  #00C5D8 0%, #00C4DA 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00C5D8), color-stop(100%,#00C4DA)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #00C5D8 0%,#00C4DA 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #00C5D8 0%,#00C4DA 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #00C5D8 0%,#00C4DA 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #00C5D8 0%,#00C4DA 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00C5D8', endColorstr='#00C4DA',GradientType=0 ); /* IE6-9 */
+  color: #fff;
+}
+
+.clients-landing .clients-slide{margin-top: 70px;}
+
+.clients-landing .client-item{
+  border: 1px solid #DFDFDF;
+  padding: 40px 20px 20px;
+}
+
+
+.clients-landing .client-item h5,
+.clients-landing .client-item h6{margin: 6px}
+
+.clients-landing .client-item h5{font-size: 18px}
+.clients-landing .client-item h6{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.clients-landing .client-item p{
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 20px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+
+
 /*---------------/
   #CONTACT-US
 /*---------------*/
@@ -508,7 +566,6 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #FOOTER
 /*-------------*/
 #footer{
-  border: 1px solid #EEEEEE;
   color: #fff;
   min-height: 50px;
   height: auto!important;
