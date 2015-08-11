@@ -255,6 +255,30 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   padding-top: 140px;  
   padding-bottom: 60px;
 }
+.section-title-blog{
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.section-title-blog .blog-options{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.blog-options label{color: #fff!important;}
+.blog-options input[type="text"]{
+  color: #fff;
+  border-bottom: 1px solid #fff!important;
+}
+.blog-options input[type="text"]::-webkit-input-placeholder { color:#fff; }
+.blog-options input[type="text"]:-moz-placeholder { color:#fff; } /* FF 4-18 */
+.blog-options input[type="text"]::-moz-placeholder { color:#fff; } /* FF 19+ */
+.blog-options input[type="text"]:-ms-input-placeholder { color:#fff; } /* IE 10+ */
+
+
 
 .section-title img{vertical-align: text-top}
 
@@ -598,7 +622,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .news-item{
   background-size: cover!important;
   color: #fff;
-  min-height: 280px;
+  min-height: 300px;
   text-align: center;
   padding: 10px;
   position: relative;
@@ -630,11 +654,13 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .news-item-excerpt h4{
   color: #02B3C3;
   font-weight: 500;
+  margin: 0;
 }
 .news-item-excerpt p{
   color: #fff;
   font-size: 20px;
   font-weight: 300;
+  margin: 0;
 }
 
 /*------------/
@@ -673,6 +699,43 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   display: block;
   margin: 50px auto 30px;
 }
+
+.about-us .guarantee{padding: 40px 0}
+.about-us img{max-width: 100%}
+
+/*-------------/
+  #AWARDS
+/*-------------*/
+.award{
+  padding: 30px 0;
+}
+
+.award img{max-width: 100%;}
+.award h3{
+  font-weight: 100;
+  font-size: 26px;
+  margin: 20px 0 10px!important ;
+}
+.award p{margin: 0}
+
+.awards .gov-lab{color: #00C5D8}
+.awards .gov-lab h3{color: #4D4D4D}
+.awards .viajes-claros{
+  background: #00CCD5;
+  color: #fff;
+}
+.awards .codeando{
+  background: #383838;
+  color: #fff;
+}
+.awards .codeando p{color: #00C4DA}
+.awards .angelhack p{color: #00C5D8}
+.awards .contratobook{
+  background: #07B3D9;
+  color: #fff;
+}
+
+.award-inner{min-height: 220px}
 
 /*--------------/
   #FOOTER
