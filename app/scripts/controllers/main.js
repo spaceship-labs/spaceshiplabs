@@ -8,7 +8,7 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('MainCtrl', function ($scope, $mdSidenav) {
+  .controller('MainCtrl', function ($scope, $mdSidenav, $location) {
 
 	  $scope.toggleSidebar = function() {
       $mdSidenav('left').open();
@@ -17,5 +17,8 @@ angular.module('spaceshiplabsApp')
 	  $scope.closeSidebar = function() {
       $mdSidenav('left').close();
 	  }; 
+
+		$scope.isHome = ($location.path() == '/' ) ? true : false;
+		console.log( $location.path() );	  
     
   });

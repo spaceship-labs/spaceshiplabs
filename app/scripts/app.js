@@ -19,14 +19,25 @@ angular
     'ngMaterial',
     'angular-carousel'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+
+    $locationProvider.html5Mode(true);
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl',
         controllerAs: 'home'
       })
+      .when('/about-us', {
+        templateUrl: 'views/about-us.html',
+        controller: 'AboutUsCtrl',
+        controllerAs: 'aboutUs'
+      })
       .otherwise({
         redirectTo: '/'
       });
+
+    $locationProvider.hashPrefix('!');      
+
   });

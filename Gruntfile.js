@@ -25,6 +25,8 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  var modRewrite = require('connect-modrewrite');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -80,6 +82,7 @@ module.exports = function (grunt) {
           open: true,
           middleware: function (connect) {
             return [
+              modRewrite(['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg|\\.mp4$ /index.html [L]']),            
               connect.static('.tmp'),
               connect().use(
                 '/bower_components',
@@ -358,10 +361,11 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,png,txt,mp4}',
             '.htaccess',
             '*.html',
             'images/{,*/}*.{webp}',
+            'videos/{,*/}*.*',
             'styles/fonts/{,*/}*.*'
           ]
         }, {

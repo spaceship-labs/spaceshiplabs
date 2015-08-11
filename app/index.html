@@ -1,6 +1,9 @@
 <!doctype html>
 <html ng-app="spaceshiplabsApp" ng-controller='MainCtrl'>
   <head>
+    <base href="/" >
+    <meta name="fragment" content="!">
+        
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -45,10 +48,15 @@
     
     <!--FOOTER-->
     <div id="footer">
-      <div class="container container-xxlg">
-        <p>Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500</p>
-        <p>Cancún Quintana Roo, México</p>
-        <p><strong>2 53 03 47</strong></p>
+      <div class="container container-xxlg" layout="row">
+        <section class="logo-wrapper" flex="20">
+          <a href="/"><img class="footer-logo" src="/images/logo_footer.png" alt="SpaceshipLabs"></a>
+        </section>
+        <section flex="80">
+            <p>Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500</p>
+            <p>Cancún Quintana Roo, México</p>
+            <p><strong>2 53 03 47</strong></p>
+        </section>
       </div>
     </div>
   
@@ -74,6 +82,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/home.js"></script>
         <script src="scripts/directives/fullscreenwrapper.js"></script>
+        <script src="scripts/controllers/about-us.js"></script>
         <!-- endbuild -->
 </body>
 </html>

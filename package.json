@@ -28,12 +28,18 @@
     "jshint-stylish": "^1.0.0",
     "karma-jasmine": "*",
     "karma-phantomjs-launcher": "*",
-    "time-grunt": "^1.0.0"
+    "time-grunt": "^1.0.0",
+    "bower": "~1.4.1",
+    "gulp-gh-pages": "~0.5.2"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "postinstall": "npm install -g bower && npm install -g grunt-cli && bower install"
+  },
+  "dependencies": {
+    "connect-modrewrite": "~0.8.2"
   }
 }
