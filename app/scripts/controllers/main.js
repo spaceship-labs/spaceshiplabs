@@ -13,7 +13,7 @@ angular.module('spaceshiplabsApp')
 	  $scope.toggleSidebar = function() {
       $mdSidenav('left').open();
 	  };   
-
+ 
 	  $scope.closeSidebar = function() {
       $mdSidenav('left').close();
 	  }; 
