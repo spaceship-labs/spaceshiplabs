@@ -44,6 +44,16 @@ angular
         controller: 'BlogCtrl',
         controllerAs: 'blog'
       })
+      .when('/ui-ux', {
+        templateUrl: 'views/ui-ux.html',
+        controller: 'UiUxCtrl',
+        controllerAs: 'uiUx'
+      })
+      .when('/single', {
+        templateUrl: 'views/single.html',
+        controller: 'SingleCtrl',
+        controllerAs: 'single'
+      })
       .otherwise({
         redirectTo: '/'
       });

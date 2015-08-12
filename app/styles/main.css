@@ -234,6 +234,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   color: #fff;
 }
 
+.container-alt-2{
+  background: #FAFAFA;
+}
+
 .container-normal{
   margin-left: 0;
   margin-right: 0;
@@ -316,7 +320,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 #sidebar-menu md-content button{text-align: left;}
 
 #sidebar-menu #close-button{
-  background: url(/images/arrow-left.png) center no-repeat;
+  /*background: url(images/arrow-left.png) center no-repeat;*/
 }
 
 #button-menu-mobile{cursor: pointer;display: none;height: 35px;padding: 5px 0;width: 35px;z-index: 1}
@@ -440,7 +444,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 /*------------/
-  #OUR-SERVICES-LANDING
+  #OUR-SERVICES
 /*------------*/
 .our-services-landing{
   background: transparent url(/images/foto.jpg) center center no-repeat;
@@ -450,35 +454,43 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   color: #fff;
 }
 
-.services-landing-content{width: 100%}
+.our-services{
+  background: #3A3A3A;
+  color: #fff;
+  min-height: 300px;
+}
 
-.services-landing-items{
+.our-services h1{color: #fff;}
+
+.services-content{width: 100%}
+
+.services-items{
   margin-top: 40px;
 }
 
-.services-landing-item{
+.services-item{
   cursor: pointer;
   padding-top: 116px;
 }
-.services-landing-item:nth-child(1){background: transparent url(/images/icono_blanco.png) top center no-repeat;}
-.services-landing-item:nth-child(2){background: transparent url(/images/iconos2_blanco.png) top center no-repeat;}
-.services-landing-item:nth-child(3){background: transparent url(/images/icono3_blanco.png) top center no-repeat;}
-.services-landing-item:nth-child(4){background: transparent url(/images/icono4_blanco.png) top center no-repeat;}
+.services-item:nth-child(1){background: transparent url(/images/icono_blanco.png) top center no-repeat;}
+.services-item:nth-child(2){background: transparent url(/images/iconos2_blanco.png) top center no-repeat;}
+.services-item:nth-child(3){background: transparent url(/images/icono3_blanco.png) top center no-repeat;}
+.services-item:nth-child(4){background: transparent url(/images/icono4_blanco.png) top center no-repeat;}
 
 
-.services-landing-item:hover:nth-child(1){background: transparent url(/images/icono_blanco.png) top center no-repeat;}
-.services-landing-item:hover:nth-child(2){background: transparent url(/images/iconos2.png) top center no-repeat;}
-.services-landing-item:hover:nth-child(3){background: transparent url(/images/icono3.png) top center no-repeat;}
-.services-landing-item:hover:nth-child(4){background: transparent url(/images/icono4.png) top center no-repeat;}
+.services-item:hover:nth-child(1){background: transparent url(/images/icono_blanco.png) top center no-repeat;}
+.services-item:hover:nth-child(2){background: transparent url(/images/iconos2.png) top center no-repeat;}
+.services-item:hover:nth-child(3){background: transparent url(/images/icono3.png) top center no-repeat;}
+.services-item:hover:nth-child(4){background: transparent url(/images/icono4.png) top center no-repeat;}
 
 
-.services-landing-item h5{
+.services-item h5{
   font-size: 24px;
   font-weight: 100;
   margin-bottom: 6px;
 }
 
-.services-landing-item p{
+.services-item p{
   font-weight: 100;
   font-size: 14px;
 }
@@ -664,44 +676,44 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 /*------------/
-  #ABOUT-US
+  #info-wrap
 /*------------*/
-.about-us h1,
-.about-us p,
-.about-us a > strong{color: #8F8F8F;}
+.info-wrap h1,
+.info-wrap p,
+.info-wrap a > strong{color: #8F8F8F;}
 
-.about-us h1{
+.info-wrap h1{
   margin-bottom: 20px;
 }
 
-.about-us p{
+.info-wrap p{
   font-size: 18px;
   line-height: 1.4;
   font-weight: 300;
 }
-.about-us h1 img{
+.info-wrap h1 img{
   vertical-align: text-top;
   max-width: 100%;
   margin-right: 5px;
 }
 
-.about-us .action-btn{
+.info-wrap .action-btn{
   font-size: 16px;
   font-weight: 300;
 }
 
-.about-us .support-icons{
+.info-wrap .support-icons{
   width: 60%;
   margin: 20px auto 40px;  
 }
 
-.about-us .screens-image{
+.info-wrap .screens-image{
   display: block;
   margin: 50px auto 30px;
 }
 
-.about-us .guarantee{padding: 40px 0}
-.about-us img{max-width: 100%}
+.info-wrap .guarantee{padding: 40px 0}
+.info-wrap img{max-width: 100%}
 
 /*-------------/
   #AWARDS
