@@ -11,7 +11,7 @@ angular.module('spaceshiplabsApp')
   .controller('HomeCtrl', function ($scope) {
 
 		$scope.bannerGraphImgs = [0,1];
-	  $scope.bannerGraphImgsIndex = 0;    
+	  $scope.bannerGraphImgsIndex = 0;
 
 	  $scope.carouselNext = function(){
 	    $scope.bannerGraphImgsIndex = ++$scope.bannerGraphImgsIndex % $scope.bannerGraphImgs.length;
@@ -23,6 +23,6 @@ angular.module('spaceshiplabsApp')
 
 	  $scope.goToSlide = function(index){
 	    $scope.bannerGraphImgsIndex = index;
-	  }
+	  };
 
   });

@@ -58,6 +58,6 @@ angular
         redirectTo: '/'
       });
 
-    $locationProvider.hashPrefix('!');      
+    $locationProvider.hashPrefix('!');
 
   });
