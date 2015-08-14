@@ -126,12 +126,27 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   padding: 6px 30px;
   text-align: center;
   font-weight: 500;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;    
+}
+
+.action-btn:hover{
+  background:  #fff;
+  color: #666666;  
 }
 
 .action-btn-alt{
   border: 1px solid #00CBD6;
   color: #00CBD6;
 }
+.action-btn-alt:hover{
+  background:  #00CBD6;
+  color: #fff;   
+}
+
 
 /*-----------------/
   #PORTFOLIO-LANDING
@@ -771,6 +786,91 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .single-post-content h2,
 .single-post-content h3,
 .single-post-content h4{color: #00CAD6}
+
+.single-tags a{
+  background: #FAFAFA;
+  padding: 6px 10px;
+  color: #00CAD6;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+  text-align: center;
+  margin-right: 4px;    
+}
+
+.single-tags a:hover{
+  background: #00CAD6;
+  color: #fff;
+}
+
+.blog .fb-comments{margin-top: 22px;}
+
+/*---------------/
+  #BLOG-SIDEBAR
+/*--------------*/
+.blog-sidebar-card{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-thumb{
+  background-size: cover!important;
+  min-height: 140px;
+  position: relative;
+}
+
+.card-content{
+  background: #FAFAFA;
+  padding: 44px 20px 10px;
+  position: relative;
+}
+
+.card-content:before{
+  content: '';
+  border-radius: 50%;
+  background: #00CAD6 url(/images/icono_periodico.png) center no-repeat;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  margin-top: -30px;
+  height: 60px;
+}
+
+.card-content h4,
+.card-content h4 > a,
+.card-content h5,
+.card-content-data{
+  color: #00CAD6;
+}
+.card-content-data + .card-content-data{
+    margin-top: 10px;
+}
+
+.card-content-data img{
+  vertical-align: top;
+  max-width: 15px;  
+}
+.card-content h4{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.card-content-data{font-size: 13px;}
+
+.card-content-excerpt{
+  font-size: 12px;
+  margin-top: 12px!important;
+  text-align: justify;
+}
+
+.card-content .action-btn{
+  font-size: 16px;
+  font-weight: 300;  
+}
 
 
 /*--------------/
