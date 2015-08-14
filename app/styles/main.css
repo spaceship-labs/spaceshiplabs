@@ -462,7 +462,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #OUR-SERVICES
 /*------------*/
 .our-services-landing{
-  background: transparent url(/images/foto.jpg) center center no-repeat;
+  background: transparent url(../images/foto.jpg) center center no-repeat;
   background-size: cover!important;
   background-attachment: fixed;
   position: relative;
@@ -487,16 +487,16 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   cursor: pointer;
   padding-top: 116px;
 }
-.services-item:nth-child(1){background: transparent url(/images/icono_blanco.png) top center no-repeat;}
-.services-item:nth-child(2){background: transparent url(/images/iconos2_blanco.png) top center no-repeat;}
-.services-item:nth-child(3){background: transparent url(/images/icono3_blanco.png) top center no-repeat;}
-.services-item:nth-child(4){background: transparent url(/images/icono4_blanco.png) top center no-repeat;}
+.services-item:nth-child(1){background: transparent url(../images/icono_blanco.png) top center no-repeat;}
+.services-item:nth-child(2){background: transparent url(../images/iconos2_blanco.png) top center no-repeat;}
+.services-item:nth-child(3){background: transparent url(../images/icono3_blanco.png) top center no-repeat;}
+.services-item:nth-child(4){background: transparent url(../images/icono4_blanco.png) top center no-repeat;}
 
 
-.services-item:hover:nth-child(1){background: transparent url(/images/icono_blanco.png) top center no-repeat;}
-.services-item:hover:nth-child(2){background: transparent url(/images/iconos2.png) top center no-repeat;}
-.services-item:hover:nth-child(3){background: transparent url(/images/icono3.png) top center no-repeat;}
-.services-item:hover:nth-child(4){background: transparent url(/images/icono4.png) top center no-repeat;}
+.services-item:hover:nth-child(1){background: transparent url(../images/icono_blanco.png) top center no-repeat;}
+.services-item:hover:nth-child(2){background: transparent url(../images/iconos2.png) top center no-repeat;}
+.services-item:hover:nth-child(3){background: transparent url(../images/icono3.png) top center no-repeat;}
+.services-item:hover:nth-child(4){background: transparent url(../images/icono4.png) top center no-repeat;}
 
 
 .services-item h5{
@@ -514,7 +514,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #SPACEES-LANDING
 /*--------------*/
 .spacees-landing{
-  background: #3E3E3E url(/images/mockup.png) right center no-repeat;
+  background: #3E3E3E url(../images/mockup.png) right center no-repeat;
   position: relative;
 }
 .spacees-landing img{
@@ -595,7 +595,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #CONTACT-US
 /*---------------*/
 .contact-us{
-  background: transparent url(/images/foto_equipo.jpg) center center no-repeat;
+  background: transparent url(../images/foto_equipo.jpg) center center no-repeat;
   background-size: cover!important;
   background-attachment: fixed;
   position: relative;
@@ -830,7 +830,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .card-content:before{
   content: '';
   border-radius: 50%;
-  background: #00CAD6 url(/images/icono_periodico.png) center no-repeat;
+  background: #00CAD6 url(../images/icono_periodico.png) center no-repeat;
   width: 60px;
   position: absolute;
   left: 0;
@@ -922,11 +922,11 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 #footer .logo-wrapper{text-align: left;}
 
 #footer .container .social-icon-fb{
-  background: transparent url(/images/fb-icon.png) center center no-repeat;
+  background: transparent url(../images/fb-icon.png) center center no-repeat;
 }
 
 #footer .container .social-icon-tw{
-  background: transparent url(/images/tw-icon.png) center center no-repeat;
+  background: transparent url(../images/tw-icon.png) center center no-repeat;
 }
 
 
