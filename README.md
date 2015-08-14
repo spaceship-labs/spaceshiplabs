@@ -1,5 +1,4 @@
 [![Code Climate](https://codeclimate.com/github/spaceship-labs/spaceshiplabs/badges/gpa.svg)](https://codeclimate.com/github/spaceship-labs/spaceshiplabs)
-
 [![Test Coverage](https://codeclimate.com/github/spaceship-labs/spaceshiplabs/badges/coverage.svg)](https://codeclimate.com/github/spaceship-labs/spaceshiplabs/coverage)
 
 # spaceshiplabs
