@@ -972,6 +972,6 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 }
 
-@media screen and (min-height: 1400px){
+@media screen and (max-aspect-ratio: 16/9) {
   #landing-video{width: auto}
 }
