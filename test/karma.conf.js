@@ -16,7 +16,8 @@ module.exports = function(config) {
     // testing framework to use (jasmine/mocha/qunit/...)
     // as well as any additional frameworks (requirejs/chai/sinon/...)
     frameworks: [
-      "jasmine"
+      "mocha",
+      "chai"
     ],
 
     // list of files / patterns to load in the browser
@@ -62,8 +63,20 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       "karma-phantomjs-launcher",
-      "karma-jasmine"
+      'karma-mocha',
+      'karma-chai',
+      'karma-coverage'
     ],
+
+    // Code coverage report
+    reporters: ['progress', 'coverage'],
+    preprocessors: {
+      'app/scripts/**/*.js': ['coverage']
+    },
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage'
+    },
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
