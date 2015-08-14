@@ -12,13 +12,13 @@ angular.module('spaceshiplabsApp')
 
 	  $scope.toggleSidebar = function() {
       $mdSidenav('left').open();
-	  };   
+	  };
 
 	  $scope.closeSidebar = function() {
       $mdSidenav('left').close();
-	  }; 
+	  };
 
-		$scope.isHome = ($location.path() == '/' ) ? true : false;
-		console.log( $location.path() );	  
-    
+		$scope.isHome = ($location.path() === '/' ) ? true : false;
+		console.log( $location.path() );
+
   });

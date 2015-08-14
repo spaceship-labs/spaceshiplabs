@@ -126,12 +126,27 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   padding: 6px 30px;
   text-align: center;
   font-weight: 500;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;    
+}
+
+.action-btn:hover{
+  background:  #fff;
+  color: #666666;  
 }
 
 .action-btn-alt{
   border: 1px solid #00CBD6;
   color: #00CBD6;
 }
+.action-btn-alt:hover{
+  background:  #00CBD6;
+  color: #fff;   
+}
+
 
 /*-----------------/
   #PORTFOLIO-LANDING
@@ -403,21 +418,18 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 #landing-video{
   z-index: 0;
   height: auto;
-  width: auto;
+  width: 100%;
   min-height: 100%;
   min-width: 100%;  
-}
-#landing-video{
   left: 0;
   position: absolute;
   top: 0;
-  width: 100%;
-  z-index: 0;
 }
 
 .landing-wrapper{
   /*color: #fff;*/
   position: relative;
+  overflow: hidden;
 }
 
 .landing-content{z-index: 2}
@@ -447,7 +459,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #OUR-SERVICES
 /*------------*/
 .our-services-landing{
-  background: transparent url(/images/foto.jpg) center center no-repeat;
+  background: transparent url(../images/foto.jpg) center center no-repeat;
   background-size: cover!important;
   background-attachment: fixed;
   position: relative;
@@ -472,16 +484,16 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   cursor: pointer;
   padding-top: 116px;
 }
-.services-item:nth-child(1){background: transparent url(/images/icono_blanco.png) top center no-repeat;}
-.services-item:nth-child(2){background: transparent url(/images/iconos2_blanco.png) top center no-repeat;}
-.services-item:nth-child(3){background: transparent url(/images/icono3_blanco.png) top center no-repeat;}
-.services-item:nth-child(4){background: transparent url(/images/icono4_blanco.png) top center no-repeat;}
+.services-item:nth-child(1){background: transparent url(../images/icono_blanco.png) top center no-repeat;}
+.services-item:nth-child(2){background: transparent url(../images/iconos2_blanco.png) top center no-repeat;}
+.services-item:nth-child(3){background: transparent url(../images/icono3_blanco.png) top center no-repeat;}
+.services-item:nth-child(4){background: transparent url(../images/icono4_blanco.png) top center no-repeat;}
 
 
-.services-item:hover:nth-child(1){background: transparent url(/images/icono_blanco.png) top center no-repeat;}
-.services-item:hover:nth-child(2){background: transparent url(/images/iconos2.png) top center no-repeat;}
-.services-item:hover:nth-child(3){background: transparent url(/images/icono3.png) top center no-repeat;}
-.services-item:hover:nth-child(4){background: transparent url(/images/icono4.png) top center no-repeat;}
+.services-item:hover:nth-child(1){background: transparent url(../images/icono_blanco.png) top center no-repeat;}
+.services-item:hover:nth-child(2){background: transparent url(../images/iconos2.png) top center no-repeat;}
+.services-item:hover:nth-child(3){background: transparent url(../images/icono3.png) top center no-repeat;}
+.services-item:hover:nth-child(4){background: transparent url(../images/icono4.png) top center no-repeat;}
 
 
 .services-item h5{
@@ -499,7 +511,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #SPACEES-LANDING
 /*--------------*/
 .spacees-landing{
-  background: #3E3E3E url(/images/mockup.png) right center no-repeat;
+  background: #3E3E3E url(../images/mockup.png) right center no-repeat;
   position: relative;
 }
 .spacees-landing img{
@@ -580,7 +592,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #CONTACT-US
 /*---------------*/
 .contact-us{
-  background: transparent url(/images/foto_equipo.jpg) center center no-repeat;
+  background: transparent url(../images/foto_equipo.jpg) center center no-repeat;
   background-size: cover!important;
   background-attachment: fixed;
   position: relative;
@@ -804,6 +816,92 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 /*Team Carlos Barahona*/
 
 
+.single-tags a{
+  background: #FAFAFA;
+  padding: 6px 10px;
+  color: #00CAD6;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+  text-align: center;
+  margin-right: 4px;    
+}
+
+.single-tags a:hover{
+  background: #00CAD6;
+  color: #fff;
+}
+
+.blog .fb-comments{margin-top: 22px;}
+
+/*---------------/
+  #BLOG-SIDEBAR
+/*--------------*/
+.blog-sidebar-card{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-thumb{
+  background-size: cover!important;
+  min-height: 140px;
+  position: relative;
+}
+
+.card-content{
+  background: #FAFAFA;
+  padding: 44px 20px 10px;
+  position: relative;
+}
+
+.card-content:before{
+  content: '';
+  border-radius: 50%;
+  background: #00CAD6 url(../images/icono_periodico.png) center no-repeat;
+  width: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  margin-top: -30px;
+  height: 60px;
+}
+
+.card-content h4,
+.card-content h4 > a,
+.card-content h5,
+.card-content-data{
+  color: #00CAD6;
+}
+.card-content-data + .card-content-data{
+    margin-top: 10px;
+}
+
+.card-content-data img{
+  vertical-align: top;
+  max-width: 15px;  
+}
+.card-content h4{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.card-content-data{font-size: 13px;}
+
+.card-content-excerpt{
+  font-size: 12px;
+  margin-top: 12px!important;
+  text-align: justify;
+}
+
+.card-content .action-btn{
+  font-size: 16px;
+  font-weight: 300;  
+}
+
+
 /*--------------/
   #FOOTER
 /*-------------*/
@@ -853,11 +951,11 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 #footer .logo-wrapper{text-align: left;}
 
 #footer .container .social-icon-fb{
-  background: transparent url(/images/fb-icon.png) center center no-repeat;
+  background: transparent url(../images/fb-icon.png) center center no-repeat;
 }
 
 #footer .container .social-icon-tw{
-  background: transparent url(/images/tw-icon.png) center center no-repeat;
+  background: transparent url(../images/tw-icon.png) center center no-repeat;
 }
 
 
@@ -904,4 +1002,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
     display: block;
   }
 
+}
+
+@media screen and (max-aspect-ratio: 16/9) {
+  #landing-video{width: auto}
 }
