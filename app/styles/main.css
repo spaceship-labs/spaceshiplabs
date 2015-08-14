@@ -772,6 +772,37 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .single-post-content h3,
 .single-post-content h4{color: #00CAD6}
 
+/*Team Carlos Barahona*/
+
+#graphic-design{background: #282828}
+.graphic-design{height: 700px;}
+#graphic-design .titulo-design{color: white;font-size: 53px;margin-bottom: 30px}
+.text-design{width: 65%;text-align: justify;font-size: 18px;color: white}
+.flecha-team{margin-top: 100px}
+.graphic-design.background{background-image: url(../images/foto.jpg);background-repeat:no-repeat;background-position:center;background-size: cover;}
+.graphic-design h2{color: white;font-size: 26px;text-align: left;margin-bottom: 15px;width: 300px;}
+.graphic-design h2:hover{color: #01C4D8}
+#photography-designer{height: 400px;background-image: url(../images/team/diana.jpg);background-repeat:no-repeat;background-position:center;background-size: cover;}
+#date-designer{margin-right: 132px;}
+#date-designer h1{color: white;font-size: 55px;font-weight: 300;margin-top: 70px;margin-bottom: -22px}
+#date-designer h2{color: #02C2D7;font-size: 30px;}
+#photography-community{height: 400px;background-image: url(../images/team/carrot.jpg);background-repeat:no-repeat;background-position:center;background-size: cover;}
+#date-community{margin-left: 106px;margin-top: 34px}
+#date-community h1{color: white;font-size: 55px;font-weight: 300;margin-top: 70px;margin-bottom: -22px}
+#date-community h2{color: #02C2D7;font-size: 30px;}
+.action-btn-wrap-center.community{margin: 0px}
+.more-community{width: 150px;height: 42px;border: 1px solid #485EC4;margin-top: -12px}
+.more-community a{color: #485EC4;font-size: 19px}
+#photography-programer{height: 400px;background-image: url(../images/team/cesar.jpg);background-repeat:no-repeat;background-position:center;background-size: cover;}
+#photography-founder{height: 400px;background-image: url(../images/team/daniel.jpg);background-repeat:no-repeat;background-position:center;background-size: cover;}
+#info-community{height: 360px;background-image: url(../images/team/carrot.jpg);background-repeat:no-repeat;background-position:center;background-size: cover;}
+.info-community{background: rgba(2, 194, 215, 0.5);height: 100%}
+#name-info{margin-top: 20px}
+.name-info{color: white;font-size: 30px;font-weight: 300}
+.name-info strong{font-weight: 700}
+.text-design.community{width: 40%;margin: 0 auto}
+/*Team Carlos Barahona*/
+
 
 /*--------------/
   #FOOTER

@@ -54,6 +54,11 @@ angular
         controller: 'SingleCtrl',
         controllerAs: 'single'
       })
+      .when('/team', {
+        templateUrl: 'views/team.html',
+        controller: 'TeamCtrl',
+        controllerAs: 'team'
+      })
       .otherwise({
         redirectTo: '/'
       });
