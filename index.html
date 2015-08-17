@@ -1,0 +1,17 @@
+<!doctype html> <html ng-app="spaceshiplabsApp" ng-controller="MainCtrl"> <head> <base href="/spaceshiplabs/"> <meta name="fragment" content="!"> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.6fb45d6c.css"> <link rel="stylesheet" href="styles/main.1f74314d.css"> <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700" rel="stylesheet" type="text/css"> <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo7vknjrmQzOpOWccccOpx8yLJoYkvRyA"></script> </head> <body> <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> <script>window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1630031427237305',
+          xfbml      : true,
+          version    : 'v2.4'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));</script> <div id="wrap"> <div id="main" class="clearfix"> <div id="topBackRepeat" layout="row" flex layout-fill> <ng-include src="'views/menu-mobile.html'"></ng-include> <div layout="column" flex> <ng-include src="'views/header.html'"></ng-include> <md-content ng-view> </md-content> </div> </div><!-- END topBackRepeat --> </div><!-- END main --> </div><!-- END wrap --> <div class="clear"></div> <!--FOOTER--> <div id="footer"> <div class="container container-xxlg" layout="row"> <section class="logo-wrapper" flex="20"> <a href="/"><img class="footer-logo" src="images/logo_footer.2ef6edc5.png" alt="SpaceshipLabs"></a> </section> <section flex="80"> <p>Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500</p> <p>Cancún Quintana Roo, México</p> <p><strong>2 53 03 47</strong></p> </section> </div> </div> <script src="scripts/vendor.7686816b.js"></script> <script src="scripts/scripts.0c7ab09f.js"></script> </body> </html>
