@@ -1,0 +1,106 @@
+<div class="projects-slider">
+	<div 
+		class="projects-slider-viewport" 
+		layout="row"
+		ng-style="style()"
+		full-screen-wrapper		
+		>
+		
+		<div class="projects-slider-reel projects-slider-images-reel" 
+				ng-style="style()"
+				flex="50" 
+				full-screen-wrapper>
+
+			<!--Slides-->
+
+			<div
+				ng-repeat="photos in projectsPhotos | orderBy:reverse"
+				ng-style="style()" 
+				full-screen-wrapper
+				class="projects-slide projects-slide-image"
+			>		
+				<div 
+					style="background: url({{photos[selectedProjectPhoto]}}) no-repeat"
+					class="projects-slide-image-inner"
+					data-image-index="0"
+				>
+					
+				</div>
+			</div>
+
+			<!--<div 
+				style="background: url(images/yellow_proyectos.jpg) no-repeat"
+				class="projects-slide projects-slide-image"
+				ng-style="style()" 
+				full-screen-wrapper
+				data-image-index="1"
+			>
+			</div>-->
+
+
+			<!---->
+
+		</div> 
+		
+		<div 
+			class="projects-slider-reel projects-slider-content-reel"
+			ng-style="style()" 
+			flex="50"
+			full-screen-wrapper			
+		>
+			<!--Slides-->
+			<div 
+				class="projects-slide projects-slide-content container-alt container"
+				ng-style="style()" 
+				full-screen-wrapper
+				layout="column"
+				layout-align="center center"
+				data-content-index="0"					
+			>
+				<div class="projects-slide-content-inner container container-sm">
+					<h3>UI/UX Design</h3>
+					<h1 ng-class="{'animated flipInX' : selectedIndex == 0}">Yellow Transfers</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!</p>
+					<a href="#" class="project-link">
+						<img src="images/icono_proyectos6.png" alt="">
+					</a>
+				</div>
+			</div>
+
+			<div 
+				class="projects-slide projects-slide-content container-alt container"
+				ng-style="style()" 
+				full-screen-wrapper
+				layout="column"
+				layout-align="center center"
+				data-content-index="1"					
+			>
+				<div class="projects-slide-content-inner container container-sm">
+					<h3>UI/UX Design</h3>
+					<h1 ng-class="{'animated flipInX' : selectedIndex == 1}">Proyecto de prueba</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!</p>
+					<a href="#" class="project-link">
+						<img src="images/icono_proyectos6.png" alt="">
+					</a>
+				</div>
+			</div>			
+
+			<!---->
+
+		</div>
+
+		<div class="projects-slider-nav" layout="row" layout-align="space-between center">
+			<a ng-click="movePrev()" href="#"><img src="images/flechaa.png" alt=""></a>
+			<a ng-click="moveNextPhoto()" href="#"><img src="images/flechab.png" alt=""></a>
+		</div>
+
+		<ul class="projects-slider-bullets">
+			<li ng-repeat="item in getNumber(itemsCount) track by $index">
+				<a href="#" ng-class="{'active-bullet' : selectedIndex == $index  }" ng-click="moveTo($index)"></a>
+			</li>
+		</ul>
+
+		<a ng-click="moveNext()" href="#" class="slide-next"></a>
+
+	</div>
+</div>

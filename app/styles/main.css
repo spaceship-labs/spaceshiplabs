@@ -20,6 +20,34 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   display: none !important;
 }
 
+@keyframes fadeinCustom {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeinCustom {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeinCustom {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeinCustom {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeinCustom {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 
 *:focus{
@@ -274,12 +302,13 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   padding-top: 140px;  
   padding-bottom: 60px;
 }
-.section-title-blog{
+.section-title-blog,
+.section-title-projects{
   padding-bottom: 100px;
   position: relative;
 }
 
-.section-title-blog .blog-options{
+.section-title-options{
   position: absolute;
   left: 0;
   bottom: 0;
@@ -287,15 +316,15 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   text-align: left;
 }
 
-.blog-options label{color: #fff!important;}
-.blog-options input[type="text"]{
+.section-title-options label{color: #fff!important;}
+.section-title-options input[type="text"]{
   color: #fff;
   border-bottom: 1px solid #fff!important;
 }
-.blog-options input[type="text"]::-webkit-input-placeholder { color:#fff; }
-.blog-options input[type="text"]:-moz-placeholder { color:#fff; } /* FF 4-18 */
-.blog-options input[type="text"]::-moz-placeholder { color:#fff; } /* FF 19+ */
-.blog-options input[type="text"]:-ms-input-placeholder { color:#fff; } /* IE 10+ */
+.section-title-options input[type="text"]::-webkit-input-placeholder { color:#fff; }
+.section-title-options input[type="text"]:-moz-placeholder { color:#fff; } /* FF 4-18 */
+.section-title-options input[type="text"]::-moz-placeholder { color:#fff; } /* FF 19+ */
+.section-title-options input[type="text"]:-ms-input-placeholder { color:#fff; } /* IE 10+ */
 
 
 
@@ -927,6 +956,118 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   font-weight: 300;  
 }
 
+/*--------------/
+  #PROJECTS-SLIDER
+/*-------------*/
+.projects-slider{}
+.projects-slider-viewport{
+  overflow: hidden;
+  position: relative;
+}
+.projects-slide-content{
+  padding: 0;
+  text-align: center;
+}
+.projects-slide-content,
+.projects-slide-image{
+  max-width: 100%
+}
+
+.projects-slide-image-inner{
+  position: relative;
+  height: 100%;
+  background-size: cover!important;
+  /*-webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;   */
+
+
+}
+
+.projects-slide-image{background-size: cover!important}
+.projects-slide-content h3{
+  font-weight: 100;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+.projects-slide-content h1{
+  margin-bottom: 20px;
+  animation-delay:.3s;
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -ms-animation-delay: .3s;
+  -o-animation-delay: .3s;
+}
+.projects-slide-content p{font-weight: 300}
+.projects-slide-content .project-link{
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.projects-slider-reel{
+  position: relative;
+  top: 0;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;  
+}
+.projects-slider-nav{
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  padding: 20px 0;
+}
+
+.projects-slider-nav > a{margin: 0 10px}
+
+.projects-slider-bullets{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  list-style: none;  
+}
+
+.projects-slider-bullets a{
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+}
+
+.projects-slider-bullets a.active-bullet{
+  background: #fff;
+}
+
+.projects-slider .slide-next{
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #05d3cf url(../images/flecha_proyectos3.png) center no-repeat;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  margin-top: -30px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;    
+}
+
+.projects-slider .slide-next:hover{
+  background: #475bc3 url(../images/flecha_proyectos3.png) center no-repeat;
+}
 
 /*--------------/
   #FOOTER

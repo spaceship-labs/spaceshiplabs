@@ -59,6 +59,11 @@ angular
         controller: 'TeamCtrl',
         controllerAs: 'team'
       })
+      .when('/projects', {
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsCtrl',
+        controllerAs: 'projects'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -66,3 +71,4 @@ angular
     $locationProvider.hashPrefix('!');      
 
   });
+

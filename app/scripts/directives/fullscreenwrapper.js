@@ -32,7 +32,6 @@
  					customHeight = newValue.h - header.outerHeight();
  				}else{
  					customHeight = newValue.h;
- 					console.log(customHeight);
  				}
 
  				return {
