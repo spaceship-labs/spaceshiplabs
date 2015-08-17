@@ -130,12 +130,12 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   -moz-transition: all .4s;
   -o-transition: all .4s;
   -ms-transition: all .4s;
-  transition: all .4s;    
+  transition: all .4s;
 }
 
 .action-btn:hover{
   background:  #fff;
-  color: #666666;  
+  color: #666666;
 }
 
 .action-btn-alt{
@@ -144,7 +144,7 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
 }
 .action-btn-alt:hover{
   background:  #00CBD6;
-  color: #fff;   
+  color: #fff;
 }
 
 
@@ -271,7 +271,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   background: linear-gradient(to bottom,  #08b4da 0%,#1fdeb2 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08b4da', endColorstr='#1fdeb2',GradientType=0 ); /* IE6-9 */
   color: #fff;
-  padding-top: 140px;  
+  padding-top: 140px;
   padding-bottom: 60px;
 }
 .section-title-blog{
@@ -328,7 +328,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   background: #32609C!important;
 }
 #sidebar-menu md-content{
-  background: #35384F;  
+  background: #35384F;
 }
 #sidebar-menu md-content a{color: #fff;}
 
@@ -348,25 +348,25 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .toolbar-head{
   /*
   background: #08b4da;
-  background: -moz-linear-gradient(top,  #08b4da 0%, #1fdeb2 100%); 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#08b4da), color-stop(100%,#1fdeb2)); 
-  background: -webkit-linear-gradient(top,  #08b4da 0%,#1fdeb2 100%); 
+  background: -moz-linear-gradient(top,  #08b4da 0%, #1fdeb2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#08b4da), color-stop(100%,#1fdeb2));
+  background: -webkit-linear-gradient(top,  #08b4da 0%,#1fdeb2 100%);
   background: -o-linear-gradient(top,  #08b4da 0%,#1fdeb2 100%);
   background: -ms-linear-gradient(top,  #08b4da 0%,#1fdeb2 100%);
-  background: linear-gradient(to bottom,  #08b4da 0%,#1fdeb2 100%); 
+  background: linear-gradient(to bottom,  #08b4da 0%,#1fdeb2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08b4da', endColorstr='#1fdeb2',GradientType=0 );
   */
   min-height: 0!important;
   height: auto!important;
   padding: 20px 10px;
-  background: transparent;  
+  background: transparent;
   position: absolute;
   top: 0;
-  left: 0;  
+  left: 0;
 }
 
 .toolbar-head.transparent-head{
-  background: transparent;  
+  background: transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -408,7 +408,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .toolbar-head .align-right-cu{
   font-size: 12px;
-  text-align: right;  
+  text-align: right;
 }
 
 
@@ -420,7 +420,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   height: auto;
   width: 100%;
   min-height: 100%;
-  min-width: 100%;  
+  min-width: 100%;
   left: 0;
   position: absolute;
   top: 0;
@@ -640,7 +640,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .news-wrapper{
     background-color: #fff;
     z-index: 1;
-    position: relative;  
+    position: relative;
 }
 
 .news-item{
@@ -716,7 +716,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .info-wrap .support-icons{
   width: 60%;
-  margin: 20px auto 40px;  
+  margin: 20px auto 40px;
 }
 
 .info-wrap .screens-image{
@@ -826,7 +826,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   -ms-transition: all .4s;
   transition: all .4s;
   text-align: center;
-  margin-right: 4px;    
+  margin-right: 4px;
 }
 
 .single-tags a:hover{
@@ -882,7 +882,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .card-content-data img{
   vertical-align: top;
-  max-width: 15px;  
+  max-width: 15px;
 }
 .card-content h4{
   font-size: 14px;
@@ -898,7 +898,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .card-content .action-btn{
   font-size: 16px;
-  font-weight: 300;  
+  font-weight: 300;
 }
 
 
@@ -958,10 +958,28 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   background: transparent url(../images/tw-icon.png) center center no-repeat;
 }
 
+@media (max-width: 1050px){
+/*Team*/
+  #date-designer {margin-right: 40px;}
+  #date-community {margin-left: 70px;}
+  .text-design.community {width: 60%;margin: 0 auto;}
+/*Team*/
+}
+
+
 
 @media screen and (max-width: 960px){
   .toolbar-head nav > a {font-size: 11px}
 
+
+}
+
+@media (max-width: 750px){
+/*Team*/
+  #date-designer h1,#date-community h1 {font-size: 40px;}
+  .text-design.community {width: 70%;}
+
+/*Team*/
 
 }
 
@@ -970,8 +988,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   [flex-md="100"]{
     -webkit-flex: 1!important;
     -ms-flex: 1!important;
-    flex: 1!important;  
-  }   
+    flex: 1!important;
+  }
 }
 
 
@@ -983,13 +1001,20 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   [flex-sm="100"]{
     -webkit-flex: 1!important;
     -ms-flex: 1!important;
-    flex: 1!important;  
-  } 
+    flex: 1!important;
+  }
 }
 
+
+
 @media screen and (max-width: 600px){
+/*Team*/
+  #date-designer h1,#date-community h1 {font-size: 30px;}
+  #date-designer h2,#date-community h2 {color: #02C2D7;font-size: 20px;}
+  .text-design.community {width: 90%;}
+  .name-info {font-size: 23px;}
 
-
+/*Team*/
   .toolbar-head .menu{display: none;}
 
 
