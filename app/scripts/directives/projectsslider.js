@@ -9,7 +9,7 @@
 angular.module('spaceshiplabsApp')
   .directive('projectsSlider', function () {
     return {
-      templateUrl: '/views/projects-slider.html',
+      templateUrl: 'views/projects-slider.html',
       restrict: 'E',
       link: function postLink(scope, element, attrs) {
       	scope.selectedIndex = 0;
