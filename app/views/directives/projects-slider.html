@@ -11,20 +11,26 @@
 				flex="50" 
 				full-screen-wrapper>
 
-			<!--Slides-->
+			<!--Slides(por proyecto)-->
 
 			<div
 				ng-repeat="photos in projectsPhotos | orderBy:reverse"
 				ng-style="style()" 
 				full-screen-wrapper
 				class="projects-slide projects-slide-image"
-			>		
+			>	
+				<!--Fotos de proyecto-->	
 				<div 
-					style="background: url({{photos[selectedProjectPhoto]}}) no-repeat"
-					class="projects-slide-image-inner"
+					ng-repeat="photo in photos track by $index"
+					ng-if="selectedProjectPhoto == $index"
+					class="projects-slide-image-wrapper"
 					data-image-index="0"
 				>
-					
+					<div 
+						style="background: url({{photo}}) no-repeat"
+						class="projects-slide-image-inner"
+					></div>
+
 				</div>
 			</div>
 

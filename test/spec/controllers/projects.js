@@ -16,8 +16,4 @@ describe('Controller: ProjectsCtrl', function () {
       // place here mocked dependencies
     });
   }));
-
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(ProjectsCtrl.awesomeThings.length).toBe(3);
-  });
 });

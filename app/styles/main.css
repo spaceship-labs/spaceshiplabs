@@ -973,18 +973,21 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   max-width: 100%
 }
 
+
+.projects-slide-image-wrapper,
 .projects-slide-image-inner{
   position: relative;
   height: 100%;
-  background-size: cover!important;
-  /*-webkit-transition: all .4s;
-  -moz-transition: all .4s;
-  -o-transition: all .4s;
-  -ms-transition: all .4s;
-  transition: all .4s;   */
-
-
 }
+
+.projects-slide-image-inner{
+  background-size: cover!important;
+  -webkit-animation: fadeinCustom 1s; /* Safari 4+ */
+  -moz-animation:    fadeinCustom 1s; /* Fx 5+ */
+  -o-animation:      fadeinCustom 1s; /* Opera 12+ */
+  animation:         fadeinCustom 1s; 
+}
+
 
 .projects-slide-image{background-size: cover!important}
 .projects-slide-content h3{

@@ -17,7 +17,4 @@ describe('Controller: UiUxCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    //expect(UiUxCtrl.awesomeThings.length).toBe(3);
-  });
 });
