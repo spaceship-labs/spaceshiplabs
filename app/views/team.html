@@ -35,15 +35,15 @@
 		<h1 class="name-community">Carolina Marin</h1>
 		<h2 class="title-community">COMMUNITY MANAGER</h2>
 		<div class="more-community" layout="row" layout-align="center center">
-			<a href="">Ver más</a>
+			<a ng-click="communityVisibility = true" href="">Ver más</a>
 		</div>
 	</div>
 </div>
 
-<div id="info-community" flex="100" >
+<div id="info-community" ng-show="communityVisibility" flex="100" >
 	<div class="info-community" flex="100" >
 		<div flex="100" layout="row" layout-align="end end">
-			<img src="images/cruz.png" alt="">
+			<img ng-click="communityVisibility = false" src="images/cruz.png" alt="">
 		</div>
 		<div id="name-info" layout="row" layout-align="center center">
 			<p class="name-info">Carolina Marin | <strong>Community Manager</strong></p>

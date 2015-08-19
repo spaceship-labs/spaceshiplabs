@@ -79,6 +79,14 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   z-index: 1;
 }
 
+.landing-wrapper,
+.our-services-landing,
+.mentions-landing,
+.clients-landing,
+.contact-us{
+  min-height: 400px;
+}
+
 /*-------------/
   #ROUNDED-BTN
 /*------------*/
@@ -444,17 +452,6 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 /*---------------/
   #LANDING
 /*--------------*/
-#landing-video{
-  /*
-  z-index: 0;
-  height: auto;
-  width: 100%;
-  min-height: 100%;
-  min-width: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;*/
-}
 
 #landing-video {
   position: absolute;
@@ -538,6 +535,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .services-item{
   cursor: pointer;
   padding-top: 116px;
+  position: relative;
 }
 .services-item:nth-child(1){background: transparent url(../images/icono_blanco.png) top center no-repeat;}
 .services-item:nth-child(2){background: transparent url(../images/iconos2_blanco.png) top center no-repeat;}
@@ -843,7 +841,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #AWARDS
 /*-------------*/
 .award{
-  padding: 30px 0;
+  padding: 30px 20px;
   position: relative;
 }
 
@@ -1042,6 +1040,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .projects-slide-image-inner{
   position: relative;
   height: 100%;
+
 }
 
 .projects-slide-image-inner{
@@ -1192,9 +1191,33 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   background: transparent url(../images/tw-icon.png) center center no-repeat;
 }
 
+@media (max-width: 1050px){
+/*Team*/
+  #date-designer {margin-right: 40px;}
+  #date-community {margin-left: 70px;}
+  .text-design.community {width: 60%;margin: 0 auto;}
+/*Team*/
+}
+
+
 
 @media screen and (max-width: 960px){
   .toolbar-head nav > a {font-size: 11px}
+
+
+}
+
+@media (max-width: 750px){
+/*Team*/
+  #date-designer h1,#date-community h1 {font-size: 40px;}
+  .text-design.community {width: 70%;}
+
+/*Team*/
+
+  .spacees-landing{
+    background-size: 40%;
+    background-position: right bottom;
+  }
 
 
 }
@@ -1221,9 +1244,16 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   }
 }
 
+
+
 @media screen and (max-width: 600px){
+/*Team*/
+  #date-designer h1,#date-community h1 {font-size: 30px;}
+  #date-designer h2,#date-community h2 {color: #02C2D7;font-size: 20px;}
+  .text-design.community {width: 90%;}
+  .name-info {font-size: 23px;}
 
-
+/*Team*/
   .toolbar-head .menu{display: none;}
 
 
@@ -1236,4 +1266,50 @@ md-backdrop{background: rgba(0,0,0,0.5)}
     display: block;
   }
 
+  .landing-wrapper,
+  .our-services-landing,
+  .mentions-landing,
+  .clients-landing,
+  .contact-us{
+    height: auto!important;
+    min-height: 400px;
+  }
+
+  .services-item{
+    margin-bottom: 20px;
+    min-width: 116px;
+  }
+  .services-item h5{
+    margin-top: 10px;
+  }
+  .mentions-landing-content{
+    max-width: 100%;
+    padding: 40px 10%;
+    width: 80%;
+  }
+  .mention-landing-row{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+  .mention-landing-item{
+    border: 0!important;
+    display: inline-block;
+    min-height: 100px;
+    width: 49%;
+  }
+
+  .clients-slider .client-item-avatar{position: static;}
+
+  .info-wrap .guarantee img{max-width: 200px}
+
+  .section-title-options form{padding: 20px;}
+  .section-title-blog h1{font-size: 32px}
+
+  #footer .container{padding: 34px 20px;}
+
+}
+
+@media screen and (max-aspect-ratio: 16/9) {
+  #landing-video{width: auto}
 }
