@@ -3,7 +3,7 @@
   <head>
     <base href="/" />
     <meta name="fragment" content="!">
-        
+
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -22,7 +22,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo7vknjrmQzOpOWccccOpx8yLJoYkvRyA">
-    </script>    
+    </script>
   </head>
   <body>
     <!--[if lte IE 8]>
@@ -45,26 +45,26 @@
          js.src = "//connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
-    </script>    
+    </script>
 
     <div id="wrap">
       <div id="main" class="clearfix">
         <div id="topBackRepeat" layout='row' flex layout-fill>
 
-          <ng-include src="'views/menu-mobile.html'"></ng-include> 
-          
+          <ng-include src="'views/menu-mobile.html'"></ng-include>
+
           <div layout="column" flex>
-    
-            <ng-include src="'views/header.html'"></ng-include>  
-            <md-content ng-view>
+
+            <ng-include src="'views/header.html'"></ng-include>
+            <md-content ng-view ng-cloak autoscroll="true">
             </md-content>
-    
+
           </div>
         </div><!-- END topBackRepeat -->
       </div><!-- END main -->
     </div><!-- END wrap -->
     <div class="clear"></div>
-    
+
     <!--FOOTER-->
     <div id="footer">
       <div class="container container-xxlg" layout="row">
@@ -78,7 +78,7 @@
         </section>
       </div>
     </div>
-  
+
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
