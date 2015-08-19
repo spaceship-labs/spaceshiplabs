@@ -11,13 +11,13 @@ angular.module('spaceshiplabsApp')
     return {
       templateUrl: 'views/directives/clients-slider.html',
       restrict: 'EA',
-      link: function postLink(scope, element, attrs) {
+      link: function postLink(scope) {
       	scope.selectedIndex = 0;
       	scope.itemsCount = 2;
       	scope.leftReel = 0;
 
-				scope.$watch('selectedIndex', function (newValue, oldValue) {
-					scope.leftReel = scope.selectedIndex * (-100);
+				scope.$watch('selectedIndex', function (newValue) {
+					scope.leftReel = newValue * (-100);
 					scope.widthReel = scope.itemsCount * 100;
 					scope.widthSlide = 100 / scope.itemsCount;
 				}, true);       	

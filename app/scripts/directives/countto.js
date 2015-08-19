@@ -14,7 +14,7 @@ angular.module('spaceshiplabsApp')
         link: function (scope, element, attrs) {
 
             var e = element[0];
-            var num, refreshInterval, duration, steps, step, countTo, value, increment;
+            var num, refreshInterval, duration, steps, step, countTo, increment;
             var filterVal = attrs.filter ? attrs.filter : 'number';
 
             var calculate = function () {
@@ -23,16 +23,19 @@ angular.module('spaceshiplabsApp')
                 scope.timoutId = null;
                 countTo = parseInt(attrs.countTo) || 0;
                 scope.value = parseInt(attrs.value, 10) || 0;
-                if (attrs.type == 'int')
+                if (attrs.type === 'int'){
                     duration = (parseInt(attrs.duration) * 1000) || 0;
-                else
+                }
+                else{
                     duration = (parseFloat(attrs.duration) * 1000) || 0;
-
+                }
                 steps = parseInt( Math.ceil(duration / refreshInterval) );
-                if (attrs.type == 'int')
+                if (attrs.type === 'int'){
                     increment = parseInt( Math.ceil((countTo - scope.value) / steps) );
-                else
+                }
+                else{
                     increment = parseInt((countTo - scope.value) / steps);
+                }
                 num = parseInt( Math.ceil(scope.value) );
             };
 
@@ -66,11 +69,11 @@ angular.module('spaceshiplabsApp')
                 }
             });
 
-            attrs.$observe('value', function (val) {
+            attrs.$observe('value', function () {
                 start();
             });
 
             return true;
         }
-    }
+    };
   }]);
