@@ -1,6 +1,6 @@
 <div class="landing-wrapper" layout="column" layout-align="center center" ng-style="style()" full-screen-wrapper>
   <div class="dots"></div>
-  <video autoplay loop poster="images/videobg.jpg" id="landing-video">
+  <video autoplay loop poster="images/videobg.png" id="landing-video">
     <source src="videos/spaceshiplabs.mp4" type="video/mp4">
     </video>
     <div class="landing-content center-content">
@@ -14,7 +14,7 @@
 </div>
 
 <div class="container container-alt center-content">
- <h1>Noticias recientes</h1>
+ <h1 data-wow-duration="0.8s" class="wow fadeInUp">Noticias recientes</h1>
 </div>
 
 <div class="news-wrapper" layout="row" layout-sm="column">
@@ -100,7 +100,7 @@
   <div class="container container-xlg">
     <div class="container-sm">
       <img src="images/spacees.png" alt="" />
-      <h2>ENTERPRISE SOFTWARE</h2>
+      <h2 data-wow-duration="0.8s" class="wow fadeInUp">ENTERPRISE SOFTWARE</h2>
       <p>Plataforma para el manejo completo de la empresa desde recursos humanos, contabilidad, hasta la capacitación y canalización de ventas tanto electrónicas como analogas.</p>
       <div class="action-btn-wrap">
         <a href="#" class="action-btn">VIEW</a>
@@ -111,7 +111,7 @@
 
 <div class="mentions-landing" layout="column" layout-align="center center" ng-style="style()" full-screen-wrapper>
   <div class="mentions-landing-content container container-xlg center-content">
-    <h1>Menciones</h1>
+    <h1 data-wow-duration="0.8s" class="wow fadeInUp">Menciones</h1>
 
     <div class="mention-landing-row" layout="row">
       <a href="#"
@@ -163,37 +163,17 @@
 </div>   
 
 <div class="clients-landing" layout="column" layout-align="center center" ng-style="style()" full-screen-wrapper>
-  <div class="clients-landing-content container container-lg center-content">
-    <h1>120 Happy clients</h1>
-
-    <ul>
-
-      <li
-        class="clients-slide"
-        layout="row"
-        layout-align="space-between center">
-        
-        <div class="client-item" flex="45">
-          <h5>Carlos López</h5>
-          <h6>CONSEJOSANO</h6>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
-        </div>
-
-        <div class="client-item" flex="45">
-          <h5>Alexandra Zapata-Hojel</h5>
-          <h6>MEJORA TU ESCUELA</h6>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
-        </div>   
-
-      </li>
-    </ul>
+  <div class="clients-landing-content container container-xlg center-content">
+    <h1><span count-to="200" value="0" duration="2" ></span> Happy clients</h1>
+    
+    <div clients-slider></div clients-slider>
 
   </div>
 </div>
 
 <div class="portfolio-landing">
   <div class="portfolio-title-landing container center-content">
-    <h1>Portafolio</h1>
+    <h1 data-wow-duration="0.8s" class="wow fadeInUp">Portafolio</h1>
     <div class="action-btn-wrap">
       <a href="/projects" class="action-btn">Ver todos los proyectos</a>
     </div>

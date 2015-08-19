@@ -59,7 +59,6 @@ angular.module('spaceshiplabsApp')
       	}; 
 
         scope.moveTo = function(index){
-          console.log(scope.selectedIndex);
           scope.selectedIndex = index;
         };
 

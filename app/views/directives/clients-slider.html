@@ -1,0 +1,77 @@
+<div class="clients-slider">
+
+  <div class="clients-slider-viewport">  
+    <div class="clients-slider-reel" style="left : {{leftReel}}%; width: {{widthReel}}%">
+      
+      <!--SLIDES-->
+      <div
+        class="clients-slide"
+        layout="row"
+        layout-align="space-between center"
+        style="width: {{widthSlide}}%">
+        
+        <div class="client-item" flex="45">
+          <img src="images/carloslopez.jpg" class="client-item-avatar" alt="">
+          <h5>Carlos López</h5>
+          <h6>CONSEJOSANO</h6>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
+        </div>
+
+        <div class="client-item" flex="45">
+          <img src="images/alexandra.jpg" class="client-item-avatar" alt="">
+          <h5>Alexandra Zapata-Hojel</h5>
+          <h6>MEJORA TU ESCUELA</h6>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
+        </div>   
+
+      </div>
+
+      <div
+        class="clients-slide"
+        layout="row"
+        layout-align="space-between center"
+        style="width: {{widthSlide}}%">
+        
+        <div class="client-item" flex="45">
+          <img src="images/carloslopez.jpg" class="client-item-avatar" alt="">
+          <h5>Carlos López</h5>
+          <h6>CONSEJOSANO</h6>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
+        </div>
+
+        <div class="client-item" flex="45">
+          <img src="images/alexandra.jpg" class="client-item-avatar" alt="">
+          <h5>Alexandra Zapata-Hojel</h5>
+          <h6>MEJORA TU ESCUELA</h6>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
+        </div>   
+
+      </div>
+
+      
+      <!--/SLIDES-->
+
+      <div class="clear"></div>
+    </div>
+
+  </div>
+
+    
+    <a ng-click="movePrev()" href="" class="clients-slider-arrow clients-slider-arrow-left">
+      <img src="images/flechaa.png" alt="">
+    </a>
+    <a ng-click="moveNext()" href="" class="clients-slider-arrow clients-slider-arrow-right">
+      <img src="images/flechab.png" alt="">    
+    </a>
+
+    <div class="clients-slider-bullets">
+      <a 
+        href=""
+        ng-repeat="i in getNumber(itemsCount) track by $index"
+        ng-class="{'client-slider-bullet-active' : $index == selectedIndex}"
+        ng-click="moveTo($index)"
+        >
+      </a>
+    </div>
+
+</div>
