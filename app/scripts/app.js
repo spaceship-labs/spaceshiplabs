@@ -17,9 +17,11 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngMaterial',
-    'angular-carousel'
+    'angular-carousel',
+    'contentful',
+    'btford.markdown'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, contentfulProvider) {
 
     $locationProvider.html5Mode(true);
 
@@ -64,11 +66,21 @@ angular
         controller: 'ProjectsCtrl',
         controllerAs: 'projects'
       })
+      .when('/post/:slug', {
+        templateUrl: 'views/post.html',
+        controller: 'PostCtrl',
+        controllerAs: 'post'
+      })
       .otherwise({
         redirectTo: '/'
       });
 
-    $locationProvider.hashPrefix('!');      
+    $locationProvider.hashPrefix('!');
+
+    contentfulProvider.setOptions({
+        space: '3w73jmlpbmx4',
+        accessToken: '13e3b2302d52cfddc539a661274f356bb61a201121d77918faad10e4c415f653'
+    });
 
   });
 

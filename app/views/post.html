@@ -1,0 +1,94 @@
+<!--<div
+  class="contentful-wrapper"
+  contentful-entry="getContentfulQuery()">-->
+
+<div class="contentful-wrapper">
+
+  <div class="container section-title section-title-blog center-content">
+    <h1><img src="images/icono_periodico.png" alt=""> {{entry.fields.title}}</h1>
+
+    <div class="section-title-options" >
+      <section layout="row" class="container container-xlg container-no-padding">
+        <form flex="20" flex-sm="100">
+          <section layout="row" layout-align="center center">
+            <a href="#" flex="20"><img src="images/buscar2.png" alt=""></a>
+            <md-input-container flex>
+                <label>Busca una noticia</label>
+              <input ng-model="user.email" type="text">
+            </md-input-container>
+          </section>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <div class="blog">
+
+    <div class="single-thumb" style="background: url(https://{{entry.fields.featuredImage.fields.file.url}}) center no-repeat"></div>
+
+    <div class="single container container-xlg" layout="row" layout-sm="column" layout-align="space-between start">
+
+      <div class="single-content" flex="70" flex-sm="100">
+        <h1>{{entry.fields.title}}</h1>
+        <p class="single-data">
+          <span>{{entry.fields.date}}</span> | <strong>Author: {{entry.fields.author[0].fields.name}}</strong>
+        </p>
+        <div class="single-post-content">
+          <div btf-markdown="entry.fields.body"></div>
+          <!--<p>{{entry.fields.body}}</p>-->
+
+          <div class="clear"></div>
+        </div>
+
+        <div class="single-tags">
+          <p>
+            <a
+              ng-repeat="tag in entry.fields.tags"
+              ng-href="#{{tag}}">
+              {{tag}}
+            </a>
+          </p>
+        </div>
+
+        <div class="fb-comments" data-href="" data-width="672" data-numposts="2"></div>
+
+      </div>
+
+      <div class="blog-sidebar" flex="25" flex-sm="100">
+
+        <div
+            ng-repeat="entryItem in entries"
+            class="blog-sidebar-card">
+
+          <div class="card-thumb" style="background: url(https://{{entryItem.fields.featuredImage.fields.file.url}}?w=500&h=500) center no-repeat;">
+            <a ng-href="/post/{{entryItem.fields.slug}}" class="absolute-link"></a>
+          </div>
+          <div class="card-content">
+            <h4><a ng-href="/post/{{entryItem.fields.slug}}">{{entryItem.fields.title}}</a></h4>
+            <p class="card-content-data">
+              <strong>Author: {{entryItem.fields.author[0].fields.name}}</strong>
+            </p>
+            <p class="card-content-data">
+              <small><img src="images/calendario.png" alt=""> Date {{entryItem.fields.date}}</small>
+            </p>
+            <p class="card-content-excerpt">
+              {{entryItem.fields.body | limitTo:150}} <span ng-if="entryItem.fields.body.length > 150">...</span>
+            </p>
+            <div class="action-btn-wrap">
+              <a ng-href="/post/{{entryItem.fields.slug}}" class="action-btn action-btn-alt">Ver más</a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="fb-page" data-href="https://www.facebook.com/Spaceshiplabs" data-width="240" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Spaceshiplabs"><a href="https://www.facebook.com/Spaceshiplabs">Spaceshiplabs</a></blockquote></div></div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<ng-include src="'views/contact-us.html'"></ng-include>

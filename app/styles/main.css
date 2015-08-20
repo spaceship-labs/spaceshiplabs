@@ -899,7 +899,12 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .single-post-content h2,
 .single-post-content h3,
-.single-post-content h4{color: #00CAD6}
+.single-post-content h4{
+  color: #00CAD6;
+  margin:16px 0;
+}
+
+.single-post-content p{margin: 10px 0;}
 
 /*Team Carlos Barahona*/
 
@@ -932,6 +937,9 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .text-design.community{width: 40%;margin: 0 auto}
 /*Team Carlos Barahona*/
 
+.single-tags{
+  margin-top: 20px;
+}
 
 .single-tags a{
   background: #FAFAFA;
@@ -1012,6 +1020,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   margin-top: 12px!important;
   text-align: justify;
 }
+
+.card-content .action-btn-wrap{padding-bottom: 20px}
 
 .card-content .action-btn{
   font-size: 16px;
