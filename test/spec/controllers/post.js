@@ -17,7 +17,4 @@ describe('Controller: PostCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(PostCtrl.awesomeThings.length).toBe(3);
-  });
 });
