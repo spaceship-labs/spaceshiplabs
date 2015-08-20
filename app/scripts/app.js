@@ -66,7 +66,7 @@ angular
         controller: 'ProjectsCtrl',
         controllerAs: 'projects'
       })
-      .when('/post/:slug', {
+      .when('/:slug', {
         templateUrl: 'views/post.html',
         controller: 'PostCtrl',
         controllerAs: 'post'

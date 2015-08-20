@@ -22,11 +22,11 @@
   <div
     ng-repeat="entry in entries"
     class="news-item"
-    style="background: url(https://{{entry.fields.featuredImage.fields.file.url}}) no-repeat"
+    ng-style="{ 'background': 'url(https://' + entry.fields.featuredImage.fields.file.url + ') center no-repeat' }"
     flex="33"
     flex-sm="100">
 
-    <a ng-href="/post/{{entry.fields.slug}}" class="absolute-link"></a>
+    <a ng-href="/{{entry.fields.slug}}" class="absolute-link"></a>
     <div class="news-item-excerpt">
       <p>{{entry.fields.title}}</p>
     </div>
