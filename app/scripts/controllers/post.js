@@ -8,51 +8,25 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('PostCtrl', function ($scope, $routeParams,  contentful) {
-    console.log($routeParams.slug);
+  .controller('PostCtrl', function ($scope, $routeParams, blogService) {
     $scope.postSlug = $routeParams.slug || 'down-the-rabbit-hole';
-    //$scope.postSlug = 'down-the-rabbit-hole';
-    $scope.postType = '2wKn6yEnZewu2SCCkus4as';
+    $scope.entries = [];
+    $scope.entry = {};
+    $scope.postsLimit = 3;
 
-    $scope.getSingleEntryQuery = function(){
-      var query = 'content_type='+ $scope.postType + '&fields.slug=' + $scope.postSlug + '&limit=1';
-      return query;
-    };
-
-    $scope.getRecentEntriesQuery = function(){
-      var query = 'content_type='+ $scope.postType + '&limit=3&order=fields.date';
-      return query;
-    };
-
-
-    $scope.getSingleEntry = function(){
-      contentful.entries( $scope.getSingleEntryQuery() ).then(function(response){
-        if(response.status === 200){
-          if(response.data.items.length > 0){
-            $scope.entry = response.data.items[0];
-            console.log($scope.entry);
-          }
-        }
+    $scope.getPost = function(){
+      blogService.getSingleEntry($scope.postSlug).then(function(entry){
+        $scope.entry = entry;
       });
     };
 
-    $scope.getRecentEntries = function(){
-      contentful.entries( $scope.getRecentEntriesQuery() ).then(function(response){
-        if(response.status === 200){
-          if(response.data.items.length > 0){
-            $scope.entries = response.data.items;
-          }
-        }
+    $scope.getRecentPosts = function(){
+      blogService.getRecentEntries($scope.postsLimit).then(function(entries){
+        $scope.entries = entries;
       });
     };
 
-    $scope.getSingleEntry();
-    $scope.getRecentEntries();
-
-
-    /*contentful.entry('1asN98Ph3mUiCYIYiiqwko').then(function(response){
-      console.log(response);
-
-    });*/
+    $scope.getPost();
+    $scope.getRecentPosts();
 
   });

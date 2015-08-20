@@ -20,38 +20,15 @@
 <div class="news-wrapper" layout="row" layout-sm="column">
 
   <div
+    ng-repeat="entry in entries"
     class="news-item"
-    style="background: url(images/foto1.jpg) no-repeat"
+    style="background: url(https://{{entry.fields.featuredImage.fields.file.url}}) no-repeat"
     flex="33"
     flex-sm="100">
 
-    <a href="#" class="absolute-link"></a>
+    <a ng-href="/post/{{entryItem.fields.slug}}" class="absolute-link"></a>
     <div class="news-item-excerpt">
-      <p>Lanzamiento rediseño mimbu</p>
-    </div>
-  </div>
-
-  <div
-    class="news-item"
-    style="background: url(images/foto2.jpg) no-repeat"
-    flex="33"
-    flex-sm="100">
-
-    <a href="#" class="absolute-link"></a>
-    <div class="news-item-excerpt">
-     <p>Nueva app Yellow Transfers</p>
-    </div>
-
-  </div>
-  <div
-    class="news-item"
-    style="background: url(images/foto3.jpg) no-repeat"
-    flex="33"
-    flex-sm="100">
-
-    <a href="#" class="absolute-link"></a>
-    <div class="news-item-excerpt">
-     <p>App en proceso</p>
+      <p>{{entry.fields.title}}</p>
     </div>
   </div>
 

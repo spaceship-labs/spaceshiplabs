@@ -8,10 +8,14 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('BlogCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('BlogCtrl', function ($scope, blogService) {
+    $scope.entries = [];
+
+    $scope.getRecentPosts = function(){
+      blogService.getRecentEntries(5).then(function(entries){
+        $scope.entries = entries;
+      });
+    };
+    $scope.getRecentPosts();
+
   });

@@ -8,21 +8,13 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('HomeCtrl', function ($scope) {
+  .controller('HomeCtrl', function ($scope, blogService) {
 
-		$scope.bannerGraphImgs = [0,1];
-	  $scope.bannerGraphImgsIndex = 0;
-
-	  $scope.carouselNext = function(){
-	    $scope.bannerGraphImgsIndex = ++$scope.bannerGraphImgsIndex % $scope.bannerGraphImgs.length;
-	  };
-
-	  $scope.carouselBack = function(){
-	    $scope.bannerGraphImgsIndex = --$scope.bannerGraphImgsIndex % $scope.bannerGraphImgs.length;
-	  };
-
-	  $scope.goToSlide = function(index){
-	    $scope.bannerGraphImgsIndex = index;
-	  };
+    $scope.getRecentPosts = function(){
+      blogService.getRecentEntries(3).then(function(entries){
+        $scope.entries = entries;
+      });
+    };
+    $scope.getRecentPosts();
 
   });
