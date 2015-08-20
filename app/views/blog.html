@@ -26,7 +26,7 @@
       flex
       flex-sm="100">
 
-      <a ng-href="/post/{{entryItem.fields.slug}}" class="absolute-link"></a>
+      <a ng-href="/post/{{entry.fields.slug}}" class="absolute-link"></a>
       <div class="news-item-excerpt">
         <h4>{{entry.fields.title}}</h4>
         <p>{{entry.fields.body | limitTo:50}} <span ng-if="entry.fields.body.length > 50">...</span></p>
@@ -45,7 +45,7 @@
       flex="50"
       flex-sm="100">
 
-      <a ng-href="/post/{{entryItem.fields.slug}}" class="absolute-link"></a>
+      <a ng-href="/post/{{entry.fields.slug}}" class="absolute-link"></a>
       <div class="news-item-excerpt">
         <h4>{{entry.fields.title}}</h4>
         <p>{{entry.fields.body | limitTo:50}} <span ng-if="entry.fields.body.length > 50">...</span></p>
@@ -63,7 +63,7 @@
       flex="50"
       flex-sm="100">
 
-      <a ng-href="/post/{{entryItem.fields.slug}}" class="absolute-link"></a>
+      <a ng-href="/post/{{entry.fields.slug}}" class="absolute-link"></a>
       <div class="news-item-excerpt">
         <h4>{{entry.fields.title}}</h4>
         <p>{{entry.fields.body | limitTo:50}} <span ng-if="entry.fields.body.length > 50">...</span></p>

@@ -12,6 +12,7 @@ angular.module('spaceshiplabsApp')
     // AngularJS will instantiate a singleton by calling "new" on this function
 
     var postType = '2wKn6yEnZewu2SCCkus4as';
+    //var postType = 'post';
 
     this.getSingleEntryQuery = function(postSlug){
       var query = 'content_type='+ postType + '&fields.slug=' + postSlug + '&limit=1';
@@ -20,7 +21,9 @@ angular.module('spaceshiplabsApp')
 
     this.getRecentEntriesQuery = function(entriesLimit){
       entriesLimit = entriesLimit || 3;
-      var query = 'content_type='+ postType + '&limit=' + entriesLimit + '&order=fields.date';
+      //var orderBy = 'created_at';
+      var orderBy = 'date';
+      var query = 'content_type='+ postType + '&limit=' + entriesLimit + '&order=fields.' + orderBy;
       return query;
     };
 
@@ -31,6 +34,7 @@ angular.module('spaceshiplabsApp')
           if(response.status === 200){
             if(response.data.items.length > 0){
               var entry = response.data.items[0];
+              console.log(entry);
               return entry;
             }
           }
@@ -42,6 +46,7 @@ angular.module('spaceshiplabsApp')
           if(response.status === 200){
             if(response.data.items.length > 0){
               var entries = response.data.items;
+              console.log(entries);
               return entries;
             }
           }

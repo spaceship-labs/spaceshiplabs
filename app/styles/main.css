@@ -755,6 +755,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .news-item{
   background-size: cover!important;
+  background-position: center!important;
   color: #fff;
   min-height: 300px;
   text-align: center;
@@ -1322,6 +1323,3 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 }
 
-@media screen and (max-aspect-ratio: 16/9) {
-  #landing-video{width: auto}
-}
