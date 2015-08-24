@@ -22,14 +22,19 @@
     <div
       ng-repeat="entry in entries | limitTo:1:0"
       class="news-item"
-      ng-style="{ 'background': 'url(https://' + entry.fields.featuredImage.fields.file.url + ') center no-repeat' }"
+      ng-style="{ 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }"
+      ng-class="{ 'news-item-default' : !entry.thumbnail_images.full.url  }"
       flex
       flex-sm="100">
 
-      <a ng-href="/{{entry.fields.slug}}" class="absolute-link"></a>
+      <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
       <div class="news-item-excerpt">
-        <h4>{{entry.fields.title}}</h4>
-        <p>{{entry.fields.body | limitTo:50}} <span ng-if="entry.fields.body.length > 50">...</span></p>
+        <div class="news-item-excerpt-inner">
+          <h4>{{entry.title}}</h4>
+          <p>
+            <span ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
+          </p>
+        </div>
       </div>
     </div>
 
@@ -41,14 +46,23 @@
     <div
       ng-repeat="entry in entries | limitTo:2:1"
       class="news-item"
-      style="background: url(https://{{entry.fields.featuredImage.fields.file.url}}) no-repeat"
+      ng-style="
+
+        entry.thumbnail_images.full.url && { 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }
+        ||
+        !entry.thumbnail_images.full.url && { 'background': 'url(' + entry.attachments[0].images.full.url + ') center no-repeat' }
+      "
       flex="50"
       flex-sm="100">
 
-      <a ng-href="/{{entry.fields.slug}}" class="absolute-link"></a>
+      <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
       <div class="news-item-excerpt">
-        <h4>{{entry.fields.title}}</h4>
-        <p>{{entry.fields.body | limitTo:50}} <span ng-if="entry.fields.body.length > 50">...</span></p>
+        <div class="news-item-excerpt-inner">
+          <h4>{{entry.title}}</h4>
+          <p>
+            <span ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
+          </p>
+        </div>
       </div>
     </div>
 
@@ -57,16 +71,25 @@
 	<div class="news-wrapper" layout="row" layout-sm="column">
 
     <div
-      ng-repeat="entry in entries | limitTo:3:5"
+      ng-repeat="entry in entries | limitTo:4:3"
       class="news-item"
-      style="background: url(https://{{entry.fields.featuredImage.fields.file.url}}) no-repeat"
+      ng-style="
+
+        entry.thumbnail_images.full.url && { 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }
+        ||
+        !entry.thumbnail_images.full.url && { 'background': 'url(' + entry.attachments[0].images.full.url + ') center no-repeat' }
+      "
       flex="50"
       flex-sm="100">
 
-      <a ng-href="/{{entry.fields.slug}}" class="absolute-link"></a>
+      <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
       <div class="news-item-excerpt">
-        <h4>{{entry.fields.title}}</h4>
-        <p>{{entry.fields.body | limitTo:50}} <span ng-if="entry.fields.body.length > 50">...</span></p>
+        <div class="news-item-excerpt-inner">
+          <h4>{{entry.title}}</h4>
+          <p>
+            <span ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
+          </p>
+        </div>
       </div>
     </div>
 

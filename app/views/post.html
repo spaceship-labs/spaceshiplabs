@@ -5,7 +5,7 @@
 <div class="contentful-wrapper">
 
   <div class="container section-title section-title-blog center-content">
-    <h1><img src="images/icono_periodico.png" alt=""> {{entry.fields.title}}</h1>
+    <h1><img src="images/icono_periodico.png" alt=""> {{entry.title}}</h1>
 
     <div class="section-title-options" >
       <section layout="row" class="container container-xlg container-no-padding">
@@ -24,33 +24,46 @@
 
   <div class="blog">
 
-    <div class="single-thumb" ng-style="{ 'background': 'url(https://' + entry.fields.featuredImage.fields.file.url + ') center no-repeat' }"></div>
+    <div
+      ng-if="entry.thumbnail_images.full"
+      class="single-thumb"
+      ng-style="{ 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }"
+      >
+    </div>
+
+    <div
+      ng-if="!entry.thumbnail_images.full"
+      class="single-thumb"
+      ng-style="{ 'background': 'url(' + entry.attachments[0].images.full.url + ') center no-repeat' }"
+      >
+    </div>
+
 
     <div class="single container container-xlg" layout="row" layout-sm="column" layout-align="space-between start">
 
       <div class="single-content" flex="70" flex-sm="100">
-        <h1>{{entry.fields.title}}</h1>
+        <h1>{{entry.title}}</h1>
         <p class="single-data">
-          <span>{{entry.fields.date}}</span> | <strong>Author: {{entry.fields.author[0].fields.name}}</strong>
+          <span>{{entry.date}}</span> | <strong>Author: {{entry.author.nickname}}</strong>
         </p>
-        <div class="single-post-content">
-          <div btf-markdown="entry.fields.body"></div>
-          <!--<p>{{entry.fields.body}}</p>-->
-
+        <div
+          class="single-post-content"
+          ng-bind-html="entry.content"
+        >
           <div class="clear"></div>
         </div>
 
         <div class="single-tags">
           <p>
             <a
-              ng-repeat="tag in entry.fields.tags"
-              ng-href="#{{tag}}">
-              {{tag}}
+              ng-repeat="tag in entry.tags"
+              ng-href="#{{tag.title}}">
+              {{tag.title}}
             </a>
           </p>
         </div>
 
-        <div class="fb-comments" data-href="" data-width="672" data-numposts="2"></div>
+        <div class="fb-comments" data-href="{{ getAbsUrl() }}" data-width="672" data-numposts="2"></div>
 
       </div>
 
@@ -60,25 +73,59 @@
             ng-repeat="entryItem in entries"
             class="blog-sidebar-card">
 
-          <div class="card-thumb" ng-style="{ 'background': 'url(https://' + entryItem.fields.featuredImage.fields.file.url + '?w=500&h=500) center no-repeat' }">
-            <a ng-href="/{{entryItem.fields.slug}}" class="absolute-link"></a>
+          <div
+            ng-if="entryItem.thumbnail_images.blog.url"
+            class="card-thumb"
+            ng-style="{ 'background': 'url(' + entryItem.thumbnail_images.blog.url + ') center no-repeat' }">
+            <a ng-href="/{{entryItem.slug}}" class="absolute-link"></a>
           </div>
+
+          <div
+            ng-if="!entryItem.thumbnail_images.blog.url"
+            class="card-thumb"
+            ng-style="{ 'background': 'url(' + entryItem.attachments[0].images.blog.url + ') center no-repeat' }">
+            <a ng-href="/{{entryItem.slug}}" class="absolute-link"></a>
+          </div>
+
           <div class="card-content">
-            <h4><a ng-href="/{{entryItem.fields.slug}}">{{entryItem.fields.title}}</a></h4>
+            <h4><a ng-href="/{{entryItem.slug}}">{{entryItem.title}}</a></h4>
             <p class="card-content-data">
-              <strong>Author: {{entryItem.fields.author[0].fields.name}}</strong>
+              <strong>Author: {{entryItem.author.nickname}}</strong>
             </p>
             <p class="card-content-data">
-              <small><img src="images/calendario.png" alt=""> Date {{entryItem.fields.date}}</small>
+              <small><img src="images/calendario.png" alt=""> Date {{entryItem.date}}</small>
             </p>
             <p class="card-content-excerpt">
-              {{entryItem.fields.body | limitTo:150}} <span ng-if="entryItem.fields.body.length > 150">...</span>
+              <span ng-bind-html="entryItem.excerpt | limitTo:150"></span> <span ng-if="entryItem.excerpt.length > 150">...</span>
             </p>
             <div class="action-btn-wrap">
-              <a ng-href="/{{entryItem.fields.slug}}" class="action-btn action-btn-alt">Ver más</a>
+              <a ng-href="/{{entryItem.slug}}" class="action-btn action-btn-alt">Ver más</a>
             </div>
           </div>
 
+        </div>
+
+        <div class="blog-sidebar-collections">
+          <h4>Categorías</h4>
+          <div layout="row" layout-align="space-between start" layout-wrap>
+            <a
+              ng-repeat="category in categories"
+              flex="45"
+              href="#"
+              class="blog-sidebar-collection">{{category.fields.title}}</a>
+
+          </div>
+        </div>
+
+        <div class="blog-sidebar-collections">
+          <h4>Archivo</h4>
+          <div layout="row" layout-align="space-between start" layout-wrap>
+            <a flex="45" href="#" class="blog-sidebar-collection">2015</a>
+            <a flex="45" href="#" class="blog-sidebar-collection">2014</a>
+            <a flex="45" href="#" class="blog-sidebar-collection">2013</a>
+            <a flex="45" href="#" class="blog-sidebar-collection">2012</a>
+
+          </div>
         </div>
 
 

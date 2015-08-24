@@ -13,10 +13,12 @@ angular.module('spaceshiplabsApp')
     $scope.entries = [];
     $scope.entry = {};
     $scope.postsLimit = 3;
+    $scope.categories = [];
 
     $scope.getPost = function(){
       blogService.getSingleEntry($scope.postSlug).then(function(entry){
         $scope.entry = entry;
+        console.log($scope.entry);
       });
     };
 
@@ -26,7 +28,15 @@ angular.module('spaceshiplabsApp')
       });
     };
 
+    $scope.getCategories = function(){
+      blogService.getCategories(10).then(function(categories){
+        $scope.categories = categories;
+        console.log(categories);
+      });
+    };
+
     $scope.getPost();
     $scope.getRecentPosts();
+    //$scope.getCategories();
 
   });

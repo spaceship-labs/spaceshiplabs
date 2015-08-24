@@ -66,6 +66,11 @@ angular
         controller: 'ProjectsCtrl',
         controllerAs: 'projects'
       })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl',
+        controllerAs: 'contact'
+      })
       .when('/:slug', {
         templateUrl: 'views/post.html',
         controller: 'PostCtrl',

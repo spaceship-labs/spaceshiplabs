@@ -21,4 +21,8 @@ angular.module('spaceshiplabsApp')
 		$scope.isHome = ($location.path() === '/' ) ? true : false;
 		console.log( $location.path() );
 
+    $scope.getAbsUrl = function(){
+      return $location.absUrl();
+    };
+
   });
