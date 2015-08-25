@@ -51,8 +51,12 @@ angular.module('spaceshiplabsApp')
     this.getSingleEntry = function(postSlug){
 
       var queryUrl = this.getSingleEntryQuery(postSlug);
-      queryUrl += '&callback=JSON_CALLBACK';
-      return $http.jsonp( queryUrl ).then(function(response) {
+      //queryUrl += '&callback=JSON_CALLBACK';
+      var req = {
+        method: 'GET',
+        url: queryUrl
+      };
+      return $http( req ).then(function(response) {
           console.log(response);
           if(response.status === 200){
             return response.data.post;
@@ -70,8 +74,12 @@ angular.module('spaceshiplabsApp')
     this.getRecentEntries = function(entriesLimit){
 
       var queryUrl = this.getRecentEntriesQuery(entriesLimit);
-      queryUrl += '&callback=JSON_CALLBACK';
-      return $http.jsonp( queryUrl ).then(function(response) {
+      //queryUrl += '&callback=JSON_CALLBACK';
+      var req = {
+        method: 'GET',
+        url: queryUrl
+      };
+      return $http( req ).then(function(response) {
           console.log(response);
           if( response.data.posts ){
             return response.data.posts;

@@ -106,7 +106,7 @@ angular
       fb_url: domainUrl ,
       fb_description: generalDescription,
       fb_type: 'article',
-      fb_image: logoImg
+      fb_image: domainUrl + '/' + logoImg
     };
 
   });

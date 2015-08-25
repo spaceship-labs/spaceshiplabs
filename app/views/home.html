@@ -17,7 +17,11 @@
  <h1 data-wow-duration="0.8s" class="wow fadeInUp">Noticias recientes</h1>
 </div>
 
-<div class="news-wrapper" layout="row" layout-sm="column">
+<div ng-show="!loadedPosts" class="container" layout="row" layout-sm="column" layout-align="center center">
+  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+
+<div ng-show="loadedPosts" class="news-wrapper" layout="row" layout-sm="column">
 
   <div
     ng-repeat="entry in entries"
@@ -38,8 +42,6 @@
       </div>
     </div>
   </div>
-
-
 
 </div>
 

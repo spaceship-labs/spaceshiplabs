@@ -16,7 +16,11 @@
 	</div>
 </div>
 
-<div class="blog">
+<div ng-show="!loadedPosts" class="container" layout="row" layout-sm="column" layout-align="center center">
+  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+
+<div ng-show="loadedPosts" class="blog">
 	<div class="news-wrapper" layout="row" layout-sm="column">
 
     <div
@@ -32,7 +36,7 @@
         <div class="news-item-excerpt-inner">
           <h4>{{entry.title}}</h4>
           <p>
-            <span ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
+            <span  class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
           </p>
         </div>
       </div>
@@ -60,7 +64,7 @@
         <div class="news-item-excerpt-inner">
           <h4>{{entry.title}}</h4>
           <p>
-            <span ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
+            <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
           </p>
         </div>
       </div>
@@ -87,7 +91,7 @@
         <div class="news-item-excerpt-inner">
           <h4>{{entry.title}}</h4>
           <p>
-            <span ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
+            <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
           </p>
         </div>
       </div>
