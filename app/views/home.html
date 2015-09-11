@@ -10,10 +10,10 @@
     </p>
   </div>
 
-  <a href="#" class="move-arrow"><img src="images/flecha.png" alt=""></a>
+  <a ng-click="scrollTo('recent-news')" href="" class="move-arrow"><img src="images/flecha.png" alt=""></a>
 </div>
 
-<div class="container container-alt center-content">
+<div id="recent-news" class="container container-alt center-content">
  <h1 data-wow-duration="0.8s" class="wow fadeInUp">Noticias recientes</h1>
 </div>
 
@@ -90,15 +90,13 @@
   </div>
 </div>
 
-<div class="spacees-landing container-alt" ng-style="style()" full-screen-wrapper>
-  <div class="container container-xlg">
-    <div class="container-sm">
-      <img src="images/spacees.png" alt="" />
-      <h2 data-wow-duration="0.8s" class="wow fadeInUp">ENTERPRISE SOFTWARE</h2>
-      <p>Plataforma para el manejo completo de la empresa desde recursos humanos, contabilidad, hasta la capacitación y canalización de ventas tanto electrónicas como analogas.</p>
-      <div class="action-btn-wrap">
-        <a href="#" class="action-btn">VIEW</a>
-      </div>
+<div class="spacees-landing container-alt" layout="row" layout-align="start center" ng-style="style()" full-screen-wrapper>
+  <div class="container-sm">
+    <img src="images/spacees.png" alt="" />
+    <h2 data-wow-duration="0.8s" class="wow fadeInUp">ENTERPRISE SOFTWARE</h2>
+    <p>Plataforma para el manejo completo de la empresa desde recursos humanos, contabilidad, hasta la capacitación y canalización de ventas tanto electrónicas como analogas.</p>
+    <div class="action-btn-wrap">
+      <a href="#" class="action-btn">VIEW</a>
     </div>
   </div>
 </div>

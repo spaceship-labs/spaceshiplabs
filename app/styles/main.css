@@ -611,7 +611,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   margin-bottom: 12px;
   max-width: 100%;
 }
-.spacees-landing .container-sm{margin: 0}
+.spacees-landing .container-sm{
+  margin: 0;
+  margin-left: 12%;
+}
 .spacees-landing h2{margin-bottom: 8px}
 .spacees-landing p{
   font-size: 15px;
@@ -1310,7 +1313,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
     width: 49%;
   }
 
+  .clients-slider{padding: 0}
   .clients-slider .client-item-avatar{position: static;}
+  .clients-slider .client-item{margin: 10px 0}
+  .clients-slider-arrow{display: none;}
 
   .info-wrap .guarantee img{max-width: 200px}
 

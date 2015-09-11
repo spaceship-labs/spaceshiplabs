@@ -51,7 +51,7 @@
   			>
   				<div class="projects-slide-content-inner container container-sm">
   					<h3>UI/UX Design</h3>
-  					<h1 ng-class="{'animated flipInX' : selectedIndex == 0}"><a href="#">Yellow Transfers</a></h1>
+  					<h1 ng-class="{'animated flipInX' : selectedIndexSlide == 0}"><a href="#">Yellow Transfers</a></h1>
   					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!</p>
   					<a href="#" class="project-link">
   						<img src="images/icono_proyectos6.png" alt="">
@@ -69,7 +69,7 @@
   			>
   				<div class="projects-slide-content-inner container container-sm">
   					<h3>UI/UX Design</h3>
-  					<h1 ng-class="{'animated flipInX' : selectedIndex == 1}"><a href="#">Proyecto de prueba</a></h1>
+  					<h1 ng-class="{'animated flipInX' : selectedIndexSlide == 1}"><a href="#">Proyecto de prueba</a></h1>
   					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!</p>
   					<a href="#" class="project-link">
   						<img src="images/icono_proyectos6.png" alt="">
@@ -87,11 +87,11 @@
 
 		<ul class="projects-slider-bullets">
 			<li ng-repeat="item in getNumber(itemsCount) track by $index">
-				<a href="#" ng-class="{'active-bullet' : selectedIndex == $index  }" ng-click="moveTo($index)"></a>
+				<a href="#" ng-class="{'active-bullet' : selectedIndexSlide == $index  }" ng-click="moveToProject($index)"></a>
 			</li>
 		</ul>
 
-		<a ng-click="moveNext()" href="#" class="slide-next"></a>
+		<a ng-click="moveNextProject()" href="#" class="slide-next"></a>
 
 	</div>
 </div>

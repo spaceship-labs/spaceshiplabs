@@ -88,27 +88,6 @@ angular
         accessToken: '13e3b2302d52cfddc539a661274f356bb61a201121d77918faad10e4c415f653'
     });*/
 
-  })
-
-
-  .run(function($rootScope, $location){
-    var domainUrl = $location.protocol() + "://" + $location.host() + ":" + $location.port();
-    var generalDescription = 'Tienes alguna idea innovadora, y quieres invertir en internet ? cuenta con nosotros para llevarla a cabo. Tenemos la experiencia y las herramientas para que tu proyecto sea todo un éxito.';
-    var generalTitle = 'Spaceship Labs - Diseño de páginas web, aplicaciones móviles, Diseño Gráfico y Software en General';
-    var generalName = 'SpaceshipLabs';
-    var logoImg = 'images/logo-og.png';
-
-    $rootScope.metatags = {
-      title: generalTitle,
-      description: generalDescription,
-      fb_title: generalTitle,
-      fb_site_name: generalName ,
-      fb_url: domainUrl ,
-      fb_description: generalDescription,
-      fb_type: 'article',
-      fb_image: domainUrl + '/' + logoImg
-    };
-
   });
 
 

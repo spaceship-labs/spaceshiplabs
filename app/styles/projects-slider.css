@@ -26,6 +26,7 @@
 }
 
 .projects-slide-image-inner{
+  background-position: center!important;
   background-size: cover!important;
   -webkit-animation: fadeinCustom 1s; /* Safari 4+ */
   -moz-animation:    fadeinCustom 1s; /* Fx 5+ */
