@@ -82,7 +82,7 @@ module.exports = function (grunt) {
           open: true,
           middleware: function (connect) {
             return [
-              modRewrite(['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg|\\.mp4$ /index.html [L]']),            
+              modRewrite(['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg|\\.mp4$ /index.html [L]']),
               connect.static('.tmp'),
               connect().use(
                 '/bower_components',
@@ -365,6 +365,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'images/{,*/}*.{webp}',
+            'json/*.json',
             'videos/{,*/}*.*',
             'styles/fonts/{,*/}*.*'
           ]
@@ -373,6 +374,13 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        },{
+          //for json responses(email)
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/json',
+          src: ['*.json'],
+          dest: '<%= yeoman.dist %>/json'
         }]
       },
       styles: {
@@ -467,7 +475,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'filerev',
-    'processhtml',    
+    'processhtml',
     'usemin',
     'htmlmin'
   ]);
