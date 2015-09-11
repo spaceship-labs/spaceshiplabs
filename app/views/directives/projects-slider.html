@@ -1,99 +1,84 @@
 <div class="projects-slider">
-	<div 
-		class="projects-slider-viewport" 
+	<div
+		class="projects-slider-viewport"
 		layout="row"
+    layout-sm="column"
 		ng-style="style()"
-		full-screen-wrapper		
+		full-screen-wrapper
 		>
-		
-		<div class="projects-slider-reel projects-slider-images-reel" 
-				ng-style="style()"
-				flex="50" 
-				full-screen-wrapper>
 
-			<!--Slides(por proyecto)-->
+    <div class="projects-slider-reel-wrapper projects-slider-images-reel-wrapper" flex="50" flex-sm="100">
+  		<div class="projects-slider-reel projects-slider-images-reel">
 
-			<div
-				ng-repeat="photos in projectsPhotos | orderBy:reverse"
-				ng-style="style()" 
-				full-screen-wrapper
-				class="projects-slide projects-slide-image"
-			>	
-				<!--Fotos de proyecto-->	
-				<div 
-					ng-repeat="photo in photos track by $index"
-					ng-if="selectedProjectPhoto == $index"
-					class="projects-slide-image-wrapper"
-					data-image-index="0"
-				>
-					<div 
-						style="background: url({{photo}}) no-repeat"
-						class="projects-slide-image-inner"
-					></div>
+  			<!--Slides(por proyecto)-->
 
-				</div>
-			</div>
+  			<div
+  				ng-repeat="photos in projectsPhotos | orderBy:reverse"
+  				ng-style="style()"
+  				full-screen-wrapper
+  				class="projects-slide projects-slide-image"
+  			>
+  				<!--Fotos de proyecto-->
+  				<div
+  					ng-repeat="photo in photos track by $index"
+  					ng-if="selectedProjectPhoto == $index"
+  					class="projects-slide-image-wrapper"
+  					data-image-index="0"
+  				>
+  					<div
+  						style="background: url({{photo}}) no-repeat"
+  						class="projects-slide-image-inner"
+  					></div>
 
-			<!--<div 
-				style="background: url(images/yellow_proyectos.jpg) no-repeat"
-				class="projects-slide projects-slide-image"
-				ng-style="style()" 
-				full-screen-wrapper
-				data-image-index="1"
-			>
-			</div>-->
+  				</div>
+  			</div>
 
+  		</div>
+    </div>
 
-			<!---->
+    <div class="projects-slider-reel-wrapper projects-slider-content-reel-wrapper" flex="50" flex-sm="100">
+  		<div
+  			class="projects-slider-reel projects-slider-content-reel"
+  		>
+  			<!--Slides-->
+  			<div
+  				class="projects-slide projects-slide-content container-alt container"
+  				ng-style="style()"
+  				full-screen-wrapper
+  				layout="column"
+  				layout-align="center center"
+  				data-content-index="0"
+  			>
+  				<div class="projects-slide-content-inner container container-sm">
+  					<h3>UI/UX Design</h3>
+  					<h1 ng-class="{'animated flipInX' : selectedIndex == 0}"><a href="#">Yellow Transfers</a></h1>
+  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!</p>
+  					<a href="#" class="project-link">
+  						<img src="images/icono_proyectos6.png" alt="">
+  					</a>
+  				</div>
+  			</div>
 
-		</div> 
-		
-		<div 
-			class="projects-slider-reel projects-slider-content-reel"
-			ng-style="style()" 
-			flex="50"
-			full-screen-wrapper			
-		>
-			<!--Slides-->
-			<div 
-				class="projects-slide projects-slide-content container-alt container"
-				ng-style="style()" 
-				full-screen-wrapper
-				layout="column"
-				layout-align="center center"
-				data-content-index="0"					
-			>
-				<div class="projects-slide-content-inner container container-sm">
-					<h3>UI/UX Design</h3>
-					<h1 ng-class="{'animated flipInX' : selectedIndex == 0}">Yellow Transfers</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!</p>
-					<a href="#" class="project-link">
-						<img src="images/icono_proyectos6.png" alt="">
-					</a>
-				</div>
-			</div>
+  			<div
+  				class="projects-slide projects-slide-content container-alt container"
+  				ng-style="style()"
+  				full-screen-wrapper
+  				layout="column"
+  				layout-align="center center"
+  				data-content-index="1"
+  			>
+  				<div class="projects-slide-content-inner container container-sm">
+  					<h3>UI/UX Design</h3>
+  					<h1 ng-class="{'animated flipInX' : selectedIndex == 1}"><a href="#">Proyecto de prueba</a></h1>
+  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!</p>
+  					<a href="#" class="project-link">
+  						<img src="images/icono_proyectos6.png" alt="">
+  					</a>
+  				</div>
+  			</div>
 
-			<div 
-				class="projects-slide projects-slide-content container-alt container"
-				ng-style="style()" 
-				full-screen-wrapper
-				layout="column"
-				layout-align="center center"
-				data-content-index="1"					
-			>
-				<div class="projects-slide-content-inner container container-sm">
-					<h3>UI/UX Design</h3>
-					<h1 ng-class="{'animated flipInX' : selectedIndex == 1}">Proyecto de prueba</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!</p>
-					<a href="#" class="project-link">
-						<img src="images/icono_proyectos6.png" alt="">
-					</a>
-				</div>
-			</div>			
-
-			<!---->
-
-		</div>
+  		</div>
+    </div>
 
 		<div class="projects-slider-nav" layout="row" layout-align="space-between center">
 			<a ng-click="movePrev()" href="#"><img src="images/flechaa.png" alt=""></a>

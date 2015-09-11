@@ -107,59 +107,77 @@
   <div class="mentions-landing-content container container-xlg center-content">
     <h1 data-wow-duration="0.8s" class="wow fadeInUp">Menciones</h1>
 
-    <div class="mention-landing-row" layout="row" layout-sm="column">
+    <div class="mention-landing-row" layout-wrap layout="row" layout-sm="column">
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/imco.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/cnn.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="0.1s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/telemundo.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="0.3s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/televisa.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="0.5s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/eluniversal.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="0.7s" data-wow-duration="0.2s"
       flex-sm="100"></a>
-    </div>
 
-    <div class="mention-landing-row" layout="row" layout-sm="column">
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/excelsor.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="0.9s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/lajornada.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="1.1s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/animalpolitico.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="1.3s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/opendata.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="1.5s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/imco.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="1.7s" data-wow-duration="0.2s"
       flex-sm="100"></a>
     </div>
 
@@ -182,21 +200,7 @@
       <a href="/projects" class="action-btn">Ver todos los proyectos</a>
     </div>
   </div>
-  <div layout="row">
-
-    <div
-      flex="50"
-      class="portfolio-item"
-      style="background: url(images/foto-uno.jpg) center no-repeat;">
-    </div>
-
-    <div
-      flex="50"
-      class="portfolio-item"
-      style="background: url(images/foto-b.jpg) center no-repeat;">
-    </div>
-
-  </div>
+  <projects-slider></projects-slider>
 </div>
 
 <ng-include src="'views/contact-us.html'"></ng-include>

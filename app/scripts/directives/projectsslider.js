@@ -7,28 +7,32 @@
  * # projectsSlider
  */
 angular.module('spaceshiplabsApp')
-  .directive('projectsSlider', function () {
+  .directive('projectsSlider', function ($interval) {
     return {
       templateUrl: 'views/directives/projects-slider.html',
       restrict: 'E',
       link: function postLink(scope) {
-      	scope.selectedIndex = 0;
-        scope.selectedProjectPhoto = 0;
-      	scope.itemsCount = 2;
-        scope.projectsPhotos = [
-          ['images/yellow_proyectos.jpg','images/lap.png'],
-          ['images/aboutus.jpg','images/imagen6.png']
-        ];
+
+        scope.setUp = function(){
+          scope.selectedIndex = 0;
+          scope.selectedProjectPhoto = 0;
+          scope.itemsCount = 2;
+          scope.projectsPhotos = [
+            ['images/yellow_proyectos.jpg','images/lap.png'],
+            ['images/aboutus.jpg','images/imagen6.png']
+          ];
+          scope.sliderInterval = $interval(scope.moveNext, 4000);
+        };
 
         scope.getNumber = function(num) {
-            return new Array(num);   
-        };        
+            return new Array(num);
+        };
 
 				scope.$watch('selectedIndex', function (newValue, oldValue) {
 					var topImages = 0;
           var topContent = 0;
           console.log(newValue);
-          if(newValue === oldValue || newValue === 0){ 
+          if(newValue === oldValue || newValue === 0){
             topContent = ( newValue * (-100) ) + '%';
             topImages = ( (scope.itemsCount-1) * (-100) ) + '%';
             $('.projects-slider-images-reel').css('top', topImages);
@@ -40,7 +44,7 @@ angular.module('spaceshiplabsApp')
           console.log(topImages);
 					$('.projects-slider-images-reel').css('top', topImages);
           $('.projects-slider-content-reel').css('top', topContent);
-				}, true); 
+				}, true);
 
       	scope.moveNext = function(){
       		if(scope.selectedIndex < (scope.itemsCount-1)){
@@ -48,6 +52,8 @@ angular.module('spaceshiplabsApp')
   				}else{
             scope.selectedIndex = 0;
           }
+          $interval.cancel(scope.sliderInterval);
+          scope.sliderInterval = $interval(scope.moveNext, 4000);
       	};
 
       	scope.movePrev = function(){
@@ -56,7 +62,7 @@ angular.module('spaceshiplabsApp')
   				}else{
             scope.selectedIndex = scope.itemsCount - 1;
           }
-      	}; 
+      	};
 
         scope.moveTo = function(index){
           scope.selectedIndex = index;
@@ -78,7 +84,9 @@ angular.module('spaceshiplabsApp')
           }else{
             scope.selectedProjectPhoto = photosCount - 1;
           }
-        }; 
+        };
+
+        scope.setUp();
 
       }
     };

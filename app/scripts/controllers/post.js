@@ -8,29 +8,13 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('PostCtrl', function ($scope, $rootScope, $routeParams, blogService, $location, $filter) {
+  .controller('PostCtrl', function ($scope, $rootScope, $routeParams, blogService, $location, $filter, metaTagsService) {
     $scope.postSlug = $routeParams.slug || 'down-the-rabbit-hole';
     $scope.entries = [];
     $scope.entry = {};
     $scope.postsLimit = 3;
     $scope.categories = [];
     $scope.loadedPost = false;
-
-    $scope.setMetaTags = function(generalTitle ,generalDescription, imageUrl){
-      var domainUrl = $location.protocol() + "://" + $location.host() + ":" + $location.port();
-      var generalName = 'SpaceshipLabs';
-
-      $rootScope.metatags = {
-        title: generalTitle,
-        description: generalDescription,
-        fb_title: generalTitle,
-        fb_site_name: generalName ,
-        fb_url: domainUrl ,
-        fb_description: generalDescription,
-        fb_type: 'article',
-        fb_image: imageUrl
-      };
-    };
 
     $scope.getPost = function(){
       blogService.getSingleEntry($scope.postSlug).then(function(entry){
@@ -43,7 +27,7 @@ angular.module('spaceshiplabsApp')
         }else if(entry.attachments){
           img = entry.attachments[0].images.full.url;
         }
-        $scope.setMetaTags(
+        metaTagsService.setMetaTags(
           entry.title,
           $filter('htmlToPlainText')(entry.excerpt),
           img

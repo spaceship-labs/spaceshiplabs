@@ -8,7 +8,7 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('MainCtrl', function ($scope, $mdSidenav, $location) {
+  .controller('MainCtrl', function ($scope, $mdSidenav, $location, metaTagsService) {
 
 	  $scope.toggleSidebar = function() {
       $mdSidenav('left').open();
@@ -19,10 +19,11 @@ angular.module('spaceshiplabsApp')
 	  };
 
 		$scope.isHome = ($location.path() === '/' ) ? true : false;
-		console.log( $location.path() );
 
     $scope.getAbsUrl = function(){
       return $location.absUrl();
     };
+
+    metaTagsService.setMetaTags();
 
   });
