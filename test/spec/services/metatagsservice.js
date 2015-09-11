@@ -11,8 +11,8 @@ describe('Service: metaTagsService', function () {
     metaTagsService = _metaTagsService_;
   }));
 
-  it('should do something', function () {
+  /*it('should do something', function () {
     expect(!!metaTagsService).toBe(true);
-  });
+  });*/
 
 });
