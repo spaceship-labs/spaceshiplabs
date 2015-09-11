@@ -17,11 +17,28 @@ angular.module('spaceshiplabsApp')
           scope.selectedIndexSlide = 0;
           scope.selectedProjectPhoto = 0;
           scope.itemsCount = 2;
+          scope.projects = [
+            {
+              type:'UI/UX Design & Software',
+              name:'Yellow Transfers',
+              description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+              url: '#',
+              images:['images/yellow_proyectos.jpg','images/lap.png']
+            },
+            {
+              type:'UI/UX Design',
+              name:'Capshia',
+              description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+              url: '#',
+              images: ['images/projects/capshia.jpg','images/projects/capshia2.jpg']
+            }
+          ];
+          console.log(scope.projects);
           scope.projectsPhotos = [
             ['images/yellow_proyectos.jpg','images/lap.png'],
-            ['images/aboutus.jpg','images/imagen6.png']
+            ['images/projects/capshia.jpg','images/imagen6.png']
           ];
-          scope.sliderInterval = $interval(scope.moveNextProject, 4000);
+          scope.sliderInterval = $interval(scope.moveNextProject, 6000);
         };
 
         scope.getNumber = function(num) {
@@ -31,7 +48,6 @@ angular.module('spaceshiplabsApp')
 				scope.$watch('selectedIndexSlide', function (newValue, oldValue) {
 					var topImages = 0;
           var topContent = 0;
-          console.log(newValue);
           if(newValue === oldValue || newValue === 0){
             topContent = ( newValue * (-100) ) + '%';
             topImages = ( (scope.itemsCount-1) * (-100) ) + '%';
@@ -41,7 +57,6 @@ angular.module('spaceshiplabsApp')
           }
 					topContent = ( newValue * (-100) ) + '%';
           topImages = ( ( ( scope.itemsCount - newValue ) -1 )  * (-100) ) + '%';
-          console.log(topImages);
 					$('.projects-slider-images-reel').css('top', topImages);
           $('.projects-slider-content-reel').css('top', topContent);
 				}, true);
@@ -53,7 +68,7 @@ angular.module('spaceshiplabsApp')
             scope.selectedIndexSlide = 0;
           }
           $interval.cancel(scope.sliderInterval);
-          scope.sliderInterval = $interval(scope.moveNextProject, 4000);
+          scope.sliderInterval = $interval(scope.moveNextProject, 6000);
       	};
 
       	scope.movePrev = function(){
@@ -63,17 +78,17 @@ angular.module('spaceshiplabsApp')
             scope.selectedIndexSlide = scope.itemsCount - 1;
           }
           $interval.cancel(scope.sliderInterval);
-          scope.sliderInterval = $interval(scope.moveNextProject, 4000);
+          scope.sliderInterval = $interval(scope.moveNextProject, 6000);
       	};
 
         scope.moveToProject = function(index){
           scope.selectedIndexSlide = index;
           $interval.cancel(scope.sliderInterval);
-          scope.sliderInterval = $interval(scope.moveNextProject, 4000);
+          scope.sliderInterval = $interval(scope.moveNextProject, 6000);
         };
 
         scope.moveNextPhoto = function(){
-          var photosCount = scope.projectsPhotos[scope.selectedIndexSlide].length;
+          var photosCount = scope.projects[scope.selectedIndexSlide].images.length;
           if(scope.selectedProjectPhoto < (photosCount-1)){
             scope.selectedProjectPhoto++;
           }else{
@@ -82,7 +97,7 @@ angular.module('spaceshiplabsApp')
         };
 
         scope.movePrevPhoto = function(){
-          var photosCount = scope.projectsPhotos[scope.selectedIndexSlide].length;
+          var photosCount = scope.projects[scope.selectedIndexSlide].photos.length;
           if(scope.selectedProjectPhoto > 0){
             scope.selectedProjectPhoto--;
           }else{
