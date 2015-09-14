@@ -7,7 +7,7 @@
     <meta charset="utf-8">
 
 
-    <title>{{ metatags.title }}</title>
+    <title ng-bind="metatags.title">Spaceship Labs - Diseño de páginas web, aplicaciones móviles, Diseño Gráfico y Software en General</title>
     <meta name="description" content="{{ metatags.description }}" >
     <meta name="robots" content="{{ metatags.robots }}" >
     <meta name="keywords" content="{{ metatags.keywords }}" >
@@ -31,6 +31,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/projects-slider.css">
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
   </head>
@@ -129,6 +130,8 @@
         <script src="scripts/services/blogservice.js"></script>
         <script src="scripts/controllers/contact.js"></script>
         <script src="scripts/filters/htmltoplaintext.js"></script>
+        <script src="scripts/services/metatagsservice.js"></script>
+        <script src="scripts/filters/customreverse.js"></script>
         <!-- endbuild -->
 
   <script>new WOW().init();</script>

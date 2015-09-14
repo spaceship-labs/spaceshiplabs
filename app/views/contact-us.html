@@ -1,25 +1,31 @@
 <div class="contact-us" layout="column" layout-align="center center" ng-style="style()" full-screen-wrapper>
-     <div class="contact-us-content container center-content">
-          <h1 data-wow-duration="0.8s" class="wow fadeInUp">Contáctanos</h1>
-          <div data-wow-delay="0.8s" data-wow-duration="0.8s" class="wow fadeInUp">
-               <p>
-                    Déjanos saber las necesidades de tu empresa.
-               </p>
-               <p>Estamos seguros que tenemos la mejor solución.</p>
-          </div>
-          <form action="#">
-               <input type="text" placeholder="Ingresar correo">
-               <input type="submit" value="ENVIAR">
-          </form>
+  <div class="contact-us-content container center-content">
+    <h1 data-wow-duration="0.8s" class="wow fadeInUp">Contáctanos</h1>
+    <div data-wow-delay="0.8s" data-wow-duration="0.8s" class="wow fadeInUp">
+       <p>
+            Déjanos saber las necesidades de tu empresa.
+       </p>
+       <p>Estamos seguros que tenemos la mejor solución.</p>
+    </div>
+    <form name="contactForm" novalidate ng-submit="doContact()">
+      <input type="email" required ng-model="contactData.email" name="email" placeholder="Ingresar correo">
+      <input type="hidden" required ng-model="contactData.message" name="message" value="Este es un mail desde divshot">
+      <input type="hidden" required ng-model="contactData.name" name="name" value="Usuario generico">
+      <input type="submit" value="ENVIAR">
+      <!--<p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.required"><span>Ingresa tu e-mail.</span></p>-->
+      <p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.email"><span>Este e-mail no es valido.</span></p>
+      <p class="contact-form-message" ng-show="emailSent"><span>Gracias por enviar tu mensaje.</span></p>
+      <p class="contact-form-message" ng-show="contactError"><span>Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
+    </form>
 
-          <div class="social-icons">
-               <a href="#"><img src="images/twitter.png" alt=""></a>
-               <a href="#"><img src="images/vine.png" alt=""></a>
-               <a href="#"><img src="images/insta.png" alt=""></a>
-               <a href="#"><img src="images/tumblr.png" alt=""></a>
-               <a href="#"><img src="images/fb.png" alt=""></a>
-               <a href="#"><img src="images/youtube.png" alt=""></a>
+    <div class="social-icons">
+      <a href="#"><img src="images/twitter.png" alt=""></a>
+      <a href="#"><img src="images/vine.png" alt=""></a>
+      <a href="#"><img src="images/insta.png" alt=""></a>
+      <a href="#"><img src="images/tumblr.png" alt=""></a>
+      <a href="#"><img src="images/fb.png" alt=""></a>
+      <a href="#"><img src="images/youtube.png" alt=""></a>
 
-          </div>
-     </div>
+    </div>
+  </div>
 </div>

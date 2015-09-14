@@ -10,10 +10,10 @@
     </p>
   </div>
 
-  <a href="#" class="move-arrow"><img src="images/flecha.png" alt=""></a>
+  <a ng-click="scrollTo('recent-news')" href="" class="move-arrow"><img src="images/flecha.png" alt=""></a>
 </div>
 
-<div class="container container-alt center-content">
+<div id="recent-news" class="container container-alt center-content">
  <h1 data-wow-duration="0.8s" class="wow fadeInUp">Noticias recientes</h1>
 </div>
 
@@ -89,15 +89,13 @@
   </div>
 </div>
 
-<div class="spacees-landing container-alt" ng-style="style()" full-screen-wrapper>
-  <div class="container container-xlg">
-    <div class="container-sm">
-      <img src="images/spacees.png" alt="" />
-      <h2 data-wow-duration="0.8s" class="wow fadeInUp">ENTERPRISE SOFTWARE</h2>
-      <p>Plataforma para el manejo completo de la empresa desde recursos humanos, contabilidad, hasta la capacitación y canalización de ventas tanto electrónicas como analogas.</p>
-      <div class="action-btn-wrap">
-        <a href="#" class="action-btn">VIEW</a>
-      </div>
+<div class="spacees-landing container-alt" layout="row" layout-align="start center" ng-style="style()" full-screen-wrapper>
+  <div class="container-sm">
+    <img src="images/spacees.png" alt="" />
+    <h2 data-wow-duration="0.8s" class="wow fadeInUp">ENTERPRISE SOFTWARE</h2>
+    <p>Plataforma para el manejo completo de la empresa desde recursos humanos, contabilidad, hasta la capacitación y canalización de ventas tanto electrónicas como analogas.</p>
+    <div class="action-btn-wrap">
+      <a href="#" class="action-btn">VIEW</a>
     </div>
   </div>
 </div>
@@ -106,59 +104,77 @@
   <div class="mentions-landing-content container container-xlg center-content">
     <h1 data-wow-duration="0.8s" class="wow fadeInUp">Menciones</h1>
 
-    <div class="mention-landing-row" layout="row" layout-sm="column">
+    <div class="mention-landing-row" layout-wrap layout="row" layout-sm="column">
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/imco.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/cnn.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="0.1s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/telemundo.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="0.3s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/televisa.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="0.5s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/eluniversal.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="0.7s" data-wow-duration="0.2s"
       flex-sm="100"></a>
-    </div>
 
-    <div class="mention-landing-row" layout="row" layout-sm="column">
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/excelsor.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="0.9s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/lajornada.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="1.1s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/animalpolitico.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="1.3s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/opendata.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="1.5s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a href="#"
-      class="mention-landing-item"
+      class="mention-landing-item wow fadeIn"
       style="background: url(images/imco.png) center no-repeat;"
       flex="20"
+      flex-md="33"
+      data-wow-delay="1.7s" data-wow-duration="0.2s"
       flex-sm="100"></a>
     </div>
 
@@ -181,21 +197,7 @@
       <a href="/projects" class="action-btn">Ver todos los proyectos</a>
     </div>
   </div>
-  <div layout="row">
-
-    <div
-      flex="50"
-      class="portfolio-item"
-      style="background: url(images/foto-uno.jpg) center no-repeat;">
-    </div>
-
-    <div
-      flex="50"
-      class="portfolio-item"
-      style="background: url(images/foto-b.jpg) center no-repeat;">
-    </div>
-
-  </div>
+  <projects-slider></projects-slider>
 </div>
 
 <ng-include src="'views/contact-us.html'"></ng-include>

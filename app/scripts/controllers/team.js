@@ -9,9 +9,4 @@
  */
 angular.module('spaceshiplabsApp')
   .controller('TeamCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   });

@@ -17,6 +17,18 @@ angular.module('spaceshiplabsApp')
         $scope.loadedPosts = true;
       });
     };
+
+    $scope.scrollTo = function(target){
+      setTimeout(
+          function(){
+              $('html, body').animate({
+                  scrollTop: $('#' + target).offset().top
+              }, 600);
+          },
+          300
+      );
+    };
+
     $scope.getRecentPosts();
 
   });
