@@ -1,4 +1,5 @@
 'use strict';
+/*global google */
 
 /**
  * @ngdoc function
@@ -28,7 +29,7 @@ angular.module('spaceshiplabsApp')
 
       // To add the marker to the map, call setMap();
       marker.setMap(map);
-    }
+    };
 
     google.maps.event.addDomListener(window, 'load', initialize);
 

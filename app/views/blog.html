@@ -2,7 +2,7 @@
 	<h1><img src="images/icono_periodico.png" alt=""> Noticias recientes</h1>
 
 	<div class="section-title-options" >
-		<section layout="row" class="container container-xlg container-no-padding">
+		<section layout="row" layout-align="space-between start" class="container container-xlg container-no-padding">
 		  <form flex="20" flex-sm="100">
 				<section layout="row" layout-align="center center">
 			  	<a href="#" flex="20"><img src="images/buscar2.png" alt=""></a>
@@ -12,6 +12,10 @@
 			    </md-input-container>
 				</section>
 		  </form>
+      <section ng-init="thumbsView = false">
+        <a href='' ng-click="thumbsView = true">v1</a>
+        <a href='' ng-click="thumbsView = false">v2</a>
+      </section>
 	  </section>
 	</div>
 </div>
@@ -21,83 +25,175 @@
 </div>
 
 <div ng-show="loadedPosts" class="blog">
-	<div class="news-wrapper" layout="row" layout-sm="column">
 
-    <div
-      ng-repeat="entry in entries | limitTo:1:0"
-      class="news-item"
-      ng-style="{ 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }"
-      ng-class="{ 'news-item-default' : !entry.thumbnail_images.full.url  }"
-      flex
-      flex-sm="100">
+  <ng-switch on="thumbsView">
 
-      <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
-      <div class="news-item-excerpt">
-        <div class="news-item-excerpt-inner">
-          <h4>{{entry.title}}</h4>
-          <p>
-            <span  class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
-          </p>
+    <!--START THUMBS VIEW-->
+    <div ng-switch-when="true" class="blog-thumbs-view">
+
+    	<div class="news-wrapper" layout="row" layout-sm="column">
+
+        <div
+          ng-repeat="entry in entries | limitTo:1:0"
+          class="news-item"
+          ng-style="{ 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }"
+          ng-class="{ 'news-item-default' : !entry.thumbnail_images.full.url  }"
+          flex
+          flex-sm="100">
+
+          <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
+          <div class="news-item-excerpt">
+            <div class="news-item-excerpt-inner">
+              <h4>{{entry.title}}</h4>
+              <p>
+                <span  class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
 
-	</div>
+    	</div>
 
-	<div class="news-wrapper" layout="row" layout-sm="column">
+    	<div class="news-wrapper" layout="row" layout-sm="column">
 
-    <div
-      ng-repeat="entry in entries | limitTo:2:1"
-      class="news-item"
-      ng-style="
+        <div
+          ng-repeat="entry in entries | limitTo:2:1"
+          class="news-item"
+          ng-style="
 
-        entry.thumbnail_images.full.url && { 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }
-        ||
-        !entry.thumbnail_images.full.url && { 'background': 'url(' + entry.attachments[0].images.full.url + ') center no-repeat' }
-      "
-      flex="50"
-      flex-sm="100">
+            entry.thumbnail_images.full.url && { 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }
+            ||
+            !entry.thumbnail_images.full.url && { 'background': 'url(' + entry.attachments[0].images.full.url + ') center no-repeat' }
+          "
+          flex="50"
+          flex-sm="100">
 
-      <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
-      <div class="news-item-excerpt">
-        <div class="news-item-excerpt-inner">
-          <h4>{{entry.title}}</h4>
-          <p>
-            <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
-          </p>
+          <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
+          <div class="news-item-excerpt">
+            <div class="news-item-excerpt-inner">
+              <h4>{{entry.title}}</h4>
+              <p>
+                <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-	</div>
+    	</div>
 
-	<div class="news-wrapper" layout="row" layout-sm="column">
+    	<div class="news-wrapper" layout="row" layout-sm="column">
 
-    <div
-      ng-repeat="entry in entries | limitTo:4:3"
-      class="news-item"
-      ng-style="
+        <div
+          ng-repeat="entry in entries | limitTo:4:3"
+          class="news-item"
+          ng-style="
 
-        entry.thumbnail_images.full.url && { 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }
-        ||
-        !entry.thumbnail_images.full.url && { 'background': 'url(' + entry.attachments[0].images.full.url + ') center no-repeat' }
-      "
-      flex="50"
-      flex-sm="100">
+            entry.thumbnail_images.full.url && { 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }
+            ||
+            !entry.thumbnail_images.full.url && { 'background': 'url(' + entry.attachments[0].images.full.url + ') center no-repeat' }
+          "
+          flex="50"
+          flex-sm="100">
 
-      <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
-      <div class="news-item-excerpt">
-        <div class="news-item-excerpt-inner">
-          <h4>{{entry.title}}</h4>
-          <p>
-            <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
-          </p>
+          <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
+          <div class="news-item-excerpt">
+            <div class="news-item-excerpt-inner">
+              <h4>{{entry.title}}</h4>
+              <p>
+                <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-	</div>
+    	</div>
+
+    </div>
+    <!--END THUMBS VIEW-->
+
+
+    <!--START LIST VIEW-->
+    <div
+      ng-switch-when="false"
+      class="blog-list-view container container-xlg"
+      layout="row"
+      layout-sm="column"
+      layout-align="space-between start">
+
+      <div class="blog-list" flex="70" flex-sm="100">
+        <div
+            ng-repeat="entryItem in entries"
+            class="blog-list-card">
+
+          <div class="card-content card-content-list">
+            <h4><a ng-href="/{{entryItem.slug}}">{{entryItem.title}}</a></h4>
+            <p class="card-content-data">
+              <small><img src="images/calendario.png" alt=""> Date {{entryItem.date}}</small> | <strong>Author: {{entryItem.author.nickname}}</strong>
+            </p>
+            <div class="card-content-preview" layout="row" layout-align="space-between start">
+              <div
+                ng-if="entryItem.thumbnail_images.thumbnail.url"
+                class="card-thumb-circle"
+                ng-style="{ 'background': 'url(' + entryItem.thumbnail_images.thumbnail.url + ') center no-repeat' }">
+                <a ng-href="/{{entryItem.slug}}" class="absolute-link"></a>
+              </div>
+
+              <div
+                ng-if="!entryItem.thumbnail_images.thumbnail.url"
+                class="card-thumb-circle"
+                ng-style="{ 'background': 'url(' + entryItem.attachments[0].images.thumbnail.url + ') center no-repeat' }">
+                <a ng-href="/{{entryItem.slug}}" class="absolute-link"></a>
+              </div>
+              <div flex>
+                <p class="card-content-excerpt">
+                  <span ng-bind-html="entryItem.excerpt | limitTo:300"></span> <span ng-if="entryItem.excerpt.length > 300">...</span>
+                </p>
+              </div>
+            </div>
+            <div class="action-btn-wrap">
+              <a ng-href="/{{entryItem.slug}}" class="action-btn action-btn-alt">Ver más</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="blog-sidebar" flex="25" flex-sm="100">
+
+        <div class="blog-sidebar-collections">
+          <h4>Categorías</h4>
+          <div layout="row" layout-align="space-between start" layout-wrap>
+            <a
+              ng-repeat="category in categories"
+              flex="45"
+              href="#"
+              class="blog-sidebar-collection">{{category.fields.title}}</a>
+
+          </div>
+        </div>
+
+        <div class="blog-sidebar-collections">
+          <h4>Archivo</h4>
+          <div layout="row" layout-align="space-between start" layout-wrap>
+            <a flex="45" href="#" class="blog-sidebar-collection">2015</a>
+            <a flex="45" href="#" class="blog-sidebar-collection">2014</a>
+            <a flex="45" href="#" class="blog-sidebar-collection">2013</a>
+            <a flex="45" href="#" class="blog-sidebar-collection">2012</a>
+
+          </div>
+        </div>
+
+
+        <div class="fb-page" data-href="https://www.facebook.com/Spaceshiplabs" data-width="240" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Spaceshiplabs"><a href="https://www.facebook.com/Spaceshiplabs">Spaceshiplabs</a></blockquote></div></div>
+
+      </div>
+
+    </div>
+    <!--END LIST VIEW-->
+
+  </ng-switch>
 
 </div>
 <ng-include src="'views/contact-us.html'"></ng-include>
