@@ -779,13 +779,19 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 0;
   height: 4px;
   background: #01CDD6;
+  display: block;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  transition: all .5s linear
 }
 
 .news-item:hover:after{
-  display: block;
+  width: 100%;
 }
 
 .news-item-excerpt{

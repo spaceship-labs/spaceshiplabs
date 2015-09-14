@@ -27,7 +27,6 @@
     ng-repeat="entry in entries"
     class="news-item"
     ng-style="
-
       entry.thumbnail_images.full.url && { 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }
       ||
       !entry.thumbnail_images.full.url && { 'background': 'url(' + entry.attachments[0].images.full.url + ') center no-repeat' }
