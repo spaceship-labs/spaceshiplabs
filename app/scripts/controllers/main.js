@@ -8,10 +8,12 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('MainCtrl', function ($scope, $mdSidenav, $location, metaTagsService, $http) {
+  .controller('MainCtrl', function ($scope, $mdSidenav, $location, metaTagsService, $http, $window) {
+    var w = angular.element($window);
     $scope.emailSent = false;
     $scope.contactError = false;
     $scope.contactData = {};
+    $scope.winSize = "medium";
 
 	  $scope.toggleSidebar = function() {
       $mdSidenav('left').open();
@@ -57,7 +59,21 @@ angular.module('spaceshiplabsApp')
 
     };
 
+    $scope.windowSize = function (){
+      return { 'h': w.height(), 'w': w.width() };
+    }
+
+    $scope.$watch($scope.windowSize,function (newValue, oldValue) {
+      if(newValue.w > 900)
+        $scope.winSize = "full";
+      else if(newValue.w > 600)
+        $scope.winSize = "large";
+      else if(newValue.w > 300)
+        $scope.winSize = "blog";
+    },true);
+    w.bind('resize', function () {
+      $scope.$apply();
+    });
 
     metaTagsService.setMetaTags();
-
   });

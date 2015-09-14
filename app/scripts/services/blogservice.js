@@ -93,5 +93,4 @@ angular.module('spaceshiplabsApp')
 
     };
 
-
   });

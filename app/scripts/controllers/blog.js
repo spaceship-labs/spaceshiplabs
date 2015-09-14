@@ -18,6 +18,7 @@ angular.module('spaceshiplabsApp')
         $scope.loadedPosts = true;
       });
     };
+
     $scope.getRecentPosts();
 
   });
