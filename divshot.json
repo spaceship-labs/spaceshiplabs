@@ -9,7 +9,7 @@
   "error_page": "404.html",
   "forms": {
     "contact": {
-      "to": "luis@19prz@gmail.com",
+      "to": "luis19prz@gmail.com",
       "from": "{{email}}",
       "replyTo": "{{name}} <{{email}}>",
       "subject": "Contact Received from {{name}}",

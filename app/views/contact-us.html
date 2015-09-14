@@ -7,11 +7,15 @@
        </p>
        <p>Estamos seguros que tenemos la mejor solución.</p>
     </div>
-    <form method="POST" action="/__/forms/contact">
-      <input type="email" name="email" placeholder="Ingresar correo">
-      <input type="hidden" name="message" value="Este es un mail desde divshot">
-      <input type="hidden" name="name" value="Hola">
+    <form name="contactForm" novalidate ng-submit="doContact()">
+      <input type="email" required ng-model="contactData.email" name="email" placeholder="Ingresar correo">
+      <input type="hidden" required ng-model="contactData.message" name="message" value="Este es un mail desde divshot">
+      <input type="hidden" required ng-model="contactData.name" name="name" value="Usuario generico">
       <input type="submit" value="ENVIAR">
+      <!--<p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.required"><span>Ingresa tu e-mail.</span></p>-->
+      <p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.email"><span>Este e-mail no es valido.</span></p>
+      <p class="contact-form-message" ng-show="emailSent"><span>Gracias por enviar tu mensaje.</span></p>
+      <p class="contact-form-message" ng-show="contactError"><span>Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
     </form>
 
     <div class="social-icons">

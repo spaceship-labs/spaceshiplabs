@@ -785,6 +785,13 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .contact-us-content .social-icons{margin-top: 40px}
 .contact-us-content .social-icons a{margin: 0 10px}
+.contact-form-message{
+  margin-top: 6px!important;
+  color: #485DC6;
+}
+.contact-form-message-error{
+  color: red
+}
 
 
 /*-------------/
