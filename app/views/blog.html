@@ -26,12 +26,8 @@
     <div
       ng-repeat="entry in entries | limitTo:1:0"
       class="news-item"
-      ng-style="
-        entry.thumbnail_images.{{winSize}}.url && { 'background': 'url(' + entry.thumbnail_images.{{winSize}}.url + ') center no-repeat' }
-        ||
-        !entry.thumbnail_images.{{winSize}}.url && { 'background': 'url(' + entry.attachments[0].images.{{winSize}}.url + ') center no-repeat' }
-      "
-      ng-class="{ 'news-item-default' : !entry.thumbnail_images.{{winSize}}.url  }"
+      ng-style="{ 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }"
+      ng-class="{ 'news-item-default' : !entry.thumbnail_images.full.url  }"
       flex
       flex-sm="100">
 

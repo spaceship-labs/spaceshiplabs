@@ -11,12 +11,15 @@ angular.module('spaceshiplabsApp')
     return {
       templateUrl: 'views/directives/projects-slider.html',
       restrict: 'E',
+      scope: {
+        preview: '=preview'
+        //projects: '=projects'
+      },
       link: function postLink(scope) {
 
         scope.setUp = function(){
           scope.selectedIndexSlide = 0;
           scope.selectedProjectPhoto = 0;
-          scope.itemsCount = 2;
           scope.projects = [
             {
               type:'UI/UX Design & Software',
@@ -33,11 +36,8 @@ angular.module('spaceshiplabsApp')
               images: ['images/projects/capshia.jpg','images/projects/capshia2.jpg']
             }
           ];
+          scope.itemsCount = scope.projects.length;
           console.log(scope.projects);
-          scope.projectsPhotos = [
-            ['images/yellow_proyectos.jpg','images/lap.png'],
-            ['images/projects/capshia.jpg','images/imagen6.png']
-          ];
           scope.sliderInterval = $interval(scope.moveNextProject, 6000);
         };
 
