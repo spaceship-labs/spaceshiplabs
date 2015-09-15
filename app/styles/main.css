@@ -294,6 +294,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   margin-right: 0;
 }
 
+.container-pulled-left{margin: 0 0 0 10%;}
+
 /*----------------/
   #SECTION-TITLE
 /*---------------*/
@@ -644,13 +646,13 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   -ms-transition: background .4s;
   transition: background .4s;
 }
-.services-item:nth-child(1){background: transparent url(../images/icono_blanco.png) top center no-repeat;}
+.services-item:nth-child(1){background: transparent url(../images/ui2.png) top center no-repeat;}
 .services-item:nth-child(2){background: transparent url(../images/iconos2_blanco.png) top center no-repeat;}
 .services-item:nth-child(3){background: transparent url(../images/icono3_blanco.png) top center no-repeat;}
 .services-item:nth-child(4){background: transparent url(../images/icono4_blanco.png) top center no-repeat;}
 
 
-.services-item:hover:nth-child(1){background: transparent url(../images/uiux-hover.png) top center no-repeat;}
+.services-item:hover:nth-child(1){background: transparent url(../images/ui.png) top center no-repeat;}
 .services-item:hover:nth-child(2){background: transparent url(../images/iconos2.png) top center no-repeat;}
 .services-item:hover:nth-child(3){background: transparent url(../images/icono3.png) top center no-repeat;}
 .services-item:hover:nth-child(4){background: transparent url(../images/icono4.png) top center no-repeat;}
@@ -1051,6 +1053,8 @@ input:-webkit-autofill {
   margin-bottom: 20px;
 }
 
+.info-wrap h1.bold-alt{color: #50B7E8;}
+
 .info-wrap p{
   font-size: 18px;
   line-height: 1.4;
@@ -1067,9 +1071,18 @@ input:-webkit-autofill {
   font-weight: 300;
 }
 
+.info-wrap .container-support{overflow: hidden;}
+
 .info-wrap .support-icons{
   width: 60%;
-  margin: 20px auto 40px;
+  margin: 20px 0 40px;
+}
+
+.info-wrap .support-card{
+  position: absolute;
+  right: -10%;
+  top: 0;
+  max-width: 50%;
 }
 
 .info-wrap .screens-image{
@@ -1449,7 +1462,15 @@ input:-webkit-autofill {
     background-position: right bottom;
   }
 
+  .info-wrap .support-card{
+    position: relative;
+    right: auto;
+    margin: 20px auto;
+    display: block;
+  }
 
+  .info-wrap .delivery-box{width: 240px;}
+  .toolbar-head.fixed-head{padding: 10px}
 }
 
 
