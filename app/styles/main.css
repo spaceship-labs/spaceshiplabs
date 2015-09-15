@@ -1066,6 +1066,13 @@ input:-webkit-autofill {
   margin-right: 5px;
 }
 
+.info-block{margin: 80px 0}
+.info-block:first-child{margin-top:0;}
+.info-wrap-description{
+  font-size: 21px!important;
+  margin: 24px 0!important;
+}
+
 .info-wrap .action-btn{
   font-size: 16px;
   font-weight: 300;
@@ -1083,11 +1090,12 @@ input:-webkit-autofill {
   right: -10%;
   top: 0;
   max-width: 50%;
+  width: 540px;
 }
 
 .info-wrap .screens-image{
   display: block;
-  margin: 50px auto 30px;
+  margin: 0 auto;
 }
 
 .info-wrap .guarantee{padding: 40px 0}
