@@ -61,15 +61,18 @@ angular.module('spaceshiplabsApp')
 
     $scope.windowSize = function (){
       return { 'h': w.height(), 'w': w.width() };
-    }
+    };
 
-    $scope.$watch($scope.windowSize,function (newValue, oldValue) {
-      if(newValue.w > 900)
+    $scope.$watch($scope.windowSize,function (newValue) {
+      if(newValue.w > 900){
         $scope.winSize = "full";
-      else if(newValue.w > 600)
+      }
+      else if(newValue.w > 600){
         $scope.winSize = "large";
-      else if(newValue.w > 300)
+      }
+      else if(newValue.w > 300){
         $scope.winSize = "blog";
+      }
     },true);
     w.bind('resize', function () {
       $scope.$apply();
