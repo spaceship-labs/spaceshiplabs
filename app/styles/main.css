@@ -73,7 +73,7 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
 .absolute-link{
   height: 100%;
   left: 0;
-  position: absolute;
+  position: absolute !important;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -437,22 +437,26 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .toolbar-head nav > ul > li{
   display: inline-block;
   margin: 0 8px;
-  position: relative;
+  /*position: relative;*/
 }
 
-.toolbar-head nav > ul > li ul{
+.toolbar-head nav > ul > li > ul{
   display: none;
   position: absolute;
   left: 0;
-  top: 100%;
+  /*top: 100%;*/
   padding-left: 0;
   list-style: none;
-  min-width: 120px;
+  /*min-width: 120px;*/
+  width: 100%;
+  padding-top:20px;
 }
 
+.toolbar-head nav > ul > li > ul:hover{display: flex;}
+.toolbar-head nav > ul > li > ul > li{text-align: center;}
 
 .toolbar-head nav > ul > li:hover ul{
-  display: block;
+  display: flex;
   -moz-animation: fadeIn .3s ease-in ;
   -webkit-animation: fadeIn .3s ease-in ;
   animation:fadeIn .3s ease-in ;
@@ -651,12 +655,17 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .services-item:nth-child(3){background: transparent url(../images/icono3_blanco.png) top center no-repeat;}
 .services-item:nth-child(4){background: transparent url(../images/icono4_blanco.png) top center no-repeat;}
 
-
 .services-item:hover:nth-child(1){background: transparent url(../images/ui.png) top center no-repeat;}
 .services-item:hover:nth-child(2){background: transparent url(../images/iconos2.png) top center no-repeat;}
 .services-item:hover:nth-child(3){background: transparent url(../images/icono3.png) top center no-repeat;}
 .services-item:hover:nth-child(4){background: transparent url(../images/icono4.png) top center no-repeat;}
 
+
+.menu .services-item{background-size: 30%;padding-top: 30px;}
+.menu .services-item:hover:nth-child(1){background: transparent url(../images/ui2.png) top center no-repeat;background-size: 30%;}
+.menu .services-item:hover:nth-child(2){background: transparent url(../images/iconos2_blanco.png) top center no-repeat;background-size: 30%;}
+.menu .services-item:hover:nth-child(3){background: transparent url(../images/icono3_blanco.png) top center no-repeat;background-size: 30%;}
+.menu .services-item:hover:nth-child(4){background: transparent url(../images/icono4_blanco.png) top center no-repeat;background-size: 30%;}
 
 .services-item h5{
   font-size: 24px;
@@ -1504,7 +1513,11 @@ input:-webkit-autofill {
   }
 }
 
-
+@media screen and (max-width: 960px){
+  /*Menu*/
+  #button-menu-mobile{ display: block;}
+  .toolbar-head .menu{ display: none;}
+}
 
 @media screen and (max-width: 600px){
 /*Team*/
@@ -1514,16 +1527,10 @@ input:-webkit-autofill {
   .name-info {font-size: 23px;}
 
 /*Team*/
-  .toolbar-head .menu{display: none;}
-
 
   .map{padding-bottom: 65%}
   .map iframe{
     /*pointer-events:none;*/
-  }
-
-  #button-menu-mobile{
-    display: block;
   }
 
   .landing-wrapper,

@@ -1,7 +1,7 @@
 <md-toolbar ng-class="{'transparent-head': isHome, 'fixed-head': scrolled, 'dropdown-active': dropdownActive}" fixed-header class='toolbar-head md-tall'>
   <div class="md-toolbar-tools container container-xlg nopadding" layout-wrap layout-align="space-between center" layout='row' layout-sm="column">
 
-      <div id="button-menu-mobile" ng-click="toggleSidebar()" flex="30" flex-sm="10">
+      <div id="button-menu-mobile" ng-click="toggleSidebar()" flex="10" flex-gt-md="30">
         <hr><hr><hr>
       </div>
 
@@ -20,12 +20,37 @@
             <!--<li><a href="#">SpacES</a></li>-->
             <li ng-mouseenter="dropdownActive = true" ng-mouseleave="dropdownActive = false">
               <a href="#">SERVICIOS</a>
-              <ul>
-                <li><a href="/ui-ux">Software</a></li>
-                <li><a href="/ui-ux">UI/UX Diseño</a></li>
-                <li><a href="/ui-ux">Branding</a></li>
-                <li><a href="/ui-ux">Marketing</a></li>
-                <li><a href="/ui-ux">Consulting</a></li>
+              <ul layout="row" layout-align="center">
+                <!-- <li flex="20" class="services-item">
+                  <div>
+                    <a href="/ui-ux" class="absolute-link"></a>
+                    <h5>Software</h5>
+                  </div>
+                </li> -->
+                <li flex="20" class="services-item">
+                  <div>
+                    <a href="/ui-ux" class="absolute-link"></a>
+                    <h5>UI/UX Design</h5>
+                  </div>
+                </li>
+                <li flex="20" class="services-item">
+                  <div >
+                    <a href="/ui-ux" class="absolute-link"></a>
+                    <h5>Branding</h5>
+                  </div>
+                </li>
+                <li flex="20" class="services-item">
+                  <div >
+                    <a href="/ui-ux" class="absolute-link"></a>
+                    <h5>Marketing</h5>
+                  </div>
+                </li>
+                <li flex="20" class="services-item">
+                  <div >
+                    <a href="/ui-ux" class="absolute-link"></a>
+                    <h5>Consulting</h5>
+                  </div>
+                </li>
               </ul>
             </li>
             <li><a href="/awards">PRENSA</a></li>
