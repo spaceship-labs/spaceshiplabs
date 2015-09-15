@@ -12,15 +12,15 @@ angular.module('spaceshiplabsApp')
       templateUrl: 'views/directives/projects-slider.html',
       restrict: 'E',
       scope: {
-        preview: '=preview'
-        //projects: '=projects'
+        preview: '=',
+        projects: '='
       },
       link: function postLink(scope) {
 
         scope.setUp = function(){
           scope.selectedIndexSlide = 0;
           scope.selectedProjectPhoto = 0;
-          scope.projects = [
+          /*scope.projects = [
             {
               type:'UI/UX Design & Software',
               name:'Yellow Transfers',
@@ -35,7 +35,7 @@ angular.module('spaceshiplabsApp')
               url: '#',
               images: ['images/projects/capshia.jpg','images/projects/capshia2.jpg']
             }
-          ];
+          ];*/
           scope.itemsCount = scope.projects.length;
           console.log(scope.projects);
           scope.sliderInterval = $interval(scope.moveNextProject, 6000);
