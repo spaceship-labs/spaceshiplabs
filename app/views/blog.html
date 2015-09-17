@@ -12,9 +12,9 @@
           </md-input-container>
         </section>
       </form>
-      <section ng-init="thumbsView = false">
-        <a href='' ng-click="thumbsView = true">v1</a>
-        <a href='' ng-click="thumbsView = false">v2</a>
+      <section class="thumbsViewContainer" ng-init="thumbsView = false">
+        <a href='' ng-click="thumbsView = false" class="thumbsView" ng-class="{'active':!thumbsView}">v2</a>
+        <a href='' ng-click="thumbsView = true" class="thumbsView" ng-class="{'active':thumbsView}">v1</a>
       </section>
     </section>
   </div>
