@@ -20,7 +20,6 @@ angular.module('spaceshiplabsApp')
       blogService.getSingleEntry($scope.postSlug).then(function(entry){
         $scope.entry = entry;
         $scope.loadedPost = true;
-        console.log(entry);
         var img = '';
         if(entry.thumbnail_images){
           img = entry.thumbnail_images.full.url;
@@ -42,13 +41,14 @@ angular.module('spaceshiplabsApp')
     };
 
     $scope.getCategories = function(){
-      blogService.getCategories(10).then(function(categories){
-        $scope.categories = categories;
+      blogService.getCategories().then(function(data){
+        $scope.categories = data;
+        console.log($scope.categories);
       });
     };
 
     $scope.getPost();
     $scope.getRecentPosts();
-    //$scope.getCategories();
+    $scope.getCategories();
 
   });

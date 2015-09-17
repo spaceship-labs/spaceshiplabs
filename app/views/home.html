@@ -26,11 +26,7 @@
   <div
     ng-repeat="entry in entries"
     class="news-item"
-    ng-style="
-      entry.thumbnail_images[winSize].url && { 'background': 'url(' + entry.thumbnail_images[winSize].url + ') center no-repeat' }
-      ||
-      !entry.thumbnail_images[winSize].url && { 'background': 'url(' + entry.attachments[0].images[winSize].url + ') center no-repeat' }
-    "
+    ng-style="getPostThumb(entry,winSize)"
     flex="33"
     flex-sm="100">
 
