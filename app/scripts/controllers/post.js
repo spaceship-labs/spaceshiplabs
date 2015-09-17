@@ -20,16 +20,16 @@ angular.module('spaceshiplabsApp')
       blogService.getSingleEntry($scope.postSlug).then(function(entry){
         $scope.entry = entry;
         $scope.loadedPost = true;
-        var img = '';
-        if(entry.thumbnail_images){
-          img = entry.thumbnail_images.full.url;
-        }else if(entry.attachments){
-          img = entry.attachments[0].images.full.url;
+        var entryImg = '';
+        if(entry.featured_image){
+          entryImg = entry.featured_image.attachment_meta.sizes.large.url;
+        }else{
+          entryImg = entry.attachments[0].large[0];
         }
         metaTagsService.setMetaTags(
           entry.title,
           $filter('htmlToPlainText')(entry.excerpt),
-          img
+          entryImg
         );
       });
     };
