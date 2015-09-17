@@ -12,7 +12,7 @@ angular.module('spaceshiplabsApp')
     // AngularJS will instantiate a singleton by calling "new" on this function
 
     //var postType = '2wKn6yEnZewu2SCCkus4as';
-    var baseUrl = 'http://spaceshiplabs.com/api/';
+    var baseUrl = 'http://spaceshiplabs.com/wp-json';
 
     //var categoryType = '5KMiN6YPvi42icqAUQMCQe';
     //var postType = 'post';
@@ -34,19 +34,19 @@ angular.module('spaceshiplabsApp')
     */
 
     this.getSingleEntryQuery = function(postSlug){
-      var action = 'get_post';
-      var query = baseUrl + action + '?slug=' + postSlug;
+      var resource = '/posts';
+      var count = 1;
+      var query = baseUrl + resource + '?filter[posts_per_page]=' + count + '&filter[name]=' + postSlug;
       return query;
     };
 
     this.getRecentEntriesQuery = function(entriesLimit){
       entriesLimit = entriesLimit || 3;
-      var action = 'get_recent_posts';
+      var resource = '/posts';
       var count = entriesLimit;
-      var query = baseUrl + action + '?count=' + count;
+      var query = baseUrl + resource + '?filter[posts_per_page]=' + count;
       return query;
     };
-
 
     this.getSingleEntry = function(postSlug){
 
@@ -57,9 +57,8 @@ angular.module('spaceshiplabsApp')
         url: queryUrl
       };
       return $http( req ).then(function(response) {
-          console.log(response);
           if(response.status === 200){
-            return response.data.post;
+            return response.data[0];
           }else{
             return {};
           }
@@ -80,9 +79,8 @@ angular.module('spaceshiplabsApp')
         url: queryUrl
       };
       return $http( req ).then(function(response) {
-          console.log(response);
-          if( response.data.posts ){
-            return response.data.posts;
+          if( response.data ){
+            return response.data;
           }else{
             return [];
           }

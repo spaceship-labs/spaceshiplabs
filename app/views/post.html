@@ -29,19 +29,10 @@
   <div ng-show="loadedPost" class="blog">
 
     <div
-      ng-if="entry.thumbnail_images.full"
       class="single-thumb"
-      ng-style="{ 'background': 'url(' + entry.thumbnail_images.full.url + ') center no-repeat' }"
+      ng-style="getPostThumb(entry,winSize)"
       >
     </div>
-
-    <div
-      ng-if="!entry.thumbnail_images.full"
-      class="single-thumb"
-      ng-style="{ 'background': 'url(' + entry.attachments[0].images.full.url + ') center no-repeat' }"
-      >
-    </div>
-
 
     <div class="single container container-xlg" layout="row" layout-sm="column" layout-align="space-between start">
 
@@ -60,9 +51,9 @@
         <div class="single-tags">
           <p>
             <a
-              ng-repeat="tag in entry.tags"
-              ng-href="#{{tag.title}}">
-              {{tag.title}}
+              ng-repeat="tag in entry.terms.post_tag"
+              ng-href="#{{tag.slug}}">
+              {{tag.name}}
             </a>
           </p>
         </div>
@@ -78,16 +69,9 @@
             class="blog-sidebar-card">
 
           <div
-            ng-if="entryItem.thumbnail_images.blog.url"
             class="card-thumb"
-            ng-style="{ 'background': 'url(' + entryItem.thumbnail_images.blog.url + ') center no-repeat' }">
-            <a ng-href="/{{entryItem.slug}}" class="absolute-link"></a>
-          </div>
-
-          <div
-            ng-if="!entryItem.thumbnail_images.blog.url"
-            class="card-thumb"
-            ng-style="{ 'background': 'url(' + entryItem.attachments[0].images.blog.url + ') center no-repeat' }">
+            ng-style="getPostThumb(entryItem,'blog')"
+            >
             <a ng-href="/{{entryItem.slug}}" class="absolute-link"></a>
           </div>
 

@@ -20,7 +20,6 @@ angular.module('spaceshiplabsApp')
       blogService.getSingleEntry($scope.postSlug).then(function(entry){
         $scope.entry = entry;
         $scope.loadedPost = true;
-        console.log(entry);
         var img = '';
         if(entry.thumbnail_images){
           img = entry.thumbnail_images.full.url;
