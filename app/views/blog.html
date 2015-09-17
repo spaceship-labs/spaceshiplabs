@@ -3,12 +3,12 @@
 
   <div class="section-title-options" >
     <section layout="row" layout-align="space-between start" class="container container-xlg container-no-padding">
-      <form flex="20" flex-sm="100">
+      <form autocomplete="off" action="/blog" method="GET" flex="20" flex-sm="100">
         <section layout="row" layout-align="center center">
           <a href="#" flex="20"><img src="images/buscar2.png" alt=""></a>
           <md-input-container flex>
               <label>Busca una noticia</label>
-            <input ng-model="user.email" type="text">
+            <input ng-model="s" name="s" type="text">
           </md-input-container>
         </section>
       </form>
@@ -36,12 +36,7 @@
         <div
           ng-repeat="entry in entries | limitTo:1:0"
           class="news-item"
-          ng-style="
-            entry.thumbnail_images[winSize].url && { 'background': 'url(' + entry.thumbnail_images[winSize].url + ') center no-repeat' }
-            ||
-            !entry.thumbnail_images[winSize].url && { 'background': 'url(' + entry.attachments[0].images[winSize].url + ') center no-repeat' }
-          "
-          ng-class="{ 'news-item-default' : !entry.thumbnail_images.full.url  }"
+          ng-style="getPostThumb(entry,winSize)"
           flex
           flex-sm="100">
 
@@ -64,11 +59,7 @@
         <div
           ng-repeat="entry in entries | limitTo:2:1"
           class="news-item"
-          ng-style="
-            entry.thumbnail_images[winSize].url && { 'background': 'url(' + entry.thumbnail_images[winSize].url + ') center no-repeat' }
-            ||
-            !entry.thumbnail_images[winSize].url && { 'background': 'url(' + entry.attachments[0].images[winSize].url + ') center no-repeat' }
-          "
+          ng-style="getPostThumb(entry,winSize)"
           flex="50"
           flex-sm="100">
 
@@ -90,11 +81,7 @@
         <div
           ng-repeat="entry in entries | limitTo:4:3"
           class="news-item"
-          ng-style="
-            entry.thumbnail_images[winSize].url && { 'background': 'url(' + entry.thumbnail_images[winSize].url + ') center no-repeat' }
-            ||
-            !entry.thumbnail_images[winSize].url && { 'background': 'url(' + entry.attachments[0].images[winSize].url + ') center no-repeat' }
-          "
+          ng-style="getPostThumb(entry,winSize)"
           flex="50"
           flex-sm="100">
 
@@ -134,19 +121,13 @@
               <small><img src="images/calendario.png" alt=""> Date {{entryItem.date}}</small> | <strong>Author: {{entryItem.author.nickname}}</strong>
             </p>
             <div class="card-content-preview" layout="row" layout-align="space-between start">
+
               <div
-                ng-if="entryItem.thumbnail_images.thumbnail.url"
                 class="card-thumb-circle"
-                ng-style="{ 'background': 'url(' + entryItem.thumbnail_images.thumbnail.url + ') center no-repeat' }">
+                ng-style="getPostThumb(entryItem)">
                 <a ng-href="/{{entryItem.slug}}" class="absolute-link"></a>
               </div>
 
-              <div
-                ng-if="!entryItem.thumbnail_images.thumbnail.url"
-                class="card-thumb-circle"
-                ng-style="{ 'background': 'url(' + entryItem.attachments[0].images.thumbnail.url + ') center no-repeat' }">
-                <a ng-href="/{{entryItem.slug}}" class="absolute-link"></a>
-              </div>
               <div flex>
                 <p class="card-content-excerpt">
                   <span ng-bind-html="entryItem.excerpt | limitTo:300"></span> <span ng-if="entryItem.excerpt.length > 300">...</span>
@@ -170,13 +151,13 @@
             <a
               ng-repeat="category in categories"
               flex="45"
-              href="#"
-              class="blog-sidebar-collection">{{category.fields.title}}</a>
+              ng-href="/blog/category/{{category.slug}}"
+              class="blog-sidebar-collection">{{category.name}}</a>
 
           </div>
         </div>
 
-        <div class="blog-sidebar-collections">
+        <!--<div class="blog-sidebar-collections">
           <h4>Archivo</h4>
           <div layout="row" layout-align="space-between start" layout-wrap>
             <a flex="45" href="#" class="blog-sidebar-collection">2015</a>
@@ -185,7 +166,7 @@
             <a flex="45" href="#" class="blog-sidebar-collection">2012</a>
 
           </div>
-        </div>
+        </div>-->
 
 
         <div class="fb-page" data-href="https://www.facebook.com/Spaceshiplabs" data-width="240" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Spaceshiplabs"><a href="https://www.facebook.com/Spaceshiplabs">Spaceshiplabs</a></blockquote></div></div>
@@ -196,6 +177,27 @@
     <!--END LIST VIEW-->
 
   </ng-switch>
+
+  <div class="container container-xlg">
+    <nav class="pagination-blog" ng-hide='!pages || pages <= 1' layout="row" >
+      <a
+        ng-if="page > 1"
+        ng-href="{{baseUrl}}/page/{{page-1}}{{searchTerm}}">
+        &lt;
+      </a>
+      <a
+        ng-repeat="itemPage in getRange(pages) | limitTo:entriesLimit:(endPagination-itemsPagination) track by $index"
+        ng-class="{'current-page': (itemPage) === page}"
+        ng-href="{{baseUrl}}/page/{{itemPage}}{{searchTerm}}">
+        {{itemPage}}
+      </a>
+      <a
+        ng-if="page < pages"
+        ng-href="{{baseUrl}}/page/{{incrementPage(page)}}{{searchTerm}}">
+        &gt;
+      </a>
+    </nav>
+  </div>
 
 </div>
 <ng-include src="'views/contact-us.html'"></ng-include>

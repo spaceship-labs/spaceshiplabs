@@ -45,7 +45,6 @@ angular.module('spaceshiplabsApp')
       };
       $http( req ).then(
         function(response) {
-          console.log(response);
           if(response.data.status === 'success'){
             $scope.emailSent = true;
           }else{
@@ -65,7 +64,7 @@ angular.module('spaceshiplabsApp')
 
     $scope.$watch($scope.windowSize,function (newValue) {
       if(newValue.w > 900){
-        $scope.winSize = "full";
+        $scope.winSize = "large";
       }
       else if(newValue.w > 600){
         $scope.winSize = "large";
@@ -79,4 +78,35 @@ angular.module('spaceshiplabsApp')
     });
 
     metaTagsService.setMetaTags();
+
+    $scope.getPostThumb = function(post,thumbSize){
+      var size = thumbSize || 'thumbnail';
+      var style = {};
+      if(post.featured_image){
+        if(!post.featured_image.attachment_meta.sizes[size]){
+          size = 'blog';
+        }
+        style = {
+          'background': 'url(' + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
+        };
+      }else{
+        if(!post.attachments[0][size]){
+          size = 'blog';
+        }
+        var urlKey = 0;
+        style = {
+          'background': 'url(' + post.attachments[0][size][urlKey] + ') center no-repeat'
+        };
+      }
+      return style;
+    };
+
+    $scope.getRange = function(n) {
+      var arr = new Array(n);
+      for(var i=0;i<n;i++){
+        arr[i] = i+1;
+      }
+      return arr;
+    };
+
   });

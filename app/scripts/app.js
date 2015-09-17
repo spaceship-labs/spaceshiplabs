@@ -47,6 +47,31 @@ angular
         controller: 'BlogCtrl',
         controllerAs: 'blog'
       })
+      .when('/blog/category/:category', {
+        templateUrl: 'views/blog.html',
+        controller: 'BlogCtrl',
+        controllerAs: 'blog'
+      })
+      .when('/blog/tag/:tag', {
+        templateUrl: 'views/blog.html',
+        controller: 'BlogCtrl',
+        controllerAs: 'blog'
+      })
+      .when('/blog/page/:page', {
+        templateUrl: 'views/blog.html',
+        controller: 'BlogCtrl',
+        controllerAs: 'blog'
+      })
+      .when('/blog/category/:category/page/:page', {
+        templateUrl: 'views/blog.html',
+        controller: 'BlogCtrl',
+        controllerAs: 'blog'
+      })
+      .when('/blog/tag/:tag/page/:page', {
+        templateUrl: 'views/blog.html',
+        controller: 'BlogCtrl',
+        controllerAs: 'blog'
+      })
       .when('/ui-ux', {
         templateUrl: 'views/ui-ux.html',
         controller: 'UiUxCtrl',
@@ -84,8 +109,8 @@ angular
     $locationProvider.hashPrefix('!');
 
     /*contentfulProvider.setOptions({
-        space: '3w73jmlpbmx4',
-        accessToken: '13e3b2302d52cfddc539a661274f356bb61a201121d77918faad10e4c415f653'
+        space: '',
+        accessToken: ''
     });*/
 
   });

@@ -1038,7 +1038,7 @@ input:-webkit-autofill {
   background-color: rgba(0,0,0,0.8);
   bottom: 0;
   left: 0;
-  min-height: 70px;
+  min-height: 88px;
   position: absolute;
   text-align: center;
   width: 100%;
@@ -1370,6 +1370,7 @@ input:-webkit-autofill {
   padding: 6px 10px;
   color: #00CAD6;
   margin: 4px 0;
+  font-size: 13px;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
   -o-transition: all .4s;
@@ -1411,6 +1412,35 @@ input:-webkit-autofill {
   width: 100px;
 }
 .blog-list-card .card-content-preview{margin-top: 10px}
+
+/*----------------/
+  #BLOG PAGINATION
+/*---------------*/
+.pagination-blog{
+  list-style: none;
+  padding-left: 0;
+}
+.pagination-blog a{
+  background-color: #3E3E3E;
+  text-align: center;
+  color: #fff;
+  vertical-align: middle;
+  margin: 0 4px;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 6px 10px;
+}
+
+.pagination-blog a:hover,
+.pagination-blog .current-page{
+  background: #1C7EE1;
+  color: #fff;
+}
+.pagination-blog a:hover,
+.pagination-blog .current-page{
+  color: #fff;
+}
 
 /*--------------/
   #FOOTER
