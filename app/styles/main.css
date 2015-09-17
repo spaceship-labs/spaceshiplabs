@@ -1273,7 +1273,11 @@ input:-webkit-autofill {
 
 .blog .fb-comments{margin-top: 22px;}
 
-.thumbsViewContainer{position: relative;top: 30px;}
+.thumbsViewContainer{
+  position: relative;
+  top: 30px;
+  text-align: center;
+}
 .thumbsView{color: transparent;display: inline-block;width: 30px;height: 25px;background-size: 100% 100%;background-repeat: no-repeat;}
 .thumbsView:nth-child(1){background-image:url(../images/lista2.png);}
 .thumbsView:nth-child(2){background-image:url(../images/bloques2.png);}
