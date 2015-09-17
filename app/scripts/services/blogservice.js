@@ -8,7 +8,7 @@
  * Service in the spaceshiplabsApp.
  */
 angular.module('spaceshiplabsApp')
-  .service('blogService', function ($http) {
+  .service('blogService', function ($http, $q) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 
     //var postType = '2wKn6yEnZewu2SCCkus4as';
@@ -17,41 +17,53 @@ angular.module('spaceshiplabsApp')
     //var categoryType = '5KMiN6YPvi42icqAUQMCQe';
     //var postType = 'post';
 
-    /*
-    this.getCategories = function(limit){
-      limit = limit || 10;
-      var query = 'content_type='+ categoryType + '&limit='+limit;
-      return contentful.entries( query ).then(function(response){
-          if(response.status === 200){
-            if(response.data.items.length > 0){
-              var categories = response.data.items;
-              console.log(categories);
-              return categories;
-            }
-          }
-        });
+
+    this.getCategoriesQuery = function(postSlug){
+      var resource = '/posts';
+      var entriesLimit = 1;
+      var query = baseUrl + resource + '?post_status=publish&filter[posts_per_page]=' + entriesLimit + '&filter[name]=' + postSlug;
+      return query;
     };
-    */
 
     this.getSingleEntryQuery = function(postSlug){
       var resource = '/posts';
-      var count = 1;
-      var query = baseUrl + resource + '?filter[posts_per_page]=' + count + '&filter[name]=' + postSlug;
+      var entriesLimit = 1;
+      var query = baseUrl + resource + '?post_status=publish&filter[posts_per_page]=' + entriesLimit + '&filter[name]=' + postSlug;
       return query;
     };
 
     this.getRecentEntriesQuery = function(entriesLimit){
       entriesLimit = entriesLimit || 3;
       var resource = '/posts';
-      var count = entriesLimit;
-      var query = baseUrl + resource + '?filter[posts_per_page]=' + count;
+      var query = baseUrl + resource + '?post_status=publish&filter[posts_per_page]=' + entriesLimit;
+      return query;
+    };
+
+    this.getEntriesQuery = function(params){
+      var page = params.page || 1;
+      var limit = params.limit || 3;
+      var resource = '/posts';
+      var query = baseUrl + resource;
+      query += '?post_status=publish';
+      query += '&filter[posts_per_page]=' + limit;
+      query += '&page=' + page;
+      query += '&paged=' + page;
+      if(params.category){
+        query += '&filter[category_name]=' + params.category;
+      }
+      if(params.tag){
+        query += '&filter[tag]=' + params.tag;
+      }
+      if(params.searchTerm){
+        query += '&filter[s]=' + params.searchTerm;
+      }
+
       return query;
     };
 
     this.getSingleEntry = function(postSlug){
 
       var queryUrl = this.getSingleEntryQuery(postSlug);
-      //queryUrl += '&callback=JSON_CALLBACK';
       var req = {
         method: 'GET',
         url: queryUrl
@@ -73,7 +85,6 @@ angular.module('spaceshiplabsApp')
     this.getRecentEntries = function(entriesLimit){
 
       var queryUrl = this.getRecentEntriesQuery(entriesLimit);
-      //queryUrl += '&callback=JSON_CALLBACK';
       var req = {
         method: 'GET',
         url: queryUrl
@@ -87,6 +98,51 @@ angular.module('spaceshiplabsApp')
         }, function(err) {
           //error
           console.log(err);
+        });
+
+    };
+
+    this.getEntries = function(params){
+      var queryUrl = this.getEntriesQuery(params);
+      var req = {
+        method: 'GET',
+        url: queryUrl
+      };
+      var deferred = $q.defer();
+      $http( req )
+        .success(function(response, status, headers) {
+          var data = {
+            pages: headers('x-wp-totalpages'),
+            entries: response
+          };
+          deferred.resolve(data);
+        })
+        .error(function(err) {
+          //error
+          console.log(err);
+          deferred.reject(err);
+        });
+
+      return deferred.promise;
+    };
+
+    this.getCategories = function(){
+
+      var queryUrl = baseUrl + '/posts/types/posts/taxonomies/category/terms';
+      var req = {
+        method: 'GET',
+        url: queryUrl
+      };
+      return $http( req ).then(function(response) {
+          if(response.status === 200){
+            return response.data;
+          }else{
+            return {};
+          }
+        }, function(err) {
+          //error
+          console.log(err);
+          return {};
         });
 
     };

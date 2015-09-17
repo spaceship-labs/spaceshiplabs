@@ -101,4 +101,12 @@ angular.module('spaceshiplabsApp')
       return style;
     };
 
+    $scope.getRange = function(n) {
+      var arr = new Array(n);
+      for(var i=0;i<n;i++){
+        arr[i] = i+1;
+      }
+      return arr;
+    };
+
   });

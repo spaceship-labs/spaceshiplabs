@@ -41,13 +41,14 @@ angular.module('spaceshiplabsApp')
     };
 
     $scope.getCategories = function(){
-      blogService.getCategories(10).then(function(categories){
-        $scope.categories = categories;
+      blogService.getCategories().then(function(data){
+        $scope.categories = data;
+        console.log($scope.categories);
       });
     };
 
     $scope.getPost();
     $scope.getRecentPosts();
-    //$scope.getCategories();
+    $scope.getCategories();
 
   });
