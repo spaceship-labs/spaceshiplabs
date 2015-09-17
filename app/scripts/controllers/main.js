@@ -89,7 +89,7 @@ angular.module('spaceshiplabsApp')
         style = {
           'background': 'url(' + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
         };
-      }else{
+      }else if(post.attachments){
         if(!post.attachments[0][size]){
           size = 'blog';
         }

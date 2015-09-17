@@ -43,7 +43,6 @@ angular.module('spaceshiplabsApp')
     $scope.getCategories = function(){
       blogService.getCategories().then(function(data){
         $scope.categories = data;
-        console.log($scope.categories);
       });
     };
 

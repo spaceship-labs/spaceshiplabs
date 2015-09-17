@@ -32,18 +32,25 @@ angular.module('spaceshiplabsApp')
     $scope.projects = [
       {
         type:'UI/UX Design & Software',
-        name:'Yellow Transfers',
+        name:'Mejora tu escuela',
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-        url: '#',
-        images:['images/yellow_proyectos.jpg','images/lap.png']
+        url: 'http://www.mejoratuescuela.org/',
+        images:['images/projects/mejora2.jpg','images/projects/mejora.jpg']
       },
       {
-        type:'UI/UX Design',
-        name:'Capshia',
+        type:'UI/UX Design & Software',
+        name:'Airportcun',
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-        url: '#',
-        images: ['images/projects/capshia.jpg','images/projects/capshia2.jpg']
-      }
+        url: 'http://airportcun.com/',
+        images:['images/projects/air2.jpg','images/projects/air.jpg']
+      },
+      {
+        type:'UI/UX Design & Software',
+        name:'Viajes Claros',
+        description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+        url: 'http://www.viajesclaros.ifai.mx/',
+        images:['images/projects/viajes2.jpg','images/projects/viajes.jpg']
+      },
     ];
 
     $scope.getRecentPosts();
