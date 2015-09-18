@@ -41,18 +41,26 @@ angular.module('spaceshiplabsApp')
 
       $scope.baseUrl = '/blog';
       $scope.searchTerm = '';
+      $scope.term = '';
+      $scope.blogSection = 'blog';
 
       if($routeParams.category){
         params.category = $routeParams.category;
-        $scope.baseUrl = '/blog/category' + $routeParams.category;
+        $scope.baseUrl = '/blog/category/' + $routeParams.category;
+        $scope.blogSection = 'category';
+        $scope.term = $routeParams.category;
       }
       else if($routeParams.tag){
         params.tag = $routeParams.tag;
-        $scope.baseUrl = '/blog/tag' + $routeParams.tag;
+        $scope.baseUrl = '/blog/tag/' + $routeParams.tag;
+        $scope.blogSection = 'tag';
+        $scope.term = $routeParams.tag;
       }
       else if($routeParams.s){
         params.searchTerm = $routeParams.s;
         $scope.searchTerm = '?s=' + $routeParams.s;
+        $scope.blogSection = 'search';
+        $scope.term = $routeParams.s;
       }
 
       $scope.getRecentPosts(params);

@@ -1,8 +1,11 @@
 <div class="landing-wrapper" layout="column" layout-align="center center" ng-style="style()" full-screen-wrapper>
   <div class="dots"></div>
-  <video autoplay loop poster="images/videobg.png" id="landing-video">
-    <source src="videos/spaceshiplabs.mp4" type="video/mp4">
+    <video autoplay loop preload="none" autoplay="autoplay" poster="images/videobg.png" id="landing-video">
+      <source src="videos/spaceshiplabs.mp4" type="video/mp4">
     </video>
+    <script>
+        document.getElementById('landing-video').play();
+    </script>
     <div class="landing-content center-content">
      <h1 data-wow-duration="0.8s" class="wow fadeInUp">SPACESHIP LABS</h1>
      <p data-wow-delay="0.8s" data-wow-duration="0.8s" class="wow fadeInUp">
@@ -193,7 +196,7 @@
       <a href="/projects" class="action-btn">Ver todos los proyectos</a>
     </div>
   </div>-->
-  <projects-slider projects="projects" preview="true"></projects-slider>
+  <projects-slider projects="projects" preview="true" win-size="winSizeSingle"></projects-slider>
 </div>
 
 <ng-include src="'views/contact-us.html'"></ng-include>

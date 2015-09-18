@@ -25,7 +25,6 @@
 </div>
 
 <div ng-show="loadedPosts" class="blog">
-
   <ng-switch on="thumbsView">
 
     <!--START THUMBS VIEW-->
@@ -120,15 +119,16 @@
             <p class="card-content-data">
               <small><img src="images/calendario.png" alt=""> Date {{entryItem.date}}</small> | <strong>Author: {{entryItem.author.nickname}}</strong>
             </p>
-            <div class="card-content-preview" layout="row" layout-align="space-between start">
+            <div class="card-content-preview" layout="row" layout-sm="column" layout-align="space-between start">
 
               <div
+                flex-sm="100"
                 class="card-thumb-circle"
                 ng-style="getPostThumb(entryItem)">
                 <a ng-href="/{{entryItem.slug}}" class="absolute-link"></a>
               </div>
 
-              <div flex>
+              <div flex flex-sm="100">
                 <p class="card-content-excerpt">
                   <span ng-bind-html="entryItem.excerpt | limitTo:300"></span> <span ng-if="entryItem.excerpt.length > 300">...</span>
                 </p>

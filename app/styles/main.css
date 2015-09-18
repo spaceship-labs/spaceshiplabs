@@ -1236,6 +1236,9 @@ input:-webkit-autofill {
 .single-post-content p{
   margin: 10px 0;
   text-align: justify;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 300;
 }
 .single-post-content a{color: #00CBD6}
 
@@ -1425,6 +1428,8 @@ input:-webkit-autofill {
 }
 .blog-list-card .card-content-excerpt{
   font-size: 14px;
+  font-weight: 300;
+  line-height: 1.3;
   margin-left: 20px;
 }
 .blog-list-card .action-btn-wrap{text-align: right;}
@@ -1689,6 +1694,9 @@ input:-webkit-autofill {
   /*-----------*/
   .pagination-blog a{margin: 0 1px;}
   .blog-list-card h4{font-size: 24px}
+  .blog-list-card .card-content-excerpt{margin-left: 0;}
+  .blog-list-card .card-thumb-circle{border-radius: 0;}
+  .pagination-blog a{padding: 6px}
 
   /*------------/
     #PROJECTS-SLIDER
@@ -1698,6 +1706,11 @@ input:-webkit-autofill {
     font-size: 14px;
     line-height: 1.3;
   }
+
+  .contact-us{
+    background-attachment: inherit;
+  }
+  .contact-us input[type="submit"]{margin-top: 14px;}
 
   #footer .container{padding: 34px 20px;}
   #footer .container p{font-size: 12px;}
