@@ -872,6 +872,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   border: 1px solid #485DC6;
   color: #485DC6;
   padding: 8px;
+  -webkit-appearance:none;
+  -moz-appearance:none;
 }
 
 .contact-us input[type="submit"]{
@@ -879,6 +881,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   border: 0;
   color: #fff;
   padding: 9px 8px;
+  -webkit-appearance:none;
+  -moz-appearance:none;
 }
 
 .contact-us input::-webkit-input-placeholder { color:#485DC6; }
@@ -1287,7 +1291,8 @@ input:-webkit-autofill {
   -ms-transition: all .4s;
   transition: all .4s;
   text-align: center;
-  margin-right: 4px;
+  margin: 4px;
+  display: inline-block;
 }
 
 .single-tags a:hover{
@@ -1697,6 +1702,7 @@ input:-webkit-autofill {
   .blog-list-card .card-content-excerpt{margin-left: 0;}
   .blog-list-card .card-thumb-circle{border-radius: 0;}
   .pagination-blog a{padding: 6px}
+  .single-thumb{background-attachment: inherit!important;}
 
   /*------------/
     #PROJECTS-SLIDER
