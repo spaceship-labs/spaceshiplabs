@@ -20,34 +20,36 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   display: none !important;
 }
 
-@keyframes fadeinCustom {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+@-webkit-keyframes topToBottom {
+   0%{ bottom:18%; }
+   50%{bottom: 20%}
+   100%{ bottom: 18%; }
 }
 
-/* Firefox < 16 */
-@-moz-keyframes fadeinCustom {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+@-moz-keyframes topToBottom {
+   0%{ bottom:18%; }
+   50%{bottom: 20%}
+   100%{ bottom: 18%; }
 }
 
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeinCustom {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+@-ms-keyframes topToBottom {
+   0%{ bottom:18%; }
+   50%{bottom: 20%}
+   100%{ bottom: 18%; }
 }
 
-/* Internet Explorer */
-@-ms-keyframes fadeinCustom {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+@-o-keyframes topToBottom {
+   0%{ bottom:18%; }
+   50%{bottom: 20%}
+   100%{ bottom: 18%; }
 }
 
-/* Opera < 12.1 */
-@-o-keyframes fadeinCustom {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+@keyframes topToBottom {
+   0%{ bottom:18%; }
+   50%{bottom: 20%}
+   100%{ bottom: 18%; }
 }
+
 
 
 *:focus{
@@ -449,6 +451,11 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .toolbar-head nav{margin-top: 6px}
 
+.toolbar-head nav > ul{
+  position: relative;
+  padding-left: 0;
+}
+
 .toolbar-head nav > ul > li{
   display: inline-block;
   margin: 0 8px;
@@ -617,7 +624,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .landing-content h1{
   font-weight: 100;
-  font-size: 44px;
+  font-size: 60px;
 }
 
 .landing-content p{font-size: 20px;}
@@ -629,6 +636,15 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   bottom: 20%;
   position: absolute;
   text-align: center;
+  -webkit-animation-name: topToBottom;
+  -webkit-animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: topToBottom;
+  -moz-animation-duration: 1.2s;
+  -moz-animation-iteration-count: infinite;
+  animation-name: topToBottom;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
 }
 
 /*------------/
@@ -648,7 +664,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   min-height: 300px;
 }
 
-.our-services h1{color: #fff;}
+.our-services h1{color: #fff!important;}
 
 .services-content{width: 100%}
 
@@ -1024,7 +1040,17 @@ input:-webkit-autofill {
   text-align: center;
   padding: 10px;
   position: relative;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
+
+.news-item:hover{
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
 
 .news-item-default{
   background: url(../images/imagen_noticias.jpg) center no-repeat!important;
@@ -1154,7 +1180,7 @@ input:-webkit-autofill {
   position: relative;
 }
 .award:hover:after{opacity: 1}
-.award:after{
+/*.award:after{
   content: '';
   opacity: 0;
   display: block;
@@ -1170,8 +1196,24 @@ input:-webkit-autofill {
   transition: all 0.3s ease-in;
 }
 .award:hover h3{color: #fff!important}
+*/
 
-.award img{max-width: 100%;}
+.award img{
+  max-width: 80%;
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -o-transition: all 1s ease; /* IE 9 */
+  -ms-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+.award:hover img{
+  -webkit-transform:scale(1.2); /* Safari and Chrome */
+  -moz-transform:scale(1.2); /* Firefox */
+  -ms-transform:scale(1.2); /* IE 9 */
+  -o-transform:scale(1.2); /* Opera */
+   transform:scale(1.2);
+}
+
 .award h3{
   font-weight: 100;
   font-size: 26px;
@@ -1330,6 +1372,10 @@ input:-webkit-autofill {
   background: #FAFAFA;
   padding: 44px 20px 10px;
   position: relative;
+}
+
+.card-content-list{
+  padding: 44px 32px 10px;
 }
 
 .card-content-list:before{
