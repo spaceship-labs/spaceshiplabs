@@ -18,8 +18,8 @@ angular.module('spaceshiplabsApp')
       },
       link: function postLink(scope) {
 
-        scope.$watch('winSize', function (newValue, oldValue) {
-          if(newValue != 'blog'){
+        scope.$watch('winSize', function (newValue) {
+          if(newValue !== 'blog'){
             scope.sliderInterval = $interval(scope.moveNextProject, 6000);
           }else{
             $interval.cancel(scope.sliderInterval);
@@ -31,7 +31,7 @@ angular.module('spaceshiplabsApp')
           scope.selectedIndexSlide = 0;
           scope.selectedProjectPhoto = 0;
           scope.itemsCount = scope.projects.length;
-          if(scope.winSize != 'blog'){
+          if(scope.winSize !== 'blog'){
             scope.sliderInterval = $interval(scope.moveNextProject, 6000);
           }
         };
@@ -63,7 +63,7 @@ angular.module('spaceshiplabsApp')
             scope.selectedIndexSlide = 0;
           }
 
-          if(scope.winSize != 'blog'){
+          if(scope.winSize !== 'blog'){
             $interval.cancel(scope.sliderInterval);
             scope.sliderInterval = $interval(scope.moveNextProject, 6000);
           }
@@ -75,7 +75,7 @@ angular.module('spaceshiplabsApp')
   				}else{
             scope.selectedIndexSlide = scope.itemsCount - 1;
           }
-          if(scope.winSize != 'blog'){
+          if(scope.winSize !== 'blog'){
             $interval.cancel(scope.sliderInterval);
             scope.sliderInterval = $interval(scope.moveNextProject, 6000);
           }
@@ -83,7 +83,7 @@ angular.module('spaceshiplabsApp')
 
         scope.moveToProject = function(index){
           scope.selectedIndexSlide = index;
-          if(scope.winSize != 'blog'){
+          if(scope.winSize !== 'blog'){
             $interval.cancel(scope.sliderInterval);
             scope.sliderInterval = $interval(scope.moveNextProject, 6000);
           }
