@@ -14,6 +14,7 @@ angular.module('spaceshiplabsApp')
     $scope.contactError = false;
     $scope.contactData = {};
     $scope.winSize = "medium";
+    $scope.winSizeSingle = "medium";
 
 	  $scope.toggleSidebar = function() {
       $mdSidenav('left').open();
@@ -65,12 +66,15 @@ angular.module('spaceshiplabsApp')
     $scope.$watch($scope.windowSize,function (newValue) {
       if(newValue.w > 900){
         $scope.winSize = "large";
+        $scope.winSizeSingle = "full";
       }
       else if(newValue.w > 600){
         $scope.winSize = "large";
+        $scope.winSizeSingle = "large";
       }
       else if(newValue.w > 300){
         $scope.winSize = "blog";
+        $scope.winSizeSingle = "blog";
       }
     },true);
     w.bind('resize', function () {

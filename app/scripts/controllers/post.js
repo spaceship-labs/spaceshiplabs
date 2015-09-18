@@ -46,6 +46,36 @@ angular.module('spaceshiplabsApp')
       });
     };
 
+    $scope.getMainPostThumb = function(post,thumbSize){
+      var size = thumbSize || 'large';
+      var style = {};
+      if(post.featured_image){
+        if(!post.featured_image.attachment_meta.sizes[size]){
+          size = 'blog';
+        }
+        style = {
+          'background': 'url(' + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
+        };
+
+        if(thumbSize === 'full'){
+          style = {
+            'background': 'url(' + post.featured_image.source + ') center no-repeat'
+          };
+        }
+
+
+      }else if(post.attachments){
+        if(!post.attachments[0][size]){
+          size = 'blog';
+        }
+        var urlKey = 0;
+        style = {
+          'background': 'url(' + post.attachments[0][size][urlKey] + ') center no-repeat'
+        };
+      }
+      return style;
+    };
+
     $scope.getPost();
     $scope.getRecentPosts();
     $scope.getCategories();
