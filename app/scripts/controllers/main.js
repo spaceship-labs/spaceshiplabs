@@ -59,7 +59,6 @@ angular.module('spaceshiplabsApp')
           }
         );
       }else{
-        console.log('invalido')
         $scope.contactError = true;
       }
     };
