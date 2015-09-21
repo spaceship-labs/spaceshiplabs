@@ -885,15 +885,15 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .contact-us input[type="email"],
 .contact-us input[type="text"]{
   background: transparent;
-  border: 1px solid #485DC6;
-  color: #485DC6;
+  border: 1px solid #00c5d8;
+  color: #00c5d8;
   padding: 8px;
   -webkit-appearance:none;
   -moz-appearance:none;
 }
 
 .contact-us input[type="submit"]{
-  background: #485DC6;
+  background: #00c5d8;
   border: 0;
   color: #fff;
   padding: 9px 8px;
@@ -901,10 +901,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   -moz-appearance:none;
 }
 
-.contact-us input::-webkit-input-placeholder { color:#485DC6; }
-.contact-us input:-moz-placeholder { color:#485DC6; } /* FF 4-18 */
-.contact-us input::-moz-placeholder { color:#485DC6; } /* FF 19+ */
-.contact-us input:-ms-input-placeholder { color:#485DC6; } /* IE 10+ */
+.contact-us input::-webkit-input-placeholder { color:#00c5d8; }
+.contact-us input:-moz-placeholder { color:#00c5d8; } /* FF 4-18 */
+.contact-us input::-moz-placeholder { color:#00c5d8; } /* FF 19+ */
+.contact-us input:-ms-input-placeholder { color:#00c5d8; } /* IE 10+ */
 
 
 .contact-us-content .social-icons{margin-top: 40px}
@@ -912,7 +912,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .contact-form-message{
   margin-top: 6px!important;
   font-size: 14px;
-  color: #485DC6;
+  color: #00c5d8;
 }
 .contact-form-message-error{
   color: red

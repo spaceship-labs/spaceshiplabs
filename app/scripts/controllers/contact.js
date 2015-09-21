@@ -31,6 +31,7 @@ angular.module('spaceshiplabsApp')
       marker.setMap(map);
     };
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    initialize();
+    //google.maps.event.addDomListener(window, 'load', initialize);
 
   });

@@ -30,33 +30,38 @@ angular.module('spaceshiplabsApp')
       return $location.absUrl();
     };
 
-    $scope.doContact = function(){
-      $scope.contactError = false;
-      $scope.emailSent = false;
-      var req = {
-        method: 'POST',
-        url: '/__/forms/contact',
-        //method: 'GET',
-        //url: '/json/email-success.json',
-        data: {
-          email: $scope.contactData.email,
-          name: $scope.contactData.name,
-          message: $scope.contactData.message
-        },
-      };
-      $http( req ).then(
-        function(response) {
-          if(response.data.status === 'success'){
-            $scope.emailSent = true;
-          }else{
+    $scope.doContact = function(form){
+      if(form.$valid){
+        $scope.contactError = false;
+        $scope.emailSent = false;
+        var req = {
+          method: 'POST',
+          url: '/__/forms/contact',
+          //method: 'GET',
+          //url: '/json/email-success.json',
+          data: {
+            email: $scope.contactData.email,
+            name: $scope.contactData.name,
+            message: $scope.contactData.message
+          },
+        };
+        $http( req ).then(
+          function(response) {
+            if(response.data.status === 'success'){
+              $scope.emailSent = true;
+              $scope.contactError = false;
+            }else{
+              $scope.contactError = true;
+            }
+          }, function(err) {
             $scope.contactError = true;
+            console.log(err);
           }
-        }, function(err) {
-          $scope.contactError = true;
-          console.log(err);
-        }
-      );
-
+        );
+      }else{
+        console.log('invalido')
+        $scope.contactError = true;
+      }
     };
 
     $scope.windowSize = function (){
