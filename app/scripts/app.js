@@ -22,7 +22,12 @@ angular
     'btford.markdown',
     'metatags'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
+
+    $mdThemingProvider.theme('default')
+      .primaryPalette('light-blue',{
+        'default': '400',
+      });
 
     $locationProvider.html5Mode(true);
 

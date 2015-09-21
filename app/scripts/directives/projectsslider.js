@@ -18,19 +18,22 @@ angular.module('spaceshiplabsApp')
       },
       link: function postLink(scope) {
 
-        scope.$watch('winSize', function (newValue) {
-          if(newValue !== 'blog'){
+        /*scope.$watch('winSize', function (newValue, oldValue) {
+          if(newValue !== 'blog' && newValue !== oldValue){
             scope.sliderInterval = $interval(scope.moveNextProject, 6000);
           }else{
             $interval.cancel(scope.sliderInterval);
           }
-        });
+        });*/
 
         scope.setUp = function(){
           scope.winSize = scope.winSize || 'large';
           scope.selectedIndexSlide = 0;
           scope.selectedProjectPhoto = 0;
           scope.itemsCount = scope.projects.length;
+
+          $interval.cancel(scope.sliderInterval);
+
           if(scope.winSize !== 'blog'){
             scope.sliderInterval = $interval(scope.moveNextProject, 6000);
           }
@@ -63,11 +66,13 @@ angular.module('spaceshiplabsApp')
             scope.selectedIndexSlide = 0;
           }
 
-          if(scope.winSize !== 'blog'){
-            $interval.cancel(scope.sliderInterval);
-            scope.sliderInterval = $interval(scope.moveNextProject, 6000);
-          }
       	};
+
+        scope.moveNextProjectAction = function(){
+          $interval.cancel(scope.sliderInterval);
+          scope.moveNextProject();
+
+        };
 
       	scope.movePrev = function(){
       		if(scope.selectedIndexSlide > 0){
@@ -75,18 +80,14 @@ angular.module('spaceshiplabsApp')
   				}else{
             scope.selectedIndexSlide = scope.itemsCount - 1;
           }
-          if(scope.winSize !== 'blog'){
-            $interval.cancel(scope.sliderInterval);
-            scope.sliderInterval = $interval(scope.moveNextProject, 6000);
-          }
+
+          $interval.cancel(scope.sliderInterval);
       	};
 
         scope.moveToProject = function(index){
           scope.selectedIndexSlide = index;
-          if(scope.winSize !== 'blog'){
-            $interval.cancel(scope.sliderInterval);
-            scope.sliderInterval = $interval(scope.moveNextProject, 6000);
-          }
+          $interval.cancel(scope.sliderInterval);
+
         };
 
         scope.moveNextPhoto = function(){

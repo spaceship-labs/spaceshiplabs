@@ -33,8 +33,6 @@ angular.module('spaceshiplabsApp')
           }
 
           $interval.cancel(scope.clientSliderInterval);
-          scope.clientSliderInterval = $interval(scope.moveNext, 4000);
-
       	};
 
       	scope.movePrev = function(){
@@ -44,13 +42,11 @@ angular.module('spaceshiplabsApp')
             scope.selectedIndex = scope.itemsCount - 1;
           }
           $interval.cancel(scope.clientSliderInterval);
-          scope.clientSliderInterval = $interval(scope.moveNext, 4000);
       	};
 
         scope.moveTo = function(index){
           scope.selectedIndex = index;
           $interval.cancel(scope.clientSliderInterval);
-          scope.clientSliderInterval = $interval(scope.moveNext, 4000);
         };
 
         scope.getNumber = function(num) {
