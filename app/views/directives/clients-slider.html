@@ -6,59 +6,26 @@
       <!--SLIDES-->
       <div
         class="clients-slide"
+        ng-repeat="slide in slides track by $index"
         ng-class="{
-          'clients-slide-active': selectedIndex == 0,
-          'clients-slide-out': movingOutIndex == 0
+          'clients-slide-active': selectedIndex == $index,
+          'clients-slide-right': nextIndex == $index,
+          'clients-slide-left' : prevIndex == $index,
+          'clients-slide-animated': isAnimated($index)
         }"
         layout="row"
         layout-align="space-between center"
         layout-sm="column"
         style="width: {{widthSlide}}%">
 
-        <div class="client-item" flex="45" flex-sm="100">
-          <img src="images/carloslopez.jpg" class="client-item-avatar" alt="">
-          <h5>Carlos López UNO</h5>
-          <h6>CONSEJOSANO</h6>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
-        </div>
-
-        <div class="client-item" flex="45" flex-sm="100">
-          <img src="images/alexandra.jpg" class="client-item-avatar" alt="">
-          <h5>Alexandra Zapata-Hojel</h5>
-          <h6>MEJORA TU ESCUELA</h6>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
+        <div ng-repeat="client in slide" class="client-item" flex="45" flex-sm="100">
+          <img ng-src="{{client.avatar}}" class="client-item-avatar" alt="">
+          <h5>{{client.name}}</h5>
+          <h6>{{client.company}}</h6>
+          <p>{{client.quote}}</p>
         </div>
 
       </div>
-
-      <div
-        class="clients-slide"
-        layout="row"
-        layout-align="space-between center"
-        ng-class="{
-          'clients-slide-active': selectedIndex == 1,
-          'clients-slide-out': movingOutIndex == 1
-        }"
-
-        layout-sm="column"
-        style="width: {{widthSlide}}%">
-
-        <div class="client-item" flex="45" flex-sm="100">
-          <img src="images/carloslopez.jpg" class="client-item-avatar" alt="">
-          <h5>Carlos López</h5>
-          <h6>CONSEJOSANO</h6>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
-        </div>
-
-        <div class="client-item" flex="45" flex-sm="100">
-          <img src="images/alexandra.jpg" class="client-item-avatar" alt="">
-          <h5>Alexandra Zapata-Hojel</h5>
-          <h6>MEJORA TU ESCUELA</h6>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
-        </div>
-
-      </div>
-
 
       <!--/SLIDES-->
 
@@ -75,7 +42,7 @@
       <img src="images/flechab.png" alt="">
     </a>
 
-    <div class="clients-slider-bullets">
+    <!--<div class="clients-slider-bullets">
       <a
         href=""
         ng-repeat="i in getNumber(itemsCount) track by $index"
@@ -83,6 +50,6 @@
         ng-click="moveTo($index)"
         >
       </a>
-    </div>
+    </div>-->
 
 </div>
