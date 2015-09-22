@@ -785,6 +785,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   color: #fff;
 }
 
+.clients-landing > .container{width: 100%;}
+
 /*----------------/
   #CLIENTS-SLIDER
 /*---------------*/
@@ -817,6 +819,19 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .clients-slider-reel{
   position: relative;
+  min-height: 320px;
+  width: 100%!important;
+}
+
+.clients-slide{
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 100%!important;
+}
+
+.clients-slide-active{
+  left: 0;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
   -o-transition: all .4s;
@@ -824,7 +839,14 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   transition: all .4s;
 }
 
-.clients-slide{float: left;}
+.clients-slide-out{
+  left: -100%;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}
 
 .clients-slider .client-item h5,
 .clients-slider .client-item h6{margin: 6px}
@@ -1744,6 +1766,8 @@ md-progress-circular .md-inner .md-right .md-half-circle {
     margin: 0!important;
     padding: 10px 14px;
   }
+  .clients-landing > .container{width: auto;}
+  .clients-slider-reel{min-height: 900px;}
 
   /*-------------/
     #ABOUT-US

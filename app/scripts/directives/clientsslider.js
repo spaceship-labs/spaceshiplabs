@@ -7,22 +7,39 @@
  * # clientsSlider
  */
 angular.module('spaceshiplabsApp')
-  .directive('clientsSlider', function ($interval) {
+  .directive('clientsSlider', function ($interval, $timeout) {
     return {
       templateUrl: 'views/directives/clients-slider.html',
       restrict: 'EA',
       link: function postLink(scope) {
+
+        scope.getMovingOutIndex = function (selectedIndex, totalItems){
+          var movingOutIndex = -1;
+          if(selectedIndex > 0){
+            movingOutIndex = selectedIndex - 1;
+          }else{
+            movingOutIndex = totalItems-1;
+          }
+
+          return movingOutIndex;
+
+        };
+
         scope.setUp = function(){
+          scope.itemsCount = 2;
         	scope.selectedIndex = 0;
-        	scope.itemsCount = 2;
         	scope.leftReel = 0;
+          scope.movingOutIndex = -1;
           scope.clientSliderInterval = $interval(scope.moveNext, 4000);
+          scope.duration = 400;
         };
 
 				scope.$watch('selectedIndex', function (newValue) {
-					scope.leftReel = newValue * (-100);
-					scope.widthReel = scope.itemsCount * 100;
-					scope.widthSlide = 100 / scope.itemsCount;
+          scope.movingOutIndex = scope.getMovingOutIndex(newValue, scope.itemsCount);
+          $timeout(function(){
+            scope.movingOutIndex = -1;
+          }, scope.duration);
+
 				}, true);
 
       	scope.moveNext = function(){

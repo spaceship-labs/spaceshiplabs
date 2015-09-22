@@ -34,6 +34,11 @@
  					customHeight = newValue.h;
  				}
 
+        //Aplicando una altura minima
+        if(customHeight < 520){
+          customHeight = 520;
+        }
+
  				return {
  					'height': (customHeight) + 'px',
  					'width': (newValue.w) + 'px'

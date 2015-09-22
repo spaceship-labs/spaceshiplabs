@@ -1,11 +1,15 @@
 <div class="clients-slider">
 
   <div class="clients-slider-viewport">
-    <div class="clients-slider-reel" style="left : {{leftReel}}%; width: {{widthReel}}%">
+    <div class="clients-slider-reel">
 
       <!--SLIDES-->
       <div
         class="clients-slide"
+        ng-class="{
+          'clients-slide-active': selectedIndex == 0,
+          'clients-slide-out': movingOutIndex == 0
+        }"
         layout="row"
         layout-align="space-between center"
         layout-sm="column"
@@ -13,7 +17,7 @@
 
         <div class="client-item" flex="45" flex-sm="100">
           <img src="images/carloslopez.jpg" class="client-item-avatar" alt="">
-          <h5>Carlos López</h5>
+          <h5>Carlos López UNO</h5>
           <h6>CONSEJOSANO</h6>
           <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."</p>
         </div>
@@ -31,6 +35,11 @@
         class="clients-slide"
         layout="row"
         layout-align="space-between center"
+        ng-class="{
+          'clients-slide-active': selectedIndex == 1,
+          'clients-slide-out': movingOutIndex == 1
+        }"
+
         layout-sm="column"
         style="width: {{widthSlide}}%">
 

@@ -13,10 +13,14 @@
   			<!--Slides(por proyecto)-->
 
   			<div
-  				ng-repeat="project in projects | customReverse"
+  				ng-repeat="project in projects | orderBy:predicate:reverse track by $index"
   				ng-style="style()"
   				full-screen-wrapper
   				class="projects-slide projects-slide-image"
+          ng-class="{
+            'projects-slide-active' : selectedIndexSlide == $index,
+            'projects-slide-out' : movingOutIndexSlide == $index
+          }"
   			>
   				<!--Fotos de proyecto-->
   				<div
@@ -48,7 +52,10 @@
   				full-screen-wrapper
   				layout="column"
   				layout-align="center center"
-  				data-content-index="{{$index}}"
+          ng-class="{
+            'projects-slide-active' : selectedIndexSlide == $index,
+            'projects-slide-out' : movingOutIndexSlide == $index
+          }"
   			>
   				<div class="projects-slide-content-inner container container-sm">
   					<h3>{{project.type}}</h3>
@@ -74,7 +81,7 @@
 		</div>
 
 		<ul class="projects-slider-bullets">
-			<li ng-repeat="item in getNumber(itemsCount) track by $index">
+			<li ng-repeat="item in getNumber(projectsCount) track by $index">
 				<a href="#" ng-class="{'active-bullet' : selectedIndexSlide == $index  }" ng-click="moveToProject($index)"></a>
 			</li>
 		</ul>

@@ -7,7 +7,7 @@
  * # projectsSlider
  */
 angular.module('spaceshiplabsApp')
-  .directive('projectsSlider', function ($interval) {
+  .directive('projectsSlider', function ($interval, $timeout) {
     return {
       templateUrl: 'views/directives/projects-slider.html',
       restrict: 'E',
@@ -26,11 +26,25 @@ angular.module('spaceshiplabsApp')
           }
         });*/
 
+        scope.getMovingOutIndexSlide = function (selectedIndex, totalItems){
+          var movingOutIndex = -1;
+          if(selectedIndex > 0){
+            movingOutIndex = selectedIndex - 1;
+          }else{
+            movingOutIndex = totalItems-1;
+          }
+
+          return movingOutIndex;
+
+        };
+
         scope.setUp = function(){
           scope.winSize = scope.winSize || 'large';
+          scope.projectsCount = scope.projects.length;
+          scope.movingOutIndexSlide = -1;
           scope.selectedIndexSlide = 0;
           scope.selectedProjectPhoto = 0;
-          scope.itemsCount = scope.projects.length;
+          scope.durationMovement = 400;
 
           $interval.cancel(scope.sliderInterval);
 
@@ -43,24 +57,17 @@ angular.module('spaceshiplabsApp')
             return new Array(num);
         };
 
-				scope.$watch('selectedIndexSlide', function (newValue, oldValue) {
-					var topImages = 0;
-          var topContent = 0;
-          if(newValue === oldValue || newValue === 0){
-            topContent = ( newValue * (-100) ) + '%';
-            topImages = ( (scope.itemsCount-1) * (-100) ) + '%';
-            $('.projects-slider-images-reel').css('top', topImages);
-            $('.projects-slider-content-reel').css('top', topContent);
-            return;
-          }
-					topContent = ( newValue * (-100) ) + '%';
-          topImages = ( ( ( scope.itemsCount - newValue ) -1 )  * (-100) ) + '%';
-					$('.projects-slider-images-reel').css('top', topImages);
-          $('.projects-slider-content-reel').css('top', topContent);
+				scope.$watch('selectedIndexSlide', function (newValue) {
+
+          scope.movingOutIndexSlide = scope.getMovingOutIndexSlide(newValue, scope.projectsCount);
+          $timeout(function(){
+            scope.movingOutIndexSlide = -1;
+          }, scope.durationMovement);
+
 				}, true);
 
       	scope.moveNextProject = function(){
-      		if(scope.selectedIndexSlide < (scope.itemsCount-1)){
+      		if(scope.selectedIndexSlide < (scope.projectsCount-1)){
 	      		scope.selectedIndexSlide++;
   				}else{
             scope.selectedIndexSlide = 0;
@@ -78,7 +85,7 @@ angular.module('spaceshiplabsApp')
       		if(scope.selectedIndexSlide > 0){
 	      		scope.selectedIndexSlide--;
   				}else{
-            scope.selectedIndexSlide = scope.itemsCount - 1;
+            scope.selectedIndexSlide = scope.projectsCount - 1;
           }
 
           $interval.cancel(scope.sliderInterval);
