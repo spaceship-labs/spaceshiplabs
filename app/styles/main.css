@@ -981,7 +981,12 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 /*--------------*/
 .contact-table{
   border-spacing: 0;
+  position: relative;
 }
+
+.contact-form{position: relative;}
+
+
 .contact-table-cell-half{width: 50%;}
 .contact-table-cell{
   border: 1px solid #00C4D5;
@@ -989,11 +994,15 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   color: #757575;
 }
 .contact-table-cell h2{
-  color: #757575;
+  color: #00C4D5;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
 }
+.contact-table-cell h2 span{
+  font-weight: 300;
+}
+
 .contact-table-cell strong{
   color: #757575;
   font-size: 12px;
@@ -1342,6 +1351,15 @@ input:-webkit-autofill {
   margin:16px 0;
 }
 
+.single-post-content .alignright{
+  float: right;
+  margin: 12px 0 12px 16px;
+}
+.single-post-content .alignleft{
+  float: left;
+  margin: 12px 16px 12px 0;
+}
+
 .single-post-content p{
   margin: 10px 0;
   text-align: justify;
@@ -1423,12 +1441,26 @@ input:-webkit-autofill {
 .blog-sidebar-card{
   text-align: center;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .card-thumb{
   background-size: cover!important;
   min-height: 140px;
   position: relative;
+  -webkit-transition: all .6s ease; /* Safari and Chrome */
+  -moz-transition: all .6s ease; /* Firefox */
+  -ms-transition: all .6s ease; /* IE 9 */
+  -o-transition: all .6s ease; /* Opera */
+  transition: all .6s ease;
+}
+
+.blog-sidebar-card:hover .card-thumb{
+ -webkit-transform:scale(1.15); /* Safari and Chrome */
+  -moz-transform:scale(1.15); /* Firefox */
+  -ms-transform:scale(1.15); /* IE 9 */
+  -o-transform:scale(1.15); /* Opera */
+   transform:scale(1.15);
 }
 
 .card-content{

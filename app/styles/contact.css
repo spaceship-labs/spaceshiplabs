@@ -1,0 +1,163 @@
+/* Firefox < 16 */
+@-moz-keyframes leftToRight {
+    from { left: -100%; }
+    to   { left: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes leftToRight {
+    from { left: -100%; }
+    to   { left: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes leftToRight {
+    from { left: -100%; }
+    to   { left: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes leftToRight {
+    from { left: -100%; }
+    to   { left: 0; }
+}
+
+/*------------------*/
+
+/* Firefox < 16 */
+@-moz-keyframes upDown {
+    from { top: -100%; }
+    to   { top: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes upDown {
+    from { top: -100%; }
+    to   { top: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes upDown {
+    from { top: -100%; }
+    to   { top: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes upDown {
+    from { top: -100%; }
+    to   { top: 0; }
+}
+
+.contact-form{
+  position: relative;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.contact-table-cell{position: relative;}
+
+
+.contact-top-border{
+  display: block;
+  height: 4px;
+  width: 100%;
+  top: -2px;
+  background: #00C4D5;
+  position: absolute;
+  left: -100%;
+  z-index:9;
+  -webkit-animation: leftToRight 1s forwards; /* Safari 4+ */
+  -moz-animation:    leftToRight 1s forwards; /* Fx 5+ */
+  -o-animation:      leftToRight 1s forwards; /* Opera 12+ */
+  animation:         leftToRight 1s forwards;
+}
+
+.contact-bottom-border{
+  display: block;
+  height: 4px;
+  width: 100%;
+  bottom: -2px;
+  background: #00C4D5;
+  position: absolute;
+  left: -100%;
+  z-index:9;
+  -webkit-animation: leftToRight 1s 1s forwards; /* Safari 4+ */
+  -moz-animation:    leftToRight 1s 1s forwards; /* Fx 5+ */
+  -o-animation:      leftToRight 1s 1s forwards; /* Opera 12+ */
+  animation:         leftToRight 1s 1s forwards;
+}
+
+.contact-left-border{
+  display: block;
+  width: 4px;
+  height: 100%;
+  left: -2px;
+  top: -100%;
+  background: #00C4D5;
+  position: absolute;
+  z-index:9;
+  -webkit-animation: upDown 1s forwards; /* Safari 4+ */
+  -moz-animation:    upDown 1s forwards; /* Fx 5+ */
+  -o-animation:      upDown 1s forwards; /* Opera 12+ */
+  animation:         upDown 1s forwards;
+}
+
+.contact-right-border{
+  display: block;
+  width: 4px;
+  height: 100%;
+  right: -2px;
+  top: -100%;
+  background: #00C4D5;
+  position: absolute;
+  z-index:9;
+  -webkit-animation: upDown 1s 1s forwards; /* Safari 4+ */
+  -moz-animation:    upDown 1s 1s forwards; /* Fx 5+ */
+  -o-animation:      upDown 1s 1s forwards; /* Opera 12+ */
+  animation:         upDown 1s 1s forwards;
+}
+
+.contact-left-inner-border{
+  display: block;
+  width: 4px;
+  height: 100%;
+  right: -2px;
+  top: -100%;
+  background: #00C4D5;
+  position: absolute;
+  z-index:9;
+  -webkit-animation: upDown 0.2s forwards 0.5s; /* Safari 4+ */
+  -moz-animation:    upDown 0.2s forwards 0.5s; /* Fx 5+ */
+  -o-animation:      upDown 0.2s forwards 0.5s; /* Opera 12+ */
+  animation:         upDown 0.2s forwards 0.5s;
+}
+
+.contact-left-middle-inner-border{
+  display: block;
+  width: 4px;
+  height: 100%;
+  right: -2px;
+  top: -100%;
+  background: #00C4D5;
+  position: absolute;
+  z-index:9;
+  -webkit-animation: upDown .2s forwards .7s; /* Safari 4+ */
+  -moz-animation:    upDown .2s forwards .7s; /* Fx 5+ */
+  -o-animation:      upDown .2s forwards .7s; /* Opera 12+ */
+  animation:         upDown .2s forwards .7s;
+}
+
+.contact-left-bottom-inner-border{
+  display: block;
+  width: 4px;
+  height: 100%;
+  right: -2px;
+  top: -100%;
+  background: #00C4D5;
+  position: absolute;
+  z-index:9;
+  -webkit-animation: upDown .6s forwards .9s; /* Safari 4+ */
+  -moz-animation:    upDown .6s forwards .9s; /* Fx 5+ */
+  -o-animation:      upDown .6s forwards .9s; /* Opera 12+ */
+  animation:         upDown .6s forwards .9s;
+}
