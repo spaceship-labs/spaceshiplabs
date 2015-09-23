@@ -832,16 +832,14 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 .clients-slide-animated{
-  -webkit-transition: left 1.4s;
-  -moz-transition: left 1.4s;
-  -o-transition: left 1.4s;
-  -ms-transition: left 1.4s;
-  transition: left 1.4s;
-}
+  -webkit-transition: all 1.4s;
+  -moz-transition: all 1.4s;
+  -o-transition: all 1.4s;
+  -ms-transition: all 1.4s;
+  transition: all 1.4s;
 
-.clients-slide-active{
-  left: 0!important;
-  opacity: 1;
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
 }
 
 .clients-slide-left{
@@ -851,6 +849,11 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .clients-slide-right{
   left: 100%;
+  opacity: 1;
+}
+
+.clients-slide-active{
+  left: 0;
   opacity: 1;
 }
 

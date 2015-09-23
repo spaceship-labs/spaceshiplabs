@@ -7,12 +7,7 @@
       <div
         class="clients-slide"
         ng-repeat="slide in slides track by $index"
-        ng-class="{
-          'clients-slide-active': selectedIndex == $index,
-          'clients-slide-right': nextIndex == $index,
-          'clients-slide-left' : prevIndex == $index,
-          'clients-slide-animated': isAnimated($index)
-        }"
+        data-slide-index="{{$index}}"
         layout="row"
         layout-align="space-between center"
         layout-sm="column"
@@ -42,7 +37,7 @@
       <img src="images/flechab.png" alt="">
     </a>
 
-    <!--<div class="clients-slider-bullets">
+    <div class="clients-slider-bullets">
       <a
         href=""
         ng-repeat="i in getNumber(itemsCount) track by $index"
@@ -50,6 +45,6 @@
         ng-click="moveTo($index)"
         >
       </a>
-    </div>-->
+    </div>
 
 </div>
