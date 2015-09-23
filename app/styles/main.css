@@ -456,7 +456,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .toolbar-head nav{margin-top: 6px}
 
 .toolbar-head nav > ul{
-  position: relative;
+  /*position: relative;*/
   padding-left: 0;
 }
 
@@ -470,11 +470,14 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   display: none;
   position: absolute;
   left: 0;
+  right: 0;
+  margin: 0 auto;
   /*top: 100%;*/
   padding-left: 0;
   list-style: none;
-  /*min-width: 120px;*/
-  width: 100%;
+  min-width: 220px;
+  width: 58%;
+  /*width: 100%;*/
   padding-top:20px;
 }
 
@@ -502,15 +505,38 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   overflow: hidden;
 }
 
-
-
-
 .toolbar-head nav > ul > li:last-child a{
   margin-right: 0;
   border: 1px solid #fff;
+  padding: 6px;
+  position: relative;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+}
+.toolbar-head nav > ul > li:last-child a:after{
+  content: '';
+  display: block;
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 0;
 }
 
-.toolbar-head nav > ul > li:last-child a:after{display: none;}
+.toolbar-head nav > ul > li:last-child a span{
+  position: relative;
+  z-index: 1;
+}
+.toolbar-head nav > ul > li:last-child a:hover span{color: #4BE7B7}
+.toolbar-head.fixed-head nav > ul > li:last-child a:hover span{color: rgb(0, 197, 216);}
+.toolbar-head nav > ul > li:last-child a:hover:after{
+  left: 0;
+}
+
 
 .toolbar-head .cart-icon img{
   max-width: 15px;
@@ -539,14 +565,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .toolbar-head.fixed-head.dropdown-active{
   max-height: none;
   height: 200px!important;
-  background: #08b4da;
-  background: -moz-linear-gradient(top,  #08b4da 0%, #1fdeb2 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#08b4da), color-stop(100%,#1fdeb2));
-  background: -webkit-linear-gradient(top,  #08b4da 0%,#1fdeb2 100%);
-  background: -o-linear-gradient(top,  #08b4da 0%,#1fdeb2 100%);
-  background: -ms-linear-gradient(top,  #08b4da 0%,#1fdeb2 100%);
-  background: linear-gradient(to bottom,  #08b4da 0%,#1fdeb2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08b4da', endColorstr='#1fdeb2',GradientType=0 );
+  background: rgb(0, 197, 216);
 }
 .toolbar-head.dropdown-active{height: 230px !important}
 .toolbar-head.fixed-head{
@@ -689,27 +708,26 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   -ms-transition: background .4s;
   transition: background .4s;
 }
-.services-item:nth-child(1){background: transparent url(../images/ui2.png) top center no-repeat;}
-.services-item:nth-child(2){background: transparent url(../images/iconos2_blanco.png) top center no-repeat;}
-.services-item:nth-child(3){background: transparent url(../images/icono3_blanco.png) top center no-repeat;}
-.services-item:nth-child(4){background: transparent url(../images/icono4_blanco.png) top center no-repeat;}
+.services-item-ui{background: transparent url(../images/ui2.png) top center no-repeat;}
+.services-item-branding{background: transparent url(../images/iconos2_blanco.png) top center no-repeat;}
+.services-item-marketing{background: transparent url(../images/icono3_blanco.png) top center no-repeat;}
+.services-item-consulting{background: transparent url(../images/icono4_blanco.png) top center no-repeat;}
+.services-item-software{background: transparent url(../images/software.png) center 5px no-repeat;}
 
-.services-item:hover:nth-child(1){background: transparent url(../images/ui.png) top center no-repeat;}
-.services-item:hover:nth-child(2){background: transparent url(../images/iconos2.png) top center no-repeat;}
-.services-item:hover:nth-child(3){background: transparent url(../images/icono3.png) top center no-repeat;}
-.services-item:hover:nth-child(4){background: transparent url(../images/icono4.png) top center no-repeat;}
+.services-item-ui:hover{background: transparent url(../images/ui.png) top center no-repeat;}
+.services-item-branding:hover{background: transparent url(../images/iconos2.png) top center no-repeat;}
+.services-item-marketing:hover{background: transparent url(../images/icono3.png) top center no-repeat;}
+.services-item-consulting:hover{background: transparent url(../images/icono4.png) top center no-repeat;}
+.services-item-software:hover{background: transparent url(../images/software.png) center 5px no-repeat;}
 
 
 .menu .services-item{padding-top: 30px;}
 .menu .services-item:hover{opacity: .5;}
-.menu .services-item:nth-child(1){background: transparent url(../images/uiMenu.png) top center no-repeat;}
-.menu .services-item:nth-child(2){background: transparent url(../images/branMenu.png) top center no-repeat;}
-.menu .services-item:nth-child(3){background: transparent url(../images/markMenu.png) top center no-repeat;}
-.menu .services-item:nth-child(4){background: transparent url(../images/consulMenu.png) top center no-repeat;}
-.menu .services-item:hover:nth-child(1){background: transparent url(../images/uiMenu.png) top center no-repeat;}
-.menu .services-item:hover:nth-child(2){background: transparent url(../images/branMenu.png) top center no-repeat;}
-.menu .services-item:hover:nth-child(3){background: transparent url(../images/markMenu.png) top center no-repeat;}
-.menu .services-item:hover:nth-child(4){background: transparent url(../images/consulMenu.png) top center no-repeat;}
+.menu .services-item-ui{background: transparent url(../images/uiMenu.png) center top no-repeat;}
+.menu .services-item-branding{background: transparent url(../images/branMenu.png) center top no-repeat;}
+.menu .services-item-marketing{background: transparent url(../images/markMenu.png) center top no-repeat;}
+.menu .services-item-consulting{background: transparent url(../images/consulMenu.png) center top no-repeat;}
+.menu .services-item-software{background: transparent url(../images/software.png) center 5px no-repeat;}
 .menu .services-item h5{
   font-size: 18px;
   font-weight: 500;
@@ -1157,7 +1175,7 @@ input:-webkit-autofill {
   margin-bottom: 20px;
 }
 
-.info-wrap h1.bold-alt{color: #50B7E8;}
+.info-wrap h1.bold-alt{color: #35BFD1;}
 
 .info-wrap p{
   font-size: 18px;

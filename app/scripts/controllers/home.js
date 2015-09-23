@@ -53,6 +53,46 @@ angular.module('spaceshiplabsApp')
       },
     ];
 
+    $scope.clients = [
+      {
+        avatar:'images/carloslopez.jpg',
+        name: 'Carlos López UNO',
+        company: 'CONSEJOSANO',
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
+      },
+      {
+        avatar:'images/alexandra.jpg',
+        name: 'Alexandra Zapata-Hojel UNO',
+        company: 'MEJORA TU ESCUELA',
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
+      },
+      {
+        avatar:'images/carloslopez.jpg',
+        name: 'Carlos López DOS',
+        company: 'CONSEJOSANO',
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
+      },
+      {
+        avatar:'images/alexandra.jpg',
+        name: 'Alexandra Zapata-Hojel DOS',
+        company: 'MEJORA TU ESCUELA',
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
+      },
+      {
+        avatar:'images/carloslopez.jpg',
+        name: 'Carlos López TREs',
+        company: 'CONSEJOSANO',
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
+      },
+      {
+        avatar:'images/alexandra.jpg',
+        name: 'Alexandra Zapata-Hojel TREs',
+        company: 'MEJORA TU ESCUELA',
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
+      },
+
+    ];
+
     $scope.getRecentPosts();
 
   });

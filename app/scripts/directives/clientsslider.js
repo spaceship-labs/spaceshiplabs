@@ -11,6 +11,9 @@ angular.module('spaceshiplabsApp')
     return {
       templateUrl: 'views/directives/clients-slider.html',
       restrict: 'EA',
+      scope:{
+        clients:'='
+      },
       link: function postLink(scope, element) {
 
         scope.getNextIndex = function (selectedIndex, totalItems){
@@ -56,45 +59,6 @@ angular.module('spaceshiplabsApp')
 
 
         scope.setUp = function(){
-          scope.clients = [
-            {
-              avatar:'images/carloslopez.jpg',
-              name: 'Carlos López UNO',
-              company: 'CONSEJOSANO',
-              quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
-            },
-            {
-              avatar:'images/alexandra.jpg',
-              name: 'Alexandra Zapata-Hojel UNO',
-              company: 'MEJORA TU ESCUELA',
-              quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
-            },
-            {
-              avatar:'images/carloslopez.jpg',
-              name: 'Carlos López DOS',
-              company: 'CONSEJOSANO',
-              quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
-            },
-            {
-              avatar:'images/alexandra.jpg',
-              name: 'Alexandra Zapata-Hojel DOS',
-              company: 'MEJORA TU ESCUELA',
-              quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
-            },
-            {
-              avatar:'images/carloslopez.jpg',
-              name: 'Carlos López TREs',
-              company: 'CONSEJOSANO',
-              quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
-            },
-            {
-              avatar:'images/alexandra.jpg',
-              name: 'Alexandra Zapata-Hojel TREs',
-              company: 'MEJORA TU ESCUELA',
-              quote: '"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum."'
-            },
-
-          ];
           scope.slides = scope.groupClients(scope.clients);
           scope.itemsCount = scope.slides.length;
         	scope.selectedIndex = 0;
@@ -126,8 +90,8 @@ angular.module('spaceshiplabsApp')
         }
 
         scope.updateLocations = function(movingOutIndex, movingInIndex){
-          console.log('out:' + movingOutIndex);
-          console.log('in: ' + movingInIndex);
+          /*console.log('out:' + movingOutIndex);
+          console.log('in: ' + movingInIndex);*/
 
           scope.removeClasses();
           var classAnimated = 'clients-slide-animated';
@@ -141,7 +105,6 @@ angular.module('spaceshiplabsApp')
             $('.clients-slide[data-slide-index="'+movingOutIndex+'"]').addClass(classLeft);
             $('.clients-slide[data-slide-index="'+movingInIndex+'"]').addClass(classActive);
           }else{
-            console.log('moviendo prev');
             classRight += ' clients-slide-animated';
             //Begins from left
             $('.clients-slide[data-slide-index="'+movingInIndex+'"]').removeClass(classAnimated);
