@@ -128,13 +128,13 @@
 }
 
 .projects-slider-nav{
-  background: rgba(0,0,0,0.6);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 50%;
+  position: relative;
+  width: 80%;
+  min-width: 80px;
+  max-width: 132px;
   padding: 20px 0;
   z-index: 9;
+  margin: 0 auto;
 }
 
 .projects-slider-nav > a{margin: 0 10px}

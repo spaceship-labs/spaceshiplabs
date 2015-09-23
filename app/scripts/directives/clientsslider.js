@@ -14,13 +14,12 @@ angular.module('spaceshiplabsApp')
       scope:{
         clients:'='
       },
-      link: function postLink(scope, element) {
+      link: function postLink(scope) {
 
         scope.getNextIndex = function (selectedIndex, totalItems){
           var nextIndex;
-          var selectedIndex = scope.selectedIndex;
-          var totalItems = scope.itemsCount;
-          var movement = scope.movement;
+          selectedIndex = scope.selectedIndex;
+          totalItems = scope.itemsCount;
 
           if(selectedIndex < (totalItems-1) ){
             nextIndex = selectedIndex + 1;
@@ -31,9 +30,9 @@ angular.module('spaceshiplabsApp')
         };
 
         scope.getPrevIndex = function (selectedIndex, totalItems){
+          selectedIndex = scope.selectedIndex;
+          totalItems = scope.itemsCount;
           var prevIndex;
-          var selectedIndex = scope.selectedIndex;
-          var totalItems = scope.itemsCount;
           if(selectedIndex > 0){
             prevIndex = selectedIndex - 1;
           }else{
@@ -62,32 +61,36 @@ angular.module('spaceshiplabsApp')
           scope.slides = scope.groupClients(scope.clients);
           scope.itemsCount = scope.slides.length;
         	scope.selectedIndex = 0;
+          if(scope.clientSliderInterval){
+            $interval.cancel(scope.clientSliderInterval);
+          }
           scope.clientSliderInterval = $interval(scope.moveNextAction, 4000);
           scope.duration = 1400;
           scope.movement = 'next';
           scope.activeAnimation = false;
         };
 
-				scope.$watch('selectedIndex', function (newValue, oldValue) {
+				/*scope.$watch('selectedIndex', function (newValue, oldValue) {
 
-				}, true);
+				}, true);*/
 
         scope.initLocations = function(){
           var selectedIndex = scope.selectedIndex;
           var classActive = 'clients-slide-active clients-slide-animated';
           $('.clients-slide[data-slide-index="'+selectedIndex+'"]').addClass(classActive);
-        }
+        };
 
         scope.removeClasses = function(movingInIndex){
           $('.clients-slide').removeClass('clients-slide-animated');
           $('.clients-slide').each(function(){
-            if( $(this).attr('data-slide-index') != movingInIndex ){
+            var index = parseInt($(this).attr('data-slide-index'));
+            if( index !== movingInIndex ){
               $(this).removeClass('clients-slide-active');
             }
           });
           $('.clients-slide').removeClass('clients-slide-left');
           $('.clients-slide').removeClass('clients-slide-right');
-        }
+        };
 
         scope.updateLocations = function(movingOutIndex, movingInIndex){
           /*console.log('out:' + movingOutIndex);
@@ -143,9 +146,7 @@ angular.module('spaceshiplabsApp')
 
       	scope.moveNext = function(){
           scope.moveNextAction();
-          if(!scope.moveNextAction){
-            $interval.cancel(scope.clientSliderInterval);
-          }
+          $interval.cancel(scope.clientSliderInterval);
       	};
 
       	scope.movePrev = function(){
@@ -168,22 +169,22 @@ angular.module('spaceshiplabsApp')
 
         scope.moveTo = function(index){
           if(index !== scope.selectedIndex && !scope.activeAnimation){
-
+            var movingInIndex;
+            var movingOutIndex;
             scope.activeAnimation = true;
 
             if(index > scope.selectedIndex){
               scope.movement = 'next';
-              var movingInIndex = scope.getNextIndex();
+              movingInIndex = scope.getNextIndex();
             }else{
               scope.movement = 'prev';
-              var movingInIndex = scope.getPrevIndex();
+              movingInIndex = scope.getPrevIndex();
             }
 
-            var movingOutIndex = scope.selectedIndex;
+            movingOutIndex = scope.selectedIndex;
 
             scope.updateLocations(movingOutIndex, movingInIndex);
 
-            var movingOutIndex = scope.selectedIndex;
             if(index > scope.selectedIndex){
               scope.movement = 'next';
             }else{
@@ -202,8 +203,16 @@ angular.module('spaceshiplabsApp')
         scope.setUp();
 
         $timeout(function(){
+          scope.removeClasses();
           scope.initLocations();
-        },0)
+        },0);
+
+        scope.$on(
+            "$destroy",
+            function() {
+                $interval.cancel( scope.clientSliderInterval );
+            }
+        );
 
 
       }

@@ -320,7 +320,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 .section-title-blog,
 .section-title-projects{
-  padding-bottom: 100px;
+  /*padding-bottom: 100px;*/
+  padding-bottom: 21px;
   position: relative;
 }
 
