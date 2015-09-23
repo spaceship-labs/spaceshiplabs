@@ -54,7 +54,10 @@
   padding: 2px;
 }
 
-.contact-table-cell{position: relative;}
+.contact-table-cell{
+  position: relative;
+  overflow: hidden;
+}
 
 
 .contact-top-border{
@@ -126,10 +129,10 @@
   background: #00C4D5;
   position: absolute;
   z-index:9;
-  -webkit-animation: upDown 0.2s forwards 0.5s; /* Safari 4+ */
-  -moz-animation:    upDown 0.2s forwards 0.5s; /* Fx 5+ */
-  -o-animation:      upDown 0.2s forwards 0.5s; /* Opera 12+ */
-  animation:         upDown 0.2s forwards 0.5s;
+  -webkit-animation: upDown 0.2s forwards 2s; /* Safari 4+ */
+  -moz-animation:    upDown 0.2s forwards 2s; /* Fx 5+ */
+  -o-animation:      upDown 0.2s forwards 2s; /* Opera 12+ */
+  animation:         upDown 0.2s forwards 2s;
 }
 
 .contact-left-middle-inner-border{
@@ -141,10 +144,10 @@
   background: #00C4D5;
   position: absolute;
   z-index:9;
-  -webkit-animation: upDown .2s forwards .7s; /* Safari 4+ */
-  -moz-animation:    upDown .2s forwards .7s; /* Fx 5+ */
-  -o-animation:      upDown .2s forwards .7s; /* Opera 12+ */
-  animation:         upDown .2s forwards .7s;
+  -webkit-animation: upDown .2s forwards 2.1s; /* Safari 4+ */
+  -moz-animation:    upDown .2s forwards 2.1s; /* Fx 5+ */
+  -o-animation:      upDown .2s forwards 2.1s; /* Opera 12+ */
+  animation:         upDown .2s forwards 2.1s;
 }
 
 .contact-left-bottom-inner-border{
@@ -156,8 +159,8 @@
   background: #00C4D5;
   position: absolute;
   z-index:9;
-  -webkit-animation: upDown .6s forwards .9s; /* Safari 4+ */
-  -moz-animation:    upDown .6s forwards .9s; /* Fx 5+ */
-  -o-animation:      upDown .6s forwards .9s; /* Opera 12+ */
-  animation:         upDown .6s forwards .9s;
+  -webkit-animation: upDown .4s forwards 2.3s; /* Safari 4+ */
+  -moz-animation:    upDown .4s forwards 2.3s; /* Fx 5+ */
+  -o-animation:      upDown .4s forwards 2.3s; /* Opera 12+ */
+  animation:         upDown .4s forwards 2.3s;
 }

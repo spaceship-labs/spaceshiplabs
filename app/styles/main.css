@@ -990,6 +990,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .contact-table-cell-half{width: 50%;}
 .contact-table-cell{
   border: 1px solid #00C4D5;
+  border-left: 0;
+  border-right: 0;
   padding: 12px 20px;
   color: #757575;
 }
@@ -1013,27 +1015,28 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 .contact-table-cell-lt{
-  border-left:2px solid #00C4D5;
-  border-top:2px solid #00C4D5;
+  border-left:0;
+  border-top:0;
 }
 .contact-table-cell-rt{
-  border-right:2px solid #00C4D5;
-  border-top:2px solid #00C4D5;
+  border-right:0;
+  border-top:0;
 }
 .contact-table-cell-lm{
-  border-left:2px solid #00C4D5;
+  border-left:0;
 }
 .contact-table-cell-rm{
-  border-right:2px solid #00C4D5;
+  border-right:0;
 }
 .contact-table-cell-lb{
-  border-left:2px solid #00C4D5;
-  border-bottom:2px solid #00C4D5;
+  border-left:0;
+  border-bottom:0;
 }
 .contact-table-cell-rb{
-  border-right:2px solid #00C4D5;
-  border-bottom:2px solid #00C4D5;
+  border-right:0;
+  border-bottom:0;
 }
+
 .contact-table-cell-submit{
   padding: 0;
   position: relative;
@@ -1081,6 +1084,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   font-size: 16px;
   width: 100%;
 }
+
+.contact-table-cell textarea{resize: none}
 
 #map-contact{
   min-height: 400px;
