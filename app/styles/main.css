@@ -379,6 +379,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 #sidebar-menu md-content a{
   color: #fff;
   font-weight: 300;
+  display: block;
+  padding-left: 25px;
 }
 
 #sidebar-menu md-content ul{padding: 0;}
@@ -389,12 +391,12 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   width: 100%;
   padding: 0;
   margin-left: 0;
-  padding-left: 25px;
+
 }
 
 #sidebar-menu #close-button{
-  background-color: #00C5D8;
-  /*background: url(images/arrow-left.png) center no-repeat;*/
+  background: #00C5D8 url(../images/flechaa.png) center center no-repeat;
+  background-size: 13px;
 }
 
 #button-menu-mobile{cursor: pointer;display: none;height: 35px;padding: 5px 0;width: 35px;z-index: 1}

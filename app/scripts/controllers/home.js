@@ -24,7 +24,6 @@ angular.module('spaceshiplabsApp')
       video.play();
       var videoLimit = 8;
       video.addEventListener('timeupdate',function(){
-        console.log(video.currentTime);
         if(video.currentTime > videoLimit){
           video.currentTime = 1;
         }
