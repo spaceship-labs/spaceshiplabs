@@ -42,10 +42,13 @@
           <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
           <div class="news-item-excerpt">
             <div class="news-item-excerpt-inner">
-              <h4>{{entry.title}}</h4>
+              <!-- <h4>{{entry.title}}</h4>
               <p>
                 <span  class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
-              </p>
+              </p> -->
+              <p>{{ entry.date | date:'dd - MMMM - yyyy' }}</p>
+              <p>{{entry.title}}</p>
+              <p><i class="cyan-arrow"></i>Leer más</p>
             </div>
           </div>
         </div>
@@ -65,10 +68,13 @@
           <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
           <div class="news-item-excerpt">
             <div class="news-item-excerpt-inner">
-              <h4>{{entry.title}}</h4>
+              <!-- <h4>{{entry.title}}</h4>
               <p>
                 <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
-              </p>
+              </p> -->
+              <p>{{ entry.date | date:'dd - MMMM - yyyy' }}</p>
+              <p>{{entry.title}}</p>
+              <p><i class="cyan-arrow"></i>Leer más</p>
             </div>
           </div>
         </div>
@@ -87,10 +93,13 @@
           <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
           <div class="news-item-excerpt">
             <div class="news-item-excerpt-inner">
-              <h4>{{entry.title}}</h4>
+              <!-- <h4>{{entry.title}}</h4>
               <p>
                 <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
-              </p>
+              </p> -->
+              <p>{{ entry.date | date:'dd - MMMM - yyyy' }}</p>
+              <p>{{entry.title}}</p>
+              <p><i class="cyan-arrow"></i>Leer más</p>
             </div>
           </div>
         </div>

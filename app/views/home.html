@@ -36,7 +36,9 @@
     <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
     <div class="news-item-excerpt">
       <div class="news-item-excerpt-inner">
+        <p>{{ entry.date | date:'dd - MMMM - yyyy' }}</p>
         <p>{{entry.title}}</p>
+        <p><i class="cyan-arrow"></i>Leer más</p>
       </div>
     </div>
   </div>
