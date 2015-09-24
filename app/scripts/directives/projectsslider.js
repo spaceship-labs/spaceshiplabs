@@ -115,6 +115,13 @@ angular.module('spaceshiplabsApp')
           }
         };
 
+        scope.$watch('projects', function (newValue, oldValue) {
+          if(newValue !== oldValue){
+            scope.setUp();
+          }
+
+        }, true);
+
         scope.setUp();
 
       }

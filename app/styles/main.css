@@ -318,12 +318,11 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   padding-top: 140px;
   padding-bottom: 60px;
 }
-.section-title-blog,
-.section-title-projects{
-  /*padding-bottom: 100px;*/
-  padding-bottom: 21px;
+.section-title-blog{
+  padding-bottom: 100px;
   position: relative;
 }
+.section-title-projects{padding-bottom: 42px}
 
 .section-title-options{
   position: absolute;
@@ -463,7 +462,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .toolbar-head nav > ul > li{
   display: inline-block;
-  margin: 0 8px;
+  margin: 0 4px;
   /*position: relative;*/
 }
 
@@ -480,6 +479,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   width: 58%;
   /*width: 100%;*/
   padding-top:20px;
+
 }
 
 .toolbar-head nav > ul > li > ul:hover{display: flex;}
@@ -504,6 +504,14 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.toolbar-head .spaces-link-menu{
+  max-width: 98px;
+  line-height: 1.2;
+  vertical-align: middle;
+  top: 11px;
+  position: relative;
 }
 
 .toolbar-head nav > ul > li:last-child a{
@@ -1045,7 +1053,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .contact-table-cell-submit:before{
   content: '';
   display: block;
-  background: #00C4D5;
+  background: #00C4D5 url(../images/flachablanca.png) 120px center no-repeat;
   position: absolute;
   left: -100%;
   top: 0;
@@ -1435,7 +1443,16 @@ input:-webkit-autofill {
   top: 30px;
   text-align: center;
 }
-.thumbsView{color: transparent;display: inline-block;width: 30px;height: 25px;background-size: 100% 100%;background-repeat: no-repeat;}
+.thumbsView{
+  color: transparent;
+  display: inline-block;
+  width: 30px;
+  margin: 0 4px;
+  height: 25px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 .thumbsView:nth-child(1){background-image:url(../images/lista2.png);}
 .thumbsView:nth-child(2){background-image:url(../images/bloques2.png);}
 .thumbsView.active:nth-child(1){background-image:url(../images/lista.png);}
@@ -1622,6 +1639,55 @@ input:-webkit-autofill {
 .pagination-blog .current-page{
   color: #fff;
 }
+
+/*----------------/
+  #PROJECTS
+/*---------------*/
+.projects-categories .project-category{
+  color: #fff;
+  font-weight: 300;
+  padding: 4px 12px;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #fff;
+}
+
+.projects-categories .project-category + .project-category{
+  border-left: 0;
+}
+
+.projects-categories .project-category span{
+  position: relative;
+  z-index: 2;
+}
+.projects-categories .project-category:hover,
+.projects-categories .project-category-active{
+  color: #73D1DB;
+}
+
+.projects-categories .project-category:before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: -100%;
+  background: #fff;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}
+
+.projects-categories .project-category-active:before,
+.projects-categories .project-category:hover:before{
+  left: 0!important;
+}
+
+
 
 /*---------------/
   #PROGRESS CIRCLE
@@ -1873,6 +1939,8 @@ md-progress-circular .md-inner .md-right .md-half-circle {
     font-size: 14px;
     line-height: 1.3;
   }
+
+  .section-title-projects{padding-bottom: 52px}
 
   .contact-us{
     background-attachment: inherit;
