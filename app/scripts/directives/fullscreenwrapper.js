@@ -24,7 +24,7 @@
  			scope.windowWidth = newValue.w;
 
  			scope.style = function (screenType) {
- 				var header = $('.toolbar-head');// jshint ignore:line
+ 				var header = $('.section-title');// jshint ignore:line
  				var customHeight;
  				screenType = typeof screenType !== 'undefined' ? screenType : 'normal';
 

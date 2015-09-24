@@ -135,6 +135,7 @@
   padding: 20px 0;
   z-index: 9;
   margin: 0 auto;
+  display: none;
 }
 
 .projects-slider-nav > a{margin: 0 10px}
@@ -181,7 +182,7 @@
   -o-transition: all 1s;
   -ms-transition: all 1s;
   transition: all 1s;
-  z-index: 9;
+  z-index: 99;
 }
 
 .projects-slider .slide-next:hover{
@@ -192,6 +193,10 @@
   .projects-slide{
     height: 100%!important;
     min-height: 420px;
+    padding-top: 23%;
+  }
+  .projects-slide-content .container-sm{
+    padding: 20px;
   }
   .projects-slider-viewport{
     display: block;

@@ -10,57 +10,6 @@
 angular.module('spaceshiplabsApp')
   .controller('ProjectsCtrl', function ($scope) {
 
-    $scope.getProjectsByName = function(name){
-      if(name || name !== ''){
-        $scope.projectsResult = $scope.allProjects.filter(function(project) {
-            var regex = new RegExp( name, 'gi' );
-            var matched = project.name.match(regex);
-            if(matched){
-              return true;
-            }
-            return false;
-        });
-
-        if($scope.projectsResult.length === 0){
-          $scope.projectsResult = $scope.allProjects;
-        }
-
-      }else{
-        $scope.projectsResult = $scope.allProjects;
-      }
-
-    };
-
-    $scope.getProjectsByCategory = function(category){
-      if(category || category !== ''){
-        $scope.projectsResult = $scope.allProjects.filter(function(project) {
-          var inCategory = project.categories.indexOf(category);
-          if(inCategory > 0){
-            return true;
-          }
-          return false;
-        });
-
-        if($scope.projectsResult.length === 0){
-          $scope.projectsResult = $scope.allProjects;
-          $scope.currentCategory = '';
-        }else{
-          $scope.currentCategory = category;
-        }
-
-      }else{
-        $scope.projectsResult = $scope.allProjects;
-        $scope.currentCategory = '';
-      }
-
-    };
-
-    $scope.$watch('searchTerm', function (newValue, oldValue) {
-      if(newValue !== oldValue){
-        $scope.getProjectsByName(newValue);
-      }
-
-    }, true);
 
     $scope.allProjects = [
       {
@@ -130,15 +79,6 @@ angular.module('spaceshiplabsApp')
       },
       {
         type:'UI/UX Design & Software',
-        name:'DR. Bronner',
-        categories: ['ui-ux','software'],
-        description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-        url: 'https://www.drbronner.com.mx/',
-        images:['images/projects/consejo2.jpg','images/projects/consejo.jpg']
-      },
-
-      {
-        type:'UI/UX Design & Software',
         name:'The Juicery Boutique',
         categories: ['ui-ux','software'],
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
@@ -161,14 +101,23 @@ angular.module('spaceshiplabsApp')
         url: 'http://caribemaya.projects.spaceshiplabs.com/',
         images:['images/projects/caribe2.jpg','images/projects/caribe.jpg']
       },
+      {
+        type:'UI/UX Design & Software',
+        name:'Silvia Ascencio',
+        categories: ['ui-ux','software'],
+        description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+        url: 'http://www.silvia.projects.spaceshiplabs.com/',
+        images:['images/projects/silvia.jpg','images/projects/silvia2.jpg']
+      },
+      {
+        type:'UI/UX Design & Software',
+        name:'Water tours',
+        categories: ['ui-ux','software'],
+        description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+        url: 'http://cancunwatertours.herokuapp.com/',
+        images:['images/projects/water.jpg','images/projects/water2.jpg']
+      },
 
     ];
-
-    $scope.init = function(){
-      $scope.projectsResult = $scope.allProjects;
-      $scope.getProjectsByName();
-    };
-
-    $scope.init();
 
   });

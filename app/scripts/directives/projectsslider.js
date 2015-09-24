@@ -13,7 +13,7 @@ angular.module('spaceshiplabsApp')
       restrict: 'E',
       scope: {
         preview: '=',
-        projects: '=',
+        allProjects: '=projects',
         winSize: '='
       },
       link: function postLink(scope) {
@@ -51,6 +51,11 @@ angular.module('spaceshiplabsApp')
           if(scope.winSize !== 'blog'){
             scope.sliderInterval = $interval(scope.moveNextProject, 6000);
           }
+        };
+
+        scope.init = function(){
+          scope.projects = scope.allProjects;
+          scope.setUp();
         };
 
         scope.getNumber = function(num) {
@@ -116,13 +121,72 @@ angular.module('spaceshiplabsApp')
         };
 
         scope.$watch('projects', function (newValue, oldValue) {
-          if(newValue !== oldValue){
+          if(newValue !== oldValue && newValue){
             scope.setUp();
           }
 
         }, true);
 
-        scope.setUp();
+        scope.getProjectsByName = function(name){
+          if(name || name !== ''){
+            scope.projects = scope.allProjects.filter(function(project) {
+                var regex = new RegExp( name, 'gi' );
+                var matched = project.name.match(regex);
+                if(matched){
+                  return true;
+                }
+                return false;
+            });
+
+            if(scope.projects.length === 0){
+              scope.projects = scope.allProjects;
+            }
+
+          }else{
+            scope.projects = scope.allProjects;
+          }
+
+        };
+
+        scope.getProjectsByCategory = function(category){
+          if(category || category !== ''){
+            scope.projects = scope.allProjects.filter(function(project) {
+              var inCategory = project.categories.indexOf(category);
+              if(inCategory > 0){
+                return true;
+              }
+              return false;
+            });
+
+            if(scope.projects.length === 0){
+              scope.projects = scope.allProjects;
+              scope.currentCategory = '';
+            }else{
+              scope.currentCategory = category;
+            }
+
+          }else{
+            scope.projects = scope.allProjects;
+            scope.currentCategory = '';
+          }
+
+        };
+
+        scope.$watch('searchTerm', function (newValue, oldValue) {
+          if(newValue !== oldValue){
+            scope.getProjectsByName(newValue);
+          }
+
+        }, true);
+
+        scope.init();
+
+        scope.$on(
+            "$destroy",
+            function() {
+                $interval.cancel( scope.sliderInterval );
+            }
+        );
 
       }
     };
