@@ -10,14 +10,13 @@
         <img ng-if="scrolled" src="images/nave.png" />
       </a>
 
-      <div class="menu-wrapper" flex="70" flex-sm="30" >
+      <div class="menu-wrapper" flex="80" flex-sm="30" >
         <nav class="menu" layout="row" layout-align="end center">
           <ul>
             <!--<li><a href="/">HOME</a></li>-->
             <li><a href="/about-us">ACERCA DE</a></li>
             <li><a href="/team">EQUIPO</a></li>
             <li><a href="/projects">PROYECTOS</a></li>
-            <!--<li><a href="#">SpacES</a></li>-->
             <li ng-mouseenter="dropdownActive = true" ng-mouseleave="dropdownActive = false">
               <a href="#">SERVICIOS</a>
               <ul layout="row" layout-align="space-between center">
@@ -55,6 +54,9 @@
             </li>
             <li><a href="/awards">PRENSA</a></li>
             <li><a href="/blog">BLOG</a></li>
+            <li>
+              <a href="#"><img class="spaces-link-menu" src="images/spaces.png" /></a>
+            </li>
             <li><a href="/contact"><span>CONTACTO</span></a></li>
           </ul>
         </nav>

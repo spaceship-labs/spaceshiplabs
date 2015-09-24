@@ -2,20 +2,47 @@
 	<!--<h1><img src="images/proyectos3.png" alt=""> Proyectos</h1>-->
 
 	<div class="section-title-options" >
-		<section layout="row"  class="container container-xlg container-no-padding">
+		<section layout="row" layout-align="start center" layout-align-sm="start"  class="container container-xlg container-no-padding">
 		  <form flex="20" flex-sm="100">
 				<section layout="row" layout-align="center center">
 			  	<a href="#" flex="20" ><img src="images/buscar2.png" alt=""></a>
 			    <md-input-container flex >
 				      <label>Busca un proyecto</label>
-			      <input ng-model="user.email" type="text">
+			      <input ng-model="searchTerm" type="text">
 			    </md-input-container>
 				</section>
 		  </form>
+      <section flex="60">
+        <section layout="row" layout-align="center center" class="projects-categories">
+          <a
+            ng-class="{'project-category-active': currentCategory == 'ui-ux'}"
+            ng-click="getProjectsByCategory('ui-ux')"
+            href="" class="project-category">
+            <span>UI/UX Design</span>
+          </a>
+          <a
+            ng-class="{'project-category-active': currentCategory == 'branding'}"
+            ng-click="getProjectsByCategory('branding')"
+            href="" class="project-category">
+            <span>Branding</span>
+          </a>
+          <a
+            ng-class="{'project-category-active': currentCategory == 'marketing'}"
+            ng-click="getProjectsByCategory('marketing')"
+            href="" class="project-category">
+            <span>Marketing</span>
+          </a>
+          <a
+            ng-class="{'project-category-active': currentCategory == 'software'}"
+            ng-click="getProjectsByCategory('software')"
+            href="" class="project-category">
+            <span>Software</span>
+          </a>
+        </section>
 	  </section>
 	</div>
 </div>
 
-<projects-slider projects="allProjects"></projects-slider>
+<projects-slider projects="projectsResult"></projects-slider>
 
 <ng-include src="'views/contact-us.html'"></ng-include>

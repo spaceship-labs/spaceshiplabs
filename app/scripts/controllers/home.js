@@ -18,6 +18,19 @@ angular.module('spaceshiplabsApp')
       });
     };
 
+    $scope.init = function(){
+      $scope.getRecentPosts();
+      var video = document.getElementById('landing-video');
+      video.play();
+      var videoLimit = 8;
+      video.addEventListener('timeupdate',function(){
+        console.log(video.currentTime);
+        if(video.currentTime > videoLimit){
+          video.currentTime = 1;
+        }
+      },false);
+    };
+
     $scope.scrollTo = function(target){
       setTimeout(
           function(){
@@ -32,6 +45,7 @@ angular.module('spaceshiplabsApp')
     $scope.projects = [
       {
         type:'UI/UX Design & Software',
+        categories: ['ui-ux','software'],
         name:'Mejora tu escuela',
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
         url: 'http://www.mejoratuescuela.org/',
@@ -39,6 +53,7 @@ angular.module('spaceshiplabsApp')
       },
       {
         type:'UI/UX Design & Software',
+        categories: ['ui-ux','software','branding'],
         name:'Airportcun',
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
         url: 'http://airportcun.com/',
@@ -47,6 +62,7 @@ angular.module('spaceshiplabsApp')
       {
         type:'UI/UX Design & Software',
         name:'Viajes Claros',
+        categories: ['ui-ux','software'],
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
         url: 'http://www.viajesclaros.ifai.mx/',
         images:['images/projects/viajes2.jpg','images/projects/viajes.jpg']
@@ -93,6 +109,6 @@ angular.module('spaceshiplabsApp')
 
     ];
 
-    $scope.getRecentPosts();
+    $scope.init();
 
   });
