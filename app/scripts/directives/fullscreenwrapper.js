@@ -35,8 +35,9 @@
  				}
 
         //Aplicando una altura minima
-        if(customHeight < 520){
-          customHeight = 520;
+
+        if(customHeight < 490){
+          customHeight = 490;
         }
 
  				return {
