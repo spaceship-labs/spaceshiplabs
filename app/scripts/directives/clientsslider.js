@@ -63,7 +63,7 @@ angular.module('spaceshiplabsApp')
 
 
         scope.setUp = function(){
-          scope.slides = scope.groupClients(scope.clients);
+          scope.slides = scope.clients;
           scope.itemsCount = scope.slides.length;
         	scope.selectedIndex = 0;
           if(scope.clientSliderInterval){
@@ -75,9 +75,6 @@ angular.module('spaceshiplabsApp')
           scope.activeAnimation = false;
         };
 
-				/*scope.$watch('selectedIndex', function (newValue, oldValue) {
-
-				}, true);*/
 
         scope.initLocations = function(){
           var selectedIndex = scope.selectedIndex;

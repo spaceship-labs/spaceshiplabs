@@ -814,7 +814,12 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   color: #fff;
 }
 
-.clients-landing > .container{width: 100%;}
+.clients-landing > .container{
+  width: 100%;
+  max-width: 80%;
+  overflow: hidden;
+  /*max-width: 100%;*/
+}
 
 /*----------------/
   #CLIENTS-SLIDER
@@ -823,11 +828,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   padding: 0 70px;
   position: relative;
 }
-.clients-slider .clients-slide{padding: 70px 10px 0;}
+.clients-slider .clients-slide{padding: 0 10px 0;}
 
 .clients-slider .client-item{
-  border: 1px solid #DFDFDF;
-  padding: 62px 20px 20px;
+  padding: 20px;
   position: relative;
 }
 
@@ -848,7 +852,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .clients-slider-reel{
   position: relative;
-  min-height: 360px;
+  min-height: 210px;
   width: 100%!important;
 }
 
@@ -889,19 +893,33 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .clients-slider .client-item h5,
 .clients-slider .client-item h6{margin: 6px}
 
-.clients-slider .client-item h5{font-size: 18px}
+.clients-slider .client-item h5:before{
+  content: '';
+  display: block;
+  height: 2px;
+  background: #fff;
+  width: 40px;
+  margin: 10px auto 15px;
+}
+
+.clients-slider .client-item h5{
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
 .clients-slider .client-item h6{
   font-size: 14px;
-  font-weight: 400;
+  margin-top: 0;
 }
 
 .clients-slider .client-item p{
-  font-size: 16px;
+  font-size: 26px;
+  line-height: 1.2;
   font-weight: 300;
   margin-top: 20px;
-  line-height: 1.4;
-  text-align: justify;
+  text-align: center;
 }
+
 
 .clients-slider-arrow{
   position: absolute;
@@ -918,14 +936,14 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .clients-slider-bullets > a{
   display: inline-block;
-  width: 10px;
-  height: 10px;
   margin: 0 6px;
-  border: 1px solid #fff;
+}
+.clients-slider-bullets > a img{
+  max-width: 40px;
   border-radius: 50%;
 }
 .client-slider-bullet-active{
-  background: #fff;
+  /*background: #fff;*/
 }
 
 
@@ -1873,8 +1891,11 @@ md-progress-circular .md-inner .md-right .md-half-circle {
     margin: 0!important;
     padding: 10px 14px;
   }
-  .clients-landing > .container{width: auto;}
-  .clients-slider-reel{min-height: 900px;}
+  .clients-landing > .container{
+    /*width: auto;*/
+  }
+  .clients-slider-reel{min-height: 260px;}
+  .clients-slider .client-item p{font-size: 16px;}
 
   /*-------------/
     #ABOUT-US

@@ -69,7 +69,7 @@ angular.module('spaceshiplabsApp')
             scope.movingOutIndexSlide = -1;
           }, scope.durationMovement);
 
-				}, true);
+				});
 
       	scope.moveNextProject = function(){
       		if(scope.selectedIndexSlide < (scope.projectsCount-1)){
@@ -120,13 +120,11 @@ angular.module('spaceshiplabsApp')
           }
         };
 
-        scope.$watch('projects', function (newValue, oldValue) {
+        scope.$watchCollection('projects', function (newValue, oldValue) {
           if(newValue !== oldValue && newValue){
             scope.setUp();
-
           }
-
-        }, true);
+        });
 
         scope.getProjectsByName = function(name){
           if(name || name !== ''){
@@ -178,7 +176,7 @@ angular.module('spaceshiplabsApp')
             scope.getProjectsByName(newValue);
           }
 
-        }, true);
+        });
 
         scope.init();
 

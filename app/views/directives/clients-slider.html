@@ -6,18 +6,17 @@
       <!--SLIDES-->
       <div
         class="clients-slide"
-        ng-repeat="slide in slides track by $index"
+        ng-repeat="client in clients track by $index"
         data-slide-index="{{$index}}"
         layout="row"
         layout-align="space-between center"
         layout-sm="column"
-        style="width: {{widthSlide}}%">
+        >
 
-        <div ng-repeat="client in slide" class="client-item" flex="45" flex-sm="100">
-          <img ng-src="{{client.avatar}}" class="client-item-avatar" alt="">
+        <div class="client-item container container-lg">
+          <p>{{client.quote}}</p>
           <h5>{{client.name}}</h5>
           <h6>{{client.company}}</h6>
-          <p>{{client.quote}}</p>
         </div>
 
       </div>
@@ -40,10 +39,11 @@
     <div class="clients-slider-bullets">
       <a
         href=""
-        ng-repeat="i in getNumber(itemsCount) track by $index"
+        ng-repeat="client in clients track by $index"
         ng-class="{'client-slider-bullet-active' : $index == selectedIndex}"
         ng-click="moveTo($index)"
         >
+          <img ng-src="{{client.avatar}}" alt="{{client.name}}">
       </a>
     </div>
 
