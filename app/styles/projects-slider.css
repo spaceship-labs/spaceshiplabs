@@ -269,6 +269,9 @@
     min-height: 420px;
     padding-top: 23%;
   }
+  .projects-slide-content.projects-slide-preview{
+    padding-top: 4px;
+  }
   .projects-slide-content .container-sm{
     padding: 20px;
   }

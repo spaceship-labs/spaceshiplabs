@@ -16,6 +16,11 @@ angular.module('spaceshiplabsApp')
       },
       link: function postLink(scope) {
 
+        scope.init = function(){
+          scope.removeClasses();
+          scope.initLocations();
+        };
+
         scope.getNextIndex = function (selectedIndex, totalItems){
           var nextIndex;
           selectedIndex = scope.selectedIndex;
@@ -203,8 +208,7 @@ angular.module('spaceshiplabsApp')
         scope.setUp();
 
         $timeout(function(){
-          scope.removeClasses();
-          scope.initLocations();
+          scope.init();
         },0);
 
         scope.$on(

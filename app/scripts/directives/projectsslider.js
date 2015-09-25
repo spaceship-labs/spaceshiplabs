@@ -16,15 +16,18 @@ angular.module('spaceshiplabsApp')
         allProjects: '=projects',
         winSize: '='
       },
-      link: function postLink(scope) {
+      link: function postLink(scope,element) {
 
-        /*scope.$watch('winSize', function (newValue, oldValue) {
-          if(newValue !== 'blog' && newValue !== oldValue){
-            scope.sliderInterval = $interval(scope.moveNextProject, 6000);
-          }else{
-            $interval.cancel(scope.sliderInterval);
+        scope.init = function(){
+          scope.projects = scope.allProjects;
+          scope.setUp();
+
+          //Hiding elements on preview mode
+          if(scope.preview || typeof scope.preview !== 'undefined'){
+            var nav = $(element).find('.projects-categories-wrapper');
+            nav.hide();
           }
-        });*/
+        };
 
         scope.getMovingOutIndexSlide = function (selectedIndex, totalItems){
           var movingOutIndex = -1;
@@ -51,12 +54,9 @@ angular.module('spaceshiplabsApp')
           if(scope.winSize !== 'blog'){
             scope.sliderInterval = $interval(scope.moveNextProject, 6000);
           }
+
         };
 
-        scope.init = function(){
-          scope.projects = scope.allProjects;
-          scope.setUp();
-        };
 
         scope.getNumber = function(num) {
             return new Array(num);
@@ -123,6 +123,7 @@ angular.module('spaceshiplabsApp')
         scope.$watch('projects', function (newValue, oldValue) {
           if(newValue !== oldValue && newValue){
             scope.setUp();
+
           }
 
         }, true);

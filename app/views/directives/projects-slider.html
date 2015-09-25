@@ -7,57 +7,13 @@
 		full-screen-wrapper
 		>
 
-    <!--<section ng-show="!preview" class="projects-categories-wrapper">
-      <section class="container-smd" layout="column" layout-gt-lg="row" layout-align="center end">
-        <form flex="30">
-          <section layout="row" layout-align="center center">
-            <a href="#" ><img src="images/buscar2.png" alt=""></a>
-            <md-input-container flex="80" >
-                <label>Busca un proyecto</label>
-              <input ng-model="searchTerm" type="text">
-            </md-input-container>
-          </section>
-        </form>
-        <section flex="70">
-          <section layout="row" layout-align="center center" class="projects-categories">
-            <a
-              ng-class="{'project-category-active': currentCategory == 'ui-ux'}"
-              ng-click="getProjectsByCategory('ui-ux')"
-              href="" class="project-category">
-              <span>UI/UX Design</span>
-            </a>
-            <a
-              ng-class="{'project-category-active': currentCategory == 'branding'}"
-              ng-click="getProjectsByCategory('branding')"
-              href="" class="project-category">
-              <span>Branding</span>
-            </a>
-            <a
-              ng-class="{'project-category-active': currentCategory == 'marketing'}"
-              ng-click="getProjectsByCategory('marketing')"
-              href="" class="project-category">
-              <span>Marketing</span>
-            </a>
-            <a
-              ng-class="{'project-category-active': currentCategory == 'software'}"
-              ng-click="getProjectsByCategory('software')"
-              href="" class="project-category">
-              <span>Software</span>
-            </a>
-          </section>
-        </section>
-      </section>
-    </section>-->
-
     <div class="projects-slider-reel-wrapper projects-slider-images-reel-wrapper" flex="50" flex-sm="100">
   		<div class="projects-slider-reel projects-slider-images-reel">
 
   			<!--Slides(por proyecto)-->
 
   			<div
-  				ng-repeat="project in projects | orderBy:predicate:reverse track by $index"
-  				ng-style="style('firstScreen')"
-  				full-screen-wrapper
+  				ng-repeat="project in projects track by $index"
   				class="projects-slide projects-slide-image"
           ng-class="{
             'projects-slide-active' : selectedIndexSlide == $index,
@@ -72,7 +28,7 @@
   					data-image-index="0"
   				>
   					<div
-  						style="background: url({{image}}) no-repeat"
+  						style="background: url({{::image}}) no-repeat"
   						class="projects-slide-image-inner"
   					></div>
 
@@ -84,7 +40,7 @@
 
     <div class="projects-slider-reel-wrapper projects-slider-content-reel-wrapper" flex="50" flex-sm="100">
 
-      <section ng-show="!preview" layout="column" layout-gt-lg="row" layout-align="center center" class="projects-categories-wrapper container-smd">
+      <section layout="column" layout-gt-lg="row" layout-align="center center" class="projects-categories-wrapper  container-smd">
         <form flex="30">
           <section layout="row" layout-align="center center">
             <a href="#" ><img src="images/buscar2.png" alt=""></a>
@@ -130,9 +86,7 @@
   			<!--Slides-->
   			<div
   				class="projects-slide projects-slide-content container-alt container"
-  				ng-style="style('firstScreen')"
           ng-repeat="project in projects track by $index"
-  				full-screen-wrapper
   				layout="column"
   				layout-align="center center"
           ng-class="{
@@ -149,14 +103,14 @@
               <a ng-click="moveNextPhoto()" href="#"><img src="images/flechab.png" alt=""></a>
             </div>
 
-        		<h3>{{project.type}}</h3>
-  					<h1 ng-class="{'animated flipInX' : selectedIndexSlide == $index}"><a ng-href="{{project.url}}">{{project.name}}</a></h1>
-  					<p>{{project.description}}</p>
-  					<a target="_blank" ng-href="{{project.url}}" class="project-link">
+        		<h3>{{::project.type}}</h3>
+  					<h1 ng-class="{'animated flipInX' : selectedIndexSlide == $index}"><a ng-href="{{::project.url}}">{{::project.name}}</a></h1>
+  					<p>{{::project.description}}</p>
+  					<a target="_blank" ng-href="{{::project.url}}" class="project-link">
   						<img src="images/icono_proyectos6.png" alt="">
   					</a>
 
-            <div ng-show="preview" class="action-btn-wrap">
+            <div ng-show="preview" class="action-btn-wrap action-btn-all">
               <a href="/projects" class="action-btn">Ver todos los proyectos</a>
             </div>
 

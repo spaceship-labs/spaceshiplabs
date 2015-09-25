@@ -319,7 +319,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   padding-bottom: 20px;
 }
 .section-title-blog{
-  padding-bottom: 100px;
+  padding-bottom: 68px;
   position: relative;
 }
 
@@ -510,7 +510,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 .toolbar-head .spacees-link-menu{
-  max-width: 84px;
+  max-width: 91px;
   line-height: 1.2;
   vertical-align: middle;
   top: 1px;
@@ -560,13 +560,9 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 .toolbar-head .logo img{
-  /*max-width: 200px;*/
   max-width: 100%;
-/*  -webkit-transition: all .4s ease;
-  -moz-transition: all .4s ease;
-  -o-transition: all .4s ease;
-  -ms-transition: all .4s ease;
-  transition: all .4s ease;*/
+  position: relative;
+  top: -1px;
 }
 
 .toolbar-head .align-right-cu{
@@ -705,15 +701,18 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .our-services h1{color: #fff!important;}
 
 .services-content{width: 100%}
+.services-content h1{margin-top: 12px;}
 
 .services-items{
   margin-top: 40px;
+  padding: 4px 12px;
 }
 
 .services-item{
   cursor: pointer;
   padding-top: 116px;
   position: relative;
+  background-size: 100%;
   -webkit-transition: background .4s;
   -moz-transition: background .4s;
   -o-transition: background .4s;
@@ -1789,6 +1788,7 @@ md-progress-circular .md-inner .md-right .md-half-circle {
   .toolbar-head .menu{ display: none;}
 
   .section-title{padding-top: 78px}
+  .section-title-blog{padding-bottom: 94px;}
 
   /*---------/
     #PROJECTS-SLIDER
@@ -1863,7 +1863,7 @@ md-progress-circular .md-inner .md-right .md-half-circle {
   .info-wrap .guarantee img{max-width: 200px}
 
   .section-title-options form{padding: 20px;}
-  .section-title-blog h1{font-size: 32px}
+  .section-title-blog h1{font-size: 24px}
 
   /*-------------/
     #LANDING

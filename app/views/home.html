@@ -33,11 +33,11 @@
     flex="33"
     flex-sm="100">
 
-    <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
+    <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
     <div class="news-item-excerpt">
       <div class="news-item-excerpt-inner">
-        <p>{{ entry.date | date:'dd - MMMM - yyyy' }}</p>
-        <p>{{entry.title}}</p>
+        <p>{{ ::entry.date | date:'dd - MMMM - yyyy' }}</p>
+        <p>{{ ::entry.title}}</p>
         <p><i class="cyan-arrow"></i>Leer más</p>
       </div>
     </div>
@@ -52,13 +52,14 @@
     class="services-items"
     layout="row"
     layout-align="space-between start"
-    layout-sm="column"
+    layout-sm="row"
     layout-align-sm="center center"
+    layout-wrap
     >
       <div
         class="services-item services-item-ui"
         flex="20"
-        flex-sm="100">
+        flex-sm="50">
         <a href="/ui-ux" class="absolute-link"></a>
         <h5>UI/UX Design</h5>
       </div>
@@ -66,14 +67,14 @@
       <div
         class="services-item services-item-branding"
         flex="20"
-        flex-sm="100">
+        flex-sm="50">
         <h5>Branding</h5>
       </div>
 
       <div
         class="services-item services-item-marketing"
         flex="20"
-        flex-sm="100">
+        flex-sm="50">
         <h5>Marketing</h5>
         <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>-->
       </div>
@@ -81,7 +82,7 @@
       <div
         class="services-item services-item-software"
         flex="20"
-        flex-sm="100" >
+        flex-sm="50" >
         <!--<img src="images/icono4_blanco.png" alt="">-->
         <h5>Software</h5>
       </div>
@@ -192,12 +193,6 @@
 </div>
 
 <div class="portfolio-landing">
-  <!--<div class="portfolio-title-landing container center-content">
-    <h1 data-wow-duration="0.8s" class="wow fadeInUp">Portafolio</h1>
-    <div class="action-btn-wrap">
-      <a href="/projects" class="action-btn">Ver todos los proyectos</a>
-    </div>
-  </div>-->
   <projects-slider projects="projects" preview="true" win-size="winSizeSingle"></projects-slider>
 </div>
 
