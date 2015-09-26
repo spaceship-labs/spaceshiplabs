@@ -1298,6 +1298,96 @@ input:-webkit-autofill {
 .info-wrap img{max-width: 100%}
 
 /*-------------/
+  #SPACEES
+/*------------*/
+.info-wrap-spacees{
+  overflow: hidden;
+  max-width: 100%;
+}
+.info-wrap-spacees .container-md{
+  text-align: justify;
+}
+
+.info-gradient-container{
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.info-gradient-container:after{
+  content: '';
+  position: absolute;
+  left: -6%;
+  display: block;
+  top: 0;
+  width: 118%;
+  height: 100%;
+  background: #7775c0; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #7775c0 0%, #7775c0 0%, #25d4c7 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#7775c0), color-stop(0%,#7775c0), color-stop(100%,#25d4c7)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #7775c0 0%,#7775c0 0%,#25d4c7 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #7775c0 0%,#7775c0 0%,#25d4c7 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #7775c0 0%,#7775c0 0%,#25d4c7 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #7775c0 0%,#7775c0 0%,#25d4c7 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7775c0', endColorstr='#25d4c7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  z-index: 1;
+  -ms-transform: rotate(-3deg); /* IE 9 */
+  -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
+  transform: rotate(-3deg);
+}
+
+.info-gradient-container-inner{
+  position: relative;
+  z-index: 2;
+}
+
+.info-gradient-container h2{
+  color: #fff;
+  font-weight: 100;
+  font-size: 32px;
+}
+
+.info-features-spacees{
+  list-style: none;
+  padding-left: 0;
+  margin-left: auto;
+}
+.info-features-spacees li{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+  margin: 20px 0;
+}
+
+.block-list-wrapper h2{
+  color: #7676c0;
+  font-size: 42px;
+}
+
+.block-list{
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.block-list li{
+  margin-bottom: 30px;
+}
+.block-list li h3{
+  color: #8787c8;
+  font-size: 24px;
+  font-weight: 100;
+}
+.block-list li h3:after{
+  content: '';
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #8787c8;
+  margin: 2px 0;
+}
+
+
+/*-------------/
   #AWARDS
 /*-------------*/
 .award{
