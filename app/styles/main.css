@@ -750,7 +750,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   height: 200px;
 }
 .service-hover{
-  height: 400px !important;
+  height: 80% !important;
   opacity: 0;
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
