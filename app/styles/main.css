@@ -705,32 +705,82 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .services-content h1{margin-top: 12px;}
 
 .services-items{
-  margin-top: 40px;
   padding: 4px 12px;
+  margin-top: 30px;
+}
+
+.service-item{
+  height: 117px;
 }
 
 .services-item{
-  cursor: pointer;
+  position: relative;
+  border-right: 1px solid rgba(255,255,255,.6);
+  height: 400px;
+  /*cursor: pointer;
   padding-top: 116px;
   position: relative;
-  background-size: 100%;
+  background-size: 100%;*/
   -webkit-transition: background .4s;
   -moz-transition: background .4s;
   -o-transition: background .4s;
   -ms-transition: background .4s;
   transition: background .4s;
 }
-.services-item-ui{background: transparent url(../images/ui2.png) top center no-repeat;}
-.services-item-branding{background: transparent url(../images/iconos2_blanco.png) top center no-repeat;}
-.services-item-marketing{background: transparent url(../images/icono3_blanco.png) top center no-repeat;}
+.services-item:last-child{border: none;}
+.services-item-ui{background: transparent url(../images/servicios1.png) top center no-repeat;}
+.services-item-branding{background: transparent url(../images/servicios2.png) top center no-repeat;}
+.services-item-marketing{background: transparent url(../images/servicios3.png) top center no-repeat;}
 .services-item-consulting{background: transparent url(../images/icono4_blanco.png) top center no-repeat;}
-.services-item-software{background: transparent url(../images/software2.png) center 5px no-repeat;}
+.services-item-software{background: transparent url(../images/servicios4.png) center 5px no-repeat;}
 
-.services-item-ui:hover{background: transparent url(../images/ui.png) top center no-repeat;}
+.services-item .service > hr{
+    border: solid 1px #FFF;
+    width: 50%;
+  }
+
+.services-item .service{
+  transition: all .5s;
+  position: absolute;
+  margin: auto auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+}
+.service-hover{
+  height: 400px !important;
+  opacity: 0;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+}
+.services-item:hover .service{
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  -o-transform: rotateX(-90deg);
+  -ms-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  opacity: 0;
+}
+.services-item:hover .service-hover{
+  transition-delay: .3s !important;
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+/*.services-item-ui:hover{background: transparent url(../images/ui.png) top center no-repeat;}
 .services-item-branding:hover{background: transparent url(../images/iconos2.png) top center no-repeat;}
 .services-item-marketing:hover{background: transparent url(../images/icono3.png) top center no-repeat;}
 .services-item-consulting:hover{background: transparent url(../images/icono4.png) top center no-repeat;}
-.services-item-software:hover{background: transparent url(../images/software2-hover.png) center 5px no-repeat;}
+.services-item-software:hover{background: transparent url(../images/software2-hover.png) center 5px no-repeat;}*/
 
 
 .menu .services-item{padding-top: 30px;}
@@ -749,13 +799,20 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .services-item h5{
   color: #fff;
   font-size: 24px;
-  font-weight: 100;
-  margin-bottom: 6px;
+  font-weight: normal;
+  margin: 20px 0;
 }
 
 .services-item p{
-  font-weight: 100;
-  font-size: 14px;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.services-item .read-more{
+  border: solid 2px #FFF;
+  padding: 5px;
+  width: 60%;
+  margin: 0 auto;
 }
 
 /*---------------/
