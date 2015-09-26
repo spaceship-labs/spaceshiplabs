@@ -16,6 +16,11 @@ angular.module('spaceshiplabsApp')
       },
       link: function postLink(scope) {
 
+        scope.init = function(){
+          scope.removeClasses();
+          scope.initLocations();
+        };
+
         scope.getNextIndex = function (selectedIndex, totalItems){
           var nextIndex;
           selectedIndex = scope.selectedIndex;
@@ -58,7 +63,7 @@ angular.module('spaceshiplabsApp')
 
 
         scope.setUp = function(){
-          scope.slides = scope.groupClients(scope.clients);
+          scope.slides = scope.clients;
           scope.itemsCount = scope.slides.length;
         	scope.selectedIndex = 0;
           if(scope.clientSliderInterval){
@@ -70,9 +75,6 @@ angular.module('spaceshiplabsApp')
           scope.activeAnimation = false;
         };
 
-				/*scope.$watch('selectedIndex', function (newValue, oldValue) {
-
-				}, true);*/
 
         scope.initLocations = function(){
           var selectedIndex = scope.selectedIndex;
@@ -203,8 +205,7 @@ angular.module('spaceshiplabsApp')
         scope.setUp();
 
         $timeout(function(){
-          scope.removeClasses();
-          scope.initLocations();
+          scope.init();
         },0);
 
         scope.$on(

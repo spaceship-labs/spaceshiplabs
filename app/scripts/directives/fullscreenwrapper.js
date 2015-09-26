@@ -20,9 +20,6 @@
 
  		scope.$watch(scope.getWindowDimensions, function (newValue, oldValue) {// jshint ignore:line
 
- 			scope.windowHeight = newValue.h;
- 			scope.windowWidth = newValue.w;
-
  			scope.style = function (screenType) {
  				var header = $('.section-title');// jshint ignore:line
  				var customHeight;
@@ -35,8 +32,9 @@
  				}
 
         //Aplicando una altura minima
-        if(customHeight < 520){
-          customHeight = 520;
+
+        if(customHeight < 490){
+          customHeight = 490;
         }
 
  				return {
@@ -44,10 +42,11 @@
  					'width': (newValue.w) + 'px'
  				};
  			};
+
  		}, true);
 
  		w.bind('resize', function () {
- 			scope.$apply();
+ 			scope.$digest();
  		});
  	};
 

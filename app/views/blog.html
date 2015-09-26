@@ -39,15 +39,15 @@
           flex
           flex-sm="100">
 
-          <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
+          <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
           <div class="news-item-excerpt">
             <div class="news-item-excerpt-inner">
               <!-- <h4>{{entry.title}}</h4>
               <p>
                 <span  class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
               </p> -->
-              <p>{{ entry.date | date:'dd - MMMM - yyyy' }}</p>
-              <p>{{entry.title}}</p>
+              <p>{{ ::entry.date | date:'dd - MMMM - yyyy' }}</p>
+              <p>{{::entry.title}}</p>
               <p><i class="cyan-arrow"></i>Leer más</p>
             </div>
           </div>
@@ -65,15 +65,15 @@
           flex="50"
           flex-sm="100">
 
-          <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
+          <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
           <div class="news-item-excerpt">
             <div class="news-item-excerpt-inner">
               <!-- <h4>{{entry.title}}</h4>
               <p>
                 <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
               </p> -->
-              <p>{{ entry.date | date:'dd - MMMM - yyyy' }}</p>
-              <p>{{entry.title}}</p>
+              <p>{{ ::entry.date | date:'dd - MMMM - yyyy' }}</p>
+              <p>{{::entry.title}}</p>
               <p><i class="cyan-arrow"></i>Leer más</p>
             </div>
           </div>
@@ -90,15 +90,15 @@
           flex="50"
           flex-sm="100">
 
-          <a ng-href="/{{entry.slug}}" class="absolute-link"></a>
+          <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
           <div class="news-item-excerpt">
             <div class="news-item-excerpt-inner">
               <!-- <h4>{{entry.title}}</h4>
               <p>
                 <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
               </p> -->
-              <p>{{ entry.date | date:'dd - MMMM - yyyy' }}</p>
-              <p>{{entry.title}}</p>
+              <p>{{ ::entry.date | date:'dd - MMMM - yyyy' }}</p>
+              <p>{{::entry.title}}</p>
               <p><i class="cyan-arrow"></i>Leer más</p>
             </div>
           </div>
@@ -124,9 +124,9 @@
             class="blog-list-card">
 
           <div class="card-content card-content-list">
-            <h4><a ng-href="/{{entryItem.slug}}">{{entryItem.title}}</a></h4>
+            <h4><a ng-href="/{{entryItem.slug}}">{{::entryItem.title}}</a></h4>
             <p class="card-content-data">
-              <small><img src="images/calendario.png" alt=""> Date {{entryItem.date}}</small> | <strong>Author: {{entryItem.author.nickname}}</strong>
+              <small><img src="images/calendario.png" alt=""> Date {{::entryItem.date}}</small> | <strong>Author: {{::entryItem.author.nickname}}</strong>
             </p>
             <div class="card-content-preview" layout="row" layout-sm="column" layout-align="space-between start">
 
@@ -134,7 +134,7 @@
                 flex-sm="100"
                 class="card-thumb-circle"
                 ng-style="getPostThumb(entryItem)">
-                <a ng-href="/{{entryItem.slug}}" class="absolute-link"></a>
+                <a ng-href="/{{::entryItem.slug}}" class="absolute-link"></a>
               </div>
 
               <div flex flex-sm="100">
@@ -144,7 +144,7 @@
               </div>
             </div>
             <div class="action-btn-wrap">
-              <a ng-href="/{{entryItem.slug}}" class="action-btn action-btn-alt">Ver más</a>
+              <a ng-href="/{{::entryItem.slug}}" class="action-btn action-btn-alt">Ver más</a>
             </div>
           </div>
 
@@ -160,8 +160,8 @@
             <a
               ng-repeat="category in categories"
               flex="45"
-              ng-href="/blog/category/{{category.slug}}"
-              class="blog-sidebar-collection">{{category.name}}</a>
+              ng-href="/blog/category/{{::category.slug}}"
+              class="blog-sidebar-collection">{{::category.name}}</a>
 
           </div>
         </div>

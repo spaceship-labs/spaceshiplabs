@@ -10,11 +10,15 @@
 angular.module('spaceshiplabsApp')
   .controller('MainCtrl', function ($scope, $mdSidenav, $location, metaTagsService, $http, $window) {
     var w = angular.element($window);
-    $scope.emailSent = false;
-    $scope.contactError = false;
-    $scope.contactData = {};
-    $scope.winSize = "medium";
-    $scope.winSizeSingle = "medium";
+
+    $scope.init = function(){
+      $scope.emailSent = false;
+      $scope.contactError = false;
+      $scope.contactData = {};
+      $scope.winSize = "medium";
+      $scope.winSizeSingle = "medium";
+      $scope.redirectCount = 0;
+    };
 
 	  $scope.toggleSidebar = function() {
       $mdSidenav('left').open();
@@ -23,6 +27,13 @@ angular.module('spaceshiplabsApp')
 	  $scope.closeSidebar = function() {
       $mdSidenav('left').close();
 	  };
+
+    $scope.$on('$locationChangeStart', function() {
+      if($scope.redirectCount > 0){
+        $scope.closeSidebar();
+      }
+      $scope.redirectCount++;
+    });
 
 		$scope.isHome = ($location.path() === '/' ) ? true : false;
 
@@ -146,5 +157,7 @@ angular.module('spaceshiplabsApp')
       }
       return arr;
     };
+
+    $scope.init();
 
   });

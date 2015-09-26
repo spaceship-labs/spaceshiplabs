@@ -102,6 +102,11 @@ angular
         controller: 'ContactCtrl',
         controllerAs: 'contact'
       })
+      .when('/spacees', {
+        templateUrl: 'views/spacees.html',
+        controller: 'SpaceesCtrl',
+        controllerAs: 'spacees'
+      })
       .when('/:slug', {
         templateUrl: 'views/post.html',
         controller: 'PostCtrl',

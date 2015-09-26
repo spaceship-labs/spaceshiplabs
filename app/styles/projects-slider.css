@@ -50,18 +50,56 @@
 .projects-slide-content{
   padding: 0;
   text-align: center;
-  top: 100%;
+  /*top: 100%;*/
+  -ms-transform: translate(0,100%);
+  -webkit-transform: translate(0,100%);
+  -moz-transform: translate(0,100%);
+  -o-transform: translate(0,100%);
+  transform: translate(0,100%);
 }
 
 .projects-slide-image{
-  bottom: 100%;
+  /*bottom: 100%;*/
+  -ms-transform: translate(0,-100%);
+  -webkit-transform: translate(0,-100%);
+  -moz-transform: translate(0,-100%);
+  -o-transform: translate(0,-100%);
+  transform: translate(0,-100%);
 }
 
-.projects-slide-content.projects-slide-active{top:0;}
-.projects-slide-content.projects-slide-out{top:-100%;}
+.projects-slide-content.projects-slide-active{
+  /*top:0;*/
+  -ms-transform: translate(0,0%);
+  -webkit-transform: translate(0,0%);
+  -moz-transform: translate(0,0%);
+  -o-transform: translate(0,0%);
+  transform: translate(0,0%);
+}
+.projects-slide-content.projects-slide-out{
+  /*top:-100%;*/
+  -ms-transform: translate(0,-100%);
+  -webkit-transform: translate(0,-100%);
+  -moz-transform: translate(0,-100%);
+  -o-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+}
 
-.projects-slide-image.projects-slide-active{bottom:0;}
-.projects-slide-image.projects-slide-out{bottom:-100%;}
+.projects-slide-image.projects-slide-active{
+  /*bottom:0;*/
+  -ms-transform: translate(0,0%);
+  -webkit-transform: translate(0,0%);
+  -moz-transform: translate(0,0%);
+  -o-transform: translate(0,0%);
+  transform: translate(0,0%);
+}
+.projects-slide-image.projects-slide-out{
+  /*bottom:-100%;*/
+  -ms-transform: translate(0,100%);
+  -webkit-transform: translate(0,100%);
+  -moz-transform: translate(0,100%);
+  -o-transform: translate(0,100%);
+  transform: translate(0,100%);
+}
 
 .projects-slide-content,
 .projects-slide-image{
@@ -189,11 +227,88 @@
   background: #475bc3 url(../images/flecha_proyectos3.png) center no-repeat;
 }
 
+/*--------------/
+  #PROJECTS-CATEGORIES
+/*-------------*/
+
+.projects-categories-wrapper{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 1%;
+  z-index: 99;
+  /*background: #16A6C5;*/
+}
+
+.projects-categories-wrapper form img{max-width: 18px;}
+.projects-categories-wrapper md-input-container{font-size: 14px;}
+
+.projects-categories-wrapper label{color: #fff!important;}
+.projects-categories-wrapper input[type="text"]{
+  color: #fff;
+  border-bottom: 1px solid #fff!important;
+}
+.projects-categories-wrapper input[type="text"]::-webkit-input-placeholder { color:#fff; }
+.projects-categories-wrapper input[type="text"]:-moz-placeholder { color:#fff; } /* FF 4-18 */
+.projects-categories-wrapper input[type="text"]::-moz-placeholder { color:#fff; } /* FF 19+ */
+.projects-categories-wrapper input[type="text"]:-ms-input-placeholder { color:#fff; } /* IE 10+ */
+
+.projects-categories .project-category{
+  color: #fff;
+  font-weight: 300;
+  padding: 3px 12px;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #fff;
+  z-index: 2;
+}
+
+.projects-categories .project-category + .project-category{
+  border-left: 0;
+}
+
+.projects-categories .project-category span{
+  position: relative;
+  z-index: 2;
+}
+.projects-categories .project-category:hover,
+.projects-categories .project-category-active{
+  color: #3E3E3E;
+}
+
+.projects-categories .project-category:before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: -100%;
+  background: #fff;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}
+
+.projects-categories .project-category-active:before,
+.projects-categories .project-category:hover:before{
+  left: 0!important;
+}
+
+
+
 @media screen and (max-width: 600px){
   .projects-slide{
     height: 100%!important;
     min-height: 420px;
     padding-top: 23%;
+  }
+  .projects-slide-content.projects-slide-preview{
+    padding-top: 4px;
   }
   .projects-slide-content .container-sm{
     padding: 20px;
