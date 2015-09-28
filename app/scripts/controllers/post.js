@@ -22,7 +22,11 @@ angular.module('spaceshiplabsApp')
         $scope.loadedPost = true;
         $scope.entryImg = '';
         if(entry.featured_image){
-          $scope.entryImg = entry.featured_image.attachment_meta.sizes.large.url;
+          if(entry.featured_image.attachment_meta.sizes.large){
+            $scope.entryImg = entry.featured_image.attachment_meta.sizes.large.url;
+          }else{
+            $scope.entryImg = entry.featured_image.attachment_meta.sizes.blog.url;
+          }
         }else{
           $scope.entryImg = entry.attachments[0].large[0];
         }
@@ -50,9 +54,14 @@ angular.module('spaceshiplabsApp')
       var post = $scope.entry;
       var size = $rootScope.winSizeSingle || 'large';
       var style = {};
-      if(post.featured_image){
+      if(post.secondary_image && post.secondary_image[size]){
+        style = {
+          'background': 'url(' + post.secondary_image[size] + ') center no-repeat'
+        };
+      }
+      else if(post.featured_image){
 
-        if(size === 'full'){
+        if(size === 'full' && !post.secondary_image){
           style = {
             'background': 'url(' + post.featured_image.source + ') center no-repeat'
           };

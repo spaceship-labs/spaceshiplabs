@@ -838,7 +838,13 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 /*--------------/
   #MENTIONS-LANDING
 /*--------------*/
-.mentions-landing-content{width: 100%}
+.mentions-landing-content{
+  width: 100%;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  box-sizing:border-box;
+}
 .mentions-landing-content h1{
   color: #7C7C7C;
   margin-bottom: 20px;
@@ -2003,6 +2009,34 @@ md-progress-circular .md-inner .md-right .md-half-circle {
   .projects-slide-content h1{font-size: 34px}
   .projects-slide-content p{font-size: 13px}
 
+  .service-item{
+    background-size: contain;
+    height: 70px;
+  }
+
+  .services-item .service{
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  .services-item .service-hover{
+    transition-delay: .3s !important;
+    opacity: 1;
+    margin: 0 auto;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  .services-item .service-hover p{
+    font-size: 14px;
+    margin: 12px 0;
+  }
+  .services-item .service:first-child{display: none;}
 
 }
 
@@ -2040,6 +2074,8 @@ md-progress-circular .md-inner .md-right .md-half-circle {
     margin-bottom: 20px;
     min-width: 116px;
   }
+
+
   .services-item h5{
     margin-top: 10px;
   }
