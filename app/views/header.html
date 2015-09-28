@@ -13,41 +13,34 @@
       <div class="menu-wrapper" flex="80" flex-sm="30" >
         <nav class="menu" layout="row" layout-align="end center">
           <ul>
-            <!--<li><a href="/">HOME</a></li>-->
             <li><a href="/about-us">ACERCA DE</a></li>
             <li><a href="/team">EQUIPO</a></li>
             <li><a href="/projects">PROYECTOS</a></li>
             <li ng-mouseenter="dropdownActive = true" ng-mouseleave="dropdownActive = false">
               <a href="#">SERVICIOS</a>
               <ul layout="row" layout-align="space-between center">
-                <!-- <li flex="20" class="services-item">
+                <li flex="20" class="services-item services-item-ui wow" data-wow-delay="0s" ng-class="{'fadeInDown animated':dropdownActive}" itemscope itemtype="http://schema.org/Service">
                   <div>
                     <a href="/ui-ux" class="absolute-link"></a>
-                    <h5>Software</h5>
-                  </div>
-                </li> -->
-                <li flex="20" class="services-item services-item-ui wow" data-wow-delay="0s" ng-class="{'fadeInDown animated':dropdownActive}">
-                  <div>
-                    <a href="/ui-ux" class="absolute-link"></a>
-                    <h5>UI/UX Design</h5>
+                    <h5 itemprop="name">UI/UX Design</h5>
                   </div>
                 </li>
-                <li flex="20" class="services-item services-item-branding wow" data-wow-delay=".1s" ng-class="{'fadeInDown animated':dropdownActive}">
+                <li flex="20" class="services-item services-item-branding wow" data-wow-delay=".1s" ng-class="{'fadeInDown animated':dropdownActive}" itemscope itemtype="http://schema.org/Service">
                   <div >
                     <a href="/ui-ux" class="absolute-link"></a>
-                    <h5>Branding</h5>
+                    <h5 itemprop="name">Branding</h5>
                   </div>
                 </li>
-                <li flex="20" class="services-item services-item-marketing wow" data-wow-delay=".2s" ng-class="{'fadeInDown animated':dropdownActive}">
+                <li flex="20" class="services-item services-item-marketing wow" data-wow-delay=".2s" ng-class="{'fadeInDown animated':dropdownActive}" itemscope itemtype="http://schema.org/Service">
                   <div >
                     <a href="/ui-ux" class="absolute-link"></a>
-                    <h5>Marketing</h5>
+                    <h5 itemprop="name">Marketing</h5>
                   </div>
                 </li>
-                <li flex="20" class="services-item services-item-software wow" data-wow-delay=".3s" ng-class="{'fadeInDown animated':dropdownActive}">
+                <li flex="20" class="services-item services-item-software wow" data-wow-delay=".3s" ng-class="{'fadeInDown animated':dropdownActive}" itemscope itemtype="http://schema.org/Service">
                   <div >
                     <a href="/ui-ux" class="absolute-link"></a>
-                    <h5>Software</h5>
+                    <h5 itemprop="name">Software</h5>
                   </div>
                 </li>
               </ul>

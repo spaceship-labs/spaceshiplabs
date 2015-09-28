@@ -805,11 +805,11 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   margin: 20px 0;
 }
 
-.services-item .read-more{
+.services-item .action-btn{
   border: solid 2px #FFF;
   padding: 5px;
-  width: 60%;
   margin: 0 auto;
+  font-size: 18px;
 }
 
 /*---------------/
@@ -1277,8 +1277,9 @@ input:-webkit-autofill {
 .news-item-excerpt .binded-span p{display: inline;}
 
 .news-item-excerpt h4{
-  color: #02B3C3;
-  font-weight: 500;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
   margin: 0;
 }
 .news-item-excerpt p{

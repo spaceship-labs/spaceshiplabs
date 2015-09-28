@@ -1,5 +1,11 @@
-<div class="card-content card-content-list">
-  <h4><a ng-href="/{{::entry.slug}}">{{::entry.title}}</a></h4>
+<div class="card-content card-content-list" itemid="/{{::entry.slug}}" itemscope itemtype="http://schema.org/BlogPosting">
+  <meta itemprop="name" content="{{::entry.title}}">
+  <meta itemprop="headline" content="{{::entry.title}}">
+  <h4>
+    <a ng-href="/{{::entry.slug}}">
+      {{::entry.title}}
+    </a>
+  </h4>
   <p class="card-content-data">
     <small><img src="images/calendario.png" alt=""> Date {{::entry.date}}</small> | <strong>Author: {{::entry.author.nickname}}</strong>
   </p>
@@ -14,7 +20,7 @@
 
     <div flex flex-sm="100">
       <p class="card-content-excerpt">
-        <span ng-bind-html="entry.excerpt | limitTo:300"></span> <span ng-if="entry.excerpt.length > 300">...</span>
+        <span itemprop="description" ng-bind-html="entry.excerpt | limitTo:300"></span> <span ng-if="entry.excerpt.length > 300">...</span>
       </p>
     </div>
   </div>

@@ -20,7 +20,7 @@ angular.module('spaceshiplabsApp')
       var description = generalDescription ||  '¿Tienes alguna idea innovadora, y quieres invertir en internet? cuenta con nosotros para llevarla a cabo. Tenemos la experiencia y las herramientas para que tu proyecto sea todo un éxito.';
       var title =  generalTitle || 'SpaceshipLabs - Diseño de páginas web, aplicaciones móviles, Diseño Gráfico y Software en General';
       var generalName = 'SpaceshipLabs';
-      var img = imageUrl ||  domainUrl+'images/logo-og.png';
+      var img = imageUrl ||  domainUrl+'/images/logo-og.png';
 
       $rootScope.metatags = {
         title: title,
