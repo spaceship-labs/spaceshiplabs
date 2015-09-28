@@ -752,6 +752,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .service-hover{
   height: 80% !important;
   opacity: 0;
+  padding: 0 12px;
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
   -o-transform: rotateX(90deg);
@@ -776,14 +777,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   transform: rotateX(0deg);
 }
 
-/*.services-item-ui:hover{background: transparent url(../images/ui.png) top center no-repeat;}
-.services-item-branding:hover{background: transparent url(../images/iconos2.png) top center no-repeat;}
-.services-item-marketing:hover{background: transparent url(../images/icono3.png) top center no-repeat;}
-.services-item-consulting:hover{background: transparent url(../images/icono4.png) top center no-repeat;}
-.services-item-software:hover{background: transparent url(../images/software2-hover.png) center 5px no-repeat;}*/
-
-
-.menu .services-item{padding-top: 30px;}
+.menu .services-item{
+  padding-top: 30px;
+  border: 0;
+}
 .menu .services-item:hover{opacity: .5;}
 .menu .services-item-ui{background: transparent url(../images/uiMenu.png) center top no-repeat;}
 .menu .services-item-branding{background: transparent url(../images/branMenu.png) center top no-repeat;}

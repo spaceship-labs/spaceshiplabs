@@ -1,0 +1,22 @@
+<div
+  class="card-thumb"
+  ng-style="getPostThumb()"
+  >
+  <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
+</div>
+
+<div class="card-content">
+  <h4><a ng-href="/{{::entry.slug}}">{{::entry.title}}</a></h4>
+  <p class="card-content-data">
+    <strong>Author: {{::entry.author.nickname}}</strong>
+  </p>
+  <p class="card-content-data">
+    <small><img src="images/calendario.png" alt=""> Date {{::entry.date}}</small>
+  </p>
+  <p class="card-content-excerpt">
+    <span ng-bind-html="entry.excerpt | limitTo:150"></span> <span ng-if="entry.excerpt.length > 150">...</span>
+  </p>
+  <div class="action-btn-wrap">
+    <a ng-href="/{{::entry.slug}}" class="action-btn action-btn-alt">Ver más</a>
+  </div>
+</div>

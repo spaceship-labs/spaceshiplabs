@@ -28,19 +28,11 @@
 
   <div
     ng-repeat="entry in entries"
-    class="news-item"
-    ng-style="getPostThumb(entry,winSize)"
     flex="33"
     flex-sm="100">
 
-    <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
-    <div class="news-item-excerpt">
-      <div class="news-item-excerpt-inner">
-        <p>{{ ::entry.date | date:'dd - MMMM - yyyy' }}</p>
-        <p>{{ ::entry.title}}</p>
-        <p><i class="cyan-arrow"></i>Leer más</p>
-      </div>
-    </div>
+    <div post-item post-type="thumb" entry="entry"></div>
+
   </div>
 
 </div>
@@ -231,4 +223,4 @@
   <projects-slider projects="projects" preview="true" win-size="winSizeSingle"></projects-slider>
 </div>
 
-<ng-include src="'views/contact-us.html'"></ng-include>
+<ng-include src="'views/partials/contact-us.html'"></ng-include>

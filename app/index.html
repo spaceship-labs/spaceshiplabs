@@ -51,9 +51,9 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
-    <link rel='stylesheet' href='bower_components/angular-carousel/dist/angular-carousel.css' />
-    <link rel='stylesheet' href='bower_components/animate.css/animate.css' />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/angular-carousel/dist/angular-carousel.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -63,7 +63,8 @@
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  <body itemscope itemtype="http://schema.org/ProfessionalService">
+    <link itemprop="url" href="http://www.spaceshiplabs.com">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -162,6 +163,8 @@
         <script src="scripts/filters/customreverse.js"></script>
         <script src="scripts/directives/fixedheader.js"></script>
         <script src="scripts/controllers/spacees.js"></script>
+        <script src="scripts/directives/postitem.js"></script>
+        <script src="scripts/services/windowsize.js"></script>
         <!-- endbuild -->
 
   <script type="text/javascript"

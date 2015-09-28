@@ -2,21 +2,21 @@
   <h1><img src="images/contact-icon.png" alt=""> Contacto</h1>
 </div>
 <!--<ng-include src="'views/contact-us.html'"></ng-include>-->
-<div class="container container-xlg">
+<div class="container container-xlg" itemscope itemtype="http://schema.org/ProfessionalService">
 
   <form hide-gt-sm show-sm name="contactForm" novalidate ng-submit="doContact(contactForm)">
     <section class="contact-table">
       <div class="contact-table-cell contact-table-cell-lt">
         <p><strong>TELÉFONO</strong></p>
-        <p>+(998) 254 03 47</p>
+        <p itemprop="telephone">+(998) 254 03 47</p>
       </div>
       <div class="contact-table-cell contact-table-cell-lm" rowspan="2">
         <p><strong>E-MAIL</strong></p>
-        <p>admin@spaceshiplabs.com</p>
+        <p itemprop="email">admin@spaceshiplabs.com</p>
       </div>
       <div class="contact-table-cell contact-table-cell-lb" rowspan="2">
         <p><strong>UBICACIÓN</strong></p>
-        <p>Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500 Cancún Quintana Roo, México</p>
+        <p itemprop="address">Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500 Cancún Quintana Roo, México</p>
       </div>
       <div class="contact-table-cell">
         <h2>Escríbenos</h2>
@@ -48,7 +48,7 @@
         <td class="contact-table-cell contact-table-cell-lt">
           <div class="contact-left-inner-border"></div>
           <p><strong>TELÉFONO</strong></p>
-          <p>+(998) 254 03 47</p>
+          <p itemprop="telephone">+(998) 254 03 47</p>
         </td>
         <td class="contact-table-cell contact-table-cell-half contact-table-cell-rt">
           <h2>Escríbenos</h2>
@@ -59,7 +59,7 @@
         <td class="contact-table-cell contact-table-cell-lm" rowspan="2">
           <div class="contact-left-middle-inner-border"></div>
           <p><strong>E-MAIL</strong></p>
-          <p>admin@spaceshiplabs.com</p>
+          <p itemprop="email">admin@spaceshiplabs.com</p>
         </td>
         <td class="contact-table-cell contact-table-cell-rm">
           <input required ng-model="contactData.name" name="name" type="text" placeholder="Nombre">
@@ -74,7 +74,7 @@
         <td class="contact-table-cell contact-table-cell-lb" rowspan="2">
           <div class="contact-left-bottom-inner-border"></div>
           <p><strong>UBICACIÓN</strong></p>
-          <p>Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500 Cancún Quintana Roo, México</p>
+          <p itemprop="address">Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500 Cancún Quintana Roo, México</p>
         </td>
         <td class="contact-table-cell contact-table-cell-rm">
           <textarea required ng-model="contactData.message" name="message" placeholder="Mensaje" cols="30" rows="10"></textarea>

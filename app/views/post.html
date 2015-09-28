@@ -30,7 +30,7 @@
 
     <div
       class="single-thumb"
-      ng-style="getMainPostThumb(entry,winSizeSingle)"
+      ng-style="getMainPostThumb()"
       >
     </div>
 
@@ -68,28 +68,7 @@
             ng-repeat="entryItem in entries"
             class="blog-sidebar-card">
 
-          <div
-            class="card-thumb"
-            ng-style="getPostThumb(entryItem,'blog')"
-            >
-            <a ng-href="/{{::entryItem.slug}}" class="absolute-link"></a>
-          </div>
-
-          <div class="card-content">
-            <h4><a ng-href="/{{::entryItem.slug}}">{{::entryItem.title}}</a></h4>
-            <p class="card-content-data">
-              <strong>Author: {{::entryItem.author.nickname}}</strong>
-            </p>
-            <p class="card-content-data">
-              <small><img src="images/calendario.png" alt=""> Date {{::entryItem.date}}</small>
-            </p>
-            <p class="card-content-excerpt">
-              <span ng-bind-html="entryItem.excerpt | limitTo:150"></span> <span ng-if="entryItem.excerpt.length > 150">...</span>
-            </p>
-            <div class="action-btn-wrap">
-              <a ng-href="/{{::entryItem.slug}}" class="action-btn action-btn-alt">Ver más</a>
-            </div>
-          </div>
+            <div post-item post-type="sidebar" entry="entryItem"></div>
 
         </div>
 
@@ -126,4 +105,4 @@
 
 </div>
 
-<ng-include src="'views/contact-us.html'"></ng-include>
+<ng-include src="'views/partials/contact-us.html'"></ng-include>
