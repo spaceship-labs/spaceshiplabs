@@ -645,6 +645,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .landing-wrapper{
   /*color: #fff;*/
+  background: url(../images/videobg.png);
   position: relative;
   overflow: hidden;
 }

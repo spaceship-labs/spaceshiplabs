@@ -8,7 +8,7 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('HomeCtrl', function ($scope, blogService) {
+  .controller('HomeCtrl', function ($scope, blogService, $rootScope) {
     $scope.loadedPosts = false;
 
     $scope.getRecentPosts = function(){
@@ -20,14 +20,19 @@ angular.module('spaceshiplabsApp')
 
     $scope.init = function(){
       $scope.getRecentPosts();
-      var video = document.getElementById('landing-video');
-      video.play();
-      var videoLimit = 8;
-      video.addEventListener('timeupdate',function(){
-        if(video.currentTime > videoLimit){
-          video.currentTime = 1;
-        }
-      },false);
+      var windowDimensions = $rootScope.windowSize();
+      if(windowDimensions.w > 600){
+        var video = document.getElementById('landing-video');
+        var videoLimit = 8;
+        video.play();
+        video.addEventListener('timeupdate',function(){
+          if(video.currentTime > videoLimit){
+            video.currentTime = 1;
+          }
+        },false);
+      }else{
+        $('#landing-video').remove();
+      }
     };
 
     $scope.scrollTo = function(target){
