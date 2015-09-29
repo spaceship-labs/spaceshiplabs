@@ -20,16 +20,20 @@ angular.module('spaceshiplabsApp')
       blogService.getSingleEntry($scope.postSlug).then(function(entry){
         $scope.entry = entry;
         $scope.loadedPost = true;
-        var entryImg = '';
+        $scope.entryImg = '';
         if(entry.featured_image){
-          entryImg = entry.featured_image.attachment_meta.sizes.large.url;
+          if(entry.featured_image.attachment_meta.sizes.large){
+            $scope.entryImg = entry.featured_image.attachment_meta.sizes.large.url;
+          }else{
+            $scope.entryImg = entry.featured_image.attachment_meta.sizes.blog.url;
+          }
         }else{
-          entryImg = entry.attachments[0].large[0];
+          $scope.entryImg = entry.attachments[0].large[0];
         }
         metaTagsService.setMetaTags(
           entry.title,
           $filter('htmlToPlainText')(entry.excerpt),
-          entryImg
+          $scope.entryImg
         );
       });
     };
@@ -44,6 +48,45 @@ angular.module('spaceshiplabsApp')
       blogService.getCategories().then(function(data){
         $scope.categories = data;
       });
+    };
+
+    $scope.getMainPostThumb = function(){
+      var post = $scope.entry;
+      var size = $rootScope.winSizeSingle || 'large';
+      var style = {};
+      if(post.secondary_image && post.secondary_image[size]){
+        style = {
+          'background': 'url(' + post.secondary_image[size] + ') center no-repeat'
+        };
+      }
+      else if(post.featured_image){
+
+        if(size === 'full' && !post.secondary_image){
+          style = {
+            'background': 'url(' + post.featured_image.source + ') center no-repeat'
+          };
+        }
+
+        else if(!post.featured_image.attachment_meta.sizes[size]){
+          size = 'blog';
+        }
+
+        if(size !== 'full'){
+          style = {
+            'background': 'url(' + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
+          };
+        }
+
+      }else if(post.attachments){
+        if(!post.attachments[0][size]){
+          size = 'blog';
+        }
+        var urlKey = 0;
+        style = {
+          'background': 'url(' + post.attachments[0][size][urlKey] + ') center no-repeat'
+        };
+      }
+      return style;
     };
 
     $scope.getPost();

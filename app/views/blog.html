@@ -34,23 +34,9 @@
 
         <div
           ng-repeat="entry in entries | limitTo:1:0"
-          class="news-item"
-          ng-style="getMainPostThumb(entry,winSizeSingle)"
           flex
           flex-sm="100">
-
-          <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
-          <div class="news-item-excerpt">
-            <div class="news-item-excerpt-inner">
-              <!-- <h4>{{entry.title}}</h4>
-              <p>
-                <span  class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
-              </p> -->
-              <p>{{ ::entry.date | date:'dd - MMMM - yyyy' }}</p>
-              <p>{{::entry.title}}</p>
-              <p><i class="cyan-arrow"></i>Leer más</p>
-            </div>
-          </div>
+            <div post-item post-type="thumb" entry="entry"></div>
         </div>
 
 
@@ -60,23 +46,11 @@
 
         <div
           ng-repeat="entry in entries | limitTo:2:1"
-          class="news-item"
-          ng-style="getPostThumb(entry,winSize)"
           flex="50"
           flex-sm="100">
 
-          <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
-          <div class="news-item-excerpt">
-            <div class="news-item-excerpt-inner">
-              <!-- <h4>{{entry.title}}</h4>
-              <p>
-                <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
-              </p> -->
-              <p>{{ ::entry.date | date:'dd - MMMM - yyyy' }}</p>
-              <p>{{::entry.title}}</p>
-              <p><i class="cyan-arrow"></i>Leer más</p>
-            </div>
-          </div>
+          <div post-item post-type="thumb" entry="entry"></div>
+
         </div>
 
       </div>
@@ -85,23 +59,11 @@
 
         <div
           ng-repeat="entry in entries | limitTo:4:3"
-          class="news-item"
-          ng-style="getPostThumb(entry,winSize)"
           flex="50"
           flex-sm="100">
 
-          <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
-          <div class="news-item-excerpt">
-            <div class="news-item-excerpt-inner">
-              <!-- <h4>{{entry.title}}</h4>
-              <p>
-                <span class="binded-span" ng-bind-html="entry.excerpt | limitTo:80"></span> <span ng-if="entry.excerpt.length > 80">...</span>
-              </p> -->
-              <p>{{ ::entry.date | date:'dd - MMMM - yyyy' }}</p>
-              <p>{{::entry.title}}</p>
-              <p><i class="cyan-arrow"></i>Leer más</p>
-            </div>
-          </div>
+            <div post-item post-type="thumb" entry="entry"></div>
+
         </div>
 
       </div>
@@ -119,34 +81,12 @@
       layout-align="space-between start">
 
       <div class="blog-list" flex="70" flex-sm="100">
+
         <div
-            ng-repeat="entryItem in entries"
-            class="blog-list-card">
+          ng-repeat="entryItem in entries"
+          class="blog-list-card">
 
-          <div class="card-content card-content-list">
-            <h4><a ng-href="/{{entryItem.slug}}">{{::entryItem.title}}</a></h4>
-            <p class="card-content-data">
-              <small><img src="images/calendario.png" alt=""> Date {{::entryItem.date}}</small> | <strong>Author: {{::entryItem.author.nickname}}</strong>
-            </p>
-            <div class="card-content-preview" layout="row" layout-sm="column" layout-align="space-between start">
-
-              <div
-                flex-sm="100"
-                class="card-thumb-circle"
-                ng-style="getPostThumb(entryItem)">
-                <a ng-href="/{{::entryItem.slug}}" class="absolute-link"></a>
-              </div>
-
-              <div flex flex-sm="100">
-                <p class="card-content-excerpt">
-                  <span ng-bind-html="entryItem.excerpt | limitTo:300"></span> <span ng-if="entryItem.excerpt.length > 300">...</span>
-                </p>
-              </div>
-            </div>
-            <div class="action-btn-wrap">
-              <a ng-href="/{{::entryItem.slug}}" class="action-btn action-btn-alt">Ver más</a>
-            </div>
-          </div>
+          <div post-item entry="entryItem"></div>
 
         </div>
 
@@ -209,4 +149,4 @@
   </div>
 
 </div>
-<ng-include src="'views/contact-us.html'"></ng-include>
+<ng-include src="'views/partials/contact-us.html'"></ng-include>

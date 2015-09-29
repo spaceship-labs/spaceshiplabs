@@ -1,0 +1,30 @@
+<div class="card-content card-content-list" itemid="/{{::entry.slug}}" itemscope itemtype="http://schema.org/BlogPosting">
+  <meta itemprop="name" content="{{::entry.title}}">
+  <meta itemprop="headline" content="{{::entry.title}}">
+  <h4>
+    <a ng-href="/{{::entry.slug}}">
+      {{::entry.title}}
+    </a>
+  </h4>
+  <p class="card-content-data">
+    <small><img src="images/calendario.png" alt=""> Date {{::entry.date}}</small> | <strong>Author: {{::entry.author.nickname}}</strong>
+  </p>
+  <div class="card-content-preview" layout="row" layout-sm="column" layout-align="space-between start">
+
+    <div
+      flex-sm="100"
+      class="card-thumb-circle"
+      ng-style="getPostThumb(entry)">
+      <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
+    </div>
+
+    <div flex flex-sm="100">
+      <p class="card-content-excerpt">
+        <span itemprop="description" ng-bind-html="entry.excerpt | limitTo:300"></span> <span ng-if="entry.excerpt.length > 300">...</span>
+      </p>
+    </div>
+  </div>
+  <div class="action-btn-wrap">
+    <a ng-href="/{{::entry.slug}}" class="action-btn action-btn-alt">Ver más</a>
+  </div>
+</div>

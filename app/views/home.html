@@ -28,19 +28,11 @@
 
   <div
     ng-repeat="entry in entries"
-    class="news-item"
-    ng-style="getPostThumb(entry,winSize)"
     flex="33"
     flex-sm="100">
 
-    <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
-    <div class="news-item-excerpt">
-      <div class="news-item-excerpt-inner">
-        <p>{{ ::entry.date | date:'dd - MMMM - yyyy' }}</p>
-        <p>{{ ::entry.title}}</p>
-        <p><i class="cyan-arrow"></i>Leer más</p>
-      </div>
-    </div>
+    <div post-item post-type="thumb" entry="entry"></div>
+
   </div>
 
 </div>
@@ -54,85 +46,96 @@
     layout-align="center center"
     layout-wrap
     >
-      <div class="services-item" flex="25" flex-sm="50">
+      <div class="services-item" flex="25" flex-sm="50" itemscope itemtype="http://schema.org/Service">
           <a href="/ui-ux" class="absolute-link"></a>
           <div class="service">
             <div class="service-item services-item-ui"></div>
-            <h5>UI/UX Design</h5>
+            <h5 itemprop="name">UI/UX Design</h5>
             <hr>
           </div>
           <div class="service service-hover">
             <div class="service-item services-item-ui"></div>
-            <h5>UI/UX Design</h5>
+            <h5 itemprop="name">UI/UX Design</h5>
             <hr>
-            <p>
+            <p itemprop="description">
               Lorem ipsum dolor sit amet, duo euripidis vituperatoribus id, vel id omnesque persecuti delicatissimi.
             </p>
-            <div class="read-more">Leer Más</div>
+            <div class="action btn-wrap">
+              <a href="/ui-uix" class="action-btn" itemprop="url">Leer más</a>
+            </div>
           </div>
       </div>
-      <div class="services-item" flex="25" flex-sm="50">
+      <div class="services-item" flex="25" flex-sm="50" itemscope itemtype="http://schema.org/Service">
           <a href="/ui-ux" class="absolute-link"></a>
           <div class="service">
             <div class="service-item services-item-branding"></div>
-            <h5>Branding</h5>
+            <h5 itemprop="name">Branding</h5>
             <hr>
           </div>
           <div class="service service-hover">
             <div class="service-item services-item-branding"></div>
-            <h5>Branding</h5>
+            <h5 itemprop="name">Branding</h5>
             <hr>
-            <p>
+            <p itemprop="description">
               Lorem ipsum dolor sit amet, duo euripidis vituperatoribus id, vel id omnesque persecuti delicatissimi.
             </p>
-            <div class="read-more">Leer Más</div>
+            <div class="action btn-wrap">
+              <a href="#" class="action-btn" itemprop="url">Leer más</a>
+            </div>
           </div>
       </div>
-      <div class="services-item" flex="25" flex-sm="50">
+      <div class="services-item" flex="25" flex-sm="50" itemscope itemtype="http://schema.org/Service">
           <a href="/ui-ux" class="absolute-link"></a>
           <div class="service">
             <div class="service-item services-item-marketing"></div>
-            <h5>Marketing</h5>
+            <h5 itemprop="name">Marketing</h5>
             <hr>
           </div>
           <div class="service service-hover">
             <div class="service-item services-item-marketing"></div>
-            <h5>Marketing</h5>
+            <h5 itemprop="name">Marketing</h5>
             <hr>
-            <p>
+            <p itemprop="description">
               Lorem ipsum dolor sit amet, duo euripidis vituperatoribus id, vel id omnesque persecuti delicatissimi.
             </p>
-            <div class="read-more">Leer Más</div>
+            <div class="action btn-wrap">
+              <a href="#" class="action-btn" itemprop="url">Leer más</a>
+            </div>
           </div>
       </div>
-      <div class="services-item" flex="25" flex-sm="50">
+      <div class="services-item" flex="25" flex-sm="50" itemscope itemtype="http://schema.org/Service">
           <a href="/ui-ux" class="absolute-link"></a>
           <div class="service">
             <div class="service-item services-item-software"></div>
-            <h5>Software</h5>
+            <h5 itemprop="name">Software</h5>
             <hr>
           </div>
           <div class="service service-hover">
             <div class="service-item services-item-software"></div>
-            <h5>Software</h5>
+            <h5 itemprop="name">Software</h5>
             <hr>
-            <p>
+            <p itemprop="description">
               Lorem ipsum dolor sit amet, duo euripidis vituperatoribus id, vel id omnesque persecuti delicatissimi.
             </p>
-            <div class="read-more">Leer Más</div>
+            <div class="action btn-wrap">
+              <a href="#" class="action-btn" itemprop="url">Leer más</a>
+            </div>
           </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="spacees-landing container-alt" layout="row" layout-align="start center" ng-style="style()" full-screen-wrapper>
+<div class="spacees-landing container-alt" layout="row" layout-align="start center" ng-style="style()" full-screen-wrapper itemscope itemtype="http://schema.org/Service">
+  <meta itemprop="logo" content="images/spacees.png">
+  <meta itemprop="image" content="images/spacees.png">
+
   <div class="container-sm">
     <img src="images/spacees.png" alt="" />
-    <h2 data-wow-duration="0.8s" class="wow fadeInUp">ENTERPRISE SOFTWARE</h2>
-    <p>Plataforma para el manejo completo de la empresa desde recursos humanos, contabilidad, hasta la capacitación y canalización de ventas tanto electrónicas como analogas.</p>
+    <h2 data-wow-duration="0.8s" class="wow fadeInUp" itemprop="name">ENTERPRISE SOFTWARE</h2>
+    <p itemprop="description">Plataforma para el manejo completo de la empresa desde recursos humanos, contabilidad, hasta la capacitación y canalización de ventas tanto electrónicas como analogas.</p>
     <div class="action-btn-wrap">
-      <a href="#" class="action-btn">VER</a>
+      <a href="/spacees" itemprop="url" class="action-btn">VER</a>
     </div>
   </div>
 </div>
@@ -231,4 +234,4 @@
   <projects-slider projects="projects" preview="true" win-size="winSizeSingle"></projects-slider>
 </div>
 
-<ng-include src="'views/contact-us.html'"></ng-include>
+<ng-include src="'views/partials/contact-us.html'"></ng-include>

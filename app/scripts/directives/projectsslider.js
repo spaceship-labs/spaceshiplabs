@@ -42,6 +42,7 @@ angular.module('spaceshiplabsApp')
         };
 
         scope.setUp = function(){
+          console.log('setUp');
           scope.winSize = scope.winSize || 'large';
           scope.projectsCount = scope.projects.length;
           scope.movingOutIndexSlide = -1;
@@ -136,6 +137,8 @@ angular.module('spaceshiplabsApp')
                 }
                 return false;
             });
+
+            console.log(scope.projects);
 
             if(scope.projects.length === 0){
               scope.projects = scope.allProjects;

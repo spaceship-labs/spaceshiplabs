@@ -3,13 +3,15 @@
 <div class="info-wrap-spacees info-wrap">
 
   <div class="info-block">
-    <div layout="row" layout-sm="column" class="container container-xlg container-no-padding" layout-align-sm="start start">
+    <div layout="row" layout-sm="column" class="container container-xlg container-no-padding" layout-align="space-between start" layout-align-sm="start start">
       <section flex flex-sm="100" class="container container-normal container-md">
-        <h1><img class="wow fadeInUp" data-wow-duration="0.8s" src="images/spacees.png" alt="SpaceEs" /></h1>
+        <h1><img class="wow fadeInUp" data-wow-duration="0.8s" src="images/logo_spacees.png" alt="SpaceEs" /></h1>
         <p>Es una plataforma de gestión empresarial flexible y robusta de última generación que te ayudara a maximizar la eficiencia de tu negocio.</p>
       </section>
-      <section flex="50" flex-sm="100">
-        <img src="images/mockup.png" alt="">
+      <section class="mockups-wrapper" flex="50" flex-sm="100">
+        <img class="tablet-img wow slideInUp" data-wow-duration="1.6s" src="images/tablet-spacees.png" alt="">
+        <img class="cel-img wow slideInUp" data-wow-duration="2.4s" src="images/cel-spacees.png" alt="">
+        <img class="desktop-img wow slideInUp" data-wow-duration="3.2s" src="images/compu-spacees.png" alt="">
       </section>
     </div>
   </div>
@@ -33,10 +35,12 @@
 
   <div class="info-block">
     <div layout="row" layout-sm="column" class="container container-xlg container-no-padding" layout-align-sm="start start">
-      <section flex flex-sm="100" class="container container-normal container-md">
+      <section flex flex-sm="100" class="container container-normal container-md mockups-wrapper">
+        <img class="cel1-img wow slideInUp" data-wow-duration="0.8s" data-wow-delay="0.8" src="images/cel2.png" alt="">
+        <img class="cel2-img wow slideInUp" data-wow-duration="1.6s" data-wow-delay="1.6" src="images/cel1.png" alt="">
       </section>
       <section flex="50" flex-sm="100" class="block-list-wrapper">
-        <h2>Industrias:</h2>
+        <h2 class="wow fadeInUp" data-wow-duration="0.8s">Industrias:</h2>
         <ul class="block-list">
           <li>
             <h3>Turismo</h3>
@@ -57,4 +61,4 @@
 
 </div>
 
-<ng-include src="'views/contact-us.html'"></ng-include>
+<ng-include src="'views/partials/contact-us.html'"></ng-include>

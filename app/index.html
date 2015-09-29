@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="spaceshiplabsApp" ng-controller='MainCtrl'>
+<html ng-app="spaceshiplabsApp" ng-controller='MainCtrl' itemscope itemtype="http://schema.org/Organization">
   <head>
     <base href="/" />
     <meta name="fragment" content="!">
@@ -11,6 +11,12 @@
       ng-bind="metatags.title">
       SpaceshipLabs - Diseño de páginas web, aplicaciones móviles, Diseño Gráfico y Software en General
     </title>
+
+
+    <link itemprop="url" href="http://www.spaceshiplabs.com">
+    <meta itemtype="logo" content="images/logo-og.png">
+    <meta itemtype="address" content="Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500 Cancún Q.Roo, México.">
+
 
     <meta
       name="description"
@@ -64,6 +70,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
+
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -110,10 +117,10 @@
         <section class="logo-wrapper" flex="20">
           <a href="/"><img class="footer-logo" src="images/logo_footer.png" alt="SpaceshipLabs"></a>
         </section>
-        <section flex="80" flex-sm="60">
-            <p>Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500</p>
+        <section flex="80" flex-sm="60" itemscope itemtype="http://schema.org/ContactPoint">
+            <p itemprop="address">Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500</p>
             <p>Cancún Quintana Roo, México</p>
-            <p><strong>2 54 03 47</strong></p>
+            <p itemprop="telephone"><strong>2 54 03 47</strong></p>
         </section>
       </div>
     </div>
@@ -162,6 +169,8 @@
         <script src="scripts/filters/customreverse.js"></script>
         <script src="scripts/directives/fixedheader.js"></script>
         <script src="scripts/controllers/spacees.js"></script>
+        <script src="scripts/directives/postitem.js"></script>
+        <script src="scripts/services/windowsize.js"></script>
         <!-- endbuild -->
 
   <script type="text/javascript"
