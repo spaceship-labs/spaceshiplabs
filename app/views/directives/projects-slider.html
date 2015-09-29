@@ -43,7 +43,10 @@
       <section layout="column" layout-gt-lg="row" layout-align="center center" class="projects-categories-wrapper  container-smd">
         <form flex="30">
           <section layout="row" layout-align="center center">
-            <a href="#" ><img src="images/buscar2.png" alt=""></a>
+            <a href="#">
+              <!--<img src="images/buscar2.png" alt="">-->
+              <i class="icon-buscador"></i>
+            </a>
             <md-input-container flex="80" >
                 <label>Busca un proyecto</label>
               <input ng-model="searchTerm" type="text">
@@ -110,7 +113,8 @@
             </h1>
   					<p itemprop="description">{{project.description}}</p>
   					<a target="_blank" itemprop="url" ng-href="{{project.url}}" class="project-link">
-  						<img src="images/icono_proyectos6.png" alt="">
+  						<i class="icon-link"></i>
+              <!--<img src="images/icono_proyectos6.png" alt="">-->
   					</a>
 
             <div ng-show="preview" class="action-btn-wrap action-btn-all">
@@ -125,11 +129,11 @@
 
 		<ul class="projects-slider-bullets">
 			<li ng-repeat="item in getNumber(projectsCount) track by $index">
-				<a href="#" ng-class="{'active-bullet' : selectedIndexSlide == $index  }" ng-click="moveToProject($index)"></a>
+				<a href="" ng-class="{'active-bullet' : selectedIndexSlide == $index  }" ng-click="moveToProject($index)"></a>
 			</li>
 		</ul>
 
-		<a ng-click="moveNextProjectAction()" href="#" class="slide-next"></a>
+		<a ng-click="moveNextProjectAction()" href="" class="slide-next"></a>
 
 	</div>
 </div>

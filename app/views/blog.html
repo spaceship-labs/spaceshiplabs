@@ -1,5 +1,8 @@
 <div class="container section-title section-title-blog center-content">
-  <h1><img src="images/icono_periodico.png" alt=""> Noticias recientes</h1>
+  <h1>
+    <!--<img src="images/icono_periodico.png" alt="">-->
+    <i class="icon-noticias"></i> Noticias recientes
+   </h1>
 
   <div class="section-title-options" >
     <section layout="row" layout-align="space-between start" class="container container-xlg container-no-padding">
@@ -13,8 +16,12 @@
         </section>
       </form>
       <section class="thumbsViewContainer" ng-init="thumbsView = false" flex-sm="30">
-        <a href='' ng-click="thumbsView = false" class="thumbsView" ng-class="{'active':!thumbsView}">v2</a>
-        <a href='' ng-click="thumbsView = true" class="thumbsView" ng-class="{'active':thumbsView}">v1</a>
+        <a href='' ng-click="thumbsView = false" class="thumbsView" ng-class="{'active':!thumbsView}">
+          <i class="icon-lista"></i>
+        </a>
+        <a href='' ng-click="thumbsView = true" class="thumbsView" ng-class="{'active':thumbsView}">
+          <!--<i class="icon-cuadros"></i>-->
+        </a>
       </section>
     </section>
   </div>

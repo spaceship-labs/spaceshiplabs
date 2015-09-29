@@ -142,8 +142,14 @@
 
 .projects-slide-content p{font-weight: 300}
 .projects-slide-content .project-link{
+  color: #fff;
   display: inline-block;
   margin-top: 20px;
+  font-size: 54px;
+}
+.projects-slide-content .project-link i{
+  line-height: 1!important;
+  vertical-align: middle;
 }
 
 .projects-slider-reel-wrapper{
@@ -242,6 +248,7 @@
 }
 
 .projects-categories-wrapper form img{max-width: 18px;}
+.projects-categories-wrapper form i{color: #fff}
 .projects-categories-wrapper md-input-container{font-size: 14px;}
 
 .projects-categories-wrapper label{color: #fff!important;}
