@@ -42,7 +42,6 @@ angular.module('spaceshiplabsApp')
         };
 
         scope.setUp = function(){
-          console.log('setUp');
           scope.winSize = scope.winSize || 'large';
           scope.projectsCount = scope.projects.length;
           scope.movingOutIndexSlide = -1;

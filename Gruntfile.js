@@ -82,7 +82,7 @@ module.exports = function (grunt) {
           open: true,
           middleware: function (connect) {
             return [
-              modRewrite(['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg|\\.mp4$ /index.html [L]']),
+              modRewrite(['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg|\\.ttf|\\.woff|\\.mp4|\\.webm$ /index.html [L]']),
               connect.static('.tmp'),
               connect().use(
                 '/bower_components',
@@ -375,6 +375,14 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
         },{
+          //for fontello
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/fonts',
+          src: ['*.*'],
+          dest: '<%= yeoman.dist %>/fonts'
+        },
+        {
           //for json responses(email)
           expand: true,
           dot: true,
