@@ -714,6 +714,18 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 .services-item{
+
+  cursor: pointer;
+  padding-top: 116px;
+  position: relative;
+  background-size: 100%;
+  -webkit-transition: background .4s;
+  -moz-transition: background .4s;
+  -o-transition: background .4s;
+  -ms-transition: background .4s;
+  transition: background .4s;
+}
+.services-items .services-item{
   position: relative;
   border-right: 1px solid rgba(255,255,255,.6);
   height: 400px;
@@ -727,6 +739,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   -ms-transition: background .4s;
   transition: background .4s;
 }
+
 .services-item:last-child{border: none;}
 .services-item-ui{background: transparent url(../images/servicios1.png) top center no-repeat;}
 .services-item-branding{background: transparent url(../images/servicios2.png) top center no-repeat;}
@@ -1269,7 +1282,7 @@ input:-webkit-autofill {
   position: absolute;
   text-align: center;
   width: 100%;
-  margin-bottom: -38px;
+  margin-bottom: -40px;
   transition: all .3s;
 }
 
@@ -1288,8 +1301,8 @@ input:-webkit-autofill {
   color: #fff;
   font-size: 20px;
   font-weight: 300;
-  margin: 0;
-  line-height: 35px;
+  margin: 8px 0;
+  line-height: 25px;
   font-weight: bold;
 }
 
