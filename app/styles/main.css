@@ -429,6 +429,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   position: absolute;
   top: 0;
   left: 0;
+  /*z-index: 0;*/
   -webkit-transition: padding .2s ease;
   -moz-transition: padding .2s ease;
   -o-transition: padding .2s ease;
@@ -1469,6 +1470,51 @@ input:-webkit-autofill {
   margin: 2px 0;
 }
 
+.mockups-wrapper{
+  position: relative;
+  min-height: 450px;
+  margin-bottom: 40px;
+}
+
+.mockups-wrapper .tablet-img{
+  position: absolute;
+  right: -35px;
+  top: 0;
+  z-index: 3;
+}
+
+.mockups-wrapper .cel-img{
+  position: absolute;
+  top: 34%;
+  left: -4%;
+  width: 70%;
+  z-index: 2;
+}
+
+.mockups-wrapper .desktop-img{
+  position: absolute;
+  top: 55%;
+  right: -10%;
+  width: 80%;
+  z-index: 1;
+}
+
+.mockups-wrapper .cel1-img{
+  position: absolute;
+  top: 0%;
+  right: 0;
+  z-index: 1;
+  width: 80%;
+}
+.mockups-wrapper .cel2-img{
+  position: absolute;
+  top: 10%;
+  right: 30%;
+  width: 80%;
+  z-index: 2;
+}
+
+
 
 /*-------------/
   #AWARDS
@@ -2159,6 +2205,19 @@ md-progress-circular .md-inner .md-right .md-half-circle {
     font-size: 14px;
     line-height: 1.3;
   }
+
+  /*---------------/
+    #SPACEES
+  /*--------------*/
+  .mockups-wrapper{width: 100%;}
+  .info-wrap-spacees h1{text-align: center;}
+  .info-wrap-spacees h1 img{width: 80%;}
+  .info-features-spacees{padding: 0}
+  .info-features-spacees li{font-size: 14px;}
+  .block-list{padding: 10px}
+  .block-list li h3:after{display: none;}
+  .mockups-wrapper .cel2-img,
+  .mockups-wrapper .cel1-img{width: 74%}
 
   .section-title-projects{
     padding-bottom: 22px;
