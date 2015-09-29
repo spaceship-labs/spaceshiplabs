@@ -716,17 +716,17 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 .services-item{
-
   cursor: pointer;
   padding-top: 116px;
   position: relative;
   background-size: 100%;
-  -webkit-transition: background .4s;
-  -moz-transition: background .4s;
-  -o-transition: background .4s;
-  -ms-transition: background .4s;
-  transition: background .4s;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
 }
+
 .services-items .services-item{
   position: relative;
   border-right: 1px solid rgba(255,255,255,.6);
@@ -783,7 +783,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   opacity: 0;
 }
 .services-item:hover .service-hover{
-  transition-delay: .3s !important;
+  animation-delay: .3s !important;
   opacity: 1;
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
@@ -795,8 +795,18 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .menu .services-item{
   padding-top: 30px;
   border: 0;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -ms-transition: all .3s;
 }
-.menu .services-item:hover{opacity: .5;}
+
+.menu .services-item:nth-child(1){animation-delay: .0s !important;}
+.menu .services-item:nth-child(2){animation-delay: .2s !important;}
+.menu .services-item:nth-child(3){animation-delay: .4s !important;}
+.menu .services-item:nth-child(4){animation-delay: .6s !important;}
+.menu .services-item:hover{opacity: .5 !important;}
+
 .menu .services-item-ui{background: transparent url(../images/uiMenu.png) center top no-repeat;}
 .menu .services-item-branding{background: transparent url(../images/branMenu.png) center top no-repeat;}
 .menu .services-item-marketing{background: transparent url(../images/markMenu.png) center top no-repeat;}
