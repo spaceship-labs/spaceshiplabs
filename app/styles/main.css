@@ -822,10 +822,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   -ms-transition: all .3s;
 }
 
-.menu .services-item:nth-child(1){animation-delay: .0s !important;}
-.menu .services-item:nth-child(2){animation-delay: .2s !important;}
-.menu .services-item:nth-child(3){animation-delay: .4s !important;}
-.menu .services-item:nth-child(4){animation-delay: .6s !important;}
+.menu .services-item:nth-child(1){animation-delay: 0s;}
+.menu .services-item:nth-child(2){animation-delay: .2s;}
+.menu .services-item:nth-child(3){animation-delay: .4s;}
+.menu .services-item:nth-child(4){animation-delay: .6s;}
 .menu .services-item:hover{opacity: .5 !important;}
 
 .menu .services-item-ui{background: transparent url(../images/uiMenu.png) center top no-repeat;}
@@ -833,6 +833,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .menu .services-item-marketing{background: transparent url(../images/markMenu.png) center top no-repeat;}
 .menu .services-item-consulting{background: transparent url(../images/consulMenu.png) center top no-repeat;}
 .menu .services-item-software{background: transparent url(../images/software.png) center 5px no-repeat;}
+
 .menu .services-item h5{
   font-size: 18px;
   font-weight: 500;
