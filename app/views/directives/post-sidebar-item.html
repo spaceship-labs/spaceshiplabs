@@ -22,7 +22,7 @@
     <small><img src="images/calendario.png" alt=""> Date {{::entry.date}}</small>
   </p>
   <p class="card-content-excerpt">
-    <span itemprop="description" ng-bind-html="entry.excerpt | limitTo:150"></span> <span ng-if="entry.excerpt.length > 150">...</span>
+    <span itemprop="description" ng-bind-html="entry.excerpt | limitTo:80 | htmlToPlainText"></span> <span ng-if="entry.excerpt.length > 80">...</span>
   </p>
   <div class="action-btn-wrap">
     <a ng-href="/{{::entry.slug}}" class="action-btn action-btn-alt">Ver más</a>

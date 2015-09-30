@@ -138,6 +138,11 @@
 }
 
 .projects-slide-content h1 a{color: #fff}
+.projects-slide-content .action-btn:hover{
+  border: 1px solid #00c5d8;
+  background: #00c5d8;
+  color: #fff;
+}
 
 .projects-slide-content p{font-weight: 300}
 .projects-slide-content .project-link{
@@ -146,6 +151,11 @@
   margin-top: 20px;
   font-size: 54px;
 }
+
+.projects-slide-content .project-link:hover{
+  color: #00c5d8;
+}
+
 .projects-slide-content .project-link i{
   line-height: 1!important;
   vertical-align: middle;

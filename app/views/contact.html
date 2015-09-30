@@ -7,7 +7,7 @@
 <!--<ng-include src="'views/contact-us.html'"></ng-include>-->
 <div class="container container-xlg" itemscope itemtype="http://schema.org/ContactPoint">
 
-  <form hide-gt-sm show-sm name="contactForm" novalidate ng-submit="doContact(contactForm)">
+  <form hide-gt-sm show-sm name="contactForm" autocomplete="off" novalidate ng-submit="doContact(contactForm)">
     <section class="contact-table contact-table-mobile">
       <div class="contact-table-cell contact-table-cell-lt">
         <p><strong>TELÉFONO</strong></p>
@@ -41,16 +41,21 @@
     </section>
   </form>
 
-  <form class="contact-form" hide-sm name="contactForm" novalidate ng-submit="doContact(contactForm)">
-    <div class="contact-top-border"></div>
-    <div class="contact-bottom-border"></div>
-    <div class="contact-left-border"></div>
-    <div class="contact-right-border"></div>
+  <form class="contact-form" hide-sm name="contactForm" autocomplete="off" novalidate ng-submit="doContact(contactForm)">
+
+    <!--ANIMATED STROKES-->
+    <div class="contact-stroke contact-top-border wow leftToRight" data-wow-duration="1s" ></div>
+    <div class="contact-stroke contact-bottom-border wow leftToRight" data-wow-duration="1s" data-wow-delay="1s"></div>
+    <div class="contact-stroke contact-left-border wow upDown" data-wow-duration="1s"></div>
+    <div class="contact-stroke contact-right-border wow upDown" data-wow-duration="1s" data-wow-delay="1s"></div>
+    <!--END ANIMATED STROKES-->
 
     <table class="contact-table">
       <tr>
         <td class="contact-table-cell contact-table-cell-lt">
-          <div class="contact-left-inner-border"></div>
+
+          <div class="contact-stroke contact-left-inner-border wow upDown" data-wow-duration="0.2s" data-wow-delay="0.5s"></div>
+
           <p><strong>TELÉFONO</strong></p>
           <p itemprop="telephone">+(998) 254 03 47</p>
         </td>
@@ -61,7 +66,9 @@
       </tr>
       <tr>
         <td class="contact-table-cell contact-table-cell-lm" rowspan="2">
-          <div class="contact-left-middle-inner-border"></div>
+
+          <div class="contact-stroke contact-left-middle-inner-border wow upDown" data-wow-duration="0.2s" data-wow-delay="0.6s"></div>
+
           <p><strong>E-MAIL</strong></p>
           <p itemprop="email">admin@spaceshiplabs.com</p>
         </td>
@@ -76,7 +83,9 @@
       </tr>
       <tr>
         <td class="contact-table-cell contact-table-cell-lb" rowspan="2">
-          <div class="contact-left-bottom-inner-border"></div>
+
+          <div class="contact-stroke contact-left-bottom-inner-border wow upDown" data-wow-duration="0.4s" data-wow-delay="0.7s"></div>
+
           <p><strong>UBICACIÓN</strong></p>
           <p itemprop="address">Avenida Bonampak Calle Cereza #1 SM 2-A L 20 CP 77500 Cancún Quintana Roo, México</p>
         </td>

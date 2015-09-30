@@ -20,7 +20,7 @@
 
     <div flex flex-sm="100">
       <p class="card-content-excerpt">
-        <span itemprop="description" ng-bind-html="entry.excerpt | limitTo:300"></span> <span ng-if="entry.excerpt.length > 300">...</span>
+        <span itemprop="description" ng-bind-html="entry.excerpt | limitTo:200 | htmlToPlainText"></span> <span ng-if="entry.excerpt.length > 200">...</span>
       </p>
     </div>
   </div>

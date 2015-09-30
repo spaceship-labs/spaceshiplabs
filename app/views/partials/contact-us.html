@@ -23,23 +23,46 @@
        </p>
        <p>Estamos seguros que tenemos la mejor solución.</p>
     </div>
-    <form name="contactForm" novalidate ng-submit="doContact(contactForm)">
-      <input type="email" required ng-model="contactData.email" name="email" placeholder="Ingresar correo">
-      <input type="hidden" required ng-model="contactData.message" name="message" value="Este es un mail desde divshot">
-      <input type="hidden" required ng-model="contactData.name" name="name" value="Usuario generico">
-      <input type="submit" value="ENVIAR">
+    <form name="contactForm" autocomplete="off" class="contact-form contact-form-partial" novalidate ng-submit="doContact(contactForm)">
+      <!--ANIMATED STROKES-->
+      <div class="contact-stroke contact-top-border wow leftToRight" data-wow-duration="1s" ></div>
+      <div class="contact-stroke contact-bottom-border wow leftToRight" data-wow-duration="1s" data-wow-delay="1s"></div>
+      <div class="contact-stroke contact-left-border wow upDown" data-wow-duration="1s"></div>
+      <div class="contact-stroke contact-right-border wow upDown" data-wow-duration="1s" data-wow-delay="1s"></div>
+      <!--END ANIMATED STROKES-->
 
-      <section ng-if="contactError">
-        <p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.email"><span>*Este e-mail no es valido.</span></p>
-        <p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.required"><span>*Ingresa tu e-mail.</span></p>
-        <!--<p class="contact-form-message contact-form-message-error" ng-show="contactForm.name.$error.required"><span>*Ingresa tu nombre.</span></p>
-        <p class="contact-form-message contact-form-message-error" ng-show="contactForm.message.$error.required"><span>*Ingresa un mensaje.</span></p>-->
+      <section class="contact-table">
+        <div layout="row">
+          <div flex="50" class="contact-table-cell contact-table-cell-lt">
+            <div class="contact-stroke contact-left-inner-border wow upDown" data-wow-duration="1s"></div>
+            <input required ng-model="contactData.name" name="name" type="text" placeholder="Nombre">
+          </div>
+          <div flex="50" class="contact-table-cell contact-table-cell-half contact-table-cell-rt">
+            <input type="email" required ng-model="contactData.email" name="email" placeholder="E-mail">
+          </div>
+        </div>
+        <div layout="row">
+          <div flex="100"  class="contact-table-cell">
+            <textarea required ng-model="contactData.message" name="message" placeholder="Mensaje" cols="30" rows="4"></textarea>
+          </div>
+        </div>
+        <div layout="row">
+          <div flex="100" class="contact-table-cell contact-table-cell-submit contact-table-cell-rb ">
+            <input type="submit" value="Enviar">
+            <div class="contact-table-cell-submit-on"><i class="icon-flecha"></i></div>
+          </div>
+        </div>
       </section>
-      <p class="contact-form-message" ng-show="emailSent"><span>Gracias por enviar tu mensaje.</span></p>
-      <p class="contact-form-message contact-form-message-error" ng-show="contactError"><span>*Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
-
-
     </form>
+
+    <section ng-if="contactError">
+      <p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.email"><span>*Este e-mail no es valido.</span></p>
+      <p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.required"><span>*Ingresa tu e-mail.</span></p>
+      <!--<p class="contact-form-message contact-form-message-error" ng-show="contactForm.name.$error.required"><span>*Ingresa tu nombre.</span></p>
+      <p class="contact-form-message contact-form-message-error" ng-show="contactForm.message.$error.required"><span>*Ingresa un mensaje.</span></p>-->
+    </section>
+    <p class="contact-form-message" ng-show="emailSent"><span>Gracias por enviar tu mensaje.</span></p>
+    <p class="contact-form-message contact-form-message-error" ng-show="contactError"><span>*Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
 
     <div class="social-icons">
       <a
