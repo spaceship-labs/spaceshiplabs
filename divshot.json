@@ -12,8 +12,8 @@
       "to": "luis19prz@gmail.com",
       "from": "{{email}}",
       "replyTo": "{{name}} <{{email}}>",
-      "subject": "Contact Received from {{name}}",
-      "html": "<b>Name:</b><br> {{message}}",
+      "subject": "SpaceshipLabs website contact, received from {{name}}",
+      "html": "<b>Name: {{name}}</b><br> {{message}}",
       "text": "Name: {{name}}",
       "success": "/json/email-success.json",
       "failure": "/json/email-failure.json"

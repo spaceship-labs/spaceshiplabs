@@ -334,6 +334,16 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   position: relative;
 }
 
+.section-title-spacees{
+  background: #7775c0; /* Old browsers */
+  background: -moz-linear-gradient(90deg,  #7775c0 10%, #25d4c7 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(10%,#7775c0), color-stop(10%,#7775c0), color-stop(100%,#25d4c7)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(90deg,  #7775c0 10%,#25d4c7 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(90deg,  #7775c0 10%,#25d4c7 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(90deg,  #7775c0 10%,#25d4c7 100%); /* IE10+ */
+  background: linear-gradient(90deg,  #7775c0 10%,#25d4c7 100%); /* W3C */
+}
+
 .section-title-blog i{
   font-size: 58px;
 }
@@ -1318,9 +1328,9 @@ input:-webkit-autofill {
 .info-block{
   /*margin: 80px 0;
   margin: 10% 0;*/
-  padding: 4% 0;
+  padding: 40px 0;
 }
-.info-block-spacees{padding: 10% 0;}
+.info-block-spacees{padding: 42px 0;}
 .info-block:first-child{margin-top:0;}
 .info-wrap-description{
   font-size: 18px!important;
@@ -1360,7 +1370,7 @@ input:-webkit-autofill {
 
 .info-wrap .container-support{
   overflow: hidden;
-  margin: 16% 0;
+  /*margin: 16% 0;*/
 }
 
 .info-wrap .support-icons{
@@ -2168,8 +2178,8 @@ md-progress-circular .md-inner .md-right .md-half-circle {
   }
   .mentions-landing-content{
     max-width: 100%;
-    padding: 40px 10%;
-    width: 80%;
+    padding: 10px;
+    width: 90%;
   }
   .mention-landing-row{
     display: block;
@@ -2187,6 +2197,16 @@ md-progress-circular .md-inner .md-right .md-half-circle {
   .clients-slider .client-item-avatar{position: static;}
   .clients-slider .client-item{margin: 10px 0}
   .clients-slider-arrow{display: none;}
+
+  .clients-slide .client-item .quote-icon{
+    left: -24px;
+    font-size: 26px;
+  }
+
+  .clients-slide .client-item .quote-icon-right{
+    left: auto;
+    right: -24px;
+  }
 
   .info-wrap .guarantee img{max-width: 200px}
 
@@ -2211,12 +2231,13 @@ md-progress-circular .md-inner .md-right .md-half-circle {
     #ABOUT-US
   /*------------*/
   .info-wrap{text-align: center;}
+  .info-wrap p{font-size: 16px;}
   .info-wrap .guarantee-img{margin: 0 auto;}
   .info-wrap .support-icons img{margin: 0 10px;}
   .info-wrap .support-card{margin: 40px auto 0;}
   .info-wrap .info-block{
     text-align: center;
-    padding: 2% 0;
+    padding: 25px 0;
   }
   .info-wrap .container-pulled-left{margin-left: 0;}
   .info-wrap .support-icons{width: auto;}
