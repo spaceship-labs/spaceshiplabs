@@ -1,0 +1,134 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-yfqahk');
+	src:url('../fonts/icomoon.eot?-yfqahk#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?-yfqahk') format('truetype'),
+		url('../fonts/icomoon.woff?-yfqahk') format('woff'),
+		url('../fonts/icomoon.svg?-yfqahk#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-abajo:before {
+	content: "\e600";
+}
+.icon-about:before {
+	content: "\e601";
+}
+.icon-api:before {
+	content: "\e602";
+}
+.icon-awards:before {
+	content: "\e603";
+}
+.icon-buscador:before {
+	content: "\e604";
+}
+.icon-comilla1:before {
+	content: "\e605";
+}
+.icon-comilla2:before {
+	content: "\e606";
+}
+.icon-configurable:before {
+	content: "\e607";
+}
+.icon-contacto:before {
+	content: "\e608";
+}
+.icon-cuadros:before {
+	content: "\e609";
+}
+.icon-der:before {
+	content: "\e60a";
+}
+.icon-escalable:before {
+	content: "\e60b";
+}
+.icon-face:before {
+	content: "\e60c";
+}
+.icon-flecha:before {
+	content: "\e60d";
+}
+.icon-insta:before {
+	content: "\e60e";
+}
+.icon-izq:before {
+	content: "\e60f";
+}
+.icon-link:before {
+	content: "\e610";
+}
+.icon-lista:before {
+	content: "\e611";
+}
+.icon-logo:before {
+	content: "\e612";
+}
+.icon-mantenimiento:before {
+	content: "\e613";
+}
+.icon-multiempresas:before {
+	content: "\e614";
+}
+.icon-multilenguaje:before {
+	content: "\e615";
+}
+.icon-multiusuarios:before {
+	content: "\e616";
+}
+.icon-nave:before {
+	content: "\e617";
+}
+.icon-noticias:before {
+	content: "\e618";
+}
+.icon-portafolio:before {
+	content: "\e619";
+}
+.icon-reportes:before {
+	content: "\e61a";
+}
+.icon-responsivo:before {
+	content: "\e61b";
+}
+.icon-soporte1:before {
+	content: "\e61c";
+}
+.icon-soporte2:before {
+	content: "\e61d";
+}
+.icon-soporte3:before {
+	content: "\e61e";
+}
+.icon-soporte4:before {
+	content: "\e61f";
+}
+.icon-telefono:before {
+	content: "\e620";
+}
+.icon-tranquilo:before {
+	content: "\e621";
+}
+.icon-tweet:before {
+	content: "\e622";
+}
+.icon-youtube:before {
+	content: "\e623";
+}
+

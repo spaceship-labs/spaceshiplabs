@@ -112,7 +112,7 @@ angular.module('spaceshiplabsApp')
         };
 
         scope.movePrevPhoto = function(){
-          var photosCount = scope.projects[scope.selectedIndexSlide].photos.length;
+          var photosCount = scope.projects[scope.selectedIndexSlide].images.length;
           if(scope.selectedProjectPhoto > 0){
             scope.selectedProjectPhoto--;
           }else{

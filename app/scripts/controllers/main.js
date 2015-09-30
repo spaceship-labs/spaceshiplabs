@@ -18,6 +18,7 @@ angular.module('spaceshiplabsApp')
       $scope.winSizeSingle = "medium";
       $scope.redirectCount = 0;
       windowSize.init();
+
     };
 
 	  $scope.toggleSidebar = function() {
@@ -33,6 +34,17 @@ angular.module('spaceshiplabsApp')
         $scope.closeSidebar();
       }
       $scope.redirectCount++;
+
+      var customizeHeader = function(){
+        if($location.path() === '/'){
+          $('.toolbar-head .menu').addClass('menu-home');
+        }else{
+          $('.toolbar-head .menu').removeClass('menu-home');
+        }
+      };
+
+      setTimeout(customizeHeader, 500);
+
     });
 
 		$scope.isHome = ($location.path() === '/' ) ? true : false;

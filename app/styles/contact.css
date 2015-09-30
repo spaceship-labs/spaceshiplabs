@@ -54,6 +54,10 @@
   padding: 2px;
 }
 
+.contact-table-mobile .contact-table-cell{
+  border: 1px solid #00C4D5;
+}
+
 .contact-table-cell{
   position: relative;
   overflow: hidden;

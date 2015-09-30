@@ -102,15 +102,14 @@
 
   				<div class="projects-slide-content-inner container container-sm">
 
-            <div class="projects-slider-nav" layout="row" layout-align="space-between center">
-              <a ng-click="movePrev()" href="#"><img src="images/flechaa.png" alt=""></a>
-              <a ng-click="moveNextPhoto()" href="#"><img src="images/flechab.png" alt=""></a>
-            </div>
-
         		<h3 itemprop="interactivityType">{{project.type}}</h3>
   					<h1 ng-class="{'animated flipInX' : selectedIndexSlide == $index}" itemprop="name">
               <a ng-href="{{project.url}}" itemprop="url">{{project.name}}</a>
             </h1>
+            <div class="projects-slider-nav" layout="row" layout-align="space-between center">
+              <a ng-click="movePrevPhoto()" href=""><i class="icon-izq"></i></a>
+              <a ng-click="moveNextPhoto()" href=""><i class="icon-der"></i></a>
+            </div>
   					<p itemprop="description">{{project.description}}</p>
   					<a target="_blank" itemprop="url" ng-href="{{project.url}}" class="project-link">
   						<i class="icon-link"></i>

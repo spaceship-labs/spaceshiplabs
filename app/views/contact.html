@@ -8,7 +8,7 @@
 <div class="container container-xlg" itemscope itemtype="http://schema.org/ContactPoint">
 
   <form hide-gt-sm show-sm name="contactForm" novalidate ng-submit="doContact(contactForm)">
-    <section class="contact-table">
+    <section class="contact-table contact-table-mobile">
       <div class="contact-table-cell contact-table-cell-lt">
         <p><strong>TELÉFONO</strong></p>
         <p itemprop="telephone">+(998) 254 03 47</p>
@@ -98,14 +98,13 @@
       <p class="contact-form-message contact-form-message-error" ng-show="contactForm.name.$error.required"><span>*Ingresa tu nombre.</span></p>
       <p class="contact-form-message contact-form-message-error" ng-show="contactForm.message.$error.required"><span>*Ingresa un mensaje.</span></p>
     </section>
-    <p class="contact-form-message" ng-show="emailSent"><span>Gracias por enviar tu mensaje.</span></p>
-    <p class="contact-form-message contact-form-message-error" ng-show="contactError"><span>*Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
   </form>
+
+  <p class="contact-form-message" ng-show="emailSent"><span>Gracias por enviar tu mensaje.</span></p>
+  <p class="contact-form-message contact-form-message-error" ng-show="contactError"><span>*Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
+
 
 </div>
 
 <div id="map-contact"></div>
 
-<script type="text/javascript"
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo7vknjrmQzOpOWccccOpx8yLJoYkvRyA">
-</script>
