@@ -7,67 +7,68 @@
  * # BlogCtrl
  * Controller of the spaceshiplabsApp
  */
-angular.module('spaceshiplabsApp')
-  .controller('BlogCtrl',['$scope','$routeParams','blogService', function ($scope, $routeParams, blogService) {
+function BlogCtrl($scope, $routeParams, blogService){
 
-    $scope.getRecentPosts = function(params){
-      blogService.getEntries(params).then(function(data){
-        $scope.pages = data.pages;
-        $scope.entries = data.entries;
-        $scope.loadedPosts = true;
-      });
+  $scope.getRecentPosts = function(params){
+    blogService.getEntries(params).then(function(data){
+      $scope.pages = data.pages;
+      $scope.entries = data.entries;
+      $scope.loadedPosts = true;
+    });
+  };
+
+  $scope.getCategories = function(){
+    blogService.getCategories().then(function(data){
+      $scope.categories = data;
+    });
+  };
+
+  $scope.incrementPage = function(page){ return parseInt(page)+1; };
+
+  $scope.init = function(){
+    $scope.entries = [];
+    $scope.loadedPosts = false;
+    $scope.endPagination = 8;
+    $scope.itemsPagination = 8;
+    $scope.entriesLimit = 10;
+    $scope.page = $routeParams.page || 1;
+
+    var params = {
+      limit: $scope.entriesLimit,
+      page: $scope.page,
     };
 
-    $scope.getCategories = function(){
-      blogService.getCategories().then(function(data){
-        $scope.categories = data;
-      });
-    };
+    $scope.baseUrl = '/blog';
+    $scope.searchTerm = '';
+    $scope.term = '';
+    $scope.blogSection = 'blog';
 
-    $scope.incrementPage = function(page){ return parseInt(page)+1; };
+    if($routeParams.category){
+      params.category = $routeParams.category;
+      $scope.baseUrl = '/blog/category/' + $routeParams.category;
+      $scope.blogSection = 'category';
+      $scope.term = $routeParams.category;
+    }
+    else if($routeParams.tag){
+      params.tag = $routeParams.tag;
+      $scope.baseUrl = '/blog/tag/' + $routeParams.tag;
+      $scope.blogSection = 'tag';
+      $scope.term = $routeParams.tag;
+    }
+    else if($routeParams.s){
+      params.searchTerm = $routeParams.s;
+      $scope.searchTerm = '?s=' + $routeParams.s;
+      $scope.blogSection = 'search';
+      $scope.term = $routeParams.s;
+    }
 
-    $scope.init = function(){
-      $scope.entries = [];
-      $scope.loadedPosts = false;
-      $scope.endPagination = 8;
-      $scope.itemsPagination = 8;
-      $scope.entriesLimit = 10;
-      $scope.page = $routeParams.page || 1;
+    $scope.getRecentPosts(params);
+    $scope.getCategories();
+  };
 
-      var params = {
-        limit: $scope.entriesLimit,
-        page: $scope.page,
-      };
+  $scope.init();
+}
 
-      $scope.baseUrl = '/blog';
-      $scope.searchTerm = '';
-      $scope.term = '';
-      $scope.blogSection = 'blog';
+angular.module('spaceshiplabsApp').controller('BlogCtrl',BlogCtrl);
+BlogCtrl.$inject = ['$scope','$routeParams','blogService'];
 
-      if($routeParams.category){
-        params.category = $routeParams.category;
-        $scope.baseUrl = '/blog/category/' + $routeParams.category;
-        $scope.blogSection = 'category';
-        $scope.term = $routeParams.category;
-      }
-      else if($routeParams.tag){
-        params.tag = $routeParams.tag;
-        $scope.baseUrl = '/blog/tag/' + $routeParams.tag;
-        $scope.blogSection = 'tag';
-        $scope.term = $routeParams.tag;
-      }
-      else if($routeParams.s){
-        params.searchTerm = $routeParams.s;
-        $scope.searchTerm = '?s=' + $routeParams.s;
-        $scope.blogSection = 'search';
-        $scope.term = $routeParams.s;
-      }
-
-      $scope.getRecentPosts(params);
-      $scope.getCategories();
-    };
-
-    $scope.init();
-
-
-  }]);

@@ -15,6 +15,13 @@ angular.module('spaceshiplabsApp')
         clients:'='
       },
       link: function postLink(scope) {
+        var slideSelector = '.clients-slide';
+        var classAnimated = 'clients-slide-animated';
+        var classSlideOn = 'clients-slide-active clients-slide-animated';
+        var classActive = 'clients-slide-active';
+        var classLeft = 'clients-slide-left';
+        var classRight = 'clients-slide-right';
+        var indexSelector = 'data-slide-index';
 
         scope.init = function(){
           scope.removeClasses();
@@ -78,47 +85,38 @@ angular.module('spaceshiplabsApp')
 
         scope.initLocations = function(){
           var selectedIndex = scope.selectedIndex;
-          var classActive = 'clients-slide-active clients-slide-animated';
-          $('.clients-slide[data-slide-index="'+selectedIndex+'"]').addClass(classActive);
+          $(slideSelector+'['+indexSelector+'="'+selectedIndex+'"]').addClass(classSlideOn);
         };
 
         scope.removeClasses = function(movingInIndex){
-          $('.clients-slide').removeClass('clients-slide-animated');
-          $('.clients-slide').each(function(){
-            var index = parseInt($(this).attr('data-slide-index'));
+          $(slideSelector).removeClass(classAnimated);
+          $(slideSelector).each(function(){
+            var index = parseInt($(this).attr(indexSelector));
             if( index !== movingInIndex ){
-              $(this).removeClass('clients-slide-active');
+              $(this).removeClass(classActive);
             }
           });
-          $('.clients-slide').removeClass('clients-slide-left');
-          $('.clients-slide').removeClass('clients-slide-right');
+          $(slideSelector).removeClass(classLeft);
+          $(slideSelector).removeClass(classRight);
         };
 
         scope.updateLocations = function(movingOutIndex, movingInIndex){
-          /*console.log('out:' + movingOutIndex);
-          console.log('in: ' + movingInIndex);*/
-
           scope.removeClasses();
-          var classAnimated = 'clients-slide-animated';
-          var classActive = 'clients-slide-active clients-slide-animated';
-          var classLeft = 'clients-slide-left';
-          var classRight = 'clients-slide-right';
-
 
           if(scope.movement === 'next'){
-            classLeft += ' clients-slide-animated';
-            $('.clients-slide[data-slide-index="'+movingOutIndex+'"]').addClass(classLeft);
-            $('.clients-slide[data-slide-index="'+movingInIndex+'"]').addClass(classActive);
+            classLeft += ' '+classAnimated;
+            $(slideSelector+'['+indexSelector+'="'+movingOutIndex+'"]').addClass(classLeft);
+            $(slideSelector+'['+indexSelector+'="'+movingInIndex+'"]').addClass(classSlideOn);
           }else{
-            classRight += ' clients-slide-animated';
+            classRight += ' '+classAnimated;
             //Begins from left
-            $('.clients-slide[data-slide-index="'+movingInIndex+'"]').removeClass(classAnimated);
-            $('.clients-slide[data-slide-index="'+movingInIndex+'"]').addClass(classLeft);
+            $(slideSelector+'['+indexSelector+'="'+movingInIndex+'"]').removeClass(classAnimated);
+            $(slideSelector+'['+indexSelector+'="'+movingInIndex+'"]').addClass(classLeft);
 
-            $('.clients-slide[data-slide-index="'+movingOutIndex+'"]').addClass(classRight);
+            $(slideSelector+'['+indexSelector+'="'+movingOutIndex+'"]').addClass(classRight);
 
             $timeout(function(){
-              $('.clients-slide[data-slide-index="'+movingInIndex+'"]').addClass(classActive);
+              $(slideSelector+'['+indexSelector+'="'+movingInIndex+'"]').addClass(classSlideOn);
             },100);
           }
 

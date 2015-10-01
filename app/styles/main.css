@@ -852,6 +852,20 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   margin-top: 40px;
 }
 
+.menu .services-item-about{padding-top: 0;}
+.menu .services-item-about .icon-about{
+  font-size: 62px;
+  line-height: 0.8!important;
+  vertical-align: middle;
+}
+.menu .services-item-about h5{margin: 0}
+.menu .services-item-about p{margin: 0}
+.menu .services-item-about i{
+  line-height: 1!important;
+  vertical-align: middle;
+  font-size: 50px;
+}
+
 .services-item h5{
   color: #fff;
   font-size: 24px;

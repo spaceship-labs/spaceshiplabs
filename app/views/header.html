@@ -14,11 +14,28 @@
       <div class="menu-wrapper" flex="80" flex-sm="30" >
         <nav class="menu" layout="row" layout-align="end center">
           <ul>
-            <li><a href="/about-us">ACERCA DE</a></li>
-            <li><a href="/team">EQUIPO</a></li>
+            <li ng-mouseenter="dropdownActive = true" ng-mouseleave="dropdownActive = false">
+              <a>ACERCA DE</a>
+              <ul layout="row" layout-align="center start">
+                <li flex="20" class="services-item services-item-about" ng-class="{'fadeInDown animated':dropdownActive}">
+                  <div>
+                    <a href="/about-us" class="absolute-link"></a>
+                    <p><i class="icon-about"></i></p>
+                    <h5>Acerca de nosotros</h5>
+                  </div>
+                </li>
+                <li flex="20" class="services-item services-item-about" ng-class="{'fadeInDown animated':dropdownActive}">
+                  <div>
+                    <a href="/team" class="absolute-link"></a>
+                    <p><i class="icon-multiusuarios"></i></p>
+                    <h5>Equipo espacial</h5>
+                  </div>
+                </li>
+              </ul>
+            </li>
             <li><a href="/projects">PROYECTOS</a></li>
             <li ng-mouseenter="dropdownActive = true" ng-mouseleave="dropdownActive = false">
-              <a href="#">SERVICIOS</a>
+              <a>SERVICIOS</a>
               <ul layout="row" layout-align="space-between center">
                 <li flex="20" class="services-item services-item-ui" ng-class="{'fadeInDown animated':dropdownActive}" itemscope itemtype="http://schema.org/Service">
                   <div>
