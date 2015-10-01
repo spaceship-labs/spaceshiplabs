@@ -356,6 +356,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   text-align: left;
 }
 
+.section-title-options form i{
+  font-size: 18px;
+  color: #fff;
+}
 .section-title-options label{color: #fff!important;}
 .section-title-options input[type="text"]{
   color: #fff;
