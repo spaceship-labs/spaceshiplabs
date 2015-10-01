@@ -8,7 +8,7 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('BlogCtrl', function ($scope, $routeParams, blogService) {
+  .controller('BlogCtrl',['$scope','$routeParams','blogService', function ($scope, $routeParams, blogService) {
 
     $scope.getRecentPosts = function(params){
       blogService.getEntries(params).then(function(data){
@@ -70,4 +70,4 @@ angular.module('spaceshiplabsApp')
     $scope.init();
 
 
-  });
+  }]);

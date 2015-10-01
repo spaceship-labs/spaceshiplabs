@@ -8,7 +8,7 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('PostCtrl', function ($scope, $rootScope, $routeParams, blogService, $location, $filter, metaTagsService) {
+  .controller('PostCtrl',['$scope','$rootScope','$routeParams','blogService','$location','$filter','metaTagsService', function ($scope, $rootScope, $routeParams, blogService, $location, $filter, metaTagsService) {
     $scope.postSlug = $routeParams.slug || 'down-the-rabbit-hole';
     $scope.entries = [];
     $scope.entry = {};
@@ -93,4 +93,4 @@ angular.module('spaceshiplabsApp')
     $scope.getRecentPosts();
     $scope.getCategories();
 
-  });
+  }]);

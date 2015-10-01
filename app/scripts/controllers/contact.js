@@ -24,7 +24,7 @@ angular.module('spaceshiplabsApp')
 
       var marker = new google.maps.Marker({
           position: locationLatLng,
-          title:"Spaceship Labs"
+          title:"SpaceshipLabs"
       });
 
       // To add the marker to the map, call setMap();

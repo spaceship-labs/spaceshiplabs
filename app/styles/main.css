@@ -1547,6 +1547,131 @@ input:-webkit-autofill {
   z-index: 2;
 }
 
+/*---------------/
+  #TEAM
+/*--------------*/
+.info-wrap-team{}
+.info-wrap-team h1{
+  background: #05d3cf; /* Old browsers */
+  background: -moz-linear-gradient(left,  #7775c0 0%, #25d4c7 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#7775c0), color-stop(100%,#25d4c7)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #7775c0 0%,#25d4c7 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #7775c0 0%,#25d4c7 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #7775c0 0%,#25d4c7 100%); /* IE10+ */
+  background: linear-gradient(to right,  #7775c0 0%,#25d4c7 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7775c0', endColorstr='#25d4c7',GradientType=1 ); /* IE6-9 */
+  -webkit-background-clip:text;
+  -moz-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  -moz-text-fill-color:transparent;
+  text-fill-color:transparent;
+  color: #7676c0;
+  font-size: 44px;
+}
+.team-intro .container{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.team-intro p{font-size: 24px;}
+.team-members{
+  margin-top: 50px;
+}
+.team-item{margin: 20px 0;}
+
+.team-item-inner{
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-item-inner:before{
+  content: '';
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+
+  /*background: -moz-linear-gradient(top,  rgba(255,255,255,0) 23%, rgba(0,197,217,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(23%,rgba(255,255,255,0)), color-stop(100%,rgba(0,197,217,1)));
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 23%,rgba(0,197,217,1) 100%);
+  background: -o-linear-gradient(top,  rgba(255,255,255,0) 23%,rgba(0,197,217,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(255,255,255,0) 23%,rgba(0,197,217,1) 100%);
+  background: linear-gradient(to bottom,  rgba(255,255,255,0) 23%,rgba(0,197,217,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00c5d9',GradientType=0 );
+  */
+  background: -moz-linear-gradient(top,  rgba(0,197,217,0) 0%, rgba(0,197,217,0.01) 1%, rgba(0,197,217,1) 91%, rgba(0,197,217,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,197,217,0)), color-stop(1%,rgba(0,197,217,0.01)), color-stop(91%,rgba(0,197,217,1)), color-stop(100%,rgba(0,197,217,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,197,217,0) 0%,rgba(0,197,217,0.01) 1%,rgba(0,197,217,1) 91%,rgba(0,197,217,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,197,217,0) 0%,rgba(0,197,217,0.01) 1%,rgba(0,197,217,1) 91%,rgba(0,197,217,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,197,217,0) 0%,rgba(0,197,217,0.01) 1%,rgba(0,197,217,1) 91%,rgba(0,197,217,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,197,217,0) 0%,rgba(0,197,217,0.01) 1%,rgba(0,197,217,1) 91%,rgba(0,197,217,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000c5d9', endColorstr='#00c5d9',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+.team-item:hover .team-item-inner:before{
+  opacity: 1;
+}
+
+.team-item:hover .team-item-info{
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.team-item img{
+  width: 100%;
+  max-width: 100%;
+  float: left;
+}
+
+.team-item-info{
+  padding: 10px 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}
+
+.team-item-info h4,
+.team-item-info h5{
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+.team-item-info h4{
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.team-item-info h5{font-size: 14px}
+.team-item-info h5:after{
+  content: '';
+  display: block;
+  background: #fff;
+  height: 2px;
+  width: 20%;
+  margin: 6px auto;
+}
 
 
 /*-------------/
@@ -1675,7 +1800,7 @@ input:-webkit-autofill {
 .single-post-content a{color: #00CBD6}
 
 /*Team Carlos Barahona*/
-
+/*
 #graphic-design{background: #282828;padding: 0px}
 .graphic-design{height: 700px;}
 #graphic-design .titulo-design{color: white;font-size: 53px;margin-bottom: 30px}
@@ -1703,6 +1828,7 @@ input:-webkit-autofill {
 .name-info{color: white;font-size: 30px;font-weight: 300}
 .name-info strong{font-weight: 700}
 .text-design.community{width: 40%;margin: 0 auto}
+*/
 /*Team Carlos Barahona*/
 
 .single-tags{
@@ -1950,20 +2076,6 @@ input:-webkit-autofill {
 /*---------------*/
 
 
-
-/*---------------/
-  #PROGRESS CIRCLE
-/*--------------*/
-/*md-progress-circular .md-inner .md-right .md-half-circle,
-md-progress-circular .md-inner .md-left .md-half-circle{border-left-color: #00c5d8}
-md-progress-circular .md-inner .md-gap {
-    border-top-color: #00c5d8;
-    border-bottom-color: #00c5d8;
-}
-md-progress-circular .md-inner .md-left .md-half-circle,
-md-progress-circular .md-inner .md-right .md-half-circle {
-    border-top-color: #00c5d8;
-}*/
 /*--------------/
   #FOOTER
 /*-------------*/
@@ -2027,9 +2139,10 @@ md-progress-circular .md-inner .md-right .md-half-circle {
 
 @media (max-width: 1050px){
 /*Team*/
+/*
   #date-designer {margin-right: 40px;}
   #date-community {margin-left: 70px;}
-  .text-design.community {width: 60%;margin: 0 auto;}
+  .text-design.community {width: 60%;margin: 0 auto;}*/
 /*Team*/
 }
 
@@ -2145,13 +2258,28 @@ md-progress-circular .md-inner .md-right .md-half-circle {
 
   .section-title h1{font-size: 34px;}
 
-/*Team*/
+  /*-----------/
+    #TEAM
+  /*-----------*/
+  /*
   #date-designer h1,#date-community h1 {font-size: 30px;}
   #date-designer h2,#date-community h2 {color: #02C2D7;font-size: 20px;}
   .text-design.community {width: 90%;}
-  .name-info {font-size: 23px;}
+  .name-info {font-size: 23px;}*/
 
-/*Team*/
+  .team-item-inner:before{opacity: 1;}
+  .team-item-info{
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  .team-item-info h4{font-size: 14px}
+  .team-item-info h5{font-size: 12px}
+
+  /*Team*/
+
+
 
   .map{padding-bottom: 65%}
   .map iframe{

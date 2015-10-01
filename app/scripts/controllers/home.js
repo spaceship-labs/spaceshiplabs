@@ -8,8 +8,7 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('HomeCtrl', function ($scope, blogService, $rootScope) {
-    $scope.loadedPosts = false;
+  .controller('HomeCtrl',['$scope', '$rootScope', 'blogService', function ($scope, $rootScope, blogService) {
 
     $scope.getRecentPosts = function(){
       blogService.getRecentEntries(3).then(function(entries){
@@ -19,6 +18,7 @@ angular.module('spaceshiplabsApp')
     };
 
     $scope.init = function(){
+      $scope.loadedPosts = false;
       $scope.getRecentPosts();
       var windowDimensions = $rootScope.windowSize();
       if(windowDimensions.w > 600){
@@ -91,4 +91,4 @@ angular.module('spaceshiplabsApp')
 
     $scope.init();
 
-  });
+  }]);

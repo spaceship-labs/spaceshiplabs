@@ -23,6 +23,11 @@
     to   { left: 0; }
 }
 
+@keyframes leftToRight {
+    from { left: -100%; }
+    to   { left: 0; }
+}
+
 /*------------------*/
 
 /* Firefox < 16 */
@@ -45,6 +50,11 @@
 
 /* Opera < 12.1 */
 @-o-keyframes upDown {
+    from { top: -100%; }
+    to   { top: 0; }
+}
+
+@keyframes upDown {
     from { top: -100%; }
     to   { top: 0; }
 }

@@ -8,7 +8,7 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('ProjectsCtrl', function ($scope) {
+  .controller('ProjectsCtrl',['$scope', function ($scope) {
 
 
     $scope.allProjects = [
@@ -120,4 +120,4 @@ angular.module('spaceshiplabsApp')
 
     ];
 
-  });
+  }]);

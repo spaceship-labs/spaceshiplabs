@@ -8,7 +8,7 @@
  * Controller of the spaceshiplabsApp
  */
 angular.module('spaceshiplabsApp')
-  .controller('MainCtrl', function ($scope, $mdSidenav, $location, metaTagsService, $http, windowSize) {
+  .controller('MainCtrl',['$scope','$mdSidenav','$location','metaTagsService','$http','windowSize', function ($scope, $mdSidenav, $location, metaTagsService, $http, windowSize) {
 
     $scope.init = function(){
       $scope.emailSent = false;
@@ -101,4 +101,4 @@ angular.module('spaceshiplabsApp')
 
     $scope.init();
 
-  });
+  }]);
