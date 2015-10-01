@@ -149,6 +149,9 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   #ACTION-BTN
 /*------------*/
 
+.action.btn-wrap{
+  padding-top: 10px;
+}
 .action-btn-wrap{
   margin-top: 20px;
 }
@@ -2372,6 +2375,7 @@ input:-webkit-autofill {
   }
   .clients-slider-reel{min-height: 260px;}
   .clients-slider .client-item p{font-size: 16px;}
+  .services-items .services-item{border: none;}
 
   /*-------------/
     #ABOUT-US
@@ -2435,7 +2439,6 @@ input:-webkit-autofill {
     padding-bottom: 22px;
     padding-top: 76px;
   }
-
 
   .contact-us{
     background-attachment: inherit;
