@@ -514,7 +514,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   min-width: 220px;
   width: 58%;
   /*width: 100%;*/
-  padding-top:20px;
+  padding:0 0 20px;
 
 }
 
@@ -613,10 +613,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .toolbar-head.dropdown-active,
 .toolbar-head.fixed-head.dropdown-active{
   max-height: none;
-  height: 200px!important;
+  /*height: 200px!important;*/
   background: rgb(0, 197, 216);
 }
-.toolbar-head.dropdown-active{height: 230px !important}
+.toolbar-head.dropdown-active{height: 130px !important}
 .toolbar-head.fixed-head{
   position: fixed;
   padding: 0 10px;
@@ -833,8 +833,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 .menu .services-item{
-  padding-top: 30px;
+  /*padding-top: 30px;*/
   border: 0;
+  background: none;
+  padding-top: 0;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -o-transition: all .3s;
@@ -847,25 +849,26 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .menu .services-item:nth-child(4){animation-delay: .6s;}
 .menu .services-item:hover{opacity: .5 !important;}
 
+/*
 .menu .services-item-ui{background: transparent url(../images/uiMenu.png) center top no-repeat;}
 .menu .services-item-branding{background: transparent url(../images/branMenu.png) center top no-repeat;}
 .menu .services-item-marketing{background: transparent url(../images/markMenu.png) center top no-repeat;}
 .menu .services-item-consulting{background: transparent url(../images/consulMenu.png) center top no-repeat;}
-.menu .services-item-software{background: transparent url(../images/software.png) center 5px no-repeat;}
+.menu .services-item-software{background: transparent url(../images/software.png) center 5px no-repeat;}*/
 
 .menu .services-item h5{
   font-size: 18px;
   font-weight: 500;
-  margin-top: 40px;
+  /*margin-top: 40px;*/
 }
 
-.menu .services-item-about{padding-top: 0;}
+.menu .services-item-about{/*padding-top: 0;*/}
 .menu .services-item-about .icon-about{
   font-size: 62px;
   line-height: 0.8!important;
   vertical-align: middle;
 }
-.menu .services-item-about h5{margin: 0}
+.menu .services-item-about h5{/*margin: 0*/}
 .menu .services-item-about p{margin: 0}
 .menu .services-item-about i{
   line-height: 1!important;
