@@ -969,7 +969,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #CLIENTS-SLIDER
 /*---------------*/
 .clients-slider{
-  padding: 0 70px;
+  padding: 0 50px;
   position: relative;
 }
 .clients-slider .clients-slide{padding: 0 10px 0;}
