@@ -14,50 +14,28 @@
       <div class="menu-wrapper" flex="80" flex-sm="30" >
         <nav class="menu" layout="row" layout-align="end center">
           <ul>
-            <li ng-mouseenter="dropdownActive = true" ng-mouseleave="dropdownActive = false">
+            <li>
               <a>ACERCA DE</a>
-              <ul layout="row" layout-align="center start">
-                <li flex="30" class="services-item services-item-about" ng-class="{'fadeInDown animated':dropdownActive}">
-                  <div>
-                    <a href="/about-us" class="absolute-link"></a>
-                    <h5>Acerca de nosotros</h5>
-                  </div>
-                </li>
-                <li flex="30" class="services-item services-item-about" ng-class="{'fadeInDown animated':dropdownActive}">
-                  <div>
-                    <a href="/team" class="absolute-link"></a>
-                    <h5>Equipo espacial</h5>
-                  </div>
-                </li>
+              <ul>
+                <li><a href="/about-us">Acerca de nosotros</a></li>
+                <li><a href="/team">Equipo espacial</a></li>
               </ul>
             </li>
             <li><a href="/projects">PROYECTOS</a></li>
-            <li ng-mouseenter="dropdownActive = true" ng-mouseleave="dropdownActive = false">
+            <li>
               <a>SERVICIOS</a>
-              <ul layout="row" layout-align="space-between center">
-                <li flex="20" class="services-item services-item-ui" ng-class="{'fadeInDown animated':dropdownActive}" itemscope itemtype="http://schema.org/Service">
-                  <div>
-                    <a href="/ui-ux" class="absolute-link"></a>
-                    <h5 itemprop="name">UI/UX Design</h5>
-                  </div>
+              <ul>
+                <li itemscope itemtype="http://schema.org/Service">
+                  <a href="/ui-ux" itemprop="name">UI/UX Design</a>
                 </li>
-                <li flex="20" class="services-item services-item-branding" ng-class="{'fadeInDown animated':dropdownActive}" itemscope itemtype="http://schema.org/Service">
-                  <div >
-                    <a href="/ui-ux" class="absolute-link"></a>
-                    <h5 itemprop="name">Branding</h5>
-                  </div>
+                <li itemscope itemtype="http://schema.org/Service">
+                  <a href="/ui-ux" itemprop="name">Branding</a>
                 </li>
-                <li flex="20" class="services-item services-item-marketing" ng-class="{'fadeInDown animated':dropdownActive}" itemscope itemtype="http://schema.org/Service">
-                  <div >
-                    <a href="/ui-ux" class="absolute-link"></a>
-                    <h5 itemprop="name">Marketing</h5>
-                  </div>
+                <li itemscope itemtype="http://schema.org/Service">
+                  <a href="/ui-ux" itemprop="name">Marketing</a>
                 </li>
-                <li flex="20" class="services-item services-item-software" ng-class="{'fadeInDown animated':dropdownActive}" itemscope itemtype="http://schema.org/Service">
-                  <div >
-                    <a href="/ui-ux" class="absolute-link"></a>
-                    <h5 itemprop="name">Software</h5>
-                  </div>
+                <li itemscope itemtype="http://schema.org/Service">
+                  <a href="/ui-ux" itemprop="name">Software</a>
                 </li>
               </ul>
             </li>
