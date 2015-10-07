@@ -7,7 +7,16 @@
  * # AboutUsCtrl
  * Controller of the spaceshiplabsApp
  */
-angular.module('spaceshiplabsApp')
-  .controller('AboutUsCtrl', function () {
+function AboutUsCtrl($scope,metaTagsService){
+  $scope.init = function(){
+    var meta = {
+      title: 'Acerca de nosotros | SpaceshipLabs'
+    };
+    metaTagsService.setMetaTags(meta);
+  };
+  $scope.init();
+}
+AboutUsCtrl.$inject = ['$scope','metaTagsService'];
+angular.module('spaceshiplabsApp').controller('AboutUsCtrl',AboutUsCtrl);
 
-  });
+

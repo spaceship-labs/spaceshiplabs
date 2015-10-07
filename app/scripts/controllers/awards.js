@@ -7,6 +7,14 @@
  * # AwardsCtrl
  * Controller of the spaceshiplabsApp
  */
-angular.module('spaceshiplabsApp')
-  .controller('AwardsCtrl', function () {
-  });
+function AwardsCtrl($scope,metaTagsService){
+  $scope.init = function(){
+    var meta = {
+      title: 'Reconocimientos | SpaceshipLabs'
+    };
+    metaTagsService.setMetaTags(meta);
+  };
+  $scope.init();
+}
+AwardsCtrl.$inject = ['$scope','metaTagsService'];
+angular.module('spaceshiplabsApp').controller('AwardsCtrl',AwardsCtrl);

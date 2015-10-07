@@ -7,7 +7,7 @@
  * # PostCtrl
  * Controller of the spaceshiplabsApp
  */
-function PostCtrl($scope, $rootScope, $routeParams, blogService, $location, $filter, metaTagsService){
+function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location, $filter, metaTagsService){
 
   $scope.postSlug = $routeParams.slug || 'down-the-rabbit-hole';
   $scope.entries = [];
@@ -19,6 +19,10 @@ function PostCtrl($scope, $rootScope, $routeParams, blogService, $location, $fil
   $scope.getPost = function(){
     blogService.getSingleEntry($scope.postSlug).then(function(entry){
       $scope.entry = entry;
+      if(entry.content){
+        console.log($sce);
+        $scope.entry.content = $sce.trustAsHtml(entry.content);
+      }
       $scope.loadedPost = true;
       $scope.entryImg = '';
       if(entry.featured_image){
@@ -30,11 +34,12 @@ function PostCtrl($scope, $rootScope, $routeParams, blogService, $location, $fil
       }else{
         $scope.entryImg = entry.attachments[0].large[0];
       }
-      metaTagsService.setMetaTags(
-        entry.title,
-        $filter('htmlToPlainText')(entry.excerpt),
-        $scope.entryImg
-      );
+      var meta = {
+        title: entry.title,
+        description: $filter('htmlToPlainText')(entry.excerpt),
+        image: $scope.entryImg
+      };
+      metaTagsService.setMetaTags(meta);
     });
   };
 
@@ -96,4 +101,4 @@ function PostCtrl($scope, $rootScope, $routeParams, blogService, $location, $fil
 }
 
 angular.module('spaceshiplabsApp').controller('PostCtrl',PostCtrl);
-PostCtrl.$inject = ['$scope','$rootScope','$routeParams','blogService','$location','$filter','metaTagsService'];
+PostCtrl.$inject = ['$scope','$sce','$rootScope','$routeParams','blogService','$location','$filter','metaTagsService'];

@@ -15,12 +15,21 @@ angular.module('spaceshiplabsApp')
       return this.path;
     };
 
-    this.setMetaTags = function(generalTitle ,generalDescription, imageUrl){
+    this.setMetaTags = function(params){
       var domainUrl = $location.protocol() + "://" + $location.host() + ":" + $location.port();
-      var description = $filter('htmlToPlainText')(generalDescription) ||  '¿Tienes alguna idea innovadora, y quieres invertir en internet? cuenta con nosotros para llevarla a cabo. Tenemos la experiencia y las herramientas para que tu proyecto sea todo un éxito.';
-      var title =  generalTitle || 'SpaceshipLabs - Diseño de páginas web, aplicaciones móviles, Diseño Gráfico y Software en General';
+      var defaultParams = {
+        title:'SpaceshipLabs - Diseño de páginas web, aplicaciones móviles, Diseño Gráfico y Software en General',
+        description: '¿Tienes alguna idea innovadora, y quieres invertir en internet? cuenta con nosotros para llevarla a cabo. Tenemos la experiencia y las herramientas para que tu proyecto sea todo un éxito.',
+        image: domainUrl+'/images/logo-og.png'
+      };
+
+      if(!params){
+        params = defaultParams;
+      }
+      var description = $filter('htmlToPlainText')(params.description) || defaultParams.description;
+      var title =  params.title || defaultParams.title;
       var generalName = 'SpaceshipLabs';
-      var img = imageUrl ||  domainUrl+'/images/logo-og.png';
+      var image = params.image ||  defaultParams.image;
 
 
       $rootScope.metatags = {
@@ -31,7 +40,7 @@ angular.module('spaceshiplabsApp')
         fb_url: domainUrl + this.getBasePath() ,
         fb_description: description,
         fb_type: 'article',
-        fb_image: img
+        fb_image: image
       };
     };
 

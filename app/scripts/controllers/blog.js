@@ -7,7 +7,7 @@
  * # BlogCtrl
  * Controller of the spaceshiplabsApp
  */
-function BlogCtrl($scope, $routeParams, blogService){
+function BlogCtrl($scope, $routeParams, blogService, metaTagsService){
 
   $scope.getRecentPosts = function(params){
     blogService.getEntries(params).then(function(data){
@@ -26,6 +26,11 @@ function BlogCtrl($scope, $routeParams, blogService){
   $scope.incrementPage = function(page){ return parseInt(page)+1; };
 
   $scope.init = function(){
+    var meta = {
+      title: 'Blog | SpaceshipLabs'
+    };
+    metaTagsService.setMetaTags(meta);
+
     $scope.entries = [];
     $scope.loadedPosts = false;
     $scope.endPagination = 8;
@@ -70,5 +75,5 @@ function BlogCtrl($scope, $routeParams, blogService){
 }
 
 angular.module('spaceshiplabsApp').controller('BlogCtrl',BlogCtrl);
-BlogCtrl.$inject = ['$scope','$routeParams','blogService'];
+BlogCtrl.$inject = ['$scope','$routeParams','blogService','metaTagsService'];
 

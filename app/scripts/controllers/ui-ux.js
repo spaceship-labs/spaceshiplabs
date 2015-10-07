@@ -7,6 +7,14 @@
  * # UiUxCtrl
  * Controller of the spaceshiplabsApp
  */
-angular.module('spaceshiplabsApp')
-  .controller('UiUxCtrl', function () {
-  });
+function UiUxCtrl($scope,metaTagsService){
+  $scope.init = function(){
+    var meta = {
+      title: 'UI/UX | SpaceshipLabs'
+    };
+    metaTagsService.setMetaTags(meta);
+  };
+  $scope.init();
+}
+UiUxCtrl.$inject = ['$scope','metaTagsService'];
+angular.module('spaceshiplabsApp').controller('UiUxCtrl',UiUxCtrl);

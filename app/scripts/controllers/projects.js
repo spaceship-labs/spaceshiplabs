@@ -8,7 +8,14 @@
  * Controller of the spaceshiplabsApp
  */
 
-function ProjectsCtrl($scope){
+function ProjectsCtrl($scope, metaTagsService){
+  $scope.init = function(){
+    var meta = {
+      title: 'Proyectos | SpaceshipLabs'
+    };
+    metaTagsService.setMetaTags(meta);
+  };
+
   $scope.allProjects = [
     {
       type:'UI/UX Design & Software',
@@ -118,7 +125,9 @@ function ProjectsCtrl($scope){
 
   ];
 
+  $scope.init();
+
 }
 
 angular.module('spaceshiplabsApp').controller('ProjectsCtrl',ProjectsCtrl);
-ProjectsCtrl.$inject = ['$scope'];
+ProjectsCtrl.$inject = ['$scope','metaTagsService'];

@@ -7,6 +7,14 @@
  * # TeamCtrl
  * Controller of the spaceshiplabsApp
  */
-angular.module('spaceshiplabsApp')
-  .controller('TeamCtrl', function () {
-  });
+function TeamCtrl($scope,metaTagsService){
+  $scope.init = function(){
+    var meta = {
+      title: 'Team | SpaceshipLabs'
+    };
+    metaTagsService.setMetaTags(meta);
+  };
+  $scope.init();
+}
+TeamCtrl.$inject = ['$scope','metaTagsService'];
+angular.module('spaceshiplabsApp').controller('TeamCtrl',TeamCtrl);

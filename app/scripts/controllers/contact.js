@@ -8,7 +8,8 @@
  * # ContactCtrl
  * Controller of the spaceshiplabsApp
  */
-function ContactCtrl() {
+function ContactCtrl($scope, metaTagsService) {
+
 
   var initialize = function() {
     var mapOptions = {
@@ -28,10 +29,20 @@ function ContactCtrl() {
     marker.setMap(map);
   };
 
-  initialize();
+  $scope.init = function(){
+    initialize();
+    var meta = {
+      title: 'Contacto | SpaceshipLabs'
+    };
+    metaTagsService.setMetaTags(meta);
+  };
+
+  $scope.init();
+
   //google.maps.event.addDomListener(window, 'load', initialize);
 }
 
+ContactCtrl.$inject = ['$scope','metaTagsService'];
 angular.module('spaceshiplabsApp').controller('ContactCtrl', ContactCtrl);
 
 
