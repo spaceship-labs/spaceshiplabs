@@ -7,7 +7,7 @@
  * # projectsSlider
  */
 angular.module('spaceshiplabsApp')
-  .directive('projectsSlider', function ($interval, $timeout) {
+  .directive('projectsSlider', function ($interval, $timeout, $window) {
     return {
       templateUrl: 'views/directives/projects-slider.html',
       restrict: 'E',
@@ -28,6 +28,14 @@ angular.module('spaceshiplabsApp')
             nav.hide();
           }
         };
+
+        $window.onfocus = function (){
+          if(scope.winSize !== 'blog')
+            scope.sliderInterval = $interval(scope.moveNextProject, 6000);
+        }
+        $window.onblur = function (){
+          $interval.cancel(scope.sliderInterval);
+        }
 
         scope.getMovingOutIndexSlide = function (selectedIndex, totalItems){
           var movingOutIndex = -1;
