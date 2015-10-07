@@ -30,12 +30,14 @@ angular.module('spaceshiplabsApp')
         };
 
         $window.onfocus = function (){
-          if(scope.winSize !== 'blog')
+          if(scope.winSize !== 'blog'){
             scope.sliderInterval = $interval(scope.moveNextProject, 6000);
-        }
+          }
+        };
+
         $window.onblur = function (){
           $interval.cancel(scope.sliderInterval);
-        }
+        };
 
         scope.getMovingOutIndexSlide = function (selectedIndex, totalItems){
           var movingOutIndex = -1;
