@@ -34,6 +34,8 @@ function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowS
     }
     $scope.redirectCount++;
 
+    $scope.isHome = ($location.path() === '/' ) ? true : false;
+
     var customizeHeader = function(){
       if($location.path() === '/'){
         $('.toolbar-head .menu').addClass('menu-home');
