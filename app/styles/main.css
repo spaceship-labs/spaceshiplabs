@@ -426,6 +426,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 }
 
+#sidebar-menu md-content ul > li > ul a{padding-left: 40px;}
+
 #sidebar-menu #close-button{
   background: #00C5D8 url(../images/flechaa.png) center center no-repeat;
   background-size: 13px;
@@ -606,7 +608,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 .toolbar-head.fixed-head .logo img{max-width: 70px}
 .toolbar-head.fixed-head .menu a{
-  font-size: 12px;
+  /*font-size: 12px;*/
 }
 
 /*-----------/

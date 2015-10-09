@@ -27,10 +27,37 @@
 				</md-button>
 			</li>
 			<li>
-				<md-button class="md-primary">
-					<a href="#" >SERVICIOS</a>
+				<md-button class="md-primary" ng-click="toggleSubMenu = !toggleSubMenu">
+					<a>SERVICIOS</a>
 				</md-button>
+
+        <!--SUBMENU-->
+        <ul ng-show="toggleSubMenu">
+          <li>
+            <md-button class="md-primary">
+              <a href="/ui-ux" >UI/UX Design</a>
+            </md-button>
+          </li>
+          <li>
+            <md-button class="md-primary">
+              <a href="/ui-ux" >Branding</a>
+            </md-button>
+          </li>
+          <li>
+            <md-button class="md-primary">
+              <a href="/ui-ux" >Marketing</a>
+            </md-button>
+          </li>
+          <li>
+            <md-button class="md-primary">
+              <a href="/ui-ux" >Software</a>
+            </md-button>
+          </li>
+        </ul>
+        <!--END SUBMENU-->
+
 			</li>
+
       <li>
         <md-button class="md-primary">
           <a href="/spacees" >SPACEES</a>

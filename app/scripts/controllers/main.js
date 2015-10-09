@@ -28,6 +28,7 @@ function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowS
     $mdSidenav('left').close();
   };
 
+
   $scope.$on('$locationChangeStart', function() {
     if($scope.redirectCount > 0){
       $scope.closeSidebar();
