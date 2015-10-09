@@ -568,7 +568,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   font-size: 14px;
 }
 .toolbar-head .menu > ul > li > a{display: inline-block;}
-.toolbar-head .menu > ul > li > a:after{
+.toolbar-head .menu li > a:after{
   content: '';
   display: block;
   top: 94%;
@@ -583,7 +583,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   -ms-transition: all .4s ease;
   transition: all .4s ease;
 }
-.toolbar-head .menu > ul > li > a:hover:after{
+.toolbar-head .menu  li > a:hover:after{
   left: 0;
 }
 
@@ -608,15 +608,6 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .toolbar-head.fixed-head .menu a{
   font-size: 12px;
 }
-.toolbar-head.fixed-head.transparent-head .menu > ul > li > ul,
-.toolbar-head .menu > ul > li > ul{
-  background:  rgb(0, 197, 216);
-}
-.toolbar-head.transparent-head .menu > ul > li > ul{
-  background: transparent;
-}
-/*.toolbar-head.fixed-head nav > ul > li ul a{color: #666!important}*/
-.toolbar-head.fixed-head .menu > ul{margin: 12px 0}
 
 /*-----------/
   #DROPDOWNS
@@ -627,20 +618,25 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   left: 50%;
   padding-left: 0;
   list-style: none;
-  min-width: 142px;
+  min-width: 145px;
   width: 100%;
-  padding: 0 0 10px;
+  padding: 4px 0;
   margin-top: 0px;
+  border: 2px solid #fff;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
 .toolbar-head .menu > ul > li > ul > li{
-  text-align: left;
+  /*text-align: left;*/
+  text-align: center;
+  padding: 0px 12px;
 }
 .toolbar-head .menu > ul > li > ul > li a{
-  padding:6px 8px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 6px 0;
 }
 
 .toolbar-head .menu > ul > li > ul > li > a{
@@ -648,6 +644,15 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 .toolbar-head nav > ul > li > ul > li > a:hover{color: #fff}
 
+.toolbar-head.fixed-head.transparent-head .menu > ul > li > ul,
+.toolbar-head .menu > ul > li > ul{
+  background:  rgb(0, 197, 216);
+}
+.toolbar-head.transparent-head .menu > ul > li > ul{
+  background: transparent;
+}
+/*.toolbar-head.fixed-head nav > ul > li ul a{color: #666!important}*/
+.toolbar-head.fixed-head .menu > ul{margin: 12px 0}
 
 
 /*.toolbar-head nav > ul > li > a:hover{
