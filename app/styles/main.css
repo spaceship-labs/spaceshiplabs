@@ -57,7 +57,7 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
 }
 
 #main{
-  padding-bottom: 0px;
+  padding-bottom: 126px;
 }
 
 .alt-color{
@@ -321,6 +321,18 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   color: #fff;
   padding-top: 86px;
   padding-bottom: 20px;
+}
+.section-title-service{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#08b4da+0,1fdeb2+100 */
+  background: rgb(8,180,218); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(8,180,218,1) 0%, rgba(31,222,178,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(8,180,218,1)), color-stop(100%,rgba(31,222,178,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(8,180,218,1) 0%,rgba(31,222,178,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(8,180,218,1) 0%,rgba(31,222,178,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(8,180,218,1) 0%,rgba(31,222,178,1) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(8,180,218,1) 0%,rgba(31,222,178,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08b4da', endColorstr='#1fdeb2',GradientType=1 ); /* IE6-9 */
+  padding-top: 124px!important;
 }
 .section-title i{
   font-size: 52px;
@@ -1435,6 +1447,67 @@ input:-webkit-autofill {
 
 .info-wrap .guarantee{padding: 40px 0}
 
+/*------------/
+  #SERVICE-SINGLE
+/*-----------*/
+.section-title-service h2{
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.section-title-service p{
+  font-weight: 300;
+  font-size: 19px;
+  margin-top: 30px;
+}
+
+.info-wrap-service h2{
+  color: #7676c0;
+  font-size: 46px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.info-wrap-service .gradient-title{
+  background: -webkit-linear-gradient(50deg, #08B4DA 0%,#1FDEB2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.info-wrap-service p{margin: 24px 0;}
+
+.info-block-alt{
+  background: #07B5DA;
+  color: #fff;
+}
+
+.info-block-columns{padding: 0;}
+
+.info-block-alt p,
+.info-block-alt h2{color: #fff!important;}
+
+.info-wrap-service .software-guarantee h2{
+  font-size: 64px;
+  margin: 0;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.info-column{
+  background: #07B5DA;
+  color: #fff;
+  padding: 40px 0;
+}
+.info-column + .info-column{background: #12C9C5;}
+.info-column p,
+.info-column h2{color: #fff!important;}
+.info-column p{font-size: 18px;}
+.info-column .container-mini h3{
+  font-size: 38px;
+  font-weight: 100;
+  line-height: 1;
+}
+
+
 /*-------------/
   #SPACEES
 /*------------*/
@@ -2113,7 +2186,8 @@ input:-webkit-autofill {
 /*-------------*/
 #footer{
   color: #fff;
-  min-height: 50px;
+  min-height: 126px;
+  margin-top: -126px;
   height: auto!important;
   text-align: right;
 
@@ -2450,6 +2524,11 @@ input:-webkit-autofill {
     padding-bottom: 22px;
     padding-top: 76px;
   }
+
+  /*--------/
+    #SERVICE-SINGLE
+  /*-------*/
+  .info-wrap-service p{text-align: left;}
 
   .contact-us{
     background-attachment: inherit;

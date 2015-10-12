@@ -107,6 +107,11 @@ angular
         controller: 'SpaceesCtrl',
         controllerAs: 'spacees'
       })
+      .when('/software', {
+        templateUrl: 'views/software.html',
+        controller: 'SoftwareCtrl',
+        controllerAs: 'software'
+      })
       .when('/:slug', {
         templateUrl: 'views/post.html',
         controller: 'PostCtrl',
