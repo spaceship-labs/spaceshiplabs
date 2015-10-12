@@ -24,18 +24,25 @@ function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowS
     $mdSidenav('left').open();
   };
 
+
+
   $scope.closeSidebar = function() {
     $mdSidenav('left').close();
   };
 
 
   $scope.$on('$locationChangeStart', function() {
-    if($scope.redirectCount > 0){
-      $scope.closeSidebar();
-    }
-    $scope.redirectCount++;
 
-    $scope.isHome = ($location.path() === '/' ) ? true : false;
+    var resetContactForm = function(){
+      $scope.contactError = false;
+      if($scope.contactData){
+        $scope.contactData = {
+          email:'',
+          name:'',
+          message:''
+        };
+      }
+    };
 
     var customizeHeader = function(){
       if($location.path() === '/'){
@@ -45,7 +52,18 @@ function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowS
       }
     };
 
+    var manageSidebar = function(){
+      if($scope.redirectCount > 0){
+        $scope.closeSidebar();
+      }
+      $scope.redirectCount++;
+    };
+
+    $scope.isHome = ($location.path() === '/' ) ? true : false;
+
     setTimeout(customizeHeader, 500);
+    manageSidebar();
+    resetContactForm();
 
   });
 

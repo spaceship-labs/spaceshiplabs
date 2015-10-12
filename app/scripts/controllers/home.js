@@ -37,9 +37,10 @@ function HomeCtrl($scope, $rootScope, blogService){
   $scope.scrollTo = function(target){
     setTimeout(
         function(){
-            $('html, body').animate({
-                scrollTop: $('#' + target).offset().top
-            }, 600);
+          var headerHeight = 61;
+          $('html, body').animate({
+            scrollTop: $('#' + target).offset().top - headerHeight
+          }, 600);
         },
         300
     );

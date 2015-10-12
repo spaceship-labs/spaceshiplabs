@@ -577,7 +577,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   height: 2px;
   width: 100%;
   background: #fff;
-  left: -100%;
+  left: -101%;
   position: absolute;
   -webkit-transition: all .4s ease;
   -moz-transition: all .4s ease;
@@ -620,7 +620,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   left: 50%;
   padding-left: 0;
   list-style: none;
-  min-width: 145px;
+  min-width: 138px;
   width: 100%;
   padding: 4px 0;
   margin-top: 0px;
@@ -638,11 +638,14 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .toolbar-head .menu > ul > li > ul > li a{
   overflow: hidden;
   display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
   padding: 6px 0;
 }
 
 .toolbar-head .menu > ul > li > ul > li > a{
-  color: rgba(255,255,255,0.8);
+  /*color: rgba(255,255,255,0.8);*/
+  color: #f7f7f7;
 }
 .toolbar-head nav > ul > li > ul > li > a:hover{color: #fff}
 
@@ -1213,7 +1216,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   color: #00c5d8;
 }
 .contact-form-message-error{
-  color: red
+  color: #00c5d8;
 }
 
 
@@ -2091,6 +2094,13 @@ input:-webkit-autofill {
 .pagination-blog a:hover,
 .pagination-blog .current-page{
   color: #fff;
+}
+
+/*--------------/
+  #CONTACT MAIN
+/*-------------*/
+.contact-container .contact-form-message-error{
+  color: #00C4D5;
 }
 
 /*----------------/

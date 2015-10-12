@@ -3,7 +3,7 @@
     <i class="icon-contacto"></i> Contacto
   </h1>
 </div>
-<div class="container container-xlg" itemscope itemtype="http://schema.org/ContactPoint">
+<div class="contact-container container container-xlg" itemscope itemtype="http://schema.org/ContactPoint">
 
   <form hide-gt-sm show-sm name="contactForm" autocomplete="off" novalidate ng-submit="doContact(contactForm)">
     <section class="contact-table contact-table-mobile">
@@ -99,13 +99,14 @@
         </td>
       </tr>
     </table>
-    <section ng-if="contactError">
-      <p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.email"><span>*Este e-mail no es valido.</span></p>
-      <p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.required"><span>*Ingresa tu e-mail.</span></p>
-      <p class="contact-form-message contact-form-message-error" ng-show="contactForm.name.$error.required"><span>*Ingresa tu nombre.</span></p>
-      <p class="contact-form-message contact-form-message-error" ng-show="contactForm.message.$error.required"><span>*Ingresa un mensaje.</span></p>
-    </section>
   </form>
+
+  <section ng-if="contactError">
+    <p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.email"><span>*Este e-mail no es valido.</span></p>
+    <p class="contact-form-message contact-form-message-error" ng-show="contactForm.email.$error.required"><span>*Ingresa tu e-mail.</span></p>
+    <p class="contact-form-message contact-form-message-error" ng-show="contactForm.name.$error.required"><span>*Ingresa tu nombre.</span></p>
+    <p class="contact-form-message contact-form-message-error" ng-show="contactForm.message.$error.required"><span>*Ingresa un mensaje.</span></p>
+  </section>
 
   <p class="contact-form-message" ng-show="emailSent"><span>Gracias por enviar tu mensaje.</span></p>
   <p class="contact-form-message contact-form-message-error" ng-show="contactError"><span>*Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
