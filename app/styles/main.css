@@ -1455,9 +1455,10 @@ input:-webkit-autofill {
 /*------------/
   #SERVICE-SINGLE
 /*-----------*/
+.section-title-service h1{font-size: 52px}
 .section-title-service h2{
   margin-top: 16px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -1529,14 +1530,21 @@ input:-webkit-autofill {
   color: #fff;
   padding: 40px 0;
 }
+.info-column .center-content{text-align: center;}
 .info-column + .info-column{background: #12C9C5;}
 .info-column p,
 .info-column h2{color: #fff!important;}
-.info-column p{font-size: 18px;}
+.info-column p{
+  font-size: 18px;
+  text-align: justify;
+}
 .info-column .container-mini h3{
   font-size: 38px;
   font-weight: 100;
   line-height: 1;
+}
+.info-column .container-mini h3:nth-child(1){
+  font-size: 46px;
 }
 
 
