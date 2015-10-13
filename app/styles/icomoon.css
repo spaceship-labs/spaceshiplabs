@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?-yfqahk');
-	src:url('../fonts/icomoon.eot?-yfqahk#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf?-yfqahk') format('truetype'),
-		url('../fonts/icomoon.woff?-yfqahk') format('woff'),
-		url('../fonts/icomoon.svg?-yfqahk#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?okioff');
+	src:url('../fonts/icomoon.eot?okioff#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?okioff') format('truetype'),
+		url('../fonts/icomoon.woff?okioff') format('woff'),
+		url('../fonts/icomoon.svg?okioff#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,112 +23,160 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-redefinir:before {
+	content: "\e826";
+}
+.icon-velocidad:before {
+	content: "\e833";
+}
 .icon-abajo:before {
-	content: "\e600";
+	content: "\e800";
 }
 .icon-about:before {
-	content: "\e601";
+	content: "\e801";
 }
 .icon-api:before {
-	content: "\e602";
+	content: "\e802";
 }
 .icon-awards:before {
-	content: "\e603";
+	content: "\e803";
 }
 .icon-buscador:before {
-	content: "\e604";
+	content: "\e804";
 }
 .icon-comilla1:before {
-	content: "\e605";
+	content: "\e805";
 }
 .icon-comilla2:before {
-	content: "\e606";
+	content: "\e806";
 }
 .icon-configurable:before {
-	content: "\e607";
+	content: "\e807";
 }
 .icon-contacto:before {
-	content: "\e608";
+	content: "\e808";
 }
 .icon-cuadros:before {
-	content: "\e609";
+	content: "\e809";
+}
+.icon-definicion:before {
+	content: "\e80a";
 }
 .icon-der:before {
-	content: "\e60a";
+	content: "\e80b";
+}
+.icon-diseno:before {
+	content: "\e80c";
+}
+.icon-doc:before {
+	content: "\e80d";
+}
+.icon-docu:before {
+	content: "\e80e";
+}
+.icon-documentacion:before {
+	content: "\e80f";
 }
 .icon-escalable:before {
-	content: "\e60b";
+	content: "\e810";
 }
 .icon-face:before {
-	content: "\e60c";
+	content: "\e811";
 }
 .icon-flecha:before {
-	content: "\e60d";
+	content: "\e812";
+}
+.icon-funcionamiento:before {
+	content: "\e813";
+}
+.icon-garantia:before {
+	content: "\e814";
+}
+.icon-grafica:before {
+	content: "\e815";
 }
 .icon-insta:before {
-	content: "\e60e";
+	content: "\e816";
 }
 .icon-izq:before {
-	content: "\e60f";
+	content: "\e817";
+}
+.icon-lanzamiento:before {
+	content: "\e818";
 }
 .icon-link:before {
-	content: "\e610";
+	content: "\e819";
 }
 .icon-lista:before {
-	content: "\e611";
+	content: "\e81a";
 }
 .icon-logo:before {
-	content: "\e612";
+	content: "\e81b";
 }
 .icon-mantenimiento:before {
-	content: "\e613";
+	content: "\e81c";
 }
 .icon-multiempresas:before {
-	content: "\e614";
+	content: "\e81d";
 }
-.icon-multilenguaje:before {
-	content: "\e615";
+.icon-Multilenguaje:before {
+	content: "\e81e";
 }
 .icon-multiusuarios:before {
-	content: "\e616";
+	content: "\e81f";
 }
 .icon-nave:before {
-	content: "\e617";
+	content: "\e820";
 }
 .icon-noticias:before {
-	content: "\e618";
+	content: "\e821";
 }
 .icon-portafolio:before {
-	content: "\e619";
+	content: "\e822";
+}
+.icon-produccion:before {
+	content: "\e823";
+}
+.icon-propiedad:before {
+	content: "\e824";
+}
+.icon-pruebas:before {
+	content: "\e825";
 }
 .icon-reportes:before {
-	content: "\e61a";
+	content: "\e827";
 }
 .icon-responsivo:before {
-	content: "\e61b";
+	content: "\e828";
+}
+.icon-seo:before {
+	content: "\e829";
+}
+.icon-soporte:before {
+	content: "\e82a";
 }
 .icon-soporte1:before {
-	content: "\e61c";
+	content: "\e82b";
 }
 .icon-soporte2:before {
-	content: "\e61d";
+	content: "\e82c";
 }
 .icon-soporte3:before {
-	content: "\e61e";
+	content: "\e82d";
 }
 .icon-soporte4:before {
-	content: "\e61f";
+	content: "\e82e";
 }
 .icon-telefono:before {
-	content: "\e620";
+	content: "\e82f";
 }
 .icon-tranquilo:before {
-	content: "\e621";
+	content: "\e830";
 }
 .icon-tweet:before {
-	content: "\e622";
+	content: "\e831";
 }
 .icon-youtube:before {
-	content: "\e623";
+	content: "\e832";
 }
 

@@ -80,6 +80,7 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   width: 100%;
   z-index: 1;
 }
+.no-margin{margin: 0}
 
 .landing-wrapper,
 .our-services-landing,
@@ -272,6 +273,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .container-smd{
   margin: 0 auto;
   max-width: 560px;
+}
+.container-xsmd{
+  margin: 0 auto;
+  max-width: 500px;
 }
 .container-sm{
   margin: 0 auto;
@@ -1459,7 +1464,7 @@ input:-webkit-autofill {
 .section-title-service p{
   font-weight: 300;
   font-size: 19px;
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .info-wrap-service h2{
@@ -1474,6 +1479,24 @@ input:-webkit-autofill {
   -webkit-text-fill-color: transparent;
 }
 .info-wrap-service p{margin: 24px 0;}
+.info-wrap-service img{
+  margin: 0 20px;
+  vertical-align: top;
+}
+.info-wrap-service i{
+  font-size: 75px;
+  margin: 0 20px;
+  vertical-align: middle;
+}
+.info-wrap-service .title-icons i{
+  color: #07B5DA;
+}
+.info-wrap-service i.large-icon{
+  font-size: 100px;
+}
+.info-wrap-service i.extra-large-icon{
+  font-size: 140px;
+}
 
 .info-block-alt{
   background: #07B5DA;
@@ -1490,6 +1513,15 @@ input:-webkit-autofill {
   margin: 0;
   line-height: 1.1;
   text-align: left;
+}
+.info-wrap-service .software-guarantee i{
+  color: #1CD8B7;
+  margin: 0;
+}
+.info-wrap-service .software-guarantee .gradient-title{
+  background: -webkit-linear-gradient(50deg, #1FDEB2 0%,#08B4DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .info-column{
@@ -2528,7 +2560,15 @@ input:-webkit-autofill {
   /*--------/
     #SERVICE-SINGLE
   /*-------*/
-  .info-wrap-service p{text-align: left;}
+  .info-wrap-service p{text-align: justify;}
+  .info-wrap-service .center-content{text-align: center;}
+  .info-wrap-service img{
+    margin: 10px 20px;
+    max-width: 90%;
+  }
+  .info-wrap-service h2{font-size: 38px;}
+  .info-wrap-service .software-guarantee h2{font-size: 48px}
+  .info-wrap-service .software-guarantee i{font-size: 116px;}
 
   .contact-us{
     background-attachment: inherit;
