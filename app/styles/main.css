@@ -1455,12 +1455,16 @@ input:-webkit-autofill {
 /*------------/
   #SERVICE-SINGLE
 /*-----------*/
-.section-title-service h1{font-size: 52px}
+.section-title-service h1{font-size: 44px}
 .section-title-service h2{
   margin-top: 16px;
   font-size: 22px;
   font-weight: 300;
   text-transform: uppercase;
+}
+.section-title-service a{
+  color: #fff;
+  font-weight: 700;
 }
 .section-title-service p{
   font-weight: 300;
@@ -1484,6 +1488,10 @@ input:-webkit-autofill {
   margin: 0 20px;
   vertical-align: top;
 }
+.info-wrap-service a{
+  font-weight: 700;
+  color: #8F8F8F;
+}
 .info-wrap-service i{
   font-size: 75px;
   margin: 0 20px;
@@ -1502,6 +1510,10 @@ input:-webkit-autofill {
 .info-block-alt{
   background: #07B5DA;
   color: #fff;
+}
+.info-block-alt{
+  color: #fff;
+  font-weight: 700;
 }
 
 .info-block-columns{padding: 0;}
@@ -1536,7 +1548,7 @@ input:-webkit-autofill {
 .info-column h2{color: #fff!important;}
 .info-column p{
   font-size: 18px;
-  text-align: justify;
+  /*text-align: justify;*/
 }
 .info-column .container-mini h3{
   font-size: 38px;
