@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?okioff');
-	src:url('../fonts/icomoon.eot?okioff#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf?okioff') format('truetype'),
-		url('../fonts/icomoon.woff?okioff') format('woff'),
-		url('../fonts/icomoon.svg?okioff#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?6zarhu');
+	src:url('fonts/icomoon.eot?6zarhu#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?6zarhu') format('truetype'),
+		url('fonts/icomoon.woff?6zarhu') format('woff'),
+		url('fonts/icomoon.svg?6zarhu#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,11 +23,14 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-redefinir:before {
-	content: "\e826";
+.icon-software:before {
+	content: "\e838";
 }
-.icon-velocidad:before {
-	content: "\e833";
+.icon-iu:before {
+	content: "\e839";
+}
+.icon-marketing:before {
+	content: "\e83a";
 }
 .icon-abajo:before {
 	content: "\e800";
@@ -44,139 +47,157 @@
 .icon-buscador:before {
 	content: "\e804";
 }
-.icon-comilla1:before {
+.icon-campana:before {
 	content: "\e805";
 }
-.icon-comilla2:before {
+.icon-comilla1:before {
 	content: "\e806";
 }
-.icon-configurable:before {
+.icon-comilla2:before {
 	content: "\e807";
 }
-.icon-contacto:before {
+.icon-configurable:before {
 	content: "\e808";
 }
-.icon-cuadros:before {
+.icon-contacto:before {
 	content: "\e809";
 }
-.icon-definicion:before {
+.icon-cuadros:before {
 	content: "\e80a";
 }
-.icon-der:before {
+.icon-definicion:before {
 	content: "\e80b";
 }
-.icon-diseno:before {
+.icon-der:before {
 	content: "\e80c";
 }
-.icon-doc:before {
+.icon-diseno:before {
 	content: "\e80d";
 }
-.icon-docu:before {
+.icon-doc:before {
 	content: "\e80e";
 }
-.icon-documentacion:before {
+.icon-docu:before {
 	content: "\e80f";
 }
-.icon-escalable:before {
+.icon-documentacion:before {
 	content: "\e810";
 }
-.icon-face:before {
+.icon-escalable:before {
 	content: "\e811";
 }
-.icon-flecha:before {
+.icon-estudio:before {
 	content: "\e812";
 }
-.icon-funcionamiento:before {
+.icon-face:before {
 	content: "\e813";
 }
-.icon-garantia:before {
+.icon-flecha:before {
 	content: "\e814";
 }
-.icon-grafica:before {
+.icon-funcionamiento:before {
 	content: "\e815";
 }
-.icon-insta:before {
+.icon-garantia:before {
 	content: "\e816";
 }
-.icon-izq:before {
+.icon-grafica:before {
 	content: "\e817";
 }
-.icon-lanzamiento:before {
+.icon-insta:before {
 	content: "\e818";
 }
-.icon-link:before {
+.icon-izq:before {
 	content: "\e819";
 }
-.icon-lista:before {
+.icon-lanzamiento:before {
 	content: "\e81a";
 }
-.icon-logo:before {
+.icon-link:before {
 	content: "\e81b";
 }
-.icon-mantenimiento:before {
+.icon-lista:before {
 	content: "\e81c";
 }
-.icon-multiempresas:before {
+.icon-logo:before {
 	content: "\e81d";
 }
-.icon-Multilenguaje:before {
+.icon-mantenimiento:before {
 	content: "\e81e";
 }
-.icon-multiusuarios:before {
+.icon-mercado:before {
 	content: "\e81f";
 }
-.icon-nave:before {
+.icon-multiempresas:before {
 	content: "\e820";
 }
-.icon-noticias:before {
+.icon-Multilenguaje:before {
 	content: "\e821";
 }
-.icon-portafolio:before {
+.icon-multiusuarios:before {
 	content: "\e822";
 }
-.icon-produccion:before {
+.icon-nave:before {
 	content: "\e823";
 }
-.icon-propiedad:before {
+.icon-noticias:before {
 	content: "\e824";
 }
-.icon-pruebas:before {
+.icon-portafolio:before {
 	content: "\e825";
 }
-.icon-reportes:before {
+.icon-produccion:before {
+	content: "\e826";
+}
+.icon-propiedad:before {
 	content: "\e827";
 }
-.icon-responsivo:before {
+.icon-pruebas:before {
 	content: "\e828";
 }
-.icon-seo:before {
+.icon-redefinir:before {
 	content: "\e829";
 }
-.icon-soporte:before {
+.icon-reportes:before {
 	content: "\e82a";
 }
-.icon-soporte1:before {
+.icon-responsivo:before {
 	content: "\e82b";
 }
-.icon-soporte2:before {
+.icon-seo:before {
 	content: "\e82c";
 }
-.icon-soporte3:before {
+.icon-social:before {
 	content: "\e82d";
 }
-.icon-soporte4:before {
+.icon-soporte:before {
 	content: "\e82e";
 }
-.icon-telefono:before {
+.icon-soporte1:before {
 	content: "\e82f";
 }
-.icon-tranquilo:before {
+.icon-soporte2:before {
 	content: "\e830";
 }
-.icon-tweet:before {
+.icon-soporte3:before {
 	content: "\e831";
 }
-.icon-youtube:before {
+.icon-soporte4:before {
 	content: "\e832";
+}
+.icon-telefono:before {
+	content: "\e833";
+}
+.icon-tranquilo:before {
+	content: "\e834";
+}
+.icon-tweet:before {
+	content: "\e835";
+}
+.icon-velocidad:before {
+	content: "\e836";
+}
+.icon-youtube:before {
+	content: "\e837";
 }
 

@@ -112,6 +112,11 @@ angular
         controller: 'SoftwareCtrl',
         controllerAs: 'software'
       })
+      .when('/marketing', {
+        templateUrl: 'views/marketing.html',
+        controller: 'MarketingCtrl',
+        controllerAs: 'marketing'
+      })
       .when('/:slug', {
         templateUrl: 'views/post.html',
         controller: 'PostCtrl',
