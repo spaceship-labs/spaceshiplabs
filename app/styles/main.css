@@ -1462,12 +1462,12 @@ input:-webkit-autofill {
   font-size: 88px;
   line-height: 1;
 }
-.section-title-service h1{font-size: 44px}
+.section-title-service h1{font-size: 40px}
 .section-title-service h2{
   margin-top: 16px;
   font-size: 22px;
   font-weight: 300;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 .section-title-service a{
   color: #fff;
@@ -1478,6 +1478,19 @@ input:-webkit-autofill {
   font-size: 19px;
   margin: 30px 0;
 }
+
+.service-menu a{
+  border: 1px solid #fff;
+  padding: 6px 10px;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+}
+.service-menu a:hover{
+  background: #fff;
+  color: #14C9C7;
+}
+.service-menu a + a{border-left: 0;}
 
 .info-wrap-service h2{
   color: #7676c0;
@@ -1562,6 +1575,9 @@ input:-webkit-autofill {
 /*-------------/
   #SOFTWARE
 /*-------------*/
+.section-title-software > .container:nth-child(1){
+  padding-bottom: 0;
+}
 .info-wrap-service .software-guarantee h2{
   font-size: 64px;
   margin: 0;

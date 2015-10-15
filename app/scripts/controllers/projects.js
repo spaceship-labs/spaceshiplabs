@@ -122,6 +122,14 @@ function ProjectsCtrl($scope, metaTagsService){
       url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/water2.jpg','images/projects/water.jpg']
     },
+    {
+      type:'UI/UX Design & Software',
+      name:'Water tours',
+      categories: ['ui-ux','software'],
+      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      url: 'http://cancunwatertours.herokuapp.com/',
+      images:['images/projects/juanli-houdini-.jpg','images/projects/water.jpg']
+    },
 
   ];
 
