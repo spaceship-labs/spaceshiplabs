@@ -809,11 +809,13 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 .services-item:last-child{border: none;}
+/*
 .services-item-ui{background: transparent url(../images/servicios1.png) top center no-repeat;}
 .services-item-branding{background: transparent url(../images/servicios2.png) top center no-repeat;}
 .services-item-marketing{background: transparent url(../images/servicios3.png) top center no-repeat;}
 .services-item-consulting{background: transparent url(../images/icono4_blanco.png) top center no-repeat;}
 .services-item-software{background: transparent url(../images/servicios4.png) center 5px no-repeat;}
+*/
 
 .services-item .service > hr{
     border: solid 1px #FFF;
@@ -840,6 +842,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   -ms-transform: rotateX(90deg);
   transform: rotateX(90deg);
 }
+
 .services-item:hover .service{
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
@@ -856,6 +859,11 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   -o-transform: rotateX(0deg);
   -ms-transform: rotateX(0deg);
   transform: rotateX(0deg);
+}
+
+
+.services-item .service i{
+  font-size: 126px;
 }
 
 .menu .services-item{
