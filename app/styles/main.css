@@ -1542,7 +1542,7 @@ input:-webkit-autofill {
   padding: 40px 0;
 }
 .info-column .center-content{text-align: center;}
-.info-column + .info-column{background: #12C9C5;}
+.info-column + .info-column{background: #00c4d7;}
 .info-column p,
 .info-column h2{color: #fff!important;}
 .info-column p{
@@ -1571,7 +1571,7 @@ input:-webkit-autofill {
 .info-block-alt h2{color: #fff!important;}
 
 .info-block-alt-2{
-  background: #12C9C5;
+  background: #00c4d7;
   color: #fff;
 }
 .info-block-alt-2 p,
@@ -1629,6 +1629,14 @@ input:-webkit-autofill {
   z-index: 2;
   position: relative;
 }
+
+.info-wrap-service .pull-left{
+  text-align: left;
+}
+.info-wrap-service .pull-right{
+  text-align: right;
+}
+
 
 /*-------------/
   #SPACEES
