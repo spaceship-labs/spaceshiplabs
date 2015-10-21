@@ -20,7 +20,7 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
     blogService.getSingleEntry($scope.postSlug).then(function(entry){
       $scope.entry = entry;
       if(entry.content){
-        console.log($sce);
+        //console.log($sce);
         $scope.entry.content = $sce.trustAsHtml(entry.content);
       }
       $scope.loadedPost = true;

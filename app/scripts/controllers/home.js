@@ -34,17 +34,6 @@ function HomeCtrl($scope, $rootScope, blogService){
     }
   };
 
-  $scope.scrollTo = function(target){
-    setTimeout(
-        function(){
-          var headerHeight = 61;
-          $('html, body').animate({
-            scrollTop: $('#' + target).offset().top - headerHeight
-          }, 600);
-        },
-        300
-    );
-  };
 
   $scope.projects = [
     {
@@ -78,14 +67,20 @@ function HomeCtrl($scope, $rootScope, blogService){
       avatar:'images/carloslopez.jpg',
       name: 'Carlos López',
       company: 'CONSEJOSANO',
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum.'
+      quote: 'Trabajamos juntos para un cliente startup y algunos meses despues ese startup reunio 3 millones de usd en inversion todo gracias al trabajo que realizamos juntos. '
     },
     {
       avatar:'images/alexandra.jpg',
-      name: 'Alexandra Zapata-Hojel',
-      company: 'MEJORA TU ESCUELA',
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore aliquid eligendi, provident quo veritatis vitae consequatur a eum dolorem similique sed laborum.'
+      name: 'Allan',
+      company: 'YELLOWTRANSFERS',
+      quote: 'Spaceship Labs ha sido un aliado por mas de 3 años, convirtiendo nuestra plataforma digital en una parte integral de nuestro negocio.'
     },
+    {
+      avatar:'images/alexandra.jpg',
+      name: 'Cynthia Dehesa',
+      company: 'CIUDADANOS POR LA TRANSPARENCIA',
+      quote: '!Gracias a Spaceship Labs por todo su apoyo durante el evento Transformar, el evento no hubiera sido lo mismo sin ustedes !'
+    }
 
   ];
 

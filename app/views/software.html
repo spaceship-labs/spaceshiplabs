@@ -11,12 +11,12 @@
 
   <div class="container container-xlg">
     <div class="service-menu" layout="row" layout-align="center start">
-      <a href="#">Desarrollo agil</a>
-      <a href="#">Analisis, definición y diseño</a>
-      <a href="#">Integración continua, pruebas</a>
-      <a href="#">Producción</a>
-      <a href="#">Documentación</a>
-      <a href="#">Garantia</a>
+      <a ng-click="scrollTo('desarrollo-agil')" href="">Desarrollo agil</a>
+      <a ng-click="scrollTo('analisis-definicion-y-diseno')" href="">Analisis, definición y diseño</a>
+      <a ng-click="scrollTo('integracion-continua-pruebas')" href="">Integración continua, pruebas</a>
+      <a ng-click="scrollTo('produccion')" href="">Producción</a>
+      <a ng-click="scrollTo('documentacion')" href="">Documentación</a>
+      <a ng-click="scrollTo('garantia')" href="">Garantia</a>
     </div>
   </div>
 
@@ -24,7 +24,7 @@
 
 <div class="info-wrap info-wrap-service">
 
-  <section class="info-block">
+  <section id="desarrollo-agil" class="info-block">
     <div class="container container-lg center-content">
       <h2 class="gradient-title">Flujo de trabajo</h2>
       <p>Cada una de las entregas o liberaciones de un proyecto cuentan con documentación y pruebas. Para lograr esto utilizamos un flujo de trabajo basado en el modelo de Integración Continua y desarrollo guiado por ejemplos (<a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank">test driven development</a>).</p>
@@ -43,7 +43,7 @@
     </div>
   </section>
 
-  <section class="info-block info-block-alt">
+  <section id="analisis-definicion-y-diseno" class="info-block info-block-alt">
     <div class="container container-lg center-content">
       <h2>Análisis, definición y diseño</h2>
       <p>En la primera etapa ofrecemos diseños de bases de datos normalizadas que cumplen con los requerimientos descritos en los roadmaps así como diagramas de arquitectura.</p>
@@ -56,7 +56,7 @@
     </div>
   </section>
 
-  <section class="info-block">
+  <section id="integracion-continua-pruebas" class="info-block">
     <div class="container container-lg center-content">
       <h2 class="gradient-title">Integración Continua</h2>
       <p>Nuestro proceso de entrega para cada incremento es transparente mediante el uso de herramientas para la gestión automatizada de aplicaciones.</p>
@@ -95,7 +95,7 @@
     </div>
   </section>
 
-  <section class="info-block">
+  <section id="produccion" class="info-block">
     <div class="container container-lg center-content">
       <p class="title-icons center-content">
         <i class="icon-produccion wow zoomIn" data-wow-duration="0.4s"></i>
@@ -107,7 +107,7 @@
     </div>
   </section>
 
-  <section class="info-block-columns" layout="row" layout-md="column" layout-sm="column">
+  <section id="documentacion" class="info-block-columns" layout="row" layout-md="column" layout-sm="column">
     <div flex="50" class="info-column" flex-md="100" flex-sm="100">
       <div class="container container-sm center-content">
         <h2>Documentación y transferencia de conocimiento</h2>
@@ -154,7 +154,7 @@
     </div>
   </section>-->
 
-  <section class="info-block software-guarantee">
+  <section id="garantia" class="info-block software-guarantee">
     <div class="container container-lg center-content">
       <div layout="row" layout-sm="column" class="container container-xsmd" >
         <div flex="30" flex-sm="100">

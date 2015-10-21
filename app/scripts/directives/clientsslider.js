@@ -76,8 +76,8 @@ angular.module('spaceshiplabsApp')
           if(scope.clientSliderInterval){
             $interval.cancel(scope.clientSliderInterval);
           }
-          scope.clientSliderInterval = $interval(scope.moveNextAction, 4000);
-          scope.duration = 2000;
+          scope.clientSliderInterval = $interval(scope.moveNextAction, 5000);
+          scope.duration = 5000;
           scope.movement = 'next';
           scope.activeAnimation = false;
         };

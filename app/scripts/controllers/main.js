@@ -17,6 +17,7 @@ function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowS
     $scope.winSizeSingle = "medium";
     $scope.redirectCount = 0;
     windowSize.init();
+    metaTagsService.setMetaTags();
 
   };
 
@@ -106,9 +107,18 @@ function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowS
     }
   };
 
+  $scope.scrollTo = function(target){
+    setTimeout(
+        function(){
+          var headerHeight = 61;
+          $('html, body').animate({
+            scrollTop: $('#' + target).offset().top - headerHeight
+          }, 600);
+        },
+        300
+    );
+  };
 
-
-  metaTagsService.setMetaTags();
 
 
   $scope.getRange = function(n) {
