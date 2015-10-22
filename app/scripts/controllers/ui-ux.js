@@ -24,19 +24,19 @@ function UiUxCtrl($scope, $interval,metaTagsService){
   $scope.moveDesignSlider = function(index){
     $scope.designSliderIndex = index;
     $interval.cancel( $scope.designSliderInterval );
-  }
+  };
   $scope.moveNextDesignSlider = function(){
     if($scope.designSliderIndex < $scope.logos.length-1){
       $scope.designSliderIndex++;
     }else{
       $scope.designSliderIndex  = 0;
     }
-  }
+  };
 
   $scope.$on(
       "$destroy",
       function() {
-          $interval.cancel( scope.designSliderInterval );
+          $interval.cancel( $scope.designSliderInterval );
       }
   );
 
