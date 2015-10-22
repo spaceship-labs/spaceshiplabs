@@ -1623,8 +1623,9 @@ input:-webkit-autofill {
 }
 .info-block-alt-2 p,
 .info-block-alt-2 h2{color: #fff!important;}
+/*
 .info-block-alt-2 h2{text-align: left;}
-.info-block-alt-2 p{text-align: justify;}
+.info-block-alt-2 p{text-align: justify;}*/
 
 
 /*-------------/
@@ -1683,7 +1684,52 @@ input:-webkit-autofill {
 .info-wrap-service .pull-right{
   text-align: right;
 }
+.info-wrap-service .highlight-icon{color: #07B5DA}
 
+/*-------------/
+  #UIUX
+/*------------*/
+.design-slider{position: relative;}
+.design-slide{
+  position: absolute;
+  top: 50%;
+  left: 16%;
+  margin: 0 auto;
+  width: 50%;
+  opacity: 0;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.active-design-slide{
+  opacity: 1;
+}
+
+.design-slide img{
+  max-width: 100%;
+
+}
+.design-slider-bullets{
+  text-align: center;
+  bottom: 12px;
+  left: -18%;
+  right: 0;
+  position: absolute;
+}
+.design-slider-bullets a{
+  border-radius: 50%;
+  border: 2px solid #07B5DA;
+  display: inline-block;
+  margin: 0 4px;
+  width: 10px;
+  height: 10px;
+}
+.design-slider-bullet-on{ background: #07B5DA;}
 
 /*-------------/
   #SPACEES
@@ -2435,7 +2481,6 @@ input:-webkit-autofill {
 @media screen and (max-width: 960px){
   .toolbar-head nav > a {font-size: 11px}
 
-
 }
 
 @media (max-width: 750px){
@@ -2531,6 +2576,14 @@ input:-webkit-autofill {
     margin: 12px 0;
   }
   .services-item .service:first-child{display: none;}
+
+    /*---------/
+    #UIUX
+  /*---------*/
+  .info-wrap-ui .branding-img{max-width: 90%}
+  .design-slide{left: 16%;}
+  .design-slide img{max-width: 110px;}
+  .design-slider-bullets{left: -16%;}
 
 }
 

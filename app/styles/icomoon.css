@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?6zarhu');
-	src:url('../fonts/icomoon.eot?6zarhu#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf?6zarhu') format('truetype'),
-		url('../fonts/icomoon.woff?6zarhu') format('woff'),
-		url('../fonts/icomoon.svg?6zarhu#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?bpw4xe');
+	src:url('../fonts/icomoon.eot?bpw4xe#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?bpw4xe') format('truetype'),
+		url('../fonts/icomoon.woff?bpw4xe') format('woff'),
+		url('../fonts/icomoon.svg?bpw4xe#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,181 +23,202 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-software:before {
-	content: "\e838";
-}
-.icon-iu:before {
-	content: "\e839";
-}
-.icon-marketing:before {
-	content: "\e83a";
-}
 .icon-abajo:before {
-	content: "\e800";
+	content: "\e900";
 }
 .icon-about:before {
-	content: "\e801";
+	content: "\e901";
 }
 .icon-api:before {
-	content: "\e802";
+	content: "\e902";
 }
 .icon-awards:before {
-	content: "\e803";
+	content: "\e903";
+}
+.icon-bocetaje:before {
+	content: "\e904";
 }
 .icon-buscador:before {
-	content: "\e804";
+	content: "\e905";
 }
 .icon-campana:before {
-	content: "\e805";
+	content: "\e906";
 }
 .icon-comilla1:before {
-	content: "\e806";
+	content: "\e907";
 }
 .icon-comilla2:before {
-	content: "\e807";
+	content: "\e908";
 }
 .icon-configurable:before {
-	content: "\e808";
+	content: "\e909";
 }
 .icon-contacto:before {
-	content: "\e809";
+	content: "\e90a";
 }
 .icon-cuadros:before {
-	content: "\e80a";
+	content: "\e90b";
 }
 .icon-definicion:before {
-	content: "\e80b";
+	content: "\e90c";
 }
 .icon-der:before {
-	content: "\e80c";
+	content: "\e90d";
 }
 .icon-diseno:before {
-	content: "\e80d";
+	content: "\e90e";
+}
+.icon-diseno2:before {
+	content: "\e90f";
 }
 .icon-doc:before {
-	content: "\e80e";
+	content: "\e910";
 }
 .icon-docu:before {
-	content: "\e80f";
+	content: "\e911";
 }
 .icon-documentacion:before {
-	content: "\e810";
+	content: "\e912";
 }
 .icon-escalable:before {
-	content: "\e811";
+	content: "\e913";
 }
 .icon-estudio:before {
-	content: "\e812";
+	content: "\e914";
 }
 .icon-face:before {
-	content: "\e813";
+	content: "\e915";
 }
 .icon-flecha:before {
-	content: "\e814";
+	content: "\e916";
 }
 .icon-funcionamiento:before {
-	content: "\e815";
+	content: "\e917";
 }
 .icon-garantia:before {
-	content: "\e816";
+	content: "\e918";
 }
 .icon-grafica:before {
-	content: "\e817";
+	content: "\e919";
 }
 .icon-insta:before {
-	content: "\e818";
+	content: "\e91a";
+}
+.icon-interaccion:before {
+	content: "\e91b";
+}
+.icon-iu:before {
+	content: "\e91c";
 }
 .icon-izq:before {
-	content: "\e819";
+	content: "\e91d";
 }
 .icon-lanzamiento:before {
-	content: "\e81a";
+	content: "\e91e";
 }
 .icon-link:before {
-	content: "\e81b";
+	content: "\e91f";
 }
 .icon-lista:before {
-	content: "\e81c";
+	content: "\e920";
 }
 .icon-logo:before {
-	content: "\e81d";
+	content: "\e921";
+}
+.icon-mano:before {
+	content: "\e922";
 }
 .icon-mantenimiento:before {
-	content: "\e81e";
+	content: "\e923";
+}
+.icon-marketing:before {
+	content: "\e924";
 }
 .icon-mercado:before {
-	content: "\e81f";
+	content: "\e925";
 }
 .icon-multiempresas:before {
-	content: "\e820";
+	content: "\e926";
 }
 .icon-Multilenguaje:before {
-	content: "\e821";
+	content: "\e927";
 }
 .icon-multiusuarios:before {
-	content: "\e822";
+	content: "\e928";
 }
 .icon-nave:before {
-	content: "\e823";
+	content: "\e929";
 }
 .icon-noticias:before {
-	content: "\e824";
+	content: "\e92a";
+}
+.icon-paleta:before {
+	content: "\e92b";
 }
 .icon-portafolio:before {
-	content: "\e825";
+	content: "\e92c";
 }
 .icon-produccion:before {
-	content: "\e826";
+	content: "\e92d";
 }
 .icon-propiedad:before {
-	content: "\e827";
+	content: "\e92e";
 }
 .icon-pruebas:before {
-	content: "\e828";
+	content: "\e92f";
 }
 .icon-redefinir:before {
-	content: "\e829";
+	content: "\e930";
+}
+.icon-referencias:before {
+	content: "\e931";
 }
 .icon-reportes:before {
-	content: "\e82a";
+	content: "\e932";
 }
 .icon-responsivo:before {
-	content: "\e82b";
+	content: "\e933";
 }
 .icon-seo:before {
-	content: "\e82c";
+	content: "\e934";
 }
 .icon-social:before {
-	content: "\e82d";
+	content: "\e935";
+}
+.icon-software:before {
+	content: "\e936";
 }
 .icon-soporte:before {
-	content: "\e82e";
+	content: "\e937";
 }
 .icon-soporte1:before {
-	content: "\e82f";
+	content: "\e938";
 }
 .icon-soporte2:before {
-	content: "\e830";
+	content: "\e939";
 }
 .icon-soporte3:before {
-	content: "\e831";
+	content: "\e93a";
 }
 .icon-soporte4:before {
-	content: "\e832";
+	content: "\e93b";
 }
 .icon-telefono:before {
-	content: "\e833";
+	content: "\e93c";
 }
 .icon-tranquilo:before {
-	content: "\e834";
+	content: "\e93d";
 }
 .icon-tweet:before {
-	content: "\e835";
+	content: "\e93e";
 }
 .icon-velocidad:before {
-	content: "\e836";
+	content: "\e93f";
+}
+.icon-wireframe:before {
+	content: "\e940";
 }
 .icon-youtube:before {
-	content: "\e837";
+	content: "\e941";
 }
 
