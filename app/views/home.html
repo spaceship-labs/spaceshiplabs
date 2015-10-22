@@ -16,23 +16,30 @@
   <a ng-click="scrollTo('recent-news')" href="" class="move-arrow"><img src="images/flecha.png" alt=""></a>
 </div>
 
-<div id="recent-news" class="container container-alt center-content">
+<!--<div id="recent-news" class="container container-alt center-content">
  <h1 data-wow-duration="0.8s" class="wow fadeInUp">Noticias recientes</h1>
-</div>
+</div>-->
 
-<div ng-show="!loadedPosts" class="container" layout="row" layout-sm="column" layout-align="center center">
-  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
-</div>
 
-<div ng-show="loadedPosts" class="news-wrapper" layout="row" layout-sm="column">
 
-  <div
-    ng-repeat="entry in entries"
-    flex="33"
-    flex-sm="100">
+<div  class="news-wrapper news-wrapper-landing container container-xxlg">
 
-    <div post-item post-type="thumb" entry="entry"></div>
+  <h1 data-wow-duration="0.8s" class="wow fadeInUp"><i class="icon-noticias"></i></h1>
+  <h1 data-wow-duration="0.8s" class="wow fadeInUp">Noticias recientes</h1>
 
+  <div ng-show="!loadedPosts" class="container" layout="row" layout-sm="column" layout-align="center center">
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+  </div>
+
+  <div ng-show="loadedPosts" class="news-row" layout="row" layout-sm="column">
+    <div
+      ng-repeat="entry in entries"
+      flex="33"
+      flex-sm="100">
+
+      <div post-item post-type="home" entry="entry"></div>
+
+    </div>
   </div>
 
 </div>

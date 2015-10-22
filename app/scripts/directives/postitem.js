@@ -17,6 +17,9 @@ angular.module('spaceshiplabsApp')
         else if(attrs.postType === 'sidebar'){
           url = 'views/directives/post-sidebar-item.html';
         }
+        else if(attrs.postType === 'home'){
+          url = 'views/directives/post-home-item.html';
+        }
         else{
           url = 'views/directives/post-list-item.html';
         }

@@ -1,0 +1,15 @@
+<div class="news-item-wrapper">
+  <div class="news-item-excerpt">
+    <div class="news-item-excerpt-inner">
+      <p>{{ ::entry.date | date:'dd - MMMM - yyyy' }}</p>
+      <h4><a ng-href="/{{::entry.slug}}">{{::entry.title}}</h4>
+    </div>
+  </div>
+  <div class="news-item" ng-style="getMainPostThumb()" itemid="/{{::entry.slug}}" itemscope itemtype="http://schema.org/BlogPosting">
+    <meta itemprop="datePublished" content="{{::entry.date}}">
+    <meta itemprop="name" content="{{::entry.title}}">
+    <meta itemprop="headline" content="{{::entry.title}}">
+
+    <a ng-href="/{{::entry.slug}}" class="absolute-link"></a>
+  </div>
+</div>
