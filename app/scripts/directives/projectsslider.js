@@ -7,7 +7,7 @@
  * # projectsSlider
  */
 angular.module('spaceshiplabsApp')
-  .directive('projectsSlider', function ($interval, $timeout, $window, $location) {
+  .directive('projectsSlider', function ($interval, $timeout, $window, $location, $routeParams) {
     return {
       templateUrl: 'views/directives/projects-slider.html',
       restrict: 'E',
@@ -20,8 +20,7 @@ angular.module('spaceshiplabsApp')
 
         scope.init = function(){
 
-          var projectSlug = $location.hash();
-
+          var projectSlug = $routeParams.slug || false;
 
           //Hiding elements on preview mode
           if(scope.preview || typeof scope.preview !== 'undefined'){
@@ -106,7 +105,10 @@ angular.module('spaceshiplabsApp')
 
 				scope.$watch('selectedIndexSlide', function (newValue) {
 
-          $location.hash(scope.allProjects[newValue].slug);
+          //$location.hash(scope.allProjects[newValue].slug);
+          if( !scope.preview ) {
+            $location.path('/projects/' + scope.allProjects[newValue].slug);
+          }
 
           scope.movingOutIndexSlide = scope.getMovingOutIndexSlide(newValue, scope.projectsCount);
 

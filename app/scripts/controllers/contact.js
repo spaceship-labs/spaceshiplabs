@@ -20,10 +20,13 @@ function ContactCtrl($scope, metaTagsService) {
     var map = new google.maps.Map(document.getElementById('map-contact'),
        mapOptions);
     var locationLatLng = new google.maps.LatLng(21.1656951,-86.8210734);
+    //var image = 'images/logo-og.png';
+    var image = 'images/pinmap.png';
 
     var marker = new google.maps.Marker({
         position: locationLatLng,
-        title:"SpaceshipLabs"
+        title:"SpaceshipLabs",
+        icon: image
     });
     // To add the marker to the map, call setMap();
     marker.setMap(map);

@@ -79,7 +79,7 @@ function HomeCtrl($scope, $rootScope, blogService){
       avatar:'images/alexandra.jpg',
       name: 'Cynthia Dehesa',
       company: 'CIUDADANOS POR LA TRANSPARENCIA',
-      quote: '!Gracias a Spaceship Labs por todo su apoyo durante el evento Transformar, el evento no hubiera sido lo mismo sin ustedes !'
+      quote: '¡Gracias a Spaceship Labs por todo su apoyo durante el evento Transformar, el evento no hubiera sido lo mismo sin ustedes !'
     }
 
   ];

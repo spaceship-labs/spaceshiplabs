@@ -22,23 +22,25 @@
 
 
 
-<div id="recent-news" class="news-wrapper news-wrapper-landing container container-xxlg">
+<div id="recent-news" class="news-wrapper news-wrapper-landing container container-xxlg" layout="row" layout-align="center center" ng-style="style()" full-screen-wrapper>
 
-  <h1 data-wow-duration="0.8s" class="wow fadeInUp"><i class="icon-noticias"></i></h1>
-  <h1 data-wow-duration="0.8s" class="wow fadeInUp">Noticias recientes</h1>
+  <div class="news-wrapper-inner" flex>
+    <h1 data-wow-duration="0.8s" class="wow fadeInUp"><i class="icon-noticias"></i></h1>
+    <h1 data-wow-duration="0.8s" class="wow fadeInUp">Noticias recientes</h1>
 
-  <div ng-show="!loadedPosts" class="container" layout="row" layout-sm="column" layout-align="center center">
-    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
-  </div>
+    <div ng-show="!loadedPosts" class="container" layout="row" layout-sm="column" layout-align="center center">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
 
-  <div ng-show="loadedPosts" class="news-row" layout="row" layout-sm="column">
-    <div
-      ng-repeat="entry in entries"
-      flex="33"
-      flex-sm="100">
+    <div ng-show="loadedPosts" class="news-row" layout="row" layout-sm="column">
+      <div
+        ng-repeat="entry in entries"
+        flex="33"
+        flex-sm="100">
 
-      <div post-item post-type="home" entry="entry"></div>
+        <div post-item post-type="home" entry="entry"></div>
 
+      </div>
     </div>
   </div>
 
@@ -133,77 +135,77 @@
     <h1 data-wow-duration="0.8s" class="wow fadeInUp">Menciones</h1>
 
     <div class="mention-landing-row" layout-wrap layout="row" layout-sm="column">
-      <a href="#"
+      <div
       class="mention-landing-item wow fadeIn"
       style="background: url(images/imco.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-duration="0.2s"
-      flex-sm="100"></a>
-      <a href="#"
+      flex-sm="100"></div>
+      <div
       class="mention-landing-item wow fadeIn"
       style="background: url(images/cnn.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-delay="0.1s" data-wow-duration="0.2s"
-      flex-sm="100"></a>
-      <a href="#"
+      flex-sm="100"></div>
+      <div
       class="mention-landing-item wow fadeIn"
       style="background: url(images/telemundo.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-delay="0.3s" data-wow-duration="0.2s"
-      flex-sm="100"></a>
-      <a href="#"
+      flex-sm="100"></div>
+      <div
       class="mention-landing-item wow fadeIn"
       style="background: url(images/televisa.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-delay="0.5s" data-wow-duration="0.2s"
-      flex-sm="100"></a>
-      <a href="#"
+      flex-sm="100"></div>
+      <div
       class="mention-landing-item wow fadeIn"
       style="background: url(images/eluniversal.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-delay="0.7s" data-wow-duration="0.2s"
-      flex-sm="100"></a>
+      flex-sm="100"></div>
 
-      <a href="#"
+      <div
       class="mention-landing-item wow fadeIn"
       style="background: url(images/excelsor.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-delay="0.9s" data-wow-duration="0.2s"
-      flex-sm="100"></a>
-      <a
+      flex-sm="100"></div>
+      <div
       class="mention-landing-item wow fadeIn"
       style="background: url(images/lajornada.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-delay="1.1s" data-wow-duration="0.2s"
-      flex-sm="100"></a>
-      <a href="#"
+      flex-sm="100"></div>
+      <div
       class="mention-landing-item wow fadeIn"
       style="background: url(images/animalpolitico.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-delay="1.3s" data-wow-duration="0.2s"
-      flex-sm="100"></a>
-      <a href="#"
+      flex-sm="100"></div>
+      <div
       class="mention-landing-item wow fadeIn"
       style="background: url(images/opendata.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-delay="1.5s" data-wow-duration="0.2s"
-      flex-sm="100"></a>
-      <a href="#"
+      flex-sm="100"></div>
+      <div
       class="mention-landing-item wow fadeIn"
       style="background: url(images/imco.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-delay="1.7s" data-wow-duration="0.2s"
-      flex-sm="100"></a>
+      flex-sm="100"></div>
     </div>
 
   </div>
