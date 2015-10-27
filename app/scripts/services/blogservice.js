@@ -12,6 +12,7 @@ angular.module('spaceshiplabsApp')
     // AngularJS will instantiate a singleton by calling "new" on this function
 
     //var postType = '2wKn6yEnZewu2SCCkus4as';
+    var gifsCategory = 273;
     var baseUrl = 'http://spaceshiplabs.com/wp-json';
 
     //var categoryType = '5KMiN6YPvi42icqAUQMCQe';
@@ -36,6 +37,7 @@ angular.module('spaceshiplabsApp')
       entriesLimit = entriesLimit || 3;
       var resource = '/posts';
       var query = baseUrl + resource + '?post_status=publish&filter[posts_per_page]=' + entriesLimit;
+      query += '&filter[cat]=-'+gifsCategory;
       return query;
     };
 
@@ -56,6 +58,10 @@ angular.module('spaceshiplabsApp')
       }
       if(params.searchTerm){
         query += '&filter[s]=' + params.searchTerm;
+      }
+
+      if(!params.searchTerm && !params.tag && !params.category){
+        query += '&filter[cat]=-'+gifsCategory;
       }
 
       return query;
