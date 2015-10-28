@@ -2821,3 +2821,10 @@ input:-webkit-autofill {
 
 }
 
+
+/*-----------/
+  #HEIGHT-MEDIA-QUERIES
+/*----------*/
+@media screen and (min-height: 800px){
+  .single-thumb{min-height: 600px;}
+}
