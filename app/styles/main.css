@@ -1705,11 +1705,17 @@ input:-webkit-autofill {
 /*------------*/
 .info-wrap-ui .branding-section h2 i{
   margin: 0;
-  margin-left: -14px;
+  /*margin-left: -14px;*/
 }
 .info-wrap-ui .design-slider-wrap{position: relative;}
 .info-wrap-ui .design-slider-wrap,
 .info-wrap-ui .logo-design{min-height: 420px;}
+.info-wrap-ui .image-sketch{
+  background-image: url(../images/sketch.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 394px;
+}
 .design-slider{
   /*position: relative;*/
   position: absolute;
@@ -1755,6 +1761,8 @@ input:-webkit-autofill {
   height: 10px;
 }
 .design-slider-bullet-on{ background: #07B5DA;}
+
+
 
 /*-------------/
   #SPACEES
