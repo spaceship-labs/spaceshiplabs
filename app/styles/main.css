@@ -50,6 +50,72 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
    100%{ bottom: 19%; }
 }
 
+/*-------------/
+  #LEFTTORIGHT
+/*------------*/
+
+/* Firefox < 16 */
+@-moz-keyframes leftToRight {
+    from { left: -100%; }
+    to   { left: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes leftToRight {
+    from { left: -100%; }
+    to   { left: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes leftToRight {
+    from { left: -100%; }
+    to   { left: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes leftToRight {
+    from { left: -100%; }
+    to   { left: 0; }
+}
+
+@keyframes leftToRight {
+    from { left: -100%; }
+    to   { left: 0; }
+}
+
+/*-------------/
+  #upDown
+/*------------*/
+
+
+/* Firefox < 16 */
+@-moz-keyframes upDown {
+    from { top: -100%; }
+    to   { top: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes upDown {
+    from { top: -100%; }
+    to   { top: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes upDown {
+    from { top: -100%; }
+    to   { top: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes upDown {
+    from { top: -100%; }
+    to   { top: 0; }
+}
+
+@keyframes upDown {
+    from { top: -100%; }
+    to   { top: 0; }
+}
 
 
 *:focus{
@@ -1473,6 +1539,14 @@ input:-webkit-autofill {
   line-height: 1!important;
   vertical-align: middle;
 }
+.info-wrap .awards-icon-img{
+  color: #35BFD1;
+  font-size: 160px;
+  margin-bottom: 23px;
+  display: inline-block;
+  line-height: 1!important;
+  vertical-align: middle;
+}
 
 .info-wrap .info-block-conclusion{
   background: #00C8D7;
@@ -2038,31 +2112,14 @@ input:-webkit-autofill {
   position: relative;
 }
 .award:hover:after{opacity: 1}
-/*.award:after{
-  content: '';
-  opacity: 0;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: rgba(0,0,0,0.4);
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-.award:hover h3{color: #fff!important}
-*/
 
 .award img{
   max-width: 80%;
-  -webkit-transition: all 1s ease; /* Safari and Chrome */
-  -moz-transition: all 1s ease; /* Firefox */
-  -o-transition: all 1s ease; /* IE 9 */
-  -ms-transition: all 1s ease; /* Opera */
-  transition: all 1s ease;
+  -webkit-transition: all 0.4s ease; /* Safari and Chrome */
+  -moz-transition: all 0.4s ease; /* Firefox */
+  -o-transition: all 0.4s ease; /* IE 9 */
+  -ms-transition: all 0.4s ease; /* Opera */
+  transition: all 0.4s ease;
 }
 .award:hover img{
   -webkit-transform:scale(1.2); /* Safari and Chrome */
@@ -2085,30 +2142,110 @@ input:-webkit-autofill {
   color: inherit!important;
 }
 
-.awards .gov-lab{
-  color: #00C5D8;
-  max-width: none;
-}
-.awards .gov-lab h3{color: #4D4D4D}
-.awards .viajes-claros{
-  background: #00CCD5;
-  color: #fff;
-}
-.awards .codeando{
-  background: #383838;
-  color: #fff;
-}
-.awards .codeando p{color: #00C4DA}
-.awards .angelhack p{color: #00C5D8}
-.awards .contratobook{
-  background: #07B3D9;
-  color: #fff;
+.award-inner{
+  position: relative;
 }
 
-.award-inner{
-  min-height: 220px;
-  position: relative;
+.award-logo,
+.award-content{
   z-index: 4;
+  color: #fff;
+  padding: 30px 20px;
+  min-height: 260px;
+  -webkit-transition: all 0.8s ease; /* Safari and Chrome */
+  -moz-transition: all 0.8s ease; /* Firefox */
+  -o-transition: all 0.8s ease; /* IE 9 */
+  -ms-transition: all 0.8s ease; /* Opera */
+  transition: all 0.8s ease;
+}
+
+.award-logo{
+  background: #F5F5F5;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.award-content{
+  background: rgb(11,217,197); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(11,217,197,1) 0%, rgba(30,150,211,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(11,217,197,1)), color-stop(100%,rgba(30,150,211,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(11,217,197,1) 0%,rgba(30,150,211,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(11,217,197,1) 0%,rgba(30,150,211,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(11,217,197,1) 0%,rgba(30,150,211,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(11,217,197,1) 0%,rgba(30,150,211,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0bd9c5', endColorstr='#1e96d3',GradientType=0 ); /* IE6-9 */
+  position: relative;
+  z-index: 3;
+}
+.award-content-inner{
+  position: relative;
+  min-height: 200px;
+  overflow: hidden;
+  padding: 10px;
+  width: 100%;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+.award:hover .award-content{
+
+}
+.award:hover .award-logo{
+  opacity: 0;
+}
+
+.award-border-vertical{
+  display: block;
+  background: #fff;
+  width: 2px;
+  height: 100%;
+  left: 0;
+  top: -100%;
+  position: absolute;
+}
+.award-border-horizontal{
+  display: block;
+  background: #fff;
+  width: 100%;
+  height: 2px;
+  left: -100%;
+  top: 0%;
+  position: absolute;
+}
+
+.award-border-bottom{
+  top: auto;
+  bottom: 0;
+}
+.award-border-right{
+  right: 0;
+  left: auto;
+}
+
+.award:hover .award-border-left{
+  -webkit-animation: upDown 0.8s forwards;
+  -moz-animation:    upDown 0.8s forwards;
+  -o-animation:      upDown 0.8s forwards;
+  animation:         upDown 0.8s forwards;
+}
+.award:hover .award-border-top{
+  -webkit-animation: leftToRight 0.8s forwards;
+  -moz-animation:    leftToRight 0.8s forwards;
+  -o-animation:      leftToRight 0.8s forwards;
+  animation:         leftToRight 0.8s forwards;
+}
+
+.award:hover .award-border-right{
+  -webkit-animation: upDown 0.8s forwards 0.8s;
+  -moz-animation:    upDown 0.8s forwards 0.8s;
+  -o-animation:      upDown 0.8s forwards 0.8s;
+  animation:         upDown 0.8s forwards 0.8s;
+}
+.award:hover .award-border-bottom{
+  -webkit-animation: leftToRight 0.8s forwards 0.8s;
+  -moz-animation:    leftToRight 0.8s forwards 0.8s;
+  -o-animation:      leftToRight 0.8s forwards 0.8s;
+  animation:         leftToRight 0.8s forwards 0.8s;
 }
 
 /*--------------/
@@ -2820,6 +2957,7 @@ input:-webkit-autofill {
   /*---------*/
   .info-wrap-ui .design-slider-wrap,
   .info-wrap-ui .logo-design{min-height: 216px;}
+  .info-wrap-ui h2{text-align: center!important;}
 
   .contact-us{
     background-attachment: inherit;
@@ -2835,5 +2973,5 @@ input:-webkit-autofill {
   #HEIGHT-MEDIA-QUERIES
 /*----------*/
 @media screen and (min-height: 800px){
-  .single-thumb{min-height: 600px;}
+  /*.single-thumb{min-height: 600px;}*/
 }
