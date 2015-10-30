@@ -9,14 +9,16 @@
 
   </div>
 
-  <div class="container container-xlg">
-    <div class="service-menu" layout="row" layout-align="center start">
-      <a ng-click="scrollTo('desarrollo-agil')" href="">Desarrollo agil</a>
-      <a ng-click="scrollTo('analisis-definicion-y-diseno')" href="">Analisis, definición y diseño</a>
-      <a ng-click="scrollTo('integracion-continua-pruebas')" href="">Integración continua, pruebas</a>
-      <a ng-click="scrollTo('produccion')" href="">Producción</a>
-      <a ng-click="scrollTo('documentacion')" href="">Documentación</a>
-      <a ng-click="scrollTo('garantia')" href="">Garantia</a>
+  <div class="service-menu-wrap" ng-class="{'service-menu-wrap-fixed': scrolled}" fixed-element >
+    <div class="container container-xlg">
+      <div class="service-menu" layout="row" layout-align="center start">
+        <a ng-click="scrollTo('desarrollo-agil')" href="">Desarrollo agil</a>
+        <a ng-click="scrollTo('analisis-definicion-y-diseno')" href="">Analisis, definición y diseño</a>
+        <a ng-click="scrollTo('integracion-continua-pruebas')" href="">Integración continua, pruebas</a>
+        <a ng-click="scrollTo('produccion')" href="">Producción</a>
+        <a ng-click="scrollTo('documentacion')" href="">Documentación</a>
+        <a ng-click="scrollTo('garantia')" href="">Garantia</a>
+      </div>
     </div>
   </div>
 
