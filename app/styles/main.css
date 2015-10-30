@@ -1775,7 +1775,7 @@ input:-webkit-autofill {
   z-index: 1;
 }
 .info-wrap-service .info-block-market{
-  z-index: 2;
+  z-index: 99;
   position: relative;
 }
 
@@ -1803,6 +1803,38 @@ input:-webkit-autofill {
   background-size: cover;
   min-height: 394px;
 }
+.info-wrap-ui .screens-wrapper{
+  position: relative;
+  min-height: 500px;
+}
+.screens-wrapper .screen-m{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.screens-wrapper .screen-m1{
+  z-index: 4;
+  right: 10%;
+  top: 30%;
+}
+.screens-wrapper .screen-m2{
+  z-index: 3;
+  right: 0%;
+  top: 20%;
+
+}
+.screens-wrapper .screen-m3{
+  z-index: 2;
+  right: -10%;
+  top: 10%;
+}
+.screens-wrapper .screen-m4{
+  z-index: 1;
+  right: -20%;
+  top: 0%;
+}
+
+
 .design-slider{
   /*position: relative;*/
   position: absolute;
