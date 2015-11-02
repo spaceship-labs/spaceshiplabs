@@ -24,7 +24,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Mejora tu escuela',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.mejoratuescuela.org/',
-      images:['images/projects/mejora2.jpg','images/projects/mejora.jpg']
+      images:['images/projects/mejora4.jpg','images/projects/mejora3.jpg','images/projects/mejora2.jpg','images/projects/mejora.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -33,7 +33,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Airportcun',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://airportcun.com/',
-      images:['images/projects/air2.jpg','images/projects/air.jpg']
+      images:['images/projects/air4.jpg','images/projects/air3.jpg','images/projects/air2.jpg','images/projects/air.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -42,7 +42,7 @@ function ProjectsCtrl($scope, metaTagsService){
       categories: ['ui-ux','software'],
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.viajesclaros.ifai.mx/',
-      images:['images/projects/viajes2.jpg','images/projects/viajes.jpg']
+      images:['images/projects/viajes4.jpg','images/projects/viajes3.jpg','images/projects/viajes2.jpg','images/projects/viajes.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -51,7 +51,7 @@ function ProjectsCtrl($scope, metaTagsService){
       categories: ['ui-ux','software'],
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'https://www.consejosano.com/',
-      images:['images/projects/consejo2.jpg','images/projects/consejo.jpg']
+      images:['images/projects/consejo4.jpg','images/projects/consejo3.jpg','images/projects/consejo2.jpg','images/projects/consejo.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -60,7 +60,7 @@ function ProjectsCtrl($scope, metaTagsService){
       categories: ['ui-ux','software','marketing','branding'],
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://nuevopaintball.com/',
-      images:['images/projects/gotcha2.jpg','images/projects/gotcha.jpg']
+      images:['images/projects/gotcha4.jpg','images/projects/gotcha3.jpg','images/projects/gotcha2.jpg','images/projects/gotcha.jpg']
     },
     {
       type:'UI/UX Design & Software',

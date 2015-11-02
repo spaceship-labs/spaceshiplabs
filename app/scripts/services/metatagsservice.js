@@ -19,7 +19,7 @@ angular.module('spaceshiplabsApp')
       var domainUrl = $location.protocol() + "://" + $location.host() + ":" + $location.port();
       var defaultParams = {
         title:'SpaceshipLabs - Diseño de páginas web, aplicaciones móviles, Diseño Gráfico y Software en General',
-        description: '¿Tienes alguna idea innovadora, y quieres invertir en internet? cuenta con nosotros para llevarla a cabo. Tenemos la experiencia y las herramientas para que tu proyecto sea todo un éxito.',
+        description: 'Desarrollamos software en la nube, aplicaciones moviles y diseño web en general para cualquier tipo de negocio o industria.',
         image: domainUrl+'/images/logo-og.png'
       };
 

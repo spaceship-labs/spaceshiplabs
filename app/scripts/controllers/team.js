@@ -10,7 +10,8 @@
 function TeamCtrl($scope,metaTagsService){
   $scope.init = function(){
     var meta = {
-      title: 'Team | SpaceshipLabs'
+      title: 'Conoce a nuestro equipo espacial',
+      description: 'Diseñadores, programadores y community managers listos para llevar a cabo tu proyecto.'
     };
     metaTagsService.setMetaTags(meta);
   };

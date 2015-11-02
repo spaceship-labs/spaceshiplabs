@@ -1814,23 +1814,23 @@ input:-webkit-autofill {
 }
 .screens-wrapper .screen-m1{
   z-index: 4;
-  right: 10%;
+  right: 0%;
   top: 30%;
 }
 .screens-wrapper .screen-m2{
   z-index: 3;
-  right: 0%;
+  right: -10%;
   top: 20%;
 
 }
 .screens-wrapper .screen-m3{
   z-index: 2;
-  right: -10%;
+  right: -20%;
   top: 10%;
 }
 .screens-wrapper .screen-m4{
   z-index: 1;
-  right: -20%;
+  right: -30%;
   top: 0%;
 }
 
