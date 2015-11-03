@@ -1803,6 +1803,9 @@ input:-webkit-autofill {
   background-size: cover;
   min-height: 394px;
 }
+.info-wrap-ui .info-block-ux-design{
+  overflow: hidden;
+}
 .info-wrap-ui .screens-wrapper{
   position: relative;
   min-height: 500px;
@@ -2707,11 +2710,6 @@ input:-webkit-autofill {
 
 /*Team*/
 
-  .spacees-landing{
-    background-size: 40%;
-    background-position: right bottom;
-  }
-
   .info-wrap .support-card{
     position: relative;
     right: auto;
@@ -2750,6 +2748,14 @@ input:-webkit-autofill {
 }
 
 @media screen and (max-width: 960px){
+  /*-------/
+    #HOME
+  /*------*/
+  .spacees-landing{
+    background-size: 40%;
+    background-position: right bottom;
+  }
+
   /*Menu*/
   #button-menu-mobile{ display: block;}
   .toolbar-head .menu{ display: none;}
@@ -2799,7 +2805,6 @@ input:-webkit-autofill {
   /*---------*/
   .info-wrap-ui .branding-img{max-width: 90%}
   .design-slide{left: 16%;}
-  .design-slide img{max-width: 110px;}
   .design-slider-bullets{left: -16%;}
 
 }
@@ -2993,6 +2998,8 @@ input:-webkit-autofill {
     margin: 10px 20px;
     max-width: 90%;
   }
+  .design-slide{left: 18%;}
+  .design-slide img{max-width: 85%;}
   .info-wrap-service h2{font-size: 38px;}
   .info-wrap-service .software-guarantee h2{font-size: 48px}
   .info-wrap-service .software-guarantee i{font-size: 116px;}
@@ -3003,6 +3010,7 @@ input:-webkit-autofill {
   .info-wrap-ui .design-slider-wrap,
   .info-wrap-ui .logo-design{min-height: 216px;}
   .info-wrap-ui h2{text-align: center!important;}
+  .design-slider{position: relative;}
 
   .contact-us{
     background-attachment: inherit;
