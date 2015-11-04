@@ -124,7 +124,7 @@ function ProjectsCtrl($scope, metaTagsService){
       categories: ['ui-ux','software'],
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.silvia.projects.spaceshiplabs.com/',
-      images:['images/projects/silvia.jpg','images/projects/silvia2.jpg']
+      images:['images/projects/silvia.jpg','images/projects/silvia2.jpg','images/projects/silvia3.jpg','images/projects/silvia4.png','images/projects/silvia5.jpg','images/projects/silvia6.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -134,8 +134,7 @@ function ProjectsCtrl($scope, metaTagsService){
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/water2.jpg','images/projects/water.jpg']
-    }
-
+    },
   ];
 
   $scope.init();

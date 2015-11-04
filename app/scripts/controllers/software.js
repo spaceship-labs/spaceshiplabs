@@ -7,11 +7,14 @@
  * # SoftwareCtrl
  * Controller of the spaceshiplabsApp
  */
-angular.module('spaceshiplabsApp')
-  .controller('SoftwareCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+function SoftwareCtrl($scope,metaTagsService){
+  $scope.init = function(){
+    var meta = {
+      title: 'Software | SpaceshipLabs'
+    };
+    metaTagsService.setMetaTags(meta);
+  };
+  $scope.init();
+}
+SoftwareCtrl.$inject = ['$scope','metaTagsService'];
+angular.module('spaceshiplabsApp').controller('SoftwareCtrl',SoftwareCtrl);

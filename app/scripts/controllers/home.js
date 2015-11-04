@@ -7,7 +7,9 @@
  * # HomeCtrl
  * Controller of the spaceshiplabsApp
  */
-function HomeCtrl($scope, $rootScope, blogService){
+function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
+
+  metaTagsService.setMetaTags();
 
   $scope.getRecentPosts = function(){
     blogService.getRecentEntries(3).then(function(entries){
@@ -89,5 +91,5 @@ function HomeCtrl($scope, $rootScope, blogService){
 }
 
 angular.module('spaceshiplabsApp').controller('HomeCtrl',HomeCtrl);
-HomeCtrl.$inject = ['$scope', '$rootScope', 'blogService'];
+HomeCtrl.$inject = ['$scope', '$rootScope', 'blogService', 'metaTagsService'];
 

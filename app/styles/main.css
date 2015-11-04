@@ -2700,7 +2700,9 @@ input:-webkit-autofill {
 
 @media screen and (max-width: 960px){
   .toolbar-head nav > a {font-size: 11px}
-
+  .toolbar-head .md-toolbar-tools{
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 750px){
@@ -2816,6 +2818,10 @@ input:-webkit-autofill {
   .container h1{font-size: 38px;}
 
   .section-title h1{font-size: 34px;}
+  .toolbar-head .logo img{
+    max-width: 140px;
+    margin-left: 20px;
+  }
 
   /*-----------/
     #TEAM
