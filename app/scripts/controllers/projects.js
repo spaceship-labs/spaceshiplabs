@@ -83,7 +83,7 @@ function ProjectsCtrl($scope, metaTagsService){
     },
 
     {
-      type:'UI/UX Design & Software',
+      type:'UI/UX Design',
       name:'Justiti',
       slug:'justiti',
       categories: ['ui-ux'],
@@ -119,10 +119,10 @@ function ProjectsCtrl($scope, metaTagsService){
       images:['images/projects/caribemaya/1.jpg', 'images/projects/caribemaya/2.jpg']
     },
     {
-      type:'UI/UX Design & Software',
+      type:'UI/UX Design & Branding',
       name:'Silvia Ascencio',
       slug:'silvia-ascencio',
-      categories: ['ui-ux','software'],
+      categories: ['ui-ux','branding'],
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.silvia.projects.spaceshiplabs.com/',
       images:['images/projects/silvia/1.jpg','images/projects/silvia/2.jpg','images/projects/silvia/3.jpg','images/projects/silvia/4.jpg','images/projects/silvia/5.jpg','images/projects/silvia/6.jpg']
@@ -146,28 +146,28 @@ function ProjectsCtrl($scope, metaTagsService){
       images:['images/projects/brightsidesolutions/1.jpg', 'images/projects/brightsidesolutions/2.jpg', 'images/projects/brightsidesolutions/3.jpg']
     },
     {
-      type:'UI/UX Design & Software',
+      type:'Branding',
       name:'Travcy',
       slug:'travcy',
-      categories: ['ui-ux','software'],
+      categories: ['branding'],
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/travcy/1.jpg', 'images/projects/travcy/2.jpg', 'images/projects/travcy/3.jpg']
     },
     {
-      type:'UI/UX Design & Software',
+      type:'Branding',
       name:'Travelite',
       slug:'travelite',
-      categories: ['ui-ux','software'],
+      categories: ['branding'],
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/travelite/1.jpg', 'images/projects/travelite/2.jpg', 'images/projects/travelite/3.jpg']
     },
     {
-      type:'UI/UX Design & Software',
+      type:'Branding',
       name:'AirportCab',
       slug:'AirportCab',
-      categories: ['ui-ux','software'],
+      categories: ['branding'],
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/airportcab/1.jpg', 'images/projects/airportcab/2.jpg', 'images/projects/airportcab/3.jpg']
