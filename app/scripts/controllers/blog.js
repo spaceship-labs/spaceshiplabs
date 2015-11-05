@@ -27,7 +27,8 @@ function BlogCtrl($scope, $routeParams, blogService, metaTagsService){
 
   $scope.init = function(){
     var meta = {
-      title: 'Blog | SpaceshipLabs'
+      title: 'Noticias del mundo Spaceship Labs | SpaceshipLabs',
+      description: 'Conoce todo lo que rodea al mundo Spaceship Labs en nuestro blog'
     };
     metaTagsService.setMetaTags(meta);
 

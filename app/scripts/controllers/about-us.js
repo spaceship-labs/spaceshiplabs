@@ -10,7 +10,8 @@
 function AboutUsCtrl($scope,metaTagsService){
   $scope.init = function(){
     var meta = {
-      title: 'Acerca de nosotros | SpaceshipLabs'
+      title: 'Acerca de Spaceship Labs | SpaceshipLabs',
+      description: 'Diseñamos y desarrollamos software para todo tipo de plataformas y dispositivos que no solo funcionan bien, si no que se ve bien'
     };
     metaTagsService.setMetaTags(meta);
   };

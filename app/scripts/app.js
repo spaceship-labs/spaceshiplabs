@@ -37,12 +37,12 @@ angular
         controller: 'HomeCtrl',
         controllerAs: 'home'
       })
-      .when('/about-us', {
+      .when('/acerca-de-nosotros', {
         templateUrl: 'views/about-us.html',
         controller: 'AboutUsCtrl',
         controllerAs: 'aboutUs'
       })
-      .when('/awards', {
+      .when('/prensa', {
         templateUrl: 'views/awards.html',
         controller: 'AwardsCtrl',
         controllerAs: 'awards'
@@ -87,22 +87,22 @@ angular
         controller: 'SingleCtrl',
         controllerAs: 'single'
       })
-      .when('/team', {
+      .when('/nuestro-equipo', {
         templateUrl: 'views/team.html',
         controller: 'TeamCtrl',
         controllerAs: 'team'
       })
-      .when('/projects', {
+      .when('/proyectos', {
         templateUrl: 'views/projects.html',
         controller: 'ProjectsCtrl',
         controllerAs: 'projects'
       })
-      .when('/projects/:slug', {
+      .when('/proyectos/:slug', {
         templateUrl: 'views/projects.html',
         controller: 'ProjectsCtrl',
         controllerAs: 'projects'
       })
-      .when('/contact', {
+      .when('/contacto', {
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl',
         controllerAs: 'contact'

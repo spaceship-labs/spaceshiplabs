@@ -40,27 +40,30 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
   $scope.projects = [
     {
       type:'UI/UX Design & Software',
+      slug: 'mejora-tu-escuela',
       categories: ['ui-ux','software'],
       name:'Mejora tu escuela',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.mejoratuescuela.org/',
-      images:['images/projects/mejora4.jpg','images/projects/mejora3.jpg','images/projects/mejora2.jpg','images/projects/mejora.jpg']
+      images:['images/projects/mejoratuescuela/1.jpg','images/projects/mejoratuescuela/2.jpg','images/projects/mejoratuescuela/3.jpg','images/projects/mejoratuescuela/4.jpg']
     },
     {
       type:'UI/UX Design & Software',
+      slug: 'airportcun',
       categories: ['ui-ux','software','branding'],
       name:'Airportcun',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://airportcun.com/',
-      images:['images/projects/air4.jpg','images/projects/air3.jpg','images/projects/air2.jpg','images/projects/air.jpg']
+      images:['images/projects/airport/1.jpg','images/projects/airport/2.jpg','images/projects/airport/3.jpg','images/projects/airport/4.jpg']
     },
     {
       type:'UI/UX Design & Software',
       name:'Viajes Claros',
+      slug:'viajesclaros',
       categories: ['ui-ux','software'],
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.viajesclaros.ifai.mx/',
-      images:['images/projects/viajes4.jpg','images/projects/viajes3.jpg','images/projects/viajes2.jpg','images/projects/viajes.jpg']
+      images:['images/projects/viajesclaros/1.jpg','images/projects/viajesclaros/2.jpg','images/projects/viajesclaros/3.jpg', 'images/projects/viajesclaros/4.jpg']
     },
   ];
 

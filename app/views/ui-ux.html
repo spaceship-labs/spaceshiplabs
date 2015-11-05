@@ -3,7 +3,7 @@
     <div class="wrapper-icon">
       <i class="icon-iu wow zoomIn" ></i>
     </div>
-    <h1>UIX &amp; Design</h1>
+    <h1>UI/UX &amp; Design</h1>
     <h2>Un buen software debe ir acompañado de una buena interfaz y una buena marca de una buena imagen visual.</h2>
   </div>
 </div>
@@ -54,7 +54,7 @@
           </p>
         </div>
       </div>
-      <div flex="50" class="image-sketch" flex-sm="100">
+      <div flex="50" ng-style="{ 'background-image' : 'url('+ sketchs[sketchSliderIndex] +')' }" class="image-sketch" flex-sm="100">
       </div>
     </div>
   </section>
@@ -72,7 +72,14 @@
   <section class="info-block branding-section">
     <div class="container container-xxlg nopadding" layout="row" layout-sm="column">
       <div flex="50" flex-sm="100">
-        <img class="branding-img" src="images/justiti.png" alt="">
+        <div class="branding-slider">
+          <img
+            ng-repeat="demo in demos track by $index"
+            class="branding-img"
+            ng-class="{'branding-img-active': $index === brandingSliderIndex}"
+            ng-src="{{demo}}"
+            alt="">
+        </div>
       </div>
       <div flex="50" flex-sm="100">
         <div class="container">

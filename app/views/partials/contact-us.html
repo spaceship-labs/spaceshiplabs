@@ -63,8 +63,8 @@
       <p class="contact-form-message contact-form-message-error" ng-show="contactForm.name.$error.required"><span>*Ingresa tu nombre.</span></p>
       <p class="contact-form-message contact-form-message-error" ng-show="contactForm.message.$error.required"><span>*Ingresa un mensaje.</span></p>
     </section>-->
-    <p class="contact-form-message" ng-show="emailSent"><span>Gracias por enviar tu mensaje.</span></p>
-    <p class="contact-form-message contact-form-message-error" ng-show="contactError"><span>*Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
+    <p class="contact-form-message contact-form-final-message" ng-show="emailSent"><span><i class="icon-about"></i> Gracias por enviar tu mensaje.</span></p>
+    <p class="contact-form-message contact-form-message-error contact-form-final-message" ng-show="contactError"><span>*Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
 
     <div class="social-icons">
       <a

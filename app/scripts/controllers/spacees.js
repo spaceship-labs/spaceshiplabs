@@ -10,7 +10,8 @@
 function SpaceesCtrl($scope,metaTagsService){
   $scope.init = function(){
     var meta = {
-      title: 'SpaceEs | SpaceshipLabs'
+      title: 'SpaceEs | SpaceshipLabs',
+      description: 'Plataforma de gestión empresarial flexible y robusta de última generación que te ayudara a maximizar la eficiencia de tu negocio.'
     };
     metaTagsService.setMetaTags(meta);
   };
