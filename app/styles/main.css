@@ -1806,6 +1806,7 @@ input:-webkit-autofill {
 .info-wrap-ui .info-block-ux-design{
   overflow: hidden;
 }
+.info-wrap-ui .info-block-ux-design h2{text-align: left;}
 .info-wrap-ui .screens-wrapper{
   position: relative;
   min-height: 500px;
@@ -1814,21 +1815,22 @@ input:-webkit-autofill {
   position: absolute;
   right: 0;
   top: 0;
+  max-width: 80%;
 }
 .screens-wrapper .screen-m1{
   z-index: 4;
-  right: 0%;
+  right: 30%;
   top: 30%;
 }
 .screens-wrapper .screen-m2{
   z-index: 3;
-  right: -10%;
+  right: 10%;
   top: 20%;
 
 }
 .screens-wrapper .screen-m3{
   z-index: 2;
-  right: -20%;
+  right: -10%;
   top: 10%;
 }
 .screens-wrapper .screen-m4{
