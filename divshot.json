@@ -2,9 +2,11 @@
   "name": "spaceshiplabs",
   "root": "dist",
   "prerender" : true,
-  "routes": {
-    "**": "index.html"
-  },
+  "routes": [
+      {"/json/email-success.json": "/json/email-success.json"},
+      {"/json/email-failure.json": "/json/email-failure.json"},
+      {"**": "index.html"}
+  ],
   "clean_urls": true,
   "error_page": "404.html",
   "forms": {
