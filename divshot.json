@@ -9,7 +9,7 @@
   "error_page": "404.html",
   "forms": {
     "contact": {
-      "to": "admin@spaceshiplabs.com",
+      "to": "luis19prz@gmail.com",
       "from": "{{email}}",
       "replyTo": "{{name}} <{{email}}>",
       "subject": "SpaceshipLabs website contact, received from {{name}}",
