@@ -153,12 +153,13 @@ angular
       offset: 100, // how early you want to load image (default = 100)
       errorClass: 'error', // in case of loading image failure what class should be added (default = null)
       successClass: 'lazy-load-complete', // in case of loading image success what class should be added (default = null)
-      onError: function(image){}, // function fired on loading error
+      /*onError: function(image){}, // function fired on loading error
       onSuccess: function(image){
         console.log('done');
         console.log(image.$elem.attr('src'));
         console.log(image);
       }, // function fired on loading success
+      */
     });
 
   });
