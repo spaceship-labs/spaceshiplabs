@@ -18,20 +18,24 @@ function UiUxCtrl($scope, $interval,metaTagsService){
 
     $scope.designSliderIndex = 0;
     $scope.logos = [
-      'images/open_data.png',
-      'images/slack.png'
+      'images/justiti-logo.png',
+      'images/travelite-logo.png',
+      'images/travcy-logo.png',
+
     ];
 
     $scope.brandingSliderIndex = 0;
     $scope.demos = [
       'images/justiti.png',
-      'images/justiti.png',
+      'images/airport-mock.png',
     ];
 
     $scope.sketchSliderIndex = 0;
     $scope.sketchs = [
       'images/sketch.jpg',
-      'images/sketch.png'
+      'images/sketch1.jpg',
+      'images/sketch2.jpg',
+      'images/sketch3.jpg',
     ];
 
     $scope.designSliderInterval = $interval($scope.moveNextDesignSlider, 5000);
@@ -64,7 +68,7 @@ function UiUxCtrl($scope, $interval,metaTagsService){
   };
 
   $scope.moveNextSketchSlider = function(){
-    if($scope.sketchSliderIndex < $scope.logos.length-1){
+    if($scope.sketchSliderIndex < $scope.sketchs.length-1){
       $scope.sketchSliderIndex++;
     }else{
       $scope.sketchSliderIndex  = 0;

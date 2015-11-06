@@ -57,14 +57,12 @@
           <section layout="row" layout-align="center center" class="projects-categories">
             <a
               ng-class="{'project-category-active': currentCategory == 'ui-ux'}"
-              ng-click="getProjectsByCategory('ui-ux')"
-              href="" class="project-category">
+              href="/proyectos/categoria/ui-ux" class="project-category">
               <span>UI/UX Design</span>
             </a>
             <a
               ng-class="{'project-category-active': currentCategory == 'branding'}"
-              ng-click="getProjectsByCategory('branding')"
-              href="" class="project-category">
+              href="/proyectos/categoria/branding" class="project-category">
               <span>Branding</span>
             </a>
             <!--<a
@@ -127,7 +125,7 @@
     </div>
 
 		<ul class="projects-slider-bullets">
-			<li ng-repeat="item in getNumber(projectsCount) track by $index">
+			<li ng-repeat="item in getNumber(projects.length) track by $index">
 				<a href="" ng-class="{'active-bullet' : selectedIndexSlide == $index  }" ng-click="moveToProject($index)"></a>
 			</li>
 		</ul>

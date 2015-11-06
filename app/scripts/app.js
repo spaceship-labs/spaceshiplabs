@@ -102,6 +102,16 @@ angular
         controller: 'ProjectsCtrl',
         controllerAs: 'projects'
       })
+      .when('/proyectos/categoria/:category', {
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsCtrl',
+        controllerAs: 'projects'
+      })
+      .when('/proyectos/categoria/:category/:slug', {
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsCtrl',
+        controllerAs: 'projects'
+      })
       .when('/contacto', {
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl',

@@ -1816,11 +1816,29 @@ input:-webkit-autofill {
 .info-wrap-ui .design-slider-wrap{position: relative;}
 .info-wrap-ui .design-slider-wrap,
 .info-wrap-ui .logo-design{min-height: 420px;}
+.info-wrap-ui .image-sketch-wrap{
+  min-height: 394px;
+  position: relative;
+}
 .info-wrap-ui .image-sketch{
   background-image: url(../images/sketch.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 394px;
+  background-position: center center;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}
+.info-wrap-ui .image-sketch-active{
+  opacity: 1;
 }
 .info-wrap-ui .info-block-ux-design{
   overflow: hidden;

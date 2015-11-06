@@ -41,7 +41,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
     {
       type:'UI/UX Design & Software',
       slug: 'mejora-tu-escuela',
-      categories: ['ui-ux','software'],
+      category: 'ui-ux',
       name:'Mejora tu escuela',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.mejoratuescuela.org/',
@@ -50,7 +50,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
     {
       type:'UI/UX Design & Software',
       slug: 'airportcun',
-      categories: ['ui-ux','software','branding'],
+      category: 'ui-ux',
       name:'Airportcun',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://airportcun.com/',
@@ -60,7 +60,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       type:'UI/UX Design & Software',
       name:'Viajes Claros',
       slug:'viajesclaros',
-      categories: ['ui-ux','software'],
+      category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.viajesclaros.ifai.mx/',
       images:['images/projects/viajesclaros/1.jpg','images/projects/viajesclaros/2.jpg','images/projects/viajesclaros/3.jpg', 'images/projects/viajesclaros/4.jpg']

@@ -54,7 +54,13 @@
           </p>
         </div>
       </div>
-      <div flex="50" ng-style="{ 'background-image' : 'url('+ sketchs[sketchSliderIndex] +')' }" class="image-sketch" flex-sm="100">
+      <div class="image-sketch-wrap" flex="50" flex-sm="100">
+        <div
+          class="image-sketch"
+          ng-repeat="sketch in sketchs track by $index"
+          ng-class="{'image-sketch-active': $index === sketchSliderIndex}"
+          ng-style="{ 'background-image' : 'url('+ sketch +')' }" class="image-sketch">
+        </div>
       </div>
     </div>
   </section>
