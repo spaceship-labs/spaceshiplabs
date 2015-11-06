@@ -25,7 +25,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Mejora tu escuela',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.mejoratuescuela.org/',
-      images:['images/projects/mejoratuescuela/1.jpg','images/projects/mejoratuescuela/2.jpg','images/projects/mejoratuescuela/3.jpg','images/projects/mejoratuescuela/4.jpg']
+      images:['images/projects/mejoratuescuela1.jpg','images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -34,7 +34,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Airportcun',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://airportcun.com/',
-      images:['images/projects/airport/1.jpg','images/projects/airport/2.jpg','images/projects/airport/3.jpg','images/projects/airport/4.jpg']
+      images:['images/projects/airport1.jpg','images/projects/airport2.jpg','images/projects/airport3.jpg','images/projects/airport4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -43,7 +43,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.viajesclaros.ifai.mx/',
-      images:['images/projects/viajesclaros/1.jpg','images/projects/viajesclaros/2.jpg','images/projects/viajesclaros/3.jpg', 'images/projects/viajesclaros/4.jpg']
+      images:['images/projects/viajesclaros1.jpg','images/projects/viajesclaros2.jpg','images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -52,7 +52,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'https://www.consejosano.com/',
-      images:['images/projects/consejosano/1.jpg','images/projects/consejosano/2.jpg','images/projects/consejosano/3.jpg', 'images/projects/consejosano/4.jpg']
+      images:['images/projects/consejosano1.jpg','images/projects/consejosano2.jpg','images/projects/consejosano3.jpg', 'images/projects/consejosano4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -61,7 +61,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://nuevopaintball.com/',
-      images:['images/projects/mrgotcha/1.jpg','images/projects/mrgotcha/2.jpg','images/projects/mrgotcha/3.jpg','images/projects/mrgotcha/4.jpg']
+      images:['images/projects/mrgotcha1.jpg','images/projects/mrgotcha2.jpg','images/projects/mrgotcha3.jpg','images/projects/mrgotcha4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -70,7 +70,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://capshia.com/',
-      images:['images/projects/capshia/1.jpg','images/projects/capshia/2.jpg']
+      images:['images/projects/capshia1.jpg','images/projects/capshia2.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -79,7 +79,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://bit.ly/1lD0KLG',
-      images:['images/projects/seawalls/1.jpg', 'images/seawalls/capshia/2.jpg']
+      images:['images/projects/seawalls1.jpg', 'images/seawalls/capshia2.jpg']
     },
 
     {
@@ -89,7 +89,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://justiti.projects.spaceshiplabs.com/',
-      images:['images/projects/justiti/1.jpg','images/projects/justiti/2.jpg']
+      images:['images/projects/justiti1.jpg','images/projects/justiti2.jpg']
     },
     {
       type:'Branding',
@@ -98,7 +98,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'branding',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://justiti.projects.spaceshiplabs.com/',
-      images:['images/projects/justiti/3.jpg','images/projects/justiti/4.jpg','images/projects/justiti/5.jpg']
+      images:['images/projects/justiti3.jpg','images/projects/justiti4.jpg','images/projects/justiti5.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -107,7 +107,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.thejuiceryboutique.com/',
-      images:['images/projects/juicery/1.jpg','images/projects/juicery/2.jpg']
+      images:['images/projects/juicery1.jpg','images/projects/juicery2.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -116,7 +116,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.bosques.projects.spaceshiplabs.com/',
-      images:['images/projects/bosques/1.jpg','images/projects/bosques/2.jpg']
+      images:['images/projects/bosques1.jpg','images/projects/bosques2.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -125,7 +125,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://caribemaya.projects.spaceshiplabs.com/',
-      images:['images/projects/caribemaya/1.jpg', 'images/projects/caribemaya/2.jpg']
+      images:['images/projects/caribemaya1.jpg', 'images/projects/caribemaya2.jpg']
     },
     {
       type:'UI/UX Design',
@@ -134,7 +134,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.silvia.projects.spaceshiplabs.com/',
-      images:['images/projects/silvia/4.jpg','images/projects/silvia/5.jpg']
+      images:['images/projects/silvia4.jpg','images/projects/silvia5.jpg']
     },
     {
       type:'Branding',
@@ -143,7 +143,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'branding',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.silvia.projects.spaceshiplabs.com/',
-      images:['images/projects/silvia/1.jpg','images/projects/silvia/2.jpg','images/projects/silvia/3.jpg','images/projects/silvia/6.jpg']
+      images:['images/projects/silvia1.jpg','images/projects/silvia2.jpg','images/projects/silvia3.jpg','images/projects/silvia6.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -152,16 +152,16 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://cancunwatertours.herokuapp.com/',
-      images:['images/projects/watertours/1.jpg', 'images/projects/watertours/2.jpg']
+      images:['images/projects/watertours1.jpg', 'images/projects/watertours2.jpg']
     },
     {
-      type:'UI/UX Design & Software',
+      type:'Branding',
       name:'Brightside Solutions',
       slug:'brightside-solutions',
-      category: 'ui-ux',
+      category: 'branding',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://cancunwatertours.herokuapp.com/',
-      images:['images/projects/brightsidesolutions/1.jpg', 'images/projects/brightsidesolutions/2.jpg', 'images/projects/brightsidesolutions/3.jpg']
+      images:['images/projects/brightsidesolutions1.jpg', 'images/projects/brightsidesolutions2.jpg', 'images/projects/brightsidesolutions3.jpg']
     },
     {
       type:'Branding',
@@ -170,7 +170,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'branding',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://cancunwatertours.herokuapp.com/',
-      images:['images/projects/travcy/1.jpg', 'images/projects/travcy/2.jpg', 'images/projects/travcy/3.jpg']
+      images:['images/projects/travcy1.jpg', 'images/projects/travcy2.jpg', 'images/projects/travcy3.jpg']
     },
     {
       type:'Branding',
@@ -179,7 +179,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'branding',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://cancunwatertours.herokuapp.com/',
-      images:['images/projects/travelite/1.jpg', 'images/projects/travelite/2.jpg', 'images/projects/travelite/3.jpg']
+      images:['images/projects/travelite1.jpg', 'images/projects/travelite2.jpg', 'images/projects/travelite3.jpg']
     },
     {
       type:'Branding',
@@ -188,7 +188,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'branding',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://cancunwatertours.herokuapp.com/',
-      images:['images/projects/airportcab/1.jpg', 'images/projects/airportcab/2.jpg', 'images/projects/airportcab/3.jpg']
+      images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg']
     },
   ];
 

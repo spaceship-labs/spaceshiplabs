@@ -22,10 +22,33 @@
 
       <div flex="50" flex-md="100" flex-sm="100">
         <div class="screens-wrapper container-smd">
-          <img src="images/landing4.png" class="screen-m screen-m4 wow slideInUp" data-wow-duration="0.4s"  alt="">
-          <img src="images/landing3.png" class="screen-m screen-m3 wow slideInUp" data-wow-duration="0.4s" data-wow-delay="0.2s" data-wow-delay alt="">
-          <img src="images/landing2.png" class="screen-m screen-m2 wow slideInUp" data-wow-duration="0.4s" data-wow-delay="0.4s" alt="">
-          <img src="images/landing1.png" class="screen-m screen-m1 wow slideInUp" data-wow-duration="0.4s" data-wow-delay="0.6s" alt="">
+          <img
+            src='images/loader.gif'
+            lazy-img='images/landing4.png'
+            class="screen-m screen-m4 wow slideInUp"
+            data-wow-duration="0.4s"
+            alt="">
+          <img
+            src='images/loader.gif'
+            lazy-img='images/landing3.png'
+            class="screen-m screen-m3 wow slideInUp"
+            data-wow-duration="0.4s"
+            data-wow-delay="0.2s"
+            data-wow-delay alt="">
+          <img
+            src='images/loader.gif'
+            lazy-img='images/landing2.png'
+            class="screen-m screen-m2 wow slideInUp"
+            data-wow-duration="0.4s"
+            data-wow-delay="0.4s"
+            alt="">
+          <img
+            src='images/loader.gif'
+            lazy-img='images/landing1.png'
+            class="screen-m screen-m1 wow slideInUp"
+            data-wow-duration="0.4s"
+            data-wow-delay="0.6s"
+            alt="">
         </div>
       </div>
 
@@ -56,9 +79,10 @@
       </div>
       <div class="image-sketch-wrap" flex="50" flex-sm="100">
         <div
-          class="image-sketch"
+          class="image-sketch lazy-loader-gif"
           ng-repeat="sketch in sketchs track by $index"
           ng-class="{'image-sketch-active': $index === sketchSliderIndex}"
+          lazy-img='{{sketch}}'
           ng-style="{ 'background-image' : 'url('+ sketch +')' }" class="image-sketch">
         </div>
       </div>
@@ -83,7 +107,8 @@
             ng-repeat="demo in demos track by $index"
             class="branding-img"
             ng-class="{'branding-img-active': $index === brandingSliderIndex}"
-            ng-src="{{demo}}"
+            ng-src="images/loader.gif"
+            lazy-img="{{demo}}"
             alt="">
         </div>
       </div>
@@ -144,7 +169,8 @@
             class="design-slide">
             <img
               class="no-margin"
-              ng-src="{{logo}}"
+              ng-src="images/loader.gif"
+              lazy-img="{{logo}}"
               alt="">
           </div>
           <div class="design-slider-bullets">

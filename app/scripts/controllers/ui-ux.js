@@ -10,7 +10,9 @@
 function UiUxCtrl($scope, $interval,metaTagsService){
   $scope.init = function(){
     var meta = {
-      title: 'UI/UX | SpaceshipLabs'
+      title: 'UI/UX & Design | SpaceshipLabs',
+      description: 'Un buen software debe ir acompañado de una buena interfaz y una buena marca de una buena imagen visual.',
+
     };
 
     metaTagsService.setMetaTags(meta);
@@ -29,6 +31,12 @@ function UiUxCtrl($scope, $interval,metaTagsService){
       'images/justiti.png',
       'images/airport-mock.png',
     ];
+    /*
+    $scope.demos = [
+      'http://staging.spaceshiplabs.divshot.io/images/justiti.70f07df5.png',
+      'http://staging.spaceshiplabs.divshot.io/images/airport-mock.7f588307.png'
+    ];*/
+
 
     $scope.sketchSliderIndex = 0;
     $scope.sketchs = [
@@ -37,6 +45,13 @@ function UiUxCtrl($scope, $interval,metaTagsService){
       'images/sketch2.jpg',
       'images/sketch3.jpg',
     ];
+    /*
+    $scope.sketchs = [
+      'http://staging.spaceshiplabs.divshot.io/images/sketch1.b171c2a5.jpg',
+      'http://staging.spaceshiplabs.divshot.io/images/sketch2.51fca493.jpg',
+      'http://staging.spaceshiplabs.divshot.io/images/sketch3.45c3e997.jpg',
+
+    ] ;*/
 
     $scope.designSliderInterval = $interval($scope.moveNextDesignSlider, 5000);
     $scope.brandingSliderInterval = $interval($scope.moveNextBrandingSlider, 5000);

@@ -156,6 +156,13 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   min-height: 400px;
 }
 
+/*---------/
+  #LAZYIMG
+/*---------*/
+*[lazy-img].lazy-loader-gif:not(.lazy-load-complete){
+  background: url(../images/loader.gif) center no-repeat!important;
+}
+
 /*-------------/
   #ROUNDED-BTN
 /*------------*/
@@ -1821,7 +1828,7 @@ input:-webkit-autofill {
   position: relative;
 }
 .info-wrap-ui .image-sketch{
-  background-image: url(../images/sketch.jpg);
+  /*background-image: url(../images/sketch.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1852,7 +1859,7 @@ input:-webkit-autofill {
   position: absolute;
   right: 0;
   top: 0;
-  max-width: 80%;
+  max-width: 65%;
 }
 .screens-wrapper .screen-m1{
   z-index: 4;
@@ -1861,18 +1868,18 @@ input:-webkit-autofill {
 }
 .screens-wrapper .screen-m2{
   z-index: 3;
-  right: 10%;
+  right: 20%;
   top: 20%;
 
 }
 .screens-wrapper .screen-m3{
   z-index: 2;
-  right: -10%;
+  right: 10%;
   top: 10%;
 }
 .screens-wrapper .screen-m4{
   z-index: 1;
-  right: -30%;
+  right: 0%;
   top: 0%;
 }
 
@@ -1928,10 +1935,13 @@ input:-webkit-autofill {
   height: 100%;
   min-height: 710px;
   overflow: hidden;
+  position: relative;
 }
 .branding-slider .branding-img{
   position: absolute;
   left: 0;
+  right: 0;
+  margin: 0 auto;
   top: 50%;
   max-width: 100%;
   opacity: 0;

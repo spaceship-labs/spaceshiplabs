@@ -10,7 +10,8 @@
 function SoftwareCtrl($scope,metaTagsService){
   $scope.init = function(){
     var meta = {
-      title: 'Software | SpaceshipLabs'
+      title: 'Desarrollo de software en Spaceship Labs. | SpaceshipLabs',
+      description: 'Desarrollo de software usando metodologías ágiles en constante comunicacion con el cliente.'
     };
     metaTagsService.setMetaTags(meta);
   };

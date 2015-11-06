@@ -10,7 +10,8 @@
 function MarketingCtrl($scope,metaTagsService){
   $scope.init = function(){
     var meta = {
-      title: 'Marketing | SpaceshipLabs'
+      title: 'Marketing para tu empresa | SpaceshipLabs',
+      description: 'SEO, Social Media, Branding y campañias creativas para tu empresa.'
     };
     metaTagsService.setMetaTags(meta);
   };
