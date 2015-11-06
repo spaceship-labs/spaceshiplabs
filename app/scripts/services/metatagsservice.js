@@ -20,7 +20,7 @@ angular.module('spaceshiplabsApp')
       var defaultParams = {
         title:'SpaceshipLabs - Diseño de páginas web, aplicaciones móviles, Diseño Gráfico y Software en General',
         description: 'Desarrollamos software en la nube, aplicaciones moviles y diseño web en general para cualquier tipo de negocio o industria.',
-        image: domainUrl+'/images/logo-og.png'
+        image: domainUrl+'/images/default-og.jpg'
       };
 
       if(!params){

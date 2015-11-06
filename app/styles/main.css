@@ -155,6 +155,10 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
 .contact-us{
   min-height: 400px;
 }
+.center-content{
+  text-align: center
+}
+.justify-text{text-align: justify;}
 
 /*---------/
   #LAZYIMG
@@ -364,9 +368,6 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   max-width: 264px;
 }
 
-.center-content{
-  text-align: center
-}
 
 .container-alt{
   background: #3E3E3E;
@@ -2284,6 +2285,7 @@ input:-webkit-autofill {
   position: absolute;
   left: 0;
   width: 100%;
+  height: 100%;
 }
 .award-content{
   background: rgb(11,217,197); /* Old browsers */
@@ -2676,7 +2678,7 @@ input:-webkit-autofill {
 
 .pagination-blog a:hover,
 .pagination-blog .current-page{
-  background: #1C7EE1;
+  background: rgb(0, 197, 216);
   color: #fff;
 }
 .pagination-blog a:hover,
@@ -2838,6 +2840,13 @@ input:-webkit-autofill {
 
   .section-title{padding-top: 78px}
   .section-title-blog{padding-bottom: 94px;}
+
+  /*---------/
+    #AWARDS
+  /*--------*/
+  .award-content{min-height: 320px;}
+  .award-content-inner{min-height: 300px;}
+
 
   /*---------/
     #PROJECTS-SLIDER

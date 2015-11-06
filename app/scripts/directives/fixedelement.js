@@ -6,19 +6,38 @@
  * @description
  * # fixedElement
  */
-angular.module('spaceshiplabsApp')
-  .directive('fixedElement', function ($window) {
-    return function(scope, element) {
-        //Initial position
-        var offsetY = element.offset().top;
+(function(){
+  angular.module('spaceshiplabsApp')
+    .directive('fixedElement', function ($window, $timeout) {
+      return function(scope, element) {
+          //Initial position
+          var offsetY = element.offset().top;
 
-        angular.element($window).bind("scroll", function() {
-             if (this.pageYOffset >= offsetY) {
-                 scope.scrolled = true;
-             } else {
-                 scope.scrolled = false;
-             }
-            scope.$apply();
-        });
-    };
-  });
+          scope.$on('$viewContentLoaded', function() {
+            $timeout(function(){
+              offsetY = element.offset().top;
+              console.log(offsetY);
+            },500);
+          });
+
+          /*
+          scope.$on('$locationChangeSuccess', function() {
+            console.log('change');
+            offsetY = element.offset().top;
+            console.log(offsetY);
+          });*/
+
+          angular.element($window).bind("scroll", function() {
+              //console.log(offsetY);
+              //console.log(this.pageYOffset);
+               if (this.pageYOffset >= offsetY) {
+                   scope.scrolled = true;
+               } else {
+                   scope.scrolled = false;
+               }
+              scope.$apply();
+          });
+      };
+    });
+
+})();

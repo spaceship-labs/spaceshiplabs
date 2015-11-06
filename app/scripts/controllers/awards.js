@@ -11,7 +11,8 @@ function AwardsCtrl($scope,metaTagsService){
   $scope.init = function(){
     var meta = {
       title: 'Prensa y reconocimientos de Spaceship Labs | SpaceshipLabs',
-      description: 'En muy poco tiempo hemos recibido importantes menciones de prensa de nuestro trabajo y obtenido importantes premios a nivel nacional.'
+      description: 'En muy poco tiempo hemos recibido importantes menciones de prensa de nuestro trabajo y obtenido importantes premios a nivel nacional.',
+      image: $scope.domainUrl + '/images/prensa-og.jpg'
     };
     metaTagsService.setMetaTags(meta);
   };

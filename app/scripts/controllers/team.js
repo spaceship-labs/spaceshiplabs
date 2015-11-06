@@ -11,7 +11,8 @@ function TeamCtrl($scope,metaTagsService){
   $scope.init = function(){
     var meta = {
       title: 'Conoce a nuestro equipo espacial',
-      description: 'Diseñadores, programadores y community managers listos para llevar a cabo tu proyecto.'
+      description: 'Diseñadores, programadores y community managers listos para llevar a cabo tu proyecto.',
+      image: $scope.domainUrl + '/images/equipo-og.jpg'
     };
     metaTagsService.setMetaTags(meta);
   };

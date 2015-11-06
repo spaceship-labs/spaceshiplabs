@@ -16,6 +16,7 @@ function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowS
     $scope.winSize = "medium";
     $scope.winSizeSingle = "medium";
     $scope.redirectCount = 0;
+    $scope.domainUrl = $location.protocol() + "://" + $location.host() + ":" + $location.port();
     windowSize.init();
     metaTagsService.setMetaTags();
 

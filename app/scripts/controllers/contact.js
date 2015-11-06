@@ -36,7 +36,8 @@ function ContactCtrl($scope, metaTagsService) {
     initialize();
     var meta = {
       title: 'Contacta a Spaceship Labs | SpaceshipLabs',
-      description: 'Envianos una señal intergalactica y te contestaremos en menos de 24 horas.'
+      description: 'Envianos una señal intergalactica y te contestaremos en menos de 24 horas.',
+      image: $scope.domainUrl + '/images/contacto-og.jpg'
     };
     metaTagsService.setMetaTags(meta);
   };

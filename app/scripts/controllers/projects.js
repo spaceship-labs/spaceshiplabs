@@ -12,7 +12,8 @@ function ProjectsCtrl($scope, metaTagsService){
   $scope.init = function(){
     var meta = {
       title: 'Proyectos de Spaceship Labs | SpaceshipLabs',
-      description: 'Conoce nuestro portafolio de proyectos de diseño grafico, branding y Diseño de UI & UX'
+      description: 'Conoce nuestro portafolio de proyectos de diseño grafico, branding y Diseño de UI & UX',
+      image: $scope.domainUrl + '/images/proyectos-og.jpg'
     };
     metaTagsService.setMetaTags(meta);
   };

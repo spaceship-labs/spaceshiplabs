@@ -75,7 +75,8 @@ angular.module('spaceshiplabsApp')
         url: queryUrl
       };
       return $http( req ).then(function(response) {
-          if(response.status === 200){
+          console.log(response);
+          if(response.status === 200 && response.data.length > 0){
             return response.data[0];
           }else{
             return {};

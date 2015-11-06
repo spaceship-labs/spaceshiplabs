@@ -12,7 +12,7 @@ function UiUxCtrl($scope, $interval,metaTagsService){
     var meta = {
       title: 'UI/UX & Design | SpaceshipLabs',
       description: 'Un buen software debe ir acompañado de una buena interfaz y una buena marca de una buena imagen visual.',
-
+      image: $scope.domainUrl + '/images/ui-og.jpg'
     };
 
     metaTagsService.setMetaTags(meta);

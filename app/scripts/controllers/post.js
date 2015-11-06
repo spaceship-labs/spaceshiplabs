@@ -18,10 +18,15 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
 
   $scope.getPost = function(){
     blogService.getSingleEntry($scope.postSlug).then(function(entry){
+      if(!entry){
+        $location.path('/');
+      }
       $scope.entry = entry;
       if(entry.content){
         //console.log($sce);
         $scope.entry.content = $sce.trustAsHtml(entry.content);
+      }else{
+        $location.path('/');
       }
       $scope.loadedPost = true;
       $scope.entryImg = '';

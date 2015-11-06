@@ -11,7 +11,8 @@ function SpaceesCtrl($scope,metaTagsService){
   $scope.init = function(){
     var meta = {
       title: 'SpaceEs | SpaceshipLabs',
-      description: 'Plataforma de gestión empresarial flexible y robusta de última generación que te ayudara a maximizar la eficiencia de tu negocio.'
+      description: 'Plataforma de gestión empresarial flexible y robusta de última generación que te ayudara a maximizar la eficiencia de tu negocio.',
+      image: $scope.domainUrl + '/images/spacees-og.jpg'
     };
     metaTagsService.setMetaTags(meta);
   };
