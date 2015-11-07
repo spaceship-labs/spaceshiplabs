@@ -2959,7 +2959,6 @@ input:-webkit-autofill {
     min-width: 116px;
   }
 
-
   .services-item h5{
     margin-top: 10px;
   }
@@ -3013,7 +3012,20 @@ input:-webkit-autofill {
   }
   .clients-slider-reel{min-height: 260px;}
   .clients-slider .client-item p{font-size: 16px;}
-  .services-items .services-item{border: none;}
+  .services-content{padding-top: 30px;}
+  .services-items{margin-top: 0;}
+  .services-items .services-item{
+    border: none;
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    margin: 20px 0;
+  }
+  .services-item .service-hover{
+    position: relative;
+    height: auto;
+  }
+  .services-item .action-btn{display: inline-block;}
   .news-item-wrapper{margin: 0 0 14px;}
 
   /*-------------/

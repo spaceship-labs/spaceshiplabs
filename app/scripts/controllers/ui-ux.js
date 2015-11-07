@@ -43,7 +43,6 @@ function UiUxCtrl($scope, $interval,metaTagsService){
       'images/sketch.jpg',
       'images/sketch1.jpg',
       'images/sketch2.jpg',
-      'images/sketch3.jpg',
     ];
     /*
     $scope.sketchs = [

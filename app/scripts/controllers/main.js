@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the spaceshiplabsApp
  */
-function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowSize){
+function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, $http, windowSize){
 
   $scope.init = function(){
     $scope.emailSent = false;
@@ -16,6 +16,7 @@ function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowS
     $scope.winSize = "medium";
     $scope.winSizeSingle = "medium";
     $scope.redirectCount = 0;
+    $scope.autoScroll = true;
     $scope.domainUrl = $location.protocol() + "://" + $location.host() + ":" + $location.port();
     windowSize.init();
     metaTagsService.setMetaTags();
@@ -32,8 +33,18 @@ function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowS
     $mdSidenav('left').close();
   };
 
+  $scope.$on('$locationChangeStart', function(evt, absNewUrl, absOldUrl) {
 
-  $scope.$on('$locationChangeStart', function() {
+    if(absOldUrl.indexOf('/proyectos') >= 0){
+      //$interval.cancel( $rootScope.sliderInterval );
+      console.log('cancelar');
+    }
+
+    if(absOldUrl.indexOf('/proyectos') >= 0 &&  absNewUrl.indexOf('/proyectos') >= 0 ) {
+      $scope.autoScroll = false;
+    }else{
+      $scope.autoScroll = true;
+    }
 
     var resetContactForm = function(){
       $scope.contactError = false;
@@ -135,5 +146,5 @@ function MainCtrl($scope, $mdSidenav, $location, metaTagsService, $http, windowS
 }
 
 angular.module('spaceshiplabsApp').controller('MainCtrl',MainCtrl);
-MainCtrl.$inject = ['$scope','$mdSidenav','$location','metaTagsService','$http','windowSize'];
+MainCtrl.$inject = ['$scope','$mdSidenav','$location','$routeParams','metaTagsService','$http','windowSize'];
 

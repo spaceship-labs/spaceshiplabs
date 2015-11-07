@@ -22,6 +22,9 @@ angular.module('spaceshiplabsApp')
 
           var projectSlug = $routeParams.slug || false;
           scope.currentCategory = $routeParams.category || false;
+          //var params = $location.search();
+
+          //console.log(params);
 
           //Hiding elements on preview mode
           if(scope.preview || typeof scope.preview !== 'undefined'){
@@ -33,39 +36,6 @@ angular.module('spaceshiplabsApp')
           scope.setUpCounter = 0;
           scope.projects = scope.allProjects;
           scope.setUp(projectSlug);
-
-
-        };
-
-        scope.getProjectBySlug = function(slug){
-          for (var i = 0; i < scope.projects.length; i++) {
-            if (scope.projects[i].slug === slug) {
-              return i;
-            }
-          }
-          return false;
-        };
-
-        $window.onfocus = function (){
-          if(scope.winSize !== 'blog'){
-            scope.sliderInterval = $interval(scope.moveNextProject, 6000);
-          }
-        };
-
-        $window.onblur = function (){
-          $interval.cancel(scope.sliderInterval);
-        };
-
-        scope.getMovingOutIndexSlide = function (selectedIndex, totalItems){
-          var movingOutIndex = -1;
-          if(selectedIndex > 0){
-            movingOutIndex = selectedIndex - 1;
-          }else{
-            movingOutIndex = totalItems-1;
-          }
-
-          return movingOutIndex;
-
         };
 
         scope.setUp = function(projectSlug){
@@ -92,9 +62,13 @@ angular.module('spaceshiplabsApp')
 
           $interval.cancel(scope.sliderInterval);
 
-          if(scope.winSize !== 'blog'){
-            scope.sliderInterval = $interval(scope.moveNextProject, 6000);
-          }
+          /*
+          //if(scope.winSize !== 'blog'){
+          if(!projectSlug){
+            //console.log()
+            //scope.sliderInterval = $interval(scope.moveNextProject, 6000);
+          }*/
+          scope.sliderInterval = $interval(scope.moveNextProject, 6000);
 
           /*if(scope.setUpCounter > 0){
             $interval.cancel(scope.sliderInterval);
@@ -104,6 +78,36 @@ angular.module('spaceshiplabsApp')
 
         };
 
+        scope.getProjectBySlug = function(slug){
+          for (var i = 0; i < scope.projects.length; i++) {
+            if (scope.projects[i].slug === slug) {
+              return i;
+            }
+          }
+          return false;
+        };
+
+        /*$window.onfocus = function (){
+          if(scope.winSize !== 'blog'){
+            scope.sliderInterval = $interval(scope.moveNextProject, 6000);
+          }
+        };
+
+        $window.onblur = function (){
+          $interval.cancel(scope.sliderInterval);
+        };*/
+
+        scope.getMovingOutIndexSlide = function (selectedIndex, totalItems){
+          var movingOutIndex = -1;
+          if(selectedIndex > 0){
+            movingOutIndex = selectedIndex - 1;
+          }else{
+            movingOutIndex = totalItems-1;
+          }
+
+          return movingOutIndex;
+
+        };
 
         scope.getNumber = function(num) {
             return new Array(num);
@@ -136,12 +140,14 @@ angular.module('spaceshiplabsApp')
       	};
 
         scope.moveNextProjectAction = function(){
+          scope.btnTriggered = true;
           $interval.cancel(scope.sliderInterval);
           scope.moveNextProject();
 
         };
 
       	scope.movePrev = function(){
+          scope.btnTriggered = true;
       		if(scope.selectedIndexSlide > 0){
 	      		scope.selectedIndexSlide--;
   				}else{
@@ -152,6 +158,7 @@ angular.module('spaceshiplabsApp')
       	};
 
         scope.moveToProject = function(index){
+          scope.btnTriggered = true;
           scope.selectedIndexSlide = index;
           $interval.cancel(scope.sliderInterval);
 
@@ -239,6 +246,7 @@ angular.module('spaceshiplabsApp')
         scope.$on(
             "$destroy",
             function() {
+                console.log('destroy');
                 $interval.cancel( scope.sliderInterval );
             }
         );

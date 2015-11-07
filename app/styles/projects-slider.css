@@ -365,4 +365,10 @@
     margin: 0 5px;
   }
 
+  .projects-slide-content .project-link{font-size: 40px;}
+
+}
+
+@media screen and (max-width: 400px){
+  .projects-slide{min-height: 530px;  }
 }
