@@ -21,10 +21,10 @@ angular.module('spaceshiplabsApp')
         scope.init = function(){
 
           var projectSlug = $routeParams.slug || false;
-          scope.currentCategory = $routeParams.category || false;
-          //var params = $location.search();
+          var params = $location.search();
 
-          //console.log(params);
+          scope.currentCategory = $routeParams.category || false;
+          scope.autoLoop = (params.move === 'false' || params.move === false) ? false : true;
 
           //Hiding elements on preview mode
           if(scope.preview || typeof scope.preview !== 'undefined'){
@@ -68,7 +68,10 @@ angular.module('spaceshiplabsApp')
             //console.log()
             //scope.sliderInterval = $interval(scope.moveNextProject, 6000);
           }*/
-          scope.sliderInterval = $interval(scope.moveNextProject, 6000);
+
+          if(scope.autoLoop){
+            scope.sliderInterval = $interval(scope.moveNextProject, 6000);
+          }
 
           /*if(scope.setUpCounter > 0){
             $interval.cancel(scope.sliderInterval);
@@ -118,7 +121,11 @@ angular.module('spaceshiplabsApp')
             if(scope.currentCategory && scope.currentCategory !== ''){
               $location.path('/proyectos/' + 'categoria/' + scope.currentCategory + '/' + scope.projects[newValue].slug );
             }else{
-              $location.path('/proyectos/' + scope.projects[newValue].slug);
+              if(scope.btnTriggered){
+                $location.path('/proyectos/' + scope.projects[newValue].slug).search('move',false);
+              }else{
+                $location.path('/proyectos/' + scope.projects[newValue].slug);
+              }
             }
           }
 
@@ -246,7 +253,6 @@ angular.module('spaceshiplabsApp')
         scope.$on(
             "$destroy",
             function() {
-                console.log('destroy');
                 $interval.cancel( scope.sliderInterval );
             }
         );
