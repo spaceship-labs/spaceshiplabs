@@ -34,7 +34,6 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       name:'Airportcun',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      //url: 'http://airportcun.com/',
       images:['images/projects/airport2.jpg','images/projects/airport1.jpg','images/projects/airport3.jpg','images/projects/airport4.jpg']
     },
     {

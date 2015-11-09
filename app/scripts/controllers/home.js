@@ -45,7 +45,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       name:'Mejora tu escuela',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.mejoratuescuela.org/',
-      images:['images/projects/mejoratuescuela1.jpg','images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
+      images:['images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela1.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -53,7 +53,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       slug:'viajesclaros',
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      images:['images/projects/viajesclaros1.jpg','images/projects/viajesclaros2.jpg','images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
+      images:['images/projects/viajesclaros2.jpg','images/projects/viajesclaros1.jpg','images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
     },
     {
       type:'Branding',
@@ -61,6 +61,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       slug:'justiti-branding',
       category: 'branding',
       description:'Diseño de Logotipo y Diseño web, para proyecto que facilita el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
+      //url: 'http://justiti.projects.spaceshiplabs.com/',
       images:['images/projects/justiti3.jpg','images/projects/justiti4.jpg','images/projects/justiti5.jpg']
     },
     {
@@ -79,7 +80,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.thejuiceryboutique.com/',
-      images:['images/projects/juicery1.jpg','images/projects/juicery2.jpg']
+      images:['images/projects/juicery2.jpg','images/projects/juicery1.jpg']
     },
     {
       type:'Branding',
@@ -87,7 +88,6 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       slug:'airportcab',
       category: 'branding',
       description:'Creación y desarrollo de marca para empresa de transportación turística.',
-      //url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg',  'images/projects/airportcab4.jpg']
     }
   ];

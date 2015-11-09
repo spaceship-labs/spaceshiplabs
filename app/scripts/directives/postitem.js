@@ -66,7 +66,7 @@ angular.module('spaceshiplabsApp')
           var style = {};
           if(post.featured_image){
 
-            if(size === 'full'){
+            if(size === 'full' || !post.featured_image.attachment_meta.sizes[size]){
               style = {
                 'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
               };
@@ -77,9 +77,16 @@ angular.module('spaceshiplabsApp')
             }
 
             if(size !== 'full'){
-              style = {
-                'background': 'url(' + blogService.blogUrl + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
-              };
+              if(!post.featured_image.attachment_meta.sizes[size]){
+                style = {
+                  'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
+                };
+              }
+              else{
+                style = {
+                  'background': 'url(' + blogService.blogUrl + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
+                };
+              }
             }
 
           }else if(post.attachments){

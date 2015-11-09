@@ -1,4 +1,4 @@
-/*
+f/*
 Theme Name: Spaceshiplabs
 Theme URI: http://Spaceshiplabs.com/
 Author: Spaceshiplabs
@@ -1010,7 +1010,8 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #SPACEES-LANDING
 /*--------------*/
 .spacees-landing{
-  background: #3E3E3E url(../images/mockup.png) right center no-repeat;
+  background: #3E3E3E ;
+  /*url(../images/mockup.png) right center no-repeat;*/
   position: relative;
 }
 .spacees-landing img{
@@ -1652,7 +1653,8 @@ input:-webkit-autofill {
 .service-menu-wrap-fixed{
   position: fixed;
   z-index: 9999;
-  top: 9%;
+  /*top: 9%;*/
+  top: 61px;
   width: 100%;
   left: 0;
   max-width: none;
@@ -2780,6 +2782,8 @@ input:-webkit-autofill {
   .toolbar-head .md-toolbar-tools{
     /*justify-content: flex-start;*/
   }
+
+  .spacees-landing{height: auto!important;}
 }
 
 @media (max-width: 750px){
@@ -2926,12 +2930,14 @@ input:-webkit-autofill {
   .text-design.community {width: 90%;}
   .name-info {font-size: 23px;}*/
 
-  .team-item-inner:before{opacity: 1;}
+  .team-item-inner:before{/*opacity: 1;*/}
   .team-item-info{
+    /*
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);
+    */
   }
   .team-item-info h4{font-size: 14px}
   .team-item-info h5{font-size: 12px}
@@ -2976,7 +2982,7 @@ input:-webkit-autofill {
   .mention-landing-item{
     border: 0!important;
     display: inline-block;
-    min-height: 100px;
+    min-height: 120px;
     width: 49%;
   }
 
