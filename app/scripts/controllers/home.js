@@ -49,22 +49,47 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
     },
     {
       type:'UI/UX Design & Software',
-      slug: 'airportcun',
-      category: 'ui-ux',
-      name:'Airportcun',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      url: 'http://airportcun.com/',
-      images:['images/projects/airport1.jpg','images/projects/airport2.jpg','images/projects/airport3.jpg','images/projects/airport4.jpg']
-    },
-    {
-      type:'UI/UX Design & Software',
       name:'Viajes Claros',
       slug:'viajesclaros',
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      url: 'http://www.viajesclaros.ifai.mx/',
       images:['images/projects/viajesclaros1.jpg','images/projects/viajesclaros2.jpg','images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
     },
+    {
+      type:'Branding',
+      name:'Justiti',
+      slug:'justiti-branding',
+      category: 'branding',
+      description:'Diseño de Logotipo y Diseño web, para proyecto que facilita el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
+      images:['images/projects/justiti3.jpg','images/projects/justiti4.jpg','images/projects/justiti5.jpg']
+    },
+    {
+      type:'Branding',
+      name:'Travcy',
+      slug:'travcy',
+      category: 'branding',
+      description:'Elección de nombre y diseño de logotipo para herramienta web desarrollada a la medida para la administración y control comercial para empresas turísticas.',
+      //url: 'http://cancunwatertours.herokuapp.com/',
+      images:['images/projects/travcy1.jpg', 'images/projects/travcy2.jpg', 'images/projects/travcy3.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      name:'The Juicery Boutique',
+      slug:'the-juicery-boutique',
+      category: 'ui-ux',
+      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      url: 'http://www.thejuiceryboutique.com/',
+      images:['images/projects/juicery1.jpg','images/projects/juicery2.jpg']
+    },
+    {
+      type:'Branding',
+      name:'AirportCab',
+      slug:'airportcab',
+      category: 'branding',
+      description:'Creación y desarrollo de marca para empresa de transportación turística.',
+      //url: 'http://cancunwatertours.herokuapp.com/',
+      images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg',  'images/projects/airportcab4.jpg']
+    }
   ];
 
   $scope.clients = [

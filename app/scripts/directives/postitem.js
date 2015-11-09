@@ -37,6 +37,7 @@ angular.module('spaceshiplabsApp')
           var post = scope.entry;
           var size = $rootScope.winSize;
           var style = {};
+          console.log(post);
           if(post.featured_image){
             if(!post.featured_image.attachment_meta.sizes[size]){
               size = 'blog';
@@ -60,6 +61,7 @@ angular.module('spaceshiplabsApp')
           var post = scope.entry;
           var size = $rootScope.winSizeSingle || 'large';
           var style = {};
+          console.log(post);
           if(post.featured_image){
 
             if(size === 'full'){

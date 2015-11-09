@@ -43,7 +43,6 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'viajesclaros',
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      url: 'http://www.viajesclaros.ifai.mx/',
       images:['images/projects/viajesclaros1.jpg','images/projects/viajesclaros2.jpg','images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
     },
     {
