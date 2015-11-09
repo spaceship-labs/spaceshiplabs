@@ -1013,6 +1013,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   background: #3E3E3E ;
   /*url(../images/mockup.png) right center no-repeat;*/
   position: relative;
+  overflow: hidden;
 }
 .spacees-landing img{
   margin-bottom: 12px;
@@ -1295,7 +1296,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #CONTACT-US
 /*---------------*/
 .contact-us{
-  background: transparent url(../images/fondo_contacto.jpg) center center no-repeat;
+  background: transparent url(../images/team.jpg) center center no-repeat;
   background-size: cover!important;
   /*background-attachment: fixed;*/
   position: relative;
