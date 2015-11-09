@@ -7,7 +7,7 @@
  * # postItem
  */
 angular.module('spaceshiplabsApp')
-  .directive('postItem', function ($rootScope) {
+  .directive('postItem', function ($rootScope, blogService) {
     return {
       templateUrl: function(element,attrs){
         var url;
@@ -37,21 +37,24 @@ angular.module('spaceshiplabsApp')
           var post = scope.entry;
           var size = $rootScope.winSize;
           var style = {};
-          console.log(post);
           if(post.featured_image){
             if(!post.featured_image.attachment_meta.sizes[size]){
-              size = 'blog';
+              style = {
+                'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
+              };
+            }else{
+              style = {
+                'background': 'url(' + blogService.blogUrl + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
+              };
             }
-            style = {
-              'background': 'url(' + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
-            };
+
           }else if(post.attachments){
             if(!post.attachments[0][size]){
               size = 'blog';
             }
             var urlKey = 0;
             style = {
-              'background': 'url(' + post.attachments[0][size][urlKey] + ') center no-repeat'
+              'background': 'url(' + blogService.blogUrl + post.attachments[0][size][urlKey] + ') center no-repeat'
             };
           }
           return style;
@@ -61,12 +64,11 @@ angular.module('spaceshiplabsApp')
           var post = scope.entry;
           var size = $rootScope.winSizeSingle || 'large';
           var style = {};
-          console.log(post);
           if(post.featured_image){
 
             if(size === 'full'){
               style = {
-                'background': 'url(' + post.featured_image.source + ') center no-repeat'
+                'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
               };
             }
 
@@ -76,7 +78,7 @@ angular.module('spaceshiplabsApp')
 
             if(size !== 'full'){
               style = {
-                'background': 'url(' + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
+                'background': 'url(' + blogService.blogUrl + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
               };
             }
 
@@ -86,7 +88,7 @@ angular.module('spaceshiplabsApp')
             }
             var urlKey = 0;
             style = {
-              'background': 'url(' + post.attachments[0][size][urlKey] + ') center no-repeat'
+              'background': 'url(' + blogService.blogUrl + post.attachments[0][size][urlKey] + ') center no-repeat'
             };
           }
           return style;

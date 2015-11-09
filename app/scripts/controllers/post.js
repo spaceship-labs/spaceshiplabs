@@ -23,7 +23,7 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
       }
       $scope.entry = entry;
       if(entry.content){
-        //console.log($sce);
+        entry.content = $scope.formatImageSrc(entry.content);
         $scope.entry.content = $sce.trustAsHtml(entry.content);
       }else{
         $location.path('/');
@@ -48,6 +48,14 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
     });
   };
 
+  $scope.formatImageSrc = function(content){
+    var find = '/wp-content/';
+    var url = 'http://blog.spaceshiplabs.com/wp-content/';
+    var re = new RegExp(find, 'g');
+    var res = content.replace(re,url);
+    return res;
+  };
+
   $scope.getRecentPosts = function(){
     blogService.getRecentEntries($scope.postsLimit).then(function(entries){
       $scope.entries = entries;
@@ -66,14 +74,14 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
     var style = {};
     if(post.secondary_image && post.secondary_image[size]){
       style = {
-        'background': 'url(' + post.secondary_image[size] + ') center no-repeat'
+        'background': 'url(' + blogService.blogUrl + post.secondary_image[size] + ') center no-repeat'
       };
     }
     else if(post.featured_image){
 
       if(size === 'full' && !post.secondary_image){
         style = {
-          'background': 'url(' + post.featured_image.source + ') center no-repeat'
+          'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
         };
       }
 
@@ -83,7 +91,7 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
 
       if(size !== 'full'){
         style = {
-          'background': 'url(' + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
+          'background': 'url(' + blogService.blogUrl + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
         };
       }
 
@@ -93,7 +101,7 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
       }
       var urlKey = 0;
       style = {
-        'background': 'url(' + post.attachments[0][size][urlKey] + ') center no-repeat'
+        'background': 'url(' + blogService.blogUrl + post.attachments[0][size][urlKey] + ') center no-repeat'
       };
     }
     return style;

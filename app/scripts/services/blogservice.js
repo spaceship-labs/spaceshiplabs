@@ -12,11 +12,11 @@ angular.module('spaceshiplabsApp')
     // AngularJS will instantiate a singleton by calling "new" on this function
 
     //var postType = '2wKn6yEnZewu2SCCkus4as';
-    var gifsCategory = 273;
-    var baseUrl = 'http://spaceshiplabs.com/wp-json';
+    var gifsCategory = 4;
+    var baseUrl = 'http://blog.spaceshiplabs.com/wp-json';
+    this.blogUrl = 'http://blog.spaceshiplabs.com';
 
     //var categoryType = '5KMiN6YPvi42icqAUQMCQe';
-    //var postType = 'post';
 
 
     this.getCategoriesQuery = function(postSlug){
