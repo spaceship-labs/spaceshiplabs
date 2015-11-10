@@ -26,7 +26,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Mejora tu escuela',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://www.mejoratuescuela.org/',
-      images:['images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela1.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
+      images:['images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -34,7 +34,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       name:'Airportcun',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      images:['images/projects/airport2.jpg','images/projects/airport1.jpg','images/projects/airport3.jpg','images/projects/airport4.jpg']
+      images:['images/projects/airport2.jpg','images/projects/airport3.jpg','images/projects/airport4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -42,7 +42,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'viajesclaros',
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      images:['images/projects/viajesclaros2.jpg','images/projects/viajesclaros1.jpg','images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
+      images:['images/projects/viajesclaros2.jpg','images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -51,7 +51,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'https://www.consejosano.com/',
-      images:['images/projects/consejosano2.jpg','images/projects/consejosano1.jpg','images/projects/consejosano3.jpg', 'images/projects/consejosano4.jpg']
+      images:['images/projects/consejosano2.jpg','images/projects/consejosano3.jpg', 'images/projects/consejosano4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -60,7 +60,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       url: 'http://nuevopaintball.com/',
-      images:['images/projects/mrgotcha2.jpg','images/projects/mrgotcha1.jpg','images/projects/mrgotcha3.jpg','images/projects/mrgotcha4.jpg']
+      images:['images/projects/mrgotcha2.jpg','images/projects/mrgotcha3.jpg','images/projects/mrgotcha4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -114,7 +114,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'bosques-de-playa',
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      images:['images/projects/bosques2.jpg','images/projects/bosques1.jpg']
+      images:['images/projects/bosques2.jpg','images/projects/bosques3.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -123,7 +123,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
       //url: 'http://caribemaya.projects.spaceshiplabs.com/',
-      images:['images/projects/caribemaya2.jpg', 'images/projects/caribemaya1.jpg']
+      images:['images/projects/caribemaya2.jpg', 'images/projects/caribemaya3.jpg']
     },
     {
       type:'UI/UX Design',

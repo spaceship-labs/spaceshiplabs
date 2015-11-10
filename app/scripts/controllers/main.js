@@ -52,7 +52,8 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
         $scope.contactData = {
           email:'',
           name:'',
-          message:''
+          message:'',
+          _gotcha: '',
         };
       }
     };
@@ -87,22 +88,30 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
   };
 
   $scope.doContact = function(form){
+    var to = 'luis19prz@gmail.com';
+    var subject = 'Contacto desde spaceshiplabs.com';
     if(form.$valid){
       $scope.contactError = false;
       $scope.emailSent = false;
+      var params = {
+        _replyto: $scope.contactData.email,
+        name: $scope.contactData.name,
+        message: $scope.contactData.message,
+        _subject: subject,
+      };
+      //params = JSON.stringify(params);
       var req = {
         method: 'POST',
-        url: '/__/forms/contact',
-        //method: 'GET',
-        //url: '/json/email-success.json',
-        data: {
-          email: $scope.contactData.email,
-          name: $scope.contactData.name,
-          message: $scope.contactData.message
+        url : 'http://formspree.io/' + to,
+        dataType: "json",
+        headers: {
+            "Content-Type": "application/json"
         },
+        data: params
       };
       $http( req ).then(
         function(response) {
+          console.log(response);
           if(response.data.status === 'success'){
             $scope.emailSent = true;
             $scope.contactError = false;
