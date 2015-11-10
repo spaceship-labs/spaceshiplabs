@@ -88,31 +88,27 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
   };
 
   $scope.doContact = function(form){
-    var to = 'luis19prz@gmail.com';
-    var subject = 'Contacto desde spaceshiplabs.com';
     if(form.$valid){
       $scope.contactError = false;
       $scope.emailSent = false;
-      var params = {
-        _replyto: $scope.contactData.email,
+      var params = $.param({
+        email: $scope.contactData.email,
         name: $scope.contactData.name,
-        message: $scope.contactData.message,
-        _subject: subject,
-      };
+        content: $scope.contactData.message,
+      });
       //params = JSON.stringify(params);
       var req = {
+        url: 'http://blog.spaceshiplabs.com/wp-content/themes/spaceshiplabs/contact_function.php',
         method: 'POST',
-        url : 'http://formspree.io/' + to,
-        dataType: "json",
         headers: {
-            "Content-Type": "application/json"
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         data: params
       };
       $http( req ).then(
         function(response) {
           console.log(response);
-          if(response.data.status === 'success'){
+          if(response.data === 'success'){
             $scope.emailSent = true;
             $scope.contactError = false;
           }else{
