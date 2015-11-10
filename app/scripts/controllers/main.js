@@ -35,11 +35,6 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
 
   $scope.$on('$locationChangeStart', function(evt, absNewUrl, absOldUrl) {
 
-    if(absOldUrl.indexOf('/proyectos') >= 0){
-      //$interval.cancel( $rootScope.sliderInterval );
-      console.log('cancelar');
-    }
-
     if(absOldUrl.indexOf('/proyectos') >= 0 &&  absNewUrl.indexOf('/proyectos') >= 0 ) {
       $scope.autoScroll = false;
     }else{
@@ -107,7 +102,7 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
       };
       $http( req ).then(
         function(response) {
-          console.log(response);
+          //console.log(response);
           if(response.data === 'success'){
             $scope.emailSent = true;
             $scope.contactError = false;

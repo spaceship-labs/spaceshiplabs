@@ -86,7 +86,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Justiti',
       slug:'justiti',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      description:'Diseño de Logotipo y Diseño web, para proyecto que facilita el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
       //url: 'http://justiti.projects.spaceshiplabs.com/',
       images:['images/projects/justiti2.jpg','images/projects/justiti1.jpg']
     },
@@ -186,6 +186,15 @@ function ProjectsCtrl($scope, metaTagsService){
       description:'Creación y desarrollo de marca para empresa de transportación turística.',
       //url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg',  'images/projects/airportcab4.jpg']
+    },
+    {
+      type:'Branding',
+      name:'Bluecore',
+      slug:'bluecore',
+      category: 'branding',
+      description:'Creación y desarrollo de marca para empresa de transportación turística.',
+      //url: 'http://cancunwatertours.herokuapp.com/',
+      images:['images/projects/bluecore1.jpg', 'images/projects/bluecore2.jpg']
     },
   ];
 
