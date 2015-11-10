@@ -84,6 +84,7 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
 
   $scope.doContact = function(form){
     if(form.$valid){
+      $scope.loadingContact = true;
       $scope.contactError = false;
       $scope.emailSent = false;
       var params = $.param({
@@ -109,9 +110,11 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
           }else{
             $scope.contactError = true;
           }
+          $scope.loadingContact = false;
         }, function(err) {
           $scope.contactError = true;
           console.log(err);
+          $scope.loadingContact = false;
         }
       );
     }else{

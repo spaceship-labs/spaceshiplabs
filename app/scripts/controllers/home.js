@@ -78,7 +78,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       name:'The Juicery Boutique',
       slug:'the-juicery-boutique',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      description:'Es una marca de Jugos cold pressed y productos naturales. Implementamos diseño y solución e-commerce para la venta de jugos, productos y paquetes detox.',
       url: 'http://www.thejuiceryboutique.com/',
       images:['images/projects/juicery2.jpg','images/projects/juicery1.jpg']
     },

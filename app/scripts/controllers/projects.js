@@ -104,7 +104,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'The Juicery Boutique',
       slug:'the-juicery-boutique',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      description:'Es una marca de Jugos cold pressed y productos naturales. Implementamos diseño y solución e-commerce para la venta de jugos, productos y paquetes detox.',
       url: 'http://www.thejuiceryboutique.com/',
       images:['images/projects/juicery2.jpg','images/projects/juicery1.jpg']
     },
@@ -183,7 +183,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'AirportCab',
       slug:'airportcab',
       category: 'branding',
-      description:'Creación y desarrollo de marca para empresa de transportación turística.',
+      description:'Es una empresa de transportación turistica del Aeropuerto. Creamos la marca y desarrollamos su sitio web.',
       //url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg',  'images/projects/airportcab4.jpg']
     },
@@ -192,8 +192,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Bluecore',
       slug:'bluecore',
       category: 'branding',
-      description:'Creación y desarrollo de marca para empresa de transportación turística.',
-      //url: 'http://cancunwatertours.herokuapp.com/',
+      description:'Es una organización (ONG) dedicada a generar una cultura de conservación marina. Contribuimos en el diseño y desarrollo de su sitio web.',
       images:['images/projects/bluecore1.jpg', 'images/projects/bluecore2.jpg']
     },
   ];

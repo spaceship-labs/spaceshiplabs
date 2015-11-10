@@ -347,6 +347,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   margin: 0 auto;
   max-width: 670px;
 }
+.container-mmd{
+  margin: 0 auto;
+  max-width: 600px;
+}
 .container-smd{
   margin: 0 auto;
   max-width: 560px;
@@ -1559,6 +1563,10 @@ input:-webkit-autofill {
 /*-------------/
   #ABOUT-US
 /*------------*/
+.info-wrap-about .intro-title{
+  font-size: 30px;
+  margin-bottom: 60px;
+}
 .info-wrap-about .info-block:first-child{
   padding: 40px 0 0;
 }
@@ -2080,7 +2088,7 @@ input:-webkit-autofill {
 
 .mockups-wrapper .cel-img{
   position: absolute;
-  top: 34%;
+  top: 37%;
   left: -4%;
   width: 70%;
   z-index: 2;

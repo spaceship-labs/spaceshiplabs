@@ -65,6 +65,9 @@
     </section>-->
     <p class="contact-form-message contact-form-final-message" ng-show="emailSent"><span><i class="icon-about"></i> Gracias por enviar tu mensaje.</span></p>
     <p class="contact-form-message contact-form-message-error contact-form-final-message" ng-show="contactError"><span>*Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
+    <div ng-show="loadingContact" class="container" layout="row" layout-sm="column" layout-align="center center">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
 
     <div class="social-icons">
       <a
