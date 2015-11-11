@@ -31,6 +31,13 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
           video.currentTime = 1;
         }
       },false);
+
+      //Fix for safari
+      var $video = $('#landing-video');
+      $video.on('canplaythrough', function() {
+         this.play();
+      });
+
     }else{
       $('#landing-video').remove();
     }
@@ -43,7 +50,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       slug: 'mejora-tu-escuela',
       category: 'ui-ux',
       name:'Mejora tu escuela',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      description:'Plataforma de participación ciudadana para transformar la educación. Desarrollamos su sitio web en el cuales posible buscar, comparar y calificar todas las escuelas de México.',
       url: 'http://www.mejoratuescuela.org/',
       images:['images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
     },
