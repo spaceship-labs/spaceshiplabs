@@ -134,7 +134,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'silvia-ascencio-branding',
       category: 'branding',
       description:'Especialista en Decoración de Interiores para casa habitacional, en este proyecto logramos rediseñar su Logotipo y crear su sitio web.',
-      images:['images/projects/silvia1.jpg','images/projects/silvia2.jpg','images/projects/silvia3.jpg','images/projects/silvia6.png']
+      images:['images/projects/silvia1.jpg','images/projects/silvia2.jpg','images/projects/silvia3.jpg','images/projects/silvia6.png','images/projects/silvia7.png']
     },
     {
       type:'UI/UX Design & Software',
@@ -184,6 +184,14 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'branding',
       description:'Es una organización (ONG) dedicada a generar una cultura de conservación marina. Contribuimos en el diseño y desarrollo de su sitio web.',
       images:['images/projects/bluecore1.jpg', 'images/projects/bluecore2.jpg', 'images/projects/bluecore3.jpg']
+    },
+    {
+      type:'Branding',
+      name:'Cancun Unlimited',
+      slug:'cancun-unlimited',
+      category: 'branding',
+      description:'',
+      images:['images/projects/cancununlimited1.jpg', 'images/projects/cancununlimited2.jpg', 'images/projects/cancununlimited4.jpg']
     },
   ];
 

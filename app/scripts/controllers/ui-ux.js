@@ -23,6 +23,7 @@ function UiUxCtrl($scope, $interval,metaTagsService){
       'images/justiti-logo.png',
       'images/travelite-logo.png',
       'images/travcy-logo.png',
+      'images/airport.png',
 
     ];
 
