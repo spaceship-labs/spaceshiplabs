@@ -24,7 +24,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug: 'mejora-tu-escuela',
       category: 'ui-ux',
       name:'Mejora tu escuela',
-      description:'Plataforma de participación ciudadana para transformar la educación. Desarrollamos su sitio web en el cuales posible buscar, comparar y calificar todas las escuelas de México.',
+      description:'Plataforma de participación ciudadana para transformar la educación. Desarrollamos su sitio web en el cual es posible buscar, comparar y calificar todas las escuelas de México.',
       url: 'http://www.mejoratuescuela.org/',
       images:['images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
     },
@@ -41,7 +41,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Viajes Claros',
       slug:'viajesclaros',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      description:'Es un proyecto del IFAI donde se manejan datos abiertos para mostrar los viajes y gastos de los servidores púbicos. Fuimos ganadores del 1er lugar en el desarrollo del sitio web el cual permite; buscar, comparar y accesar a dicha información.',
       images:['images/projects/viajesclaros2.jpg','images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
     },
     {
@@ -49,7 +49,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'ConsejoSano',
       slug:'consejosano',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      description:'Es una empresa líder en servicios de telemedicina para los Hispanos en los Estados Unidos. Implementamos un sitio web para atención y consultas médicas las 24 horas.',
       url: 'https://www.consejosano.com/',
       images:['images/projects/consejosano2.jpg','images/projects/consejosano3.jpg', 'images/projects/consejosano4.jpg']
     },
@@ -68,7 +68,6 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'capshia',
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      //url: 'http://capshia.com/',
       images:['images/projects/capshia2.jpg','images/projects/capshia1.jpg']
     },
     {
@@ -77,7 +76,6 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'sea-walls',
       category: 'ui-ux',
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      //url: 'http://bit.ly/1lD0KLG',
       images:['images/projects/seawalls2.jpg', 'images/projects/seawalls1.jpg']
     },
 
@@ -87,7 +85,6 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'justiti',
       category: 'ui-ux',
       description:'Diseño de Logotipo y Diseño web, para proyecto que facilita el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
-      //url: 'http://justiti.projects.spaceshiplabs.com/',
       images:['images/projects/justiti2.jpg','images/projects/justiti1.jpg']
     },
     {
@@ -96,7 +93,6 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'justiti-branding',
       category: 'branding',
       description:'Diseño de Logotipo y Diseño web, para proyecto que facilita el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
-      //url: 'http://justiti.projects.spaceshiplabs.com/',
       images:['images/projects/justiti3.jpg','images/projects/justiti4.jpg','images/projects/justiti5.jpg']
     },
     {
@@ -113,7 +109,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Bosques de playa',
       slug:'bosques-de-playa',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      description:'Es un nuevo desarrollo inmobiliario en playa del Carmen que brinda a inversionistas nacionales y extranjeros la armonía entre naturaleza y planeación urbana. Desarrollamos un sitio web para consultar todo acerca del proyecto, desde la venta de lotes, galería y contacto.',
       images:['images/projects/bosques2.jpg','images/projects/bosques3.jpg']
     },
     {
@@ -121,8 +117,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Caribe Maya',
       slug:'caribemaya',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      //url: 'http://caribemaya.projects.spaceshiplabs.com/',
+      description:'Compañía de administración de destinos turísticos, Desarrollamos un sitio web que ofrece servicios, traslados, actividades e información en diferentes destinos en Cancún y La Riviera Maya.',
       images:['images/projects/caribemaya2.jpg', 'images/projects/caribemaya3.jpg']
     },
     {
@@ -131,7 +126,6 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'silvia-ascencio',
       category: 'ui-ux',
       description:'Especialista en Decoración de Interiores para casa habitacional, en este proyecto logramos rediseñar su Logotipo y crear su sitio web.',
-      //url: 'http://www.silvia.projects.spaceshiplabs.com/',
       images:['images/projects/silvia4.jpg','images/projects/silvia5.jpg']
     },
     {
@@ -139,8 +133,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Silvia Ascencio',
       slug:'silvia-ascencio-branding',
       category: 'branding',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      //url: 'http://www.silvia.projects.spaceshiplabs.com/',
+      description:'Especialista en Decoración de Interiores para casa habitacional, en este proyecto logramos rediseñar su Logotipo y crear su sitio web.',
       images:['images/projects/silvia1.jpg','images/projects/silvia2.jpg','images/projects/silvia3.jpg','images/projects/silvia6.png']
     },
     {
@@ -148,7 +141,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Water tours',
       slug:'water-tours',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      description:'Es una empresa dedicada a la venta de tours acuáticos, Creamos la marca desde cero e implementamos un sitio web en el cual se puede comprar y reservar una gran variedad de actividades acuáticas.',
       //url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/watertours2.jpg', 'images/projects/watertours1.jpg']
     },
@@ -166,7 +159,6 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'travcy',
       category: 'branding',
       description:'Elección de nombre y diseño de logotipo para herramienta web desarrollada a la medida para la administración y control comercial para empresas turísticas.',
-      //url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/travcy1.jpg', 'images/projects/travcy2.jpg', 'images/projects/travcy3.jpg']
     },
     {
@@ -175,7 +167,6 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'travelite',
       category: 'branding',
       description:'Diseño de Logotipo para agencia de viajes especializada en experiencias premium para tarjetahabientes.',
-      //url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/travelite1.jpg', 'images/projects/travelite2.jpg', 'images/projects/travelite3.jpg']
     },
     {
@@ -184,7 +175,6 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'airportcab',
       category: 'branding',
       description:'Es una empresa de transportación turistica del Aeropuerto. Creamos la marca y desarrollamos su sitio web.',
-      //url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg',  'images/projects/airportcab4.jpg']
     },
     {
