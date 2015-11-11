@@ -50,7 +50,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       slug: 'mejora-tu-escuela',
       category: 'ui-ux',
       name:'Mejora tu escuela',
-      description:'Plataforma de participación ciudadana para transformar la educación. Desarrollamos su sitio web en el cuales posible buscar, comparar y calificar todas las escuelas de México.',
+      description:'Plataforma de participación ciudadana para transformar la educación. Desarrollamos un sitio web en el cual es posible buscar, comparar y calificar todas las escuelas de México.',
       url: 'http://www.mejoratuescuela.org/',
       images:['images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
     },
@@ -59,16 +59,15 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       name:'Viajes Claros',
       slug:'viajesclaros',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      images:['images/projects/viajesclaros2.jpg', 'images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
+      description:'Es un proyecto del IFAI donde se manejan datos abiertos para mostrar los viajes y gastos de los servidores púbicos. Fuimos ganadores del 1er lugar en el desarrollo del sitio web el cual permite; buscar, comparar y accesar a dicha información.',
+      images:['images/projects/viajesclaros2.jpg','images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
     },
     {
       type:'Branding',
       name:'Justiti',
       slug:'justiti-branding',
       category: 'branding',
-      description:'Diseño de Logotipo y Diseño web, para proyecto que facilita el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
-      //url: 'http://justiti.projects.spaceshiplabs.com/',
+      description:'Es un proyecto para facilitar el acceso a la justicia a los ciudadanos. Implementamos el diseño de la marca y desarrollamos un sitio web que permite fácilmente el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
       images:['images/projects/justiti3.jpg','images/projects/justiti4.jpg','images/projects/justiti5.jpg']
     },
     {
@@ -77,7 +76,6 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       slug:'travcy',
       category: 'branding',
       description:'Elección de nombre y diseño de logotipo para herramienta web desarrollada a la medida para la administración y control comercial para empresas turísticas.',
-      //url: 'http://cancunwatertours.herokuapp.com/',
       images:['images/projects/travcy1.jpg', 'images/projects/travcy2.jpg', 'images/projects/travcy3.jpg']
     },
     {
@@ -87,16 +85,16 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       category: 'ui-ux',
       description:'Es una marca de Jugos cold pressed y productos naturales. Implementamos diseño y solución e-commerce para la venta de jugos, productos y paquetes detox.',
       url: 'http://www.thejuiceryboutique.com/',
-      images:['images/projects/juicery2.jpg','images/projects/juicery1.jpg']
+      images:['images/projects/juicery2.jpg','images/projects/juicery1.jpg','images/projects/juicery3.jpg']
     },
     {
       type:'Branding',
       name:'AirportCab',
       slug:'airportcab',
       category: 'branding',
-      description:'Creación y desarrollo de marca para empresa de transportación turística.',
-      images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg',  'images/projects/airportcab4.jpg']
-    }
+      description:'Es una empresa de transportación turistica del Aeropuerto. Creamos la marca y desarrollamos su sitio web.',
+      images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg',  'images/projects/airportcab4.jpg', 'images/projects/airportcab6.jpg']
+    },
   ];
 
   $scope.clients = [

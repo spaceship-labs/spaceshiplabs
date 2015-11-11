@@ -24,7 +24,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug: 'mejora-tu-escuela',
       category: 'ui-ux',
       name:'Mejora tu escuela',
-      description:'Plataforma de participación ciudadana para transformar la educación. Desarrollamos su sitio web en el cual es posible buscar, comparar y calificar todas las escuelas de México.',
+      description:'Plataforma de participación ciudadana para transformar la educación. Desarrollamos un sitio web en el cual es posible buscar, comparar y calificar todas las escuelas de México.',
       url: 'http://www.mejoratuescuela.org/',
       images:['images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
     },
@@ -33,7 +33,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug: 'airportcun',
       category: 'ui-ux',
       name:'Airportcun',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      description:'Es un sitio web del aeropuerto de Cancún en la cual desarrollamos una plataforma dónde se pueden consultar vuelos en tiempo real, buscar transportación y tours en distintos destinos.',
       images:['images/projects/airport2.jpg','images/projects/airport3.jpg','images/projects/airport4.jpg']
     },
     {
@@ -58,7 +58,7 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Mr. Gotcha',
       slug:'mr-gotcha',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
+      description:'Es el nuevo paintball de cancún, En este proyecto implementamos un sitio web el cual permite ver los paquetes y promociones así como visualizar la galería del campo de batalla y áreas de actividades, también se puede contactar y reservar directamente desde el sitio.',
       url: 'http://nuevopaintball.com/',
       images:['images/projects/mrgotcha2.jpg','images/projects/mrgotcha3.jpg','images/projects/mrgotcha4.jpg']
     },
@@ -67,16 +67,16 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Capshia',
       slug:'capshia',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      images:['images/projects/capshia2.jpg','images/projects/capshia1.jpg']
+      description:'Es una Marca de Moda y Accesorios creada por 2 diseñadoras Mexicanas, Diseñamos y desarrollamos la tienda en linea, la cual permite consultar y comprar la colección de temporada de la marca.',
+      images:['images/projects/capshia2.jpg','images/projects/capshia1.jpg','images/projects/capshia3.jpg']
     },
     {
       type:'UI/UX Design & Software',
       name:'Sea Walls',
       slug:'sea-walls',
       category: 'ui-ux',
-      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusamus fugit, saepe, earum, illum esse sed obcaecati molestiae ducimus illo omnis! Dolores reiciendis sed non iure dolore tempore sit facere!',
-      images:['images/projects/seawalls2.jpg', 'images/projects/seawalls1.jpg']
+      description:'Es un proyecto de arte urbano inovador creado por los miembros de PangeaSeed. Implementamos un sitio web para fomentar el apoyo de artistas internacionales para ayudar a plasmar la belleza de los océanos en las calles de todo el mundo a través del arte y el activismo.',
+      images:['images/projects/seawalls2.jpg', 'images/projects/seawalls1.jpg', 'images/projects/seawalls3.jpg']
     },
 
     {
@@ -84,15 +84,15 @@ function ProjectsCtrl($scope, metaTagsService){
       name:'Justiti',
       slug:'justiti',
       category: 'ui-ux',
-      description:'Diseño de Logotipo y Diseño web, para proyecto que facilita el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
-      images:['images/projects/justiti2.jpg','images/projects/justiti1.jpg']
+      description:'Es un proyecto para facilitar el acceso a la justicia a los ciudadanos. Implementamos el diseño de la marca y desarrollamos un sitio web que permite fácilmente el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
+      images:['images/projects/justiti2.jpg','images/projects/justiti1.jpg','images/projects/justiti6.jpg']
     },
     {
       type:'Branding',
       name:'Justiti',
       slug:'justiti-branding',
       category: 'branding',
-      description:'Diseño de Logotipo y Diseño web, para proyecto que facilita el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
+      description:'Es un proyecto para facilitar el acceso a la justicia a los ciudadanos. Implementamos el diseño de la marca y desarrollamos un sitio web que permite fácilmente el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
       images:['images/projects/justiti3.jpg','images/projects/justiti4.jpg','images/projects/justiti5.jpg']
     },
     {
@@ -102,7 +102,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       description:'Es una marca de Jugos cold pressed y productos naturales. Implementamos diseño y solución e-commerce para la venta de jugos, productos y paquetes detox.',
       url: 'http://www.thejuiceryboutique.com/',
-      images:['images/projects/juicery2.jpg','images/projects/juicery1.jpg']
+      images:['images/projects/juicery2.jpg','images/projects/juicery1.jpg','images/projects/juicery3.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -110,7 +110,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'bosques-de-playa',
       category: 'ui-ux',
       description:'Es un nuevo desarrollo inmobiliario en playa del Carmen que brinda a inversionistas nacionales y extranjeros la armonía entre naturaleza y planeación urbana. Desarrollamos un sitio web para consultar todo acerca del proyecto, desde la venta de lotes, galería y contacto.',
-      images:['images/projects/bosques2.jpg','images/projects/bosques3.jpg']
+      images:['images/projects/bosques2.jpg','images/projects/bosques3.jpg','images/projects/bosques4.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -118,7 +118,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'caribemaya',
       category: 'ui-ux',
       description:'Compañía de administración de destinos turísticos, Desarrollamos un sitio web que ofrece servicios, traslados, actividades e información en diferentes destinos en Cancún y La Riviera Maya.',
-      images:['images/projects/caribemaya2.jpg', 'images/projects/caribemaya3.jpg']
+      images:['images/projects/caribemaya2.jpg', 'images/projects/caribemaya3.jpg','images/projects/caribemaya4.jpg']
     },
     {
       type:'UI/UX Design',
@@ -126,7 +126,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'silvia-ascencio',
       category: 'ui-ux',
       description:'Especialista en Decoración de Interiores para casa habitacional, en este proyecto logramos rediseñar su Logotipo y crear su sitio web.',
-      images:['images/projects/silvia4.jpg','images/projects/silvia5.jpg']
+      images:['images/projects/silvia4.jpg','images/projects/silvia5.jpg','images/projects/silvia6.jpg']
     },
     {
       type:'Branding',
@@ -175,7 +175,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'airportcab',
       category: 'branding',
       description:'Es una empresa de transportación turistica del Aeropuerto. Creamos la marca y desarrollamos su sitio web.',
-      images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg',  'images/projects/airportcab4.jpg']
+      images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg', 'images/projects/airportcab4.jpg', 'images/projects/airportcab6.jpg']
     },
     {
       type:'Branding',
@@ -183,7 +183,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'bluecore',
       category: 'branding',
       description:'Es una organización (ONG) dedicada a generar una cultura de conservación marina. Contribuimos en el diseño y desarrollo de su sitio web.',
-      images:['images/projects/bluecore1.jpg', 'images/projects/bluecore2.jpg']
+      images:['images/projects/bluecore1.jpg', 'images/projects/bluecore2.jpg', 'images/projects/bluecore3.jpg']
     },
   ];
 
