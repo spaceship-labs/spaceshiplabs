@@ -2142,11 +2142,54 @@ input:-webkit-autofill {
 .team-item{margin: 20px 0;}
 
 .team-item-inner{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 220px;
   width: 90%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
+
+.team-sonny{
+  background-image:url(../images/team/27.png);
+  background-position-y:-3%;
+}
+.team-sonny:hover{background-image:url(../images/team/28.png);}
+.team-daniel{
+  background-image:url(../images/team/1.png);
+  background-position-y: 90%;
+}
+.team-daniel:hover{
+  background-image:url(../images/team/2.png);
+  background-position-y: 80%;
+}
+.team-carolina{background-image:url(../images/team/3.png);}
+.team-carolina:hover{background-image:url(../images/team/4.png);}
+.team-carlos{background-image:url(../images/team/5.png);}
+.team-carlos:hover{background-image:url(../images/team/6.png);}
+.team-azu{background-image:url(../images/team/7.png);}
+.team-azu:hover{background-image:url(../images/team/8.png);}
+.team-paola{background-image:url(../images/team/9.png);}
+.team-paola:hover{background-image:url(../images/team/10.png);}
+.team-uriel{background-image:url(../images/team/11.png);}
+.team-uriel:hover{background-image:url(../images/team/12.png);}
+.team-usagi{background-image:url(../images/team/13.png);}
+.team-usagi:hover{background-image:url(../images/team/14.png);}
+.team-luis{background-image:url(../images/team/15.png);}
+.team-luis:hover{background-image:url(../images/team/16.png);}
+.team-angel{background-image:url(../images/team/17.png);}
+.team-angel:hover{background-image:url(../images/team/18.png);}
+.team-erick{background-image:url(../images/team/19.png);}
+.team-erick:hover{background-image:url(../images/team/20.png);}
+.team-juanli{background-image:url(../images/team/21.png);}
+.team-juanli:hover{background-image:url(../images/team/22.png);}
+.team-jafet{background-image:url(../images/team/23.png);}
+.team-jafet:hover{background-image:url(../images/team/24.png);}
+.team-diana{background-image:url(../images/team/26.png);}
+.team-diana:hover{background-image:url(../images/team/25.png);}
+
 
 .team-item-inner:before{
   content: '';
@@ -2841,6 +2884,11 @@ input:-webkit-autofill {
 
 @media screen and (max-width: 960px){
   /*-------/
+    #TEAM
+  /*------*/
+  .team-item-inner{min-height: 210px;}
+
+  /*-------/
     #HOME
   /*------*/
   .spacees-landing{
@@ -2938,7 +2986,7 @@ input:-webkit-autofill {
   #date-designer h2,#date-community h2 {color: #02C2D7;font-size: 20px;}
   .text-design.community {width: 90%;}
   .name-info {font-size: 23px;}*/
-
+  .team-item-inner{min-height: 180px;}
   .team-item-inner:before{/*opacity: 1;*/}
   .team-item-info{
     /*
