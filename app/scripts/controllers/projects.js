@@ -191,7 +191,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'cancun-unlimited',
       category: 'branding',
       description:'',
-      images:['images/projects/cancununlimited1.jpg', 'images/projects/cancununlimited2.jpg', 'images/projects/cancununlimited4.jpg']
+      images:['images/projects/cancun-unlimited1.jpg', 'images/projects/cancun-unlimited2.jpg', 'images/projects/cancun-unlimited4.jpg']
     },
   ];
 
