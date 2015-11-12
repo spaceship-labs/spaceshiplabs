@@ -70,18 +70,6 @@
               href="/proyectos/categoria/branding" class="project-category">
               <span>Branding</span>
             </a>
-            <!--<a
-              ng-class="{'project-category-active': currentCategory == 'marketing'}"
-              ng-click="getProjectsByCategory('marketing')"
-              href="" class="project-category">
-              <span>Marketing</span>
-            </a>
-            <a
-              ng-class="{'project-category-active': currentCategory == 'software'}"
-              ng-click="getProjectsByCategory('software')"
-              href="" class="project-category">
-              <span>Software</span>
-            </a>-->
           </section>
         </section>
       </section>
@@ -96,6 +84,7 @@
   				layout="column"
           itemscope itemtype="http://schema.org/WebSite"
   				layout-align="center center"
+          layout-align-sm="start start"
           ng-class="{
             'projects-slide-preview': preview,
             'projects-slide-active' : selectedIndexSlide == $index,

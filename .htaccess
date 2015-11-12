@@ -1,4 +1,4 @@
-RewriteEngine On  
+RewriteEngine On
   # If an existing asset or directory is requested go to it as it is
   RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
   RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
@@ -6,3 +6,7 @@ RewriteEngine On
 
   # If the requested resource doesn't exist, use index.html
   RewriteRule ^ /index.html
+
+  #Redirect 301 /servicios/diseno http://spaceshiplabs.com/ui-ux
+  #Redirect 301 /servicios/software http://spaceshiplabs.com/software
+  #Redirect 301 /servicios/marketing http://spaceshiplabs.com/marketing

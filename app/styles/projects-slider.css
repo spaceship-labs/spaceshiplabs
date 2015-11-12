@@ -339,7 +339,9 @@
     /*padding-top: 23%;*/
   }
   .projects-slide-content.projects-slide-preview{
-    padding-top: 4px;
+    padding-top: 30px;
+    justify-content: flex-start;
+    min-height: 360px;
   }
   .projects-slide-content .container-sm{
     padding: 20px;
@@ -359,6 +361,7 @@
   }
 
   .projects-slider-bullets{
+    display: none;
     bottom: 20px;
     -webkit-transform: none;
     -moz-transform: none;

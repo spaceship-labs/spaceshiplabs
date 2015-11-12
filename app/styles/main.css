@@ -164,7 +164,7 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   #LAZYIMG
 /*---------*/
 *[lazy-img].lazy-loader-gif:not(.lazy-load-complete){
-  background: url(../images/loader.gif) center no-repeat!important;
+  background: url(../images/loader2.gif) center no-repeat!important;
 }
 
 /*-------------/
@@ -1803,7 +1803,7 @@ input:-webkit-autofill {
 .info-wrap-service .info-block-branding{
   /*background: transparent url(../images/branding.png) center 250% no-repeat;
   background-attachment: fixed;*/
-  padding-bottom: 304px;
+  padding-bottom: 304px!important;
 }
 .info-wrap-service .fixed-img{
   position: absolute;
@@ -3083,7 +3083,7 @@ input:-webkit-autofill {
     width: 100%;
     height: auto;
     padding-top: 0;
-    margin: 20px 0;
+    margin: 30px 0;
   }
   .services-item .service-hover{
     position: relative;
@@ -3091,6 +3091,8 @@ input:-webkit-autofill {
   }
   .services-item .action-btn{display: inline-block;}
   .news-item-wrapper{margin: 0 0 14px;}
+  .spacees-landing{padding: 10px}
+  #recent-news .news-item{margin: 20px 0}
 
   /*-------------/
     #ABOUT-US
@@ -3122,7 +3124,7 @@ input:-webkit-autofill {
   .blog-list-card h4{font-size: 24px}
   .blog-list-card .card-content-excerpt{margin-left: 0;}
   .blog-list-card .card-thumb-circle{border-radius: 0;}
-  .pagination-blog a{padding: 6px}
+  /*.pagination-blog a{padding: 6px}*/
   .single-thumb{background-attachment: inherit!important;}
 
   /*------------/
@@ -3153,6 +3155,9 @@ input:-webkit-autofill {
   .section-title-projects{
     padding-bottom: 22px;
     padding-top: 76px;
+  }
+  .info-gradient-container-inner{
+    padding: 10px;
   }
 
   /*--------/
@@ -3185,7 +3190,12 @@ input:-webkit-autofill {
   .info-wrap-ui .design-slider-wrap,
   .info-wrap-ui .logo-design{min-height: 216px;}
   .info-wrap-ui h2{text-align: center!important;}
-  .design-slider{position: relative;}
+  .design-slider{
+    position: relative;
+  }
+  .branding-slider{min-height: 510px}
+  .info-wrap-ui .screens-wrapper{min-height: 320px;}
+  .info-wrap-spacees .mockups-wrapper{min-height: 345px}
 
   .contact-us{
     background-attachment: inherit;
