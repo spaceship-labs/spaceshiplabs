@@ -165,6 +165,7 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
 /*---------*/
 *[lazy-img].lazy-loader-gif:not(.lazy-load-complete){
   background: url(../images/loader.gif) center no-repeat!important;
+  background-size: 70px 36px!important;
 }
 
 /*-------------/
@@ -524,7 +525,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 #sidebar-menu md-content ul > li > ul a{padding-left: 40px;}
 
 #sidebar-menu #close-button{
-  background: #00C5D8 url(../images/flechaa.png) center center no-repeat;
+  background: #00C5D8 url(../images/arrow-mobile.png) center center no-repeat;
   background-size: 13px;
 }
 
@@ -1850,11 +1851,11 @@ input:-webkit-autofill {
   top: 0;
   height: 100%;
   width: 100%;
-  -webkit-transition: all .4s;
-  -moz-transition: all .4s;
-  -o-transition: all .4s;
-  -ms-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: opacity .4s;
+  -moz-transition: opacity .4s;
+  -o-transition: opacity .4s;
+  -ms-transition: opacity .4s;
+  transition: opacity .4s;
 }
 .info-wrap-ui .image-sketch-active{
   opacity: 1;
