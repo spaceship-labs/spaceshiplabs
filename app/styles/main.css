@@ -1,4 +1,4 @@
-f/*
+/*
 Theme Name: Spaceshiplabs
 Theme URI: http://Spaceshiplabs.com/
 Author: Spaceshiplabs
@@ -164,7 +164,7 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
   #LAZYIMG
 /*---------*/
 *[lazy-img].lazy-loader-gif:not(.lazy-load-complete){
-  background: url(../images/loader2.gif) center no-repeat!important;
+  background: url(../images/loader.gif) center no-repeat!important;
 }
 
 /*-------------/

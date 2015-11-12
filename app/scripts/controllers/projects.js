@@ -172,10 +172,18 @@ function ProjectsCtrl($scope, metaTagsService){
     {
       type:'Branding',
       name:'AirportCab',
-      slug:'airportcab',
+      slug:'airportcab-branding',
       category: 'branding',
       description:'Es una empresa de transportación turistica del Aeropuerto. Creamos la marca y desarrollamos su sitio web.',
-      images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg', 'images/projects/airportcab4.jpg', 'images/projects/airportcab6.jpg']
+      images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab4.jpg']
+    },
+    {
+      type:'UI/UX Design',
+      name:'AirportCab',
+      slug:'airportcab',
+      category: 'ui-ux',
+      description:'Es una empresa de transportación turistica del Aeropuerto. Creamos la marca y desarrollamos su sitio web.',
+      images:['images/projects/airportcab3.jpg', 'images/projects/airportcab5.jpg', 'images/projects/airportcab6.jpg']
     },
     {
       type:'Branding',

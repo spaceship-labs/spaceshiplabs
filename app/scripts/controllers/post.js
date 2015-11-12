@@ -19,6 +19,7 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
   $scope.getPost = function(){
     blogService.getSingleEntry($scope.postSlug).then(function(entry){
       if(!entry){
+        console.log('no hay entry');
         $location.path('/');
       }
       $scope.entry = entry;
@@ -26,6 +27,7 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
         entry.content = $scope.formatImageSrc(entry.content);
         $scope.entry.content = $sce.trustAsHtml(entry.content);
       }else{
+        console.log('no hay entry');
         $location.path('/');
       }
       $scope.loadedPost = true;
