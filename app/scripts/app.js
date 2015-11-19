@@ -21,7 +21,8 @@ angular
     //'contentful',
     'btford.markdown',
     'metatags',
-    'angularLazyImg'
+    'angularLazyImg',
+    'slick'
   ])
   .config(function ($routeProvider, $locationProvider, $mdThemingProvider,lazyImgConfigProvider) {
 

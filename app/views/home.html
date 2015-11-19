@@ -61,7 +61,7 @@
       data-wow-delay="0.5s" data-wow-duration="0.2s"
       flex-sm="100"></a>
       <a
-      href="Universal: http://www.eluniversal.com.mx/blogs/colectivo-mexico-informate/2015/07/8/el-gobierno-como-plataforma"
+      href="http://www.eluniversal.com.mx/blogs/colectivo-mexico-informate/2015/07/8/el-gobierno-como-plataforma"
       target="_blank"
       class="mention-landing-item wow fadeIn"
       style="background: url(images/eluniversal.png) center no-repeat;"
@@ -93,13 +93,15 @@
       flex-md="33"
       data-wow-delay="1.3s" data-wow-duration="0.2s"
       flex-sm="100"></a>
-      <div
+      <a
+      href="http://www.opendata500.com/mx/list/"
+      target="_blank"
       class="mention-landing-item wow fadeIn"
       style="background: url(images/opendata.png) center no-repeat;"
       flex="20"
       flex-md="33"
       data-wow-delay="1.5s" data-wow-duration="0.2s"
-      flex-sm="100"></div>
+      flex-sm="100"></a>
       <a
       href="http://sipse.com/novedades/lanzan-aplicacion-de-mapa-interactivo-de-gasolineras-en-el-pais-98763.html"
       target="_blank"
@@ -243,7 +245,27 @@
   <div class="clients-landing-content container container-xlg center-content">
     <!--<h1><span count-to="200" value="0" duration="2" ></span> Clientes felices</h1>-->
     <h1>Testimonios</h1>
-    <div clients-slider clients="clients"></div clients-slider>
+    <slick dots="true" infinite="true" autoplay="true" autoplaySpeed="6000" speed="800" class="clients-slider">
+      <div
+        class="clients-slide"
+        ng-repeat="client in clients track by $index"
+        layout="row"
+        layout-align="space-between center"
+        layout-sm="column"
+        >
+
+        <div class="client-item container container-lg">
+          <p>
+            <i class="icon-comilla1 quote-icon"></i>
+            <i class="icon-comilla2 quote-icon quote-icon-right"></i>
+            {{client.quote}}
+          </p>
+          <h5>{{client.name}}</h5>
+          <h6>{{client.company}}</h6>
+        </div>
+
+      </div>
+    </slick>
 
   </div>
 </div>
