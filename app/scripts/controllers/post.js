@@ -72,6 +72,22 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
 
   $scope.getMainPostThumb = function(){
     var post = $scope.entry;
+    var style = {};
+    if(post.secondary_image && post.secondary_image['full']){
+      style = {
+        'background': 'url(' + blogService.blogUrl + post.secondary_image[size] + ') center no-repeat'
+      };
+    }
+    else if(post.featured_image){
+      style = {
+        'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
+      };
+    }
+    return style;
+  }
+  /* TODO: Check if this is needed
+  $scope.getMainPostThumb = function(){
+    var post = $scope.entry;
     var size = $rootScope.winSizeSingle || 'large';
     var style = {};
     if(post.secondary_image && post.secondary_image[size]){
@@ -108,6 +124,7 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
     }
     return style;
   };
+  */
 
   $scope.getPost();
   $scope.getRecentPosts();
