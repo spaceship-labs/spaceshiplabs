@@ -2747,6 +2747,7 @@ input:-webkit-autofill {
   color: #00C4D5;
   font-size: 12px;
 }
+.contact-container .tel-link{color: #00C4D5}
 
 /*----------------/
   #PROJECTS
