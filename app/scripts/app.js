@@ -22,7 +22,8 @@ angular
     'btford.markdown',
     'metatags',
     'angularLazyImg',
-    'slick'
+    'slick',
+    '720kb.socialshare'
   ])
   .config(function ($routeProvider, $locationProvider, $mdThemingProvider,lazyImgConfigProvider) {
 

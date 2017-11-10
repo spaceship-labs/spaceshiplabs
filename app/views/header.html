@@ -1,11 +1,11 @@
-<md-toolbar ng-class="{'transparent-head': isHome, 'fixed-head': scrolled, 'dropdown-active': dropdownActive}" fixed-header class='toolbar-head md-tall'>
+<md-toolbar ng-class="{'transparent-head': isHome, 'fixed-head': scrolled, 'dropdown-active': dropdownActive}" fixed-header class='toolbar-head md-tall transparent-head'>
   <div
     class="md-toolbar-tools container container-xlg nopadding"
     layout-wrap
     layout-align="space-between center"
     layout-align-sm="space-between center"
     layout='row'
-    layout-sm="column">
+  >
 
       <div id="button-menu-mobile" ng-click="toggleSidebar()" flex="10" flex-gt-md="30">
         <hr><hr><hr>
@@ -17,14 +17,48 @@
         <i ng-if="scrolled" class="icon-nave"></i>
       </a>
 
-      <div class="menu-wrapper" flex="80" flex-xs="30" >
-        <nav class="menu" layout="row" layout-align="end center">
+      <div class="menu-wrapper" ng-class="{'menu-wrapper-social': socialMenu}" flex="80" flex-sm="100" flex-xs="100">
+        <nav class="menu" layout="row" layout-align="end center" layout-align-xs="center center">
           <ul class="social-menu" ng-show="socialMenu">
             <li><a>COMPARTE ESTO EN:</a></li>
-            <li><a href=""><i class="icon-face"></i></a></li>
-            <li><a href=""><i class="icon-insta"></i></a></li>
-            <li><a href=""><i class="icon-linkedin"></i></a></li>
-            <li><a href=""><i class="icon-whatsapp"></i></a></li>
+            <li>
+              <a 
+                socialshare
+                socialshare-provider="facebook"
+                socialshare-url="{{currentUrl}}"
+              >
+                <i class="icon-face"></i>
+              </a>
+            </li>
+            <!--
+            <li>
+              <a 
+                socialshare
+                socialshare-provider="facebook"
+                socialshare-url="{{currentUrl}}"
+              >
+                <i class="icon-insta"></i>
+              </a>
+            </li>
+            -->
+            <li>
+              <a 
+                socialshare
+                socialshare-provider="linkedin"
+                socialshare-url="{{currentUrl}}"
+              >
+                <i class="icon-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a 
+                socialshare
+                socialshare-provider="whatsapp"
+                socialshare-url="{{currentUrl}}"
+              >
+                <i class="icon-whatsapp"></i>
+              </a>
+            </li>
           </ul>
           <ul ng-show="!socialMenu">
             <li>

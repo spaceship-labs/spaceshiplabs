@@ -2864,7 +2864,10 @@ input:-webkit-autofill {
   margin: 10px 0 0;
 }
 .advice-view .alt-text{font-style: italic;}
-.advice-view p{margin: 10px 0;}
+.advice-view p{
+  margin: 10px 0;
+  text-align: justify;
+}
 .advice-view ul li{
   font-weight: 700;
   font-size: 16px;
@@ -2968,17 +2971,6 @@ input:-webkit-autofill {
 
 
 
-@media screen and (max-width: 960px){
-  .toolbar-head nav > a {font-size: 11px}
-  .toolbar-head{text-align: right;}
-  .toolbar-head .menu-wrapper{display: none;}
-  .toolbar-head .md-toolbar-tools{
-    /*justify-content: flex-start;*/
-  }
-
-  .spacees-landing{height: auto!important;}
-}
-
 @media (max-width: 750px){
 /*Team*/
   #date-designer h1,#date-community h1 {font-size: 40px;}
@@ -3042,8 +3034,27 @@ input:-webkit-autofill {
   }
 
   /*Menu*/
-  #button-menu-mobile{ display: block;}
+  .toolbar-head nav > a {font-size: 11px}
+  .toolbar-head{text-align: right;}
+  .toolbar-head .menu-wrapper{display: none;}
+  .toolbar-head .menu-wrapper-social{display: flex}
+  .toolbar-head .md-toolbar-tools{
+    /*justify-content: flex-start;*/
+  }
   .toolbar-head .menu{ display: none;}
+  .toolbar-head .menu-wrapper-social .menu{
+    display: flex;
+    width: 100%;
+    text-align: center;
+  }
+  .toolbar-head .menu-wrapper-social .menu ul{
+    margin: 6px 0;
+
+  }
+
+  .spacees-landing{height: auto!important;}
+
+  #button-menu-mobile{ display: block;}
 
   .section-title{padding-top: 78px}
   .section-title-blog{padding-bottom: 94px;}

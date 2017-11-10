@@ -34,6 +34,7 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
   };
 
   $scope.$on('$locationChangeStart', function(evt, absNewUrl, absOldUrl) {
+    $scope.currentUrl = absNewUrl;
 
     if(absOldUrl.indexOf('/proyectos') >= 0 &&  absNewUrl.indexOf('/proyectos') >= 0 ) {
       $scope.autoScroll = false;
