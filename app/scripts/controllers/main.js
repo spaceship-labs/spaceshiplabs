@@ -41,7 +41,7 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
       $scope.autoScroll = true;
     }
 
-    if(absOldUrl.indexOf('/thankyou') >= 0){
+    if(absNewUrl.indexOf('/thankyou') >= 0 || absNewUrl.indexOf('/advice') >= 0){
       $scope.socialMenu = true;
     }else{
       $scope.socialMenu = false;

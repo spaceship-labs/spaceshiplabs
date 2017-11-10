@@ -2775,7 +2775,10 @@ input:-webkit-autofill {
   background: #00C5D8;
 }
 .thankyou-view h3{color: #00CBD0;}
-.thankyou-view .phone-number{color: #00CBD0;}
+.thankyou-view .phone-number{
+  color: #00CBD0;
+  margin: 4px 0; 
+}
 .thankyou-view .reserve-title{
   margin: 30px 0 16px;
   border: 1px solid #00CBD0;
@@ -2822,7 +2825,8 @@ input:-webkit-autofill {
   font-weight: 700;
 }
 .thankyou-view .download-cta{
-  max-width: 500px;
+  width: 500px;
+  max-width: 90%;
   margin: 0 auto;
 }
 .thankyou-view .download-cta p{margin: 0;}
@@ -2840,6 +2844,54 @@ input:-webkit-autofill {
   margin-left: 6px;
   position: relative;
   top: -2px;
+}
+
+/*-------------
+  #ADVICE
+*/
+.advice-view .advice-column{padding: 0 14px}
+.advice-view h1{font-size: 30px;}
+.advice-view h2{font-size: 20px;}
+
+.advice-view .hl-title,
+.advice-view h2 strong{color: #00C5D8;}
+
+.advice-view .mini-hr{
+  border:0;
+  height: 1px;
+  background: #00C5D8;
+  max-width: 40%;
+  margin: 10px 0 0;
+}
+.advice-view .alt-text{font-style: italic;}
+.advice-view p{margin: 10px 0;}
+.advice-view ul li{
+  font-weight: 700;
+  font-size: 16px;
+}
+.advice-view .meeting-icon-wrapper{
+  text-align: center;
+  margin: 12px 0;
+}
+.advice-view .meeting-icon-wrapper i{
+  font-size: 102px;
+  color: #00C5D8;
+}
+.advice-view form input,
+.advice-view form select{
+  border: 2px solid #00C5D8;
+  display: block;
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+  background: #fff;
+}
+.advice-view .action-btn{
+  background:  #00CBD6;
+  color: #fff;
+  font-size: 20px;
+  width: 100%;
+  display: inline-block;   
 }
 
 /*--------------/
@@ -3291,6 +3343,21 @@ input:-webkit-autofill {
   .contact-us{
     background-attachment: inherit;
   }
+
+  /*
+    #THANK-YOU
+  */
+  .thankyou-view h1{font-size: 24px;}
+  .thankyou-view .phone-number{font-size: 28px;}
+  .thankyou-view .reserve-title{font-size: 18px;}
+  .thankyou-view .quote-item p{font-size: 16px;}
+  .thankyou-view .download-cta{
+    width: auto;
+    max-width: 100%;
+  }
+  .thankyou-view .download-cta .action-btn{width: auto;}
+  .thankyou-view .post-item{margin: 10px 0;}
+
 
   #footer .container{padding: 34px 20px;}
   #footer .container p{font-size: 12px;}
