@@ -14,7 +14,7 @@
 
   <div class="section-title-options" >
     <section layout="row" layout-align="space-between start" class="container container-xlg container-no-padding">
-      <form autocomplete="off" action="/blog" method="GET" flex="20" flex-sm="70">
+      <form autocomplete="off" action="/blog" method="GET" flex="20" flex-xs="70">
         <section layout="row" layout-align="center center">
           <a href="#"><i class="icon-buscador"></i></a>
           <md-input-container flex="80">
@@ -23,7 +23,7 @@
           </md-input-container>
         </section>
       </form>
-      <section class="thumbsViewContainer" ng-init="thumbsView = false" flex-sm="30">
+      <section class="thumbsViewContainer" ng-init="thumbsView = false" flex-xs="30">
         <a href='' ng-click="thumbsView = false" class="thumbsView" ng-class="{'active':!thumbsView}">
           <i class="icon-lista"></i>
         </a>
@@ -35,7 +35,7 @@
   </div>
 </div>
 
-<div ng-show="!loadedPosts" class="container" layout="row" layout-sm="column" layout-align="center center">
+<div ng-show="!loadedPosts" class="container" layout="row" layout-wrap layout-align="center center">
   <!--<md-progress-circular md-mode="indeterminate"></md-progress-circular>-->
   <img src="images/loader.gif" alt="">
 </div>
@@ -46,24 +46,24 @@
     <!--START THUMBS VIEW-->
     <div ng-switch-when="true" class="blog-thumbs-view">
 
-      <div class="news-wrapper" layout="row" layout-sm="column">
+      <div class="news-wrapper" layout="row" layout-wrap>
 
         <div
           ng-repeat="entry in entries | limitTo:1:0"
           flex
-          flex-sm="100">
+          flex-xs="100">
             <div post-item post-type="thumb" entry="entry"></div>
         </div>
 
 
       </div>
 
-      <div class="news-wrapper" layout="row" layout-sm="column">
+      <div class="news-wrapper" layout="row" layout-wrap>
 
         <div
           ng-repeat="entry in entries | limitTo:2:1"
           flex="50"
-          flex-sm="100">
+          flex-xs="100">
 
           <div post-item post-type="thumb" entry="entry"></div>
 
@@ -71,12 +71,12 @@
 
       </div>
 
-      <div class="news-wrapper" layout="row" layout-sm="column">
+      <div class="news-wrapper" layout="row" layout-wrap>
 
         <div
           ng-repeat="entry in entries | limitTo:4:3"
           flex="50"
-          flex-sm="100">
+          flex-xs="100">
 
             <div post-item post-type="thumb" entry="entry"></div>
 
@@ -93,10 +93,10 @@
       ng-switch-when="false"
       class="blog-list-view container container-xlg"
       layout="row"
-      layout-sm="column"
+      layout-wrap
       layout-align="space-between start">
 
-      <div class="blog-list" flex="70" flex-sm="100">
+      <div class="blog-list" flex="70" flex-xs="100">
 
         <div
           ng-repeat="entryItem in entries"
@@ -108,7 +108,7 @@
 
       </div>
 
-      <div class="blog-sidebar" flex="25" flex-sm="100">
+      <div class="blog-sidebar" flex="25" flex-xs="100">
 
         <div class="blog-sidebar-collections">
           <h4>Categorías</h4>

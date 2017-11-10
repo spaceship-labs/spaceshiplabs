@@ -2999,11 +2999,13 @@ input:-webkit-autofill {
 
 
 @media (max-width: 959px) and (min-width: 600px){
-  [flex-md="100"]{
+  /*
+  [flex-sm="100"]{
     -webkit-flex: 1!important;
     -ms-flex: 1!important;
     flex: 1!important;
   }
+  */
   .mentions-landing{height: auto!important;}
 
   .projects-categories-wrapper md-input-container{padding-bottom: 10px;}
@@ -3016,11 +3018,13 @@ input:-webkit-autofill {
 }
 
 @media screen and (max-width: 599px){
-  [flex-sm="100"]{
+  /*
+  [flex-xs="100"]{
     -webkit-flex: 1!important;
     -ms-flex: 1!important;
     flex: 1!important;
   }
+  */
 }
 
 @media screen and (max-width: 960px){

@@ -2,12 +2,12 @@
 	<div
 		class="projects-slider-viewport"
 		layout="row"
-    layout-sm="column"
+    layout-wrap
 		ng-style="style('firstScreen')"
 		full-screen-wrapper
 		>
 
-    <div class="projects-slider-reel-wrapper projects-slider-images-reel-wrapper" flex="50" flex-sm="100">
+    <div class="projects-slider-reel-wrapper projects-slider-images-reel-wrapper" flex="50" flex-xs="100">
   		<div class="projects-slider-reel projects-slider-images-reel">
 
   			<!--Slides(por proyecto)-->
@@ -43,9 +43,9 @@
       </div>
     </div>
 
-    <div class="projects-slider-reel-wrapper projects-slider-content-reel-wrapper" flex="50" flex-sm="100">
+    <div class="projects-slider-reel-wrapper projects-slider-content-reel-wrapper" flex="50" flex-xs="100">
 
-      <section layout="column" layout-gt-lg="row" layout-align="center center" class="projects-categories-wrapper  container-smd">
+      <section  layout-gt-lg="row" layout-align="center center" class="projects-categories-wrapper  container-smd">
         <form flex="30">
           <section layout="row" layout-align="center center">
             <a href="#">
@@ -84,7 +84,7 @@
   				layout="column"
           itemscope itemtype="http://schema.org/WebSite"
   				layout-align="center center"
-          layout-align-sm="start start"
+          layout-align-xsd="start start"
           ng-class="{
             'projects-slide-preview': preview,
             'projects-slide-active' : selectedIndexSlide == $index,

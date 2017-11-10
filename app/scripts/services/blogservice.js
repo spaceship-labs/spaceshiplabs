@@ -117,14 +117,15 @@ angular.module('spaceshiplabsApp')
       };
       var deferred = $q.defer();
       $http( req )
-        .success(function(response, status, headers) {
+        .then(function(response, status, headers) {
+          console.log('response', response);
           var data = {
-            pages: headers('x-wp-totalpages'),
-            entries: response
+            pages: response.headers('x-wp-totalpages'),
+            entries: response.data
           };
           deferred.resolve(data);
         })
-        .error(function(err) {
+        .catch(function(err) {
           //error
           console.log(err);
           deferred.reject(err);

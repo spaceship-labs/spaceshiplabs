@@ -14,7 +14,7 @@
 
   <div class="section-title-options" >
     <section layout="row" layout-align="space-between start" class="container container-xlg container-no-padding">
-      <form autocomplete="off" action="/blog" method="GET" flex="20" flex-sm="70">
+      <form autocomplete="off" action="/blog" method="GET" flex="20" flex-xs="70">
         <section layout="row" layout-align="center center">
           <a href="#"><i class="icon-buscador"></i></a>
           <md-input-container flex="80">
@@ -43,7 +43,7 @@
 
     <div class="single container container-xlg" layout="row" layout-sm="column" layout-align="space-between start">
 
-      <div class="single-content" flex="70" flex-sm="100" itemid="/{{::entry.slug}}" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="single-content" flex="70" flex-xs="100" itemid="/{{::entry.slug}}" itemscope itemtype="http://schema.org/BlogPosting">
         <meta itemprop="image" content="{{::entryImg}}">
         <meta itemprop="name" content="{{::entry.title}}">
         <meta itemprop="datePublished" content="{{::entry.date}}">
@@ -74,7 +74,7 @@
 
       </div>
 
-      <div class="blog-sidebar" flex="25" flex-sm="100">
+      <div class="blog-sidebar" flex="25" flex-xs="100">
 
         <div
             ng-repeat="entryItem in entries"
