@@ -2884,7 +2884,7 @@ input:-webkit-autofill {
   width: 100%;
   padding: 4px;
   box-sizing: border-box;
-  background: #fff;
+  background: transparent;
 }
 .advice-view .action-btn{
   background:  #00CBD6;
