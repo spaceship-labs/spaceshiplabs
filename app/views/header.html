@@ -19,7 +19,14 @@
 
       <div class="menu-wrapper" flex="80" flex-sm="30" >
         <nav class="menu" layout="row" layout-align="end center">
-          <ul>
+          <ul class="social-menu" ng-show="socialMenu">
+            <li><a>COMPARTE ESTO EN:</a></li>
+            <li><a href=""><i class="icon-face"></i></a></li>
+            <li><a href=""><i class="icon-insta"></i></a></li>
+            <li><a href=""><i class="icon-linkedin"></i></a></li>
+            <li><a href=""><i class="icon-whatsapp"></i></a></li>
+          </ul>
+          <ul ng-show="!socialMenu">
             <li>
               <a>ACERCA DE</a>
               <ul>

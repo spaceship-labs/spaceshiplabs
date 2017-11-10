@@ -707,6 +707,13 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   /*font-size: 12px;*/
 }
 
+/*---------------
+  #MENU-SOCIAL-LINKS
+/*-----------------*/
+.toolbar-head .social-menu li i{font-size: 24px;}
+.toolbar-head .social-menu li a:after{display: none;}
+.toolbar-head .social-menu li a{vertical-align: middle;}
+
 /*-----------/
   #DROPDOWNS
 /*----------*/
@@ -2753,6 +2760,87 @@ input:-webkit-autofill {
   #PROJECTS
 /*---------------*/
 
+/*---------------/
+  #THANK-YOU
+/*--------------*/
+.section-title-thankyou{
+  padding-top: 64px;
+  padding-bottom: 4px;
+}
+.section-title-thankyou i{font-size: 90px;}
+.thankyou-view h1{font-size: 32px}
+.thankyou-view hr{
+  height: 1px;
+  border: 0;
+  background: #00C5D8;
+}
+.thankyou-view h3{color: #00CBD0;}
+.thankyou-view .phone-number{color: #00CBD0;}
+.thankyou-view .reserve-title{
+  margin: 30px 0 16px;
+  border: 1px solid #00CBD0;
+  text-align: center;
+  padding: 10px 10px 6px;
+  color: #00CBD0;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 26px;
+  vertical-align: middle;
+}
+.thankyou-view .reserve-title i{
+  font-size: 38px;
+  vertical-align: middle;
+  margin-left: 10px;
+  top: -4px;
+  position: relative;
+}
+
+.thankyou-view .quotes-block{
+  background: #F5F5F5;
+  text-align: center;
+  padding: 15px;
+}
+.thankyou-view .quotes-block h1 i{
+  font-size: 40px;
+  color: #00CBD0;
+}
+
+.thankyou-view .quote-item{margin: 12px 0 20px;}
+.thankyou-view .quote-item p{
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+}
+.thankyou-view .quote-item .quote-author{
+  font-size: 18px;
+  color: #4C4ABD;
+}
+.thankyou-view .posts-items{margin: 14px 0 0;}
+.thankyou-view .post-item{padding-right: 16px;}
+.thankyou-view .post-item p a{
+  color: #000;
+  font-weight: 700;
+}
+.thankyou-view .download-cta{
+  max-width: 500px;
+  margin: 0 auto;
+}
+.thankyou-view .download-cta p{margin: 0;}
+.thankyou-view .download-cta .action-btn-wrap{margin-top: 6px;}
+.thankyou-view .download-cta .action-btn{
+  background:  #00CBD6;
+  color: #fff;
+  font-size: 20px;
+  width: 100%;
+  display: inline-block;   
+}
+.thankyou-view .download-cta .action-btn i{
+  font-size: 28px;
+  vertical-align: middle;
+  margin-left: 6px;
+  position: relative;
+  top: -2px;
+}
 
 /*--------------/
   #FOOTER

@@ -134,6 +134,11 @@ angular
         controller: 'MarketingCtrl',
         controllerAs: 'marketing'
       })
+      .when('/thankyou', {
+        templateUrl: 'views/thankyoupage.html',
+        controller: 'ThankYouCtrl',
+        controllerAs: 'thankyou'
+      })
       .when('/:slug', {
         templateUrl: 'views/post.html',
         controller: 'PostCtrl',

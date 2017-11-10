@@ -1,230 +1,251 @@
 @font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?gyf6mq');
-	src:url('../fonts/icomoon.eot?gyf6mq#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf?gyf6mq') format('truetype'),
-		url('../fonts/icomoon.woff?gyf6mq') format('woff'),
-		url('../fonts/icomoon.svg?gyf6mq#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?d8z1bn');
+  src:  url('../fonts/icomoon.eot?d8z1bn#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?d8z1bn') format('truetype'),
+    url('../fonts/icomoon.woff?d8z1bn') format('woff'),
+    url('../fonts/icomoon.svg?d8z1bn#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-abajo:before {
-	content: "\e900";
+  content: "\e900";
 }
 .icon-about:before {
-	content: "\e901";
+  content: "\e901";
 }
 .icon-api:before {
-	content: "\e902";
+  content: "\e902";
 }
 .icon-awards:before {
-	content: "\e903";
+  content: "\e903";
 }
 .icon-bocetaje:before {
-	content: "\e904";
+  content: "\e904";
 }
 .icon-branding:before {
-	content: "\e905";
+  content: "\e905";
 }
 .icon-buscador:before {
-	content: "\e906";
+  content: "\e906";
+}
+.icon-calendar:before {
+  content: "\e907";
 }
 .icon-campana:before {
-	content: "\e907";
+  content: "\e908";
 }
 .icon-comilla1:before {
-	content: "\e908";
+  content: "\e909";
 }
 .icon-comilla2:before {
-	content: "\e909";
+  content: "\e90a";
 }
 .icon-configurable:before {
-	content: "\e90a";
+  content: "\e90b";
 }
 .icon-contacto:before {
-	content: "\e90b";
+  content: "\e90c";
 }
 .icon-cuadros:before {
-	content: "\e90c";
+  content: "\e90d";
 }
 .icon-definicion:before {
-	content: "\e90d";
+  content: "\e90e";
 }
 .icon-der:before {
-	content: "\e90e";
+  content: "\e90f";
 }
 .icon-diseno:before {
-	content: "\e90f";
+  content: "\e910";
 }
 .icon-diseno2:before {
-	content: "\e910";
+  content: "\e911";
 }
 .icon-doc:before {
-	content: "\e911";
+  content: "\e912";
 }
 .icon-docu:before {
-	content: "\e912";
+  content: "\e913";
 }
 .icon-documentacion:before {
-	content: "\e913";
+  content: "\e914";
+}
+.icon-download:before {
+  content: "\e915";
 }
 .icon-escalable:before {
-	content: "\e914";
+  content: "\e916";
 }
 .icon-estudio:before {
-	content: "\e915";
+  content: "\e917";
 }
 .icon-face:before {
-	content: "\e916";
+  content: "\e918";
 }
 .icon-flecha:before {
-	content: "\e917";
+  content: "\e919";
 }
 .icon-funcionamiento:before {
-	content: "\e918";
+  content: "\e91a";
 }
 .icon-garantia:before {
-	content: "\e919";
+  content: "\e91b";
 }
 .icon-grafica:before {
-	content: "\e91a";
+  content: "\e91c";
+}
+.icon-hands:before {
+  content: "\e91d";
 }
 .icon-insta:before {
-	content: "\e91b";
+  content: "\e91e";
 }
 .icon-interaccion:before {
-	content: "\e91c";
+  content: "\e91f";
 }
 .icon-iu:before {
-	content: "\e91d";
+  content: "\e920";
 }
 .icon-izq:before {
-	content: "\e91e";
+  content: "\e921";
 }
 .icon-lanzamiento:before {
-	content: "\e91f";
+  content: "\e922";
 }
 .icon-link:before {
-	content: "\e920";
+  content: "\e923";
+}
+.icon-linkedin:before {
+  content: "\e924";
 }
 .icon-lista:before {
-	content: "\e921";
+  content: "\e925";
 }
 .icon-logo:before {
-	content: "\e922";
+  content: "\e926";
 }
 .icon-mano:before {
-	content: "\e923";
+  content: "\e927";
 }
 .icon-mantenimiento:before {
-	content: "\e924";
+  content: "\e928";
 }
 .icon-marketing:before {
-	content: "\e925";
+  content: "\e929";
+}
+.icon-meeting:before {
+  content: "\e92a";
 }
 .icon-mercado:before {
-	content: "\e926";
+  content: "\e92b";
 }
 .icon-multiempresas:before {
-	content: "\e927";
+  content: "\e92c";
 }
 .icon-Multilenguaje:before {
-	content: "\e928";
+  content: "\e92d";
 }
 .icon-multiusuarios:before {
-	content: "\e929";
+  content: "\e92e";
 }
 .icon-nave:before {
-	content: "\e92a";
+  content: "\e92f";
 }
 .icon-noticias:before {
-	content: "\e92b";
+  content: "\e930";
 }
 .icon-paleta:before {
-	content: "\e92c";
+  content: "\e931";
 }
 .icon-portafolio:before {
-	content: "\e92d";
+  content: "\e932";
 }
 .icon-premios:before {
-	content: "\e92e";
+  content: "\e933";
 }
 .icon-produccion:before {
-	content: "\e92f";
+  content: "\e934";
 }
 .icon-propiedad:before {
-	content: "\e930";
+  content: "\e935";
 }
 .icon-pruebas:before {
-	content: "\e931";
+  content: "\e936";
+}
+.icon-quotes:before {
+  content: "\e937";
 }
 .icon-redefinir:before {
-	content: "\e932";
+  content: "\e938";
 }
 .icon-referencias:before {
-	content: "\e933";
+  content: "\e939";
 }
 .icon-reportes:before {
-	content: "\e934";
+  content: "\e93a";
 }
 .icon-responsivo:before {
-	content: "\e935";
+  content: "\e93b";
 }
 .icon-seo:before {
-	content: "\e936";
+  content: "\e93c";
 }
 .icon-social:before {
-	content: "\e937";
+  content: "\e93d";
 }
 .icon-software:before {
-	content: "\e938";
+  content: "\e93e";
 }
 .icon-soporte:before {
-	content: "\e939";
+  content: "\e93f";
 }
 .icon-soporte1:before {
-	content: "\e93a";
+  content: "\e940";
 }
 .icon-soporte2:before {
-	content: "\e93b";
+  content: "\e941";
 }
 .icon-soporte3:before {
-	content: "\e93c";
+  content: "\e942";
 }
 .icon-soporte4:before {
-	content: "\e93d";
+  content: "\e943";
 }
 .icon-telefono:before {
-	content: "\e93e";
+  content: "\e944";
 }
 .icon-tranquilo:before {
-	content: "\e93f";
+  content: "\e945";
 }
 .icon-tweet:before {
-	content: "\e940";
+  content: "\e946";
 }
 .icon-velocidad:before {
-	content: "\e941";
+  content: "\e947";
+}
+.icon-whatsapp:before {
+  content: "\e948";
 }
 .icon-wireframe:before {
-	content: "\e942";
+  content: "\e949";
 }
 .icon-youtube:before {
-	content: "\e943";
+  content: "\e94a";
 }
-

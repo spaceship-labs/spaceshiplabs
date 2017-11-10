@@ -41,6 +41,12 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
       $scope.autoScroll = true;
     }
 
+    if(absOldUrl.indexOf('/thankyou') >= 0){
+      $scope.socialMenu = true;
+    }else{
+      $scope.socialMenu = false;
+    }
+
     var resetContactForm = function(){
       $scope.contactError = false;
       if($scope.contactData){
