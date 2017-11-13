@@ -3373,6 +3373,19 @@ input:-webkit-autofill {
   .thankyou-view .download-cta .action-btn{width: auto;}
   .thankyou-view .post-item{margin: 10px 0;}
 
+  /*--------------
+    #ADVICE
+  */
+  .advice-view h1{font-size: 20px;}
+  .advice-view h2{font-size: 18px;}
+  .advice-view p{font-size: 15px;}
+  .advice-view ul li{
+    font-size: 14px;
+    margin-bottom: 4px;    
+  }
+  .section-title-advice-view{padding-top: 96px;}
+  .section-title-advice-view h1{font-size: 24px;}
+  .section-title-advice-view h1 i{font-size: 24px;}
 
   #footer .container{padding: 34px 20px;}
   #footer .container p{font-size: 12px;}
