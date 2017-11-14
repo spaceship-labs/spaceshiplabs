@@ -35,41 +35,50 @@
 		<div flex="50" flex-xs="100" class="advice-column">
 			<h1>¡HABLA CON EL <strong class="hl-title">ESPECIALISTA!</strong></h1>	
 
-			<form action="#">
+
+
+			<form action="https://forms.hubspot.com/uploads/form/v2/3014389/87681cc5-72ff-4baa-9f3e-eda0cd7ed4d4" method="POST">
+				<input type="hidden" name="hs_context" ng-value="advice.hs_context">
 				<p><label for="name">Nombre*</label></p>
 				<p>
-					<input type="text" name="name" id="name">
+					<input type="text" ng-model="advice.formData.firstname" name="firstname" id="name">
+				</p>
+
+				<p><label for="name">Apellido*</label></p>
+				<p>
+					<input type="text" ng-model="advice.formData.lastname" name="lastname" id="name">
 				</p>
 
 				<p><label for="email">Email*</label></p>
 				<p>
-					<input type="email" name="email" id="email">
+					<input type="email" ng-model="advice.formData.email" name="email" id="email">
 				</p>
 
 				<p><label for="phone">Teléfono*</label></p>
 				<p>
-					<input type="text" name="phone" id="phone">
+					<input type="text" ng-model="advice.formData.phone" name="phone" id="phone">
 				</p>
 
-				<p><label for="company">Empresa*</label></p>
+				<p><label for="industry">Empresa*</label></p>
 				<p>
-					<input type="text" name="company" id="company">
+					<input type="text" ng-model="advice.formData.industry" name="industry" id="industry">
 				</p>
 
 				<p><label for="companyUrl">URL de tu empresa*</label></p>
 				<p>
-					<input type="text" name="companyUrl" id="companyUrl">
+					<input type="text" ng-model="advice.formData.website" name="website" id="companyUrl">
 				</p>
 
 				<p><label for="name">Cargo de la empresa*</label></p>
 				<p>
-					<select name="#" id="#">
-						<option value="CEO/ Director/ Presidente">CEO/ Director/ Presidente</option>
-						<option value="Gerente/ Coordinador de marketing">Gerente/ Coordinador de marketing</option>
-						<option value="Freelancer/ Asesor Independiente">Freelancer/ Asesor Independiente</option>
-						<option value="Gerente/ Coordinador de Ventas">Gerente/ Coordinador de Ventas</option>
+					<select name="cargo_de_la_empresa" id="#" ng-model="advice.formData.cargo_de_la_empresa">
+						<option value="" disabled="" selected="">- Selecciona una opción -</option>
+						<option value="CEO/Director/Presidente">CEO/Director/Presidente</option>
+						<option value="Gerente/Coordinador de marketing">Gerente/Coordinador de marketing</option>
+						<option value="Freelancer/Asesor Independiente">Freelancer/Asesor Independiente</option>
+						<option value="Gerente/Coordinador de Ventas">Gerente/Coordinador de Ventas</option>
 						<option value="Emprendedor">Emprendedor</option>
-						<option value="Estudiante">Estudiante</option>
+						<option value="Estudiante" >Estudiante</option>
 					</select>
 				</p>
 
