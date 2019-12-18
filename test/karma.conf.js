@@ -3,7 +3,7 @@
 // Generated on 2015-08-07 using
 // generator-karma 1.0.0
 
-module.exports = function(config) {
+module.exports = function (config) {
   'use strict';
 
   config.set({
@@ -67,12 +67,13 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-      "PhantomJS"
+      //"PhantomJS"
+      "Chrome"
     ],
 
     // Which plugins to enable
     plugins: [
-      "karma-phantomjs-launcher",
+      //"karma-phantomjs-launcher",
       'karma-mocha',
       'karma-chai',
       'karma-coverage'
