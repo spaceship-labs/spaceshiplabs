@@ -51,7 +51,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       category: 'ui-ux',
       name:'Mejora tu escuela',
       description:'Plataforma de participación ciudadana para transformar la educación. Desarrollamos un sitio web en el cual es posible buscar, comparar y calificar todas las escuelas de México.',
-      url: 'http://www.mejoratuescuela.org/',
+      url: 'https://www.mejoratuescuela.org/',
       images:['images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
     },
     {
@@ -84,7 +84,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
       slug:'the-juicery-boutique',
       category: 'ui-ux',
       description:'Es una marca de Jugos cold pressed y productos naturales. Implementamos diseño y solución e-commerce para la venta de jugos, productos y paquetes detox.',
-      url: 'http://www.thejuiceryboutique.com/',
+      url: 'https://www.thejuiceryboutique.com/',
       images:['images/projects/juicery2.jpg','images/projects/juicery1.jpg','images/projects/juicery3.jpg']
     },
     {

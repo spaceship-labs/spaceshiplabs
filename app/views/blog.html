@@ -1,24 +1,24 @@
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4&appId=1630031427237305";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4&appId=1630031427237305";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="container section-title section-title-blog center-content">
   <h1>
     <i class="icon-noticias"></i> Noticias recientes
-   </h1>
+  </h1>
 
-  <div class="section-title-options" >
+  <div class="section-title-options">
     <section layout="row" layout-align="space-between start" class="container container-xlg container-no-padding">
       <form autocomplete="off" action="/blog" method="GET" flex="20" flex-xs="70">
         <section layout="row" layout-align="center center">
           <a href="#"><i class="icon-buscador"></i></a>
           <md-input-container flex="80">
-              <label>Busca una noticia</label>
+            <label>Busca una noticia</label>
             <input ng-model="s" name="s" type="text">
           </md-input-container>
         </section>
@@ -48,11 +48,8 @@
 
       <div class="news-wrapper" layout="row" layout-wrap>
 
-        <div
-          ng-repeat="entry in entries | limitTo:1:0"
-          flex
-          flex-xs="100">
-            <div post-item post-type="thumb" entry="entry"></div>
+        <div ng-repeat="entry in entries | limitTo:1:0" flex flex-xs="100">
+          <div post-item post-type="thumb" entry="entry"></div>
         </div>
 
 
@@ -60,10 +57,7 @@
 
       <div class="news-wrapper" layout="row" layout-wrap>
 
-        <div
-          ng-repeat="entry in entries | limitTo:2:1"
-          flex="50"
-          flex-xs="100">
+        <div ng-repeat="entry in entries | limitTo:2:1" flex="50" flex-xs="100">
 
           <div post-item post-type="thumb" entry="entry"></div>
 
@@ -73,12 +67,9 @@
 
       <div class="news-wrapper" layout="row" layout-wrap>
 
-        <div
-          ng-repeat="entry in entries | limitTo:4:3"
-          flex="50"
-          flex-xs="100">
+        <div ng-repeat="entry in entries | limitTo:4:3" flex="50" flex-xs="100">
 
-            <div post-item post-type="thumb" entry="entry"></div>
+          <div post-item post-type="thumb" entry="entry"></div>
 
         </div>
 
@@ -89,18 +80,12 @@
 
 
     <!--START LIST VIEW-->
-    <div
-      ng-switch-when="false"
-      class="blog-list-view container container-xlg"
-      layout="row"
-      layout-wrap
+    <div ng-switch-when="false" class="blog-list-view container container-xlg" layout="row" layout-wrap
       layout-align="space-between start">
 
       <div class="blog-list" flex="70" flex-xs="100">
 
-        <div
-          ng-repeat="entryItem in entries"
-          class="blog-list-card">
+        <div ng-repeat="entryItem in entries" class="blog-list-card">
 
           <div post-item entry="entryItem"></div>
 
@@ -113,10 +98,7 @@
         <div class="blog-sidebar-collections">
           <h4>Categorías</h4>
           <div layout="row" layout-align="space-between start" layout-wrap>
-            <a
-              ng-repeat="category in categories"
-              flex="45"
-              ng-href="/blog/category/{{::category.slug}}"
+            <a ng-repeat="category in categories" flex="45" ng-href="/blog/category/{{::category.slug}}"
               class="blog-sidebar-collection">{{::category.name}}</a>
 
           </div>
@@ -134,7 +116,14 @@
         </div>-->
 
 
-        <div class="fb-page" data-href="https://www.facebook.com/Spaceshiplabs" data-width="240" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Spaceshiplabs"><a href="https://www.facebook.com/Spaceshiplabs">Spaceshiplabs</a></blockquote></div></div>
+        <div class="fb-page" crossorigin="anonymous" data-href="https://www.facebook.com/Spaceshiplabs" data-width="240"
+          data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"
+          data-show-posts="false">
+          <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/Spaceshiplabs"><a
+                href="https://www.facebook.com/Spaceshiplabs">Spaceshiplabs</a></blockquote>
+          </div>
+        </div>
 
       </div>
 
@@ -144,21 +133,15 @@
   </ng-switch>
 
   <div class="container container-xlg">
-    <nav class="pagination-blog" ng-hide='!pages || pages <= 1' layout="row" >
-      <a
-        ng-if="page > 1"
-        ng-href="{{baseUrl}}/page/{{page-1}}{{searchTerm}}">
+    <nav class="pagination-blog" ng-hide='!pages || pages <= 1' layout="row">
+      <a ng-if="page > 1" ng-href="{{baseUrl}}/page/{{page-1}}{{searchTerm}}">
         &lt;
       </a>
-      <a
-        ng-repeat="itemPage in getRange(pages) | limitTo:entriesLimit:(endPagination-itemsPagination) track by $index"
-        ng-class="{'current-page': (itemPage) === page}"
-        ng-href="{{baseUrl}}/page/{{itemPage}}{{searchTerm}}">
+      <a ng-repeat="itemPage in getRange(pages) | limitTo:entriesLimit:(endPagination-itemsPagination) track by $index"
+        ng-class="{'current-page': (itemPage) === page}" ng-href="{{baseUrl}}/page/{{itemPage}}{{searchTerm}}">
         {{itemPage}}
       </a>
-      <a
-        ng-if="page < pages"
-        ng-href="{{baseUrl}}/page/{{incrementPage(page)}}{{searchTerm}}">
+      <a ng-if="page < pages" ng-href="{{baseUrl}}/page/{{incrementPage(page)}}{{searchTerm}}">
         &gt;
       </a>
     </nav>

@@ -1,8 +1,8 @@
 /*
 Theme Name: Spaceshiplabs
-Theme URI: http://Spaceshiplabs.com/
+Theme URI: https://Spaceshiplabs.com/
 Author: Spaceshiplabs
-Author URI: http://spaceshiplabs.com/
+Author URI: https://spaceshiplabs.com/
 Description: Plantilla para Spaceshiplabs
 Version: 1.0
 Text Domain: Spaceshiplabs
@@ -407,7 +407,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   padding-bottom: 20px;
 }
 .section-title-service{
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#08b4da+0,1fdeb2+100 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#08b4da+0,1fdeb2+100 */
   background: rgb(8,180,218); /* Old browsers */
   background: -moz-linear-gradient(left,  rgba(8,180,218,1) 0%, rgba(31,222,178,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(8,180,218,1)), color-stop(100%,rgba(31,222,178,1))); /* Chrome,Safari4+ */

@@ -1,5 +1,5 @@
 // Karma configuration
-// http://karma-runner.github.io/0.12/config/configuration-file.html
+// https://karma-runner.github.io/0.12/config/configuration-file.html
 // Generated on 2015-08-07 using
 // generator-karma 1.0.0
 
@@ -100,7 +100,7 @@ module.exports = function(config) {
 
     // Uncomment the following lines if you are using grunt's server to run the tests
     // proxies: {
-    //   '/': 'http://localhost:9000/'
+    //   '/': 'https://localhost:9000/'
     // },
     // URL root prevent conflicts with the site root
     // urlRoot: '_karma_'
