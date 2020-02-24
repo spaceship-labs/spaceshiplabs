@@ -7,9 +7,9 @@
  * # MainCtrl
  * Controller of the spaceshiplabsApp
  */
-function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, $http, windowSize){
+function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, $http, windowSize) {
 
-  $scope.init = function(){
+  $scope.init = function () {
     $scope.emailSent = false;
     $scope.contactError = false;
     $scope.contactData = {};
@@ -23,59 +23,59 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
 
   };
 
-  $scope.toggleSidebar = function() {
+  $scope.toggleSidebar = function () {
     $mdSidenav('left').open();
   };
 
 
 
-  $scope.closeSidebar = function() {
+  $scope.closeSidebar = function () {
     $mdSidenav('left').close();
   };
 
-  $scope.$on('$locationChangeStart', function(evt, absNewUrl, absOldUrl) {
+  $scope.$on('$locationChangeStart', function (evt, absNewUrl, absOldUrl) {
     $scope.currentUrl = absNewUrl;
 
-    if(absOldUrl.indexOf('/proyectos') >= 0 &&  absNewUrl.indexOf('/proyectos') >= 0 ) {
+    if (absOldUrl.indexOf('/proyectos') >= 0 && absNewUrl.indexOf('/proyectos') >= 0) {
       $scope.autoScroll = false;
-    }else{
+    } else {
       $scope.autoScroll = true;
     }
 
-    if(absNewUrl.indexOf('/thankyou') >= 0 || absNewUrl.indexOf('/advice') >= 0){
+    if (absNewUrl.indexOf('/thankyou') >= 0 || absNewUrl.indexOf('/advice') >= 0) {
       $scope.socialMenu = true;
-    }else{
+    } else {
       $scope.socialMenu = false;
     }
 
-    var resetContactForm = function(){
+    var resetContactForm = function () {
       $scope.contactError = false;
-      if($scope.contactData){
+      if ($scope.contactData) {
         $scope.contactData = {
-          email:'',
-          name:'',
-          message:'',
+          email: '',
+          name: '',
+          message: '',
           _gotcha: '',
         };
       }
     };
 
-    var customizeHeader = function(){
-      if($location.path() === '/'){
+    var customizeHeader = function () {
+      if ($location.path() === '/') {
         $('.toolbar-head .menu').addClass('menu-home');
-      }else{
+      } else {
         $('.toolbar-head .menu').removeClass('menu-home');
       }
     };
 
-    var manageSidebar = function(){
-      if($scope.redirectCount > 0){
+    var manageSidebar = function () {
+      if ($scope.redirectCount > 0) {
         $scope.closeSidebar();
       }
       $scope.redirectCount++;
     };
 
-    $scope.isHome = ($location.path() === '/' ) ? true : false;
+    $scope.isHome = ($location.path() === '/') ? true : false;
 
     setTimeout(customizeHeader, 500);
     manageSidebar();
@@ -83,14 +83,14 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
 
   });
 
-  $scope.isHome = ($location.path() === '/' ) ? true : false;
+  $scope.isHome = ($location.path() === '/') ? true : false;
 
-  $scope.getAbsUrl = function(){
+  $scope.getAbsUrl = function () {
     return $location.absUrl();
   };
 
-  $scope.doContact = function(form){
-    if(form.$valid){
+  $scope.doContact = function (form) {
+    if (form.$valid) {
       $scope.loadingContact = true;
       $scope.contactError = false;
       $scope.emailSent = false;
@@ -101,52 +101,52 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
       });
       //params = JSON.stringify(params);
       var req = {
-        url: 'http://blog.spaceshiplabs.com/wp-content/themes/spaceshiplabs/contact_function.php',
+        url: 'https://blog.spaceshiplabs.com/wp-content/themes/spaceshiplabs/contact_function.php',
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         data: params
       };
-      $http( req ).then(
-        function(response) {
+      $http(req).then(
+        function (response) {
           //console.log(response);
-          if(response.data === 'success'){
+          if (response.data === 'success') {
             $scope.emailSent = true;
             $scope.contactError = false;
-          }else{
+          } else {
             $scope.contactError = true;
           }
           $scope.loadingContact = false;
-        }, function(err) {
+        }, function (err) {
           $scope.contactError = true;
           console.log(err);
           $scope.loadingContact = false;
         }
       );
-    }else{
+    } else {
       $scope.contactError = true;
     }
   };
 
-  $scope.scrollTo = function(target){
+  $scope.scrollTo = function (target) {
     setTimeout(
-        function(){
-          var headerHeight = 61;
-          $('html, body').animate({
-            scrollTop: $('#' + target).offset().top - headerHeight
-          }, 600);
-        },
-        300
+      function () {
+        var headerHeight = 61;
+        $('html, body').animate({
+          scrollTop: $('#' + target).offset().top - headerHeight
+        }, 600);
+      },
+      300
     );
   };
 
 
 
-  $scope.getRange = function(n) {
+  $scope.getRange = function (n) {
     var arr = new Array(n);
-    for(var i=0;i<n;i++){
-      arr[i] = i+1;
+    for (var i = 0; i < n; i++) {
+      arr[i] = i + 1;
     }
     return arr;
   };
@@ -155,6 +155,6 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
 
 }
 
-angular.module('spaceshiplabsApp').controller('MainCtrl',MainCtrl);
-MainCtrl.$inject = ['$scope','$mdSidenav','$location','$routeParams','metaTagsService','$http','windowSize'];
+angular.module('spaceshiplabsApp').controller('MainCtrl', MainCtrl);
+MainCtrl.$inject = ['$scope', '$mdSidenav', '$location', '$routeParams', 'metaTagsService', '$http', 'windowSize'];
 
