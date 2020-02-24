@@ -25,7 +25,7 @@ function ProjectsCtrl($scope, metaTagsService){
       category: 'ui-ux',
       name:'Mejora tu escuela',
       description:'Plataforma de participación ciudadana para transformar la educación. Desarrollamos un sitio web en el cual es posible buscar, comparar y calificar todas las escuelas de México.',
-      url: 'http://www.mejoratuescuela.org/',
+      url: 'https://www.mejoratuescuela.org/',
       images:['images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
     },
     {
@@ -59,7 +59,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'mr-gotcha',
       category: 'ui-ux',
       description:'Es el nuevo paintball de cancún, En este proyecto implementamos un sitio web el cual permite ver los paquetes y promociones así como visualizar la galería del campo de batalla y áreas de actividades, también se puede contactar y reservar directamente desde el sitio.',
-      url: 'http://nuevopaintball.com/',
+      url: 'https://nuevopaintball.com/',
       images:['images/projects/mrgotcha2.jpg','images/projects/mrgotcha3.jpg','images/projects/mrgotcha4.jpg']
     },
     {
@@ -101,7 +101,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'the-juicery-boutique',
       category: 'ui-ux',
       description:'Es una marca de Jugos cold pressed y productos naturales. Implementamos diseño y solución e-commerce para la venta de jugos, productos y paquetes detox.',
-      url: 'http://www.thejuiceryboutique.com/',
+      url: 'https://www.thejuiceryboutique.com/',
       images:['images/projects/juicery2.jpg','images/projects/juicery1.jpg','images/projects/juicery3.jpg']
     },
     {
@@ -142,7 +142,7 @@ function ProjectsCtrl($scope, metaTagsService){
       slug:'water-tours',
       category: 'ui-ux',
       description:'Es una empresa dedicada a la venta de tours acuáticos, Creamos la marca desde cero e implementamos un sitio web en el cual se puede comprar y reservar una gran variedad de actividades acuáticas.',
-      //url: 'http://cancunwatertours.herokuapp.com/',
+      //url: 'https://cancunwatertours.herokuapp.com/',
       images:['images/projects/watertours2.jpg', 'images/projects/watertours1.jpg']
     },
     {

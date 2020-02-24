@@ -7,7 +7,7 @@
  * # PostCtrl
  * Controller of the spaceshiplabsApp
  */
-function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location, $filter, metaTagsService){
+function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location, $filter, metaTagsService) {
 
   $scope.postSlug = $routeParams.slug || 'down-the-rabbit-hole';
   $scope.entries = [];
@@ -16,29 +16,29 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
   $scope.categories = [];
   $scope.loadedPost = false;
 
-  $scope.getPost = function(){
-    blogService.getSingleEntry($scope.postSlug).then(function(entry){
-      if(!entry){
+  $scope.getPost = function () {
+    blogService.getSingleEntry($scope.postSlug).then(function (entry) {
+      if (!entry) {
         console.log('no hay entry');
         $location.path('/');
       }
       $scope.entry = entry;
-      if(entry.content){
+      if (entry.content) {
         entry.content = $scope.formatImageSrc(entry.content);
         $scope.entry.content = $sce.trustAsHtml(entry.content);
-      }else{
+      } else {
         console.log('no hay entry');
         $location.path('/');
       }
       $scope.loadedPost = true;
       $scope.entryImg = '';
-      if(entry.featured_image){
-        if(entry.featured_image.attachment_meta.sizes.large){
+      if (entry.featured_image) {
+        if (entry.featured_image.attachment_meta.sizes.large) {
           $scope.entryImg = entry.featured_image.attachment_meta.sizes.large.url;
-        }else{
+        } else {
           $scope.entryImg = entry.featured_image.attachment_meta.sizes.blog.url;
         }
-      }else{
+      } else {
         $scope.entryImg = entry.attachments[0].large[0];
       }
       var meta = {
@@ -50,35 +50,35 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
     });
   };
 
-  $scope.formatImageSrc = function(content){
+  $scope.formatImageSrc = function (content) {
     var find = '/wp-content/';
-    var url = 'http://blog.spaceshiplabs.com/wp-content/';
+    var url = 'https://blog.spaceshiplabs.com/wp-content/';
     var re = new RegExp(find, 'g');
-    var res = content.replace(re,url);
+    var res = content.replace(re, url);
     return res;
   };
 
-  $scope.getRecentPosts = function(){
-    blogService.getRecentEntries($scope.postsLimit).then(function(entries){
+  $scope.getRecentPosts = function () {
+    blogService.getRecentEntries($scope.postsLimit).then(function (entries) {
       $scope.entries = entries;
     });
   };
 
-  $scope.getCategories = function(){
-    blogService.getCategories().then(function(data){
+  $scope.getCategories = function () {
+    blogService.getCategories().then(function (data) {
       $scope.categories = data;
     });
   };
 
-  $scope.getMainPostThumb = function(){
+  $scope.getMainPostThumb = function () {
     var post = $scope.entry;
     var style = {};
-    if(post.secondary_image && post.secondary_image['full']){
+    if (post.secondary_image && post.secondary_image['full']) {
       style = {
         'background': 'url(' + blogService.blogUrl + post.secondary_image[size] + ') center no-repeat'
       };
     }
-    else if(post.featured_image){
+    else if (post.featured_image) {
       style = {
         'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
       };
@@ -132,5 +132,5 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
 
 }
 
-angular.module('spaceshiplabsApp').controller('PostCtrl',PostCtrl);
-PostCtrl.$inject = ['$scope','$sce','$rootScope','$routeParams','blogService','$location','$filter','metaTagsService'];
+angular.module('spaceshiplabsApp').controller('PostCtrl', PostCtrl);
+PostCtrl.$inject = ['$scope', '$sce', '$rootScope', '$routeParams', 'blogService', '$location', '$filter', 'metaTagsService'];

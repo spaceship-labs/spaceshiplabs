@@ -34,8 +34,8 @@ function UiUxCtrl($scope, $interval,metaTagsService){
     ];
     /*
     $scope.demos = [
-      'http://staging.spaceshiplabs.divshot.io/images/justiti.70f07df5.png',
-      'http://staging.spaceshiplabs.divshot.io/images/airport-mock.7f588307.png'
+      'https://staging.spaceshiplabs.divshot.io/images/justiti.70f07df5.png',
+      'https://staging.spaceshiplabs.divshot.io/images/airport-mock.7f588307.png'
     ];*/
 
 
@@ -47,9 +47,9 @@ function UiUxCtrl($scope, $interval,metaTagsService){
     ];
     /*
     $scope.sketchs = [
-      'http://staging.spaceshiplabs.divshot.io/images/sketch1.b171c2a5.jpg',
-      'http://staging.spaceshiplabs.divshot.io/images/sketch2.51fca493.jpg',
-      'http://staging.spaceshiplabs.divshot.io/images/sketch3.45c3e997.jpg',
+      'https://staging.spaceshiplabs.divshot.io/images/sketch1.b171c2a5.jpg',
+      'https://staging.spaceshiplabs.divshot.io/images/sketch2.51fca493.jpg',
+      'https://staging.spaceshiplabs.divshot.io/images/sketch3.45c3e997.jpg',
 
     ] ;*/
 
