@@ -227,7 +227,7 @@
 
     <div ng-show="loadedPosts" class="news-row" layout="row" layout-wrap>
       <div
-        ng-repeat="entry in entries"
+        ng-repeat="entry in entries | limitTo: 3"
         flex="33"
         flex-xs="100">
 

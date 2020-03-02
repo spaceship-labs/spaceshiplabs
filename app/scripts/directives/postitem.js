@@ -31,75 +31,72 @@ angular.module('spaceshiplabsApp')
       },
       link: function postLink(scope) {
 
+        scope.styleThumb = {};
 
+        var getStyle = function (size, mediaResult) {
+          var style = {}
+          //console.log('MEDIA', size, mediaResult)
+          const sizes = mediaResult.media_details.sizes;
+          if (size === 'full' || !sizes[size]) {
+            style = {
+              'background': 'url(' + blogService.blogUrl + sizes['medium'].source_url + ') center no-repeat'
+            };
+          }
+          else if (size === 'large' && !sizes['large']) {
+            style = {
+              'background': 'url(' + blogService.blogUrl + sizes['full'].source_url + ') center no-repeat'
+            };
+          }
+          else {
+            style = {
+              'background': 'url(' + blogService.blogUrl + sizes[size].source_url + ') center no-repeat'
+            };
+          }
+          return style;
+        }
 
         scope.getPostThumb = function(){
           var post = scope.entry;
           var size = $rootScope.winSize;
-          var style = {};
-          if(post.featured_image){
-            if(!post.featured_image.attachment_meta.sizes[size]){
-              style = {
-                'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
-              };
-            }else{
-              style = {
-                'background': 'url(' + blogService.blogUrl + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
-              };
-            }
-
-          }else if(post.attachments){
-            if(!post.attachments[0][size]){
-              size = 'blog';
-            }
-            var urlKey = 0;
-            style = {
-              'background': 'url(' + blogService.blogUrl + post.attachments[0][size][urlKey] + ') center no-repeat'
-            };
+          if (post.featured_media) {
+            blogService.getSingleMedia(post.featured_media).then(function (mediaResult) {
+              scope.styleThumb = getStyle(size, mediaResult);
+            });
+          } else {
+            blogService.getPostMedia(post.id).then(function (mediaResult) {
+              //console.log('MEDIA LIST', mediaResult)
+              if (mediaResult[0])
+                scope.styleThumb = getStyle(size, mediaResult[0]);
+            });
           }
-          return style;
         };
 
         scope.getMainPostThumb = function(){
           var post = scope.entry;
           var size = $rootScope.winSizeSingle || 'large';
           var style = {};
-          if(post.featured_image){
-
-            if(size === 'full' || !post.featured_image.attachment_meta.sizes[size]){
-              style = {
-                'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
-              };
-            }
-
-            else if(!post.featured_image.attachment_meta.sizes[size]){
-              size = 'blog';
-            }
-
-            if(size !== 'full'){
-              if(!post.featured_image.attachment_meta.sizes[size]){
+          if( post.featured_media ) {
+            return style;
+            return blogService.getSingleMedia(post.featured_media).then(function (mediaResult) { 
+            
+              //}else if(post.featured_image){
+              const sizes = mediaResult.media_details.sizes;
+              if(size === 'full' || !sizes[size]){
                 style = {
-                  'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
+                  'background': 'url(' + blogService.blogUrl + sizes['medium'].source_url + ') center no-repeat'
                 };
               }
-              else{
+              else {
                 style = {
-                  'background': 'url(' + blogService.blogUrl + post.featured_image.attachment_meta.sizes[size].url + ') center no-repeat'
+                  'background': 'url(' + blogService.blogUrl + sizes[size].source_url + ') center no-repeat'
                 };
               }
-            }
-
-          }else if(post.attachments){
-            if(!post.attachments[0][size]){
-              size = 'blog';
-            }
-            var urlKey = 0;
-            style = {
-              'background': 'url(' + blogService.blogUrl + post.attachments[0][size][urlKey] + ') center no-repeat'
-            };
+              return style;
+            });
           }
           return style;
         };
+        scope.getPostThumb()
 
       }
     };

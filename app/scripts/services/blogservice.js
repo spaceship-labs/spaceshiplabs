@@ -13,11 +13,32 @@ angular.module('spaceshiplabsApp')
 
     //var postType = '2wKn6yEnZewu2SCCkus4as';
     var gifsCategory = 4;
-    var baseUrl = 'https://blog.spaceshiplabs.com/wp-json';
+    var baseUrl = 'https://blog.spaceshiplabs.com/wp-json/wp/v2';
     this.blogUrl = 'https://blog.spaceshiplabs.com';
 
     //var categoryType = '5KMiN6YPvi42icqAUQMCQe';
 
+    var formatEntry = function (entry) {
+      return {
+        id: entry.id,
+        date: entry.date,
+        type: entry.type,
+        link: entry.link,
+        slug: entry.slug,
+        title: entry.title.rendered,
+        content: entry.content.rendered,
+        excerpt: entry.excerpt.rendered,
+        featured_media: entry.featured_media,
+      };
+    };
+    var formatEntries = function (data) {
+      var result = [];
+      //var formatEntry = this.formatEntry;
+      result = data.map(function (entry, index) {
+        return formatEntry(entry);
+      })
+      return result;
+    };
 
     this.getCategoriesQuery = function (postSlug) {
       var resource = '/posts';
@@ -36,7 +57,7 @@ angular.module('spaceshiplabsApp')
     this.getRecentEntriesQuery = function (entriesLimit) {
       entriesLimit = entriesLimit || 3;
       var resource = '/posts';
-      var query = baseUrl + resource + '?post_status=publish&filter[posts_per_page]=' + entriesLimit;
+      var query = baseUrl + resource + '?post_status=publish&per_page=' + entriesLimit;
       query += '&filter[cat]=-' + gifsCategory;
       return query;
     };
@@ -47,7 +68,7 @@ angular.module('spaceshiplabsApp')
       var resource = '/posts';
       var query = baseUrl + resource;
       query += '?post_status=publish';
-      query += '&filter[posts_per_page]=' + limit;
+      query += '&per_page=' + limit;
       query += '&page=' + page;
       query += '&paged=' + page;
       if (params.category) {
@@ -74,10 +95,50 @@ angular.module('spaceshiplabsApp')
         method: 'GET',
         url: queryUrl
       };
+      //var formatEntry = this.formatEntry
       return $http(req).then(function (response) {
         console.log(response);
         if (response.status === 200 && response.data.length > 0) {
-          return response.data[0];
+          return formatEntry(response.data[0]);
+        } else {
+          return {};
+        }
+      }, function (err) {
+        //error
+        console.log(err);
+        return {};
+      });
+
+    };
+
+    this.getPostMedia = function (postId) {
+      var req = {
+        method: 'GET',
+        url: baseUrl + "/media?parent" + postId
+      };
+      //var formatEntry = this.formatEntry
+      return $http(req).then(function (response) {
+        if (response.status === 200 && response.data.length > 0) {
+          return response.data;
+        } else {
+          return [];
+        }
+      }, function (err) {
+        //error
+        console.log(err);
+        return {};
+      });
+    }
+    this.getSingleMedia = function (id) {
+
+      var req = {
+        method: 'GET',
+        url: baseUrl + "/media/" + id
+      };
+      //var formatEntry = this.formatEntry
+      return $http(req).then(function (response) {
+        if (response.status === 200 && response.data) {
+          return response.data;
         } else {
           return {};
         }
@@ -92,13 +153,14 @@ angular.module('spaceshiplabsApp')
     this.getRecentEntries = function (entriesLimit) {
 
       var queryUrl = this.getRecentEntriesQuery(entriesLimit);
+      //var formatEntries = this.formatEntries;
       var req = {
         method: 'GET',
         url: queryUrl
       };
       return $http(req).then(function (response) {
         if (response.data) {
-          return response.data;
+          return formatEntries(response.data);
         } else {
           return [];
         }
@@ -108,7 +170,6 @@ angular.module('spaceshiplabsApp')
       });
 
     };
-
     this.getEntries = function (params) {
       var queryUrl = this.getEntriesQuery(params);
       var req = {
@@ -116,12 +177,13 @@ angular.module('spaceshiplabsApp')
         url: queryUrl
       };
       var deferred = $q.defer();
+      //var formatEntries = this.formatEntries;
       $http(req)
         .then(function (response, status, headers) {
-          console.log('response', response);
+          //console.log('response', response);
           var data = {
             pages: response.headers('x-wp-totalpages'),
-            entries: response.data
+            entries: formatEntries(response.data)
           };
           deferred.resolve(data);
         })
@@ -136,7 +198,8 @@ angular.module('spaceshiplabsApp')
 
     this.getCategories = function () {
 
-      var queryUrl = baseUrl + '/posts/types/posts/taxonomies/category/terms';
+      //var queryUrl = baseUrl + '/posts/types/posts/taxonomies/category/terms';
+      var queryUrl = baseUrl + '/categories';
       var req = {
         method: 'GET',
         url: queryUrl
