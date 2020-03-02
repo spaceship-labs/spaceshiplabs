@@ -7,7 +7,7 @@
  * # HomeCtrl
  * Controller of the spaceshiplabsApp
  */
-function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
+function HomeCtrl($scope, $rootScope, blogService, metaTagsService, $timeout){
 
   metaTagsService.setMetaTags();
 
@@ -41,6 +41,9 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
     }else{
       $('#landing-video').remove();
     }
+    $timeout(function () {
+      $('.clients-slider').addClass('timeout')
+    },1000 )
   };
 
 
@@ -124,5 +127,5 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService){
 }
 
 angular.module('spaceshiplabsApp').controller('HomeCtrl',HomeCtrl);
-HomeCtrl.$inject = ['$scope', '$rootScope', 'blogService', 'metaTagsService'];
+HomeCtrl.$inject = ['$scope', '$rootScope', 'blogService', 'metaTagsService','$timeout'];
 

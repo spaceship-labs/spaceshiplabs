@@ -1097,11 +1097,24 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #CLIENTS-SLIDER
 /*---------------*/
 .clients-slider{
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  /*transition: all 1s ease-out 1s;*/
+}
+.clients-slider.slick-initialized.timeout{
+  opacity: 1;
+  visibility: visible;
+}
+.clients-slider{
   margin: 0;
   padding: 0 50px;
   position: relative;
+  width: 100%;
 }
-.clients-slider .clients-slide{padding: 0 10px 0;}
+.clients-slider .slick-list{width:100%;}
+.clients-slider .slick-track{width:40000px;display: block;}
+.clients-slider .clients-slide{padding: 0 10px 0;width:600px;}
 
 .clients-slider .client-item{
   padding: 20px;

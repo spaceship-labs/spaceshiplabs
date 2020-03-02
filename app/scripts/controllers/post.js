@@ -39,7 +39,7 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
           $scope.entryImg = entry.featured_image.attachment_meta.sizes.blog.url;
         }
       } else {
-        $scope.entryImg = entry.attachments[0].large[0];
+        //$scope.entryImg = entry.attachments[0].large[0];
       }
       var meta = {
         title: entry.title,

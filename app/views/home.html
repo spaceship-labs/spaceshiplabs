@@ -227,7 +227,7 @@
 
     <div ng-show="loadedPosts" class="news-row" layout="row" layout-wrap>
       <div
-        ng-repeat="entry in entries"
+        ng-repeat="entry in entries | limitTo: 3"
         flex="33"
         flex-xs="100">
 
@@ -244,13 +244,10 @@
   <div class="clients-landing-content container container-xlg center-content">
     <!--<h1><span count-to="200" value="0" duration="2" ></span> Clientes felices</h1>-->
     <h1>Testimonios</h1>
-    <slick dots="true" infinite="true" autoplay="true" autoplaySpeed="6000" speed="800" class="clients-slider">
+    <slick dots="true" autoplay="true" autoplaySpeed="6000" infinite="true" speed="800" class="clients-slider">
       <div
         class="clients-slide"
         ng-repeat="client in clients track by $index"
-        layout="row"
-        layout-align="space-between center"
-        layout-sm="column"
         >
 
         <div class="client-item container container-lg">
