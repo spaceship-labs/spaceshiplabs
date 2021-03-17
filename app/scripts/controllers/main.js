@@ -101,7 +101,7 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
       });
       //params = JSON.stringify(params);
       var req = {
-        url: 'https://blog.spaceshiplabs.com/wp-content/themes/spaceshiplabs/contact_function.php',
+        url: 'https://blog.spaceshiplabs.com/wp-content/themes/spaceshiplabs/composerUtilities/index.php',
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
