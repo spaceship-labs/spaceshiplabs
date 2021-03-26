@@ -1224,15 +1224,16 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   line-height: 1.2;
   font-weight: 300;
   margin-top: 20px;
+  padding: 0 15px;
   text-align: center;
   position: relative;
 }
 
 .clients-slide .client-item .quote-icon{
   position: absolute;
-  left: -55px;
+  left: -25px;
   top: 50%;
-  font-size: 55px;
+  font-size: 30px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1240,7 +1241,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .clients-slide .client-item .quote-icon-right{
   left: auto;
-  right: -55px;
+  right: -25px;
 }
 
 .clients-slider-arrow{
@@ -2947,7 +2948,7 @@ input:-webkit-autofill {
   text-transform: uppercase;
 }
 
-#footer .container{padding: 34px 0;}
+#footer .container{padding: 34px 20px;}
 
 #footer .container .social-icon{
   display: inline-block;
@@ -3019,10 +3020,19 @@ input:-webkit-autofill {
 
 
 @media screen and (max-width: 900px){
+  .clients-slide .client-item .quote-icon{
+    left: -28px;
+    font-size: 24px;
+  }
 
+  .clients-slide .client-item .quote-icon-right{
+    left: auto;
+    right: -28px;
+  }
 }
 
 @media screen and (max-width: 599px){
+ 
   /*
   [flex-xs="100"]{
     -webkit-flex: 1!important;
@@ -3221,7 +3231,7 @@ input:-webkit-autofill {
 
   .clients-slide .client-item .quote-icon{
     left: -24px;
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .clients-slide .client-item .quote-icon-right{
