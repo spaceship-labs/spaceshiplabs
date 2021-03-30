@@ -3439,3 +3439,6 @@ input:-webkit-autofill {
   height: 55px;
   transition: width .5s, height .5s;
 }
+.weight-100{
+  font-weight: 100;
+}
