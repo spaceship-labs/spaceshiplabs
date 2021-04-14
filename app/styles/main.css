@@ -1231,16 +1231,13 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .clients-slide .client-item .quote-icon{
   position: absolute;
-<<<<<<< Updated upstream
   left: -25px;
   top: 50%;
   font-size: 30px;
-=======
   left: -5rem;
   right: auto;
   top: 50%;
   font-size: 3rem;
->>>>>>> Stashed changes
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1248,9 +1245,6 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .clients-slide .client-item .quote-icon-right{
   left: auto;
-<<<<<<< Updated upstream
-  right: -25px;
-=======
   right: -5rem;
 }
 
@@ -1266,7 +1260,6 @@ md-backdrop{background: rgba(0,0,0,0.5)}
     left: auto!important;
     overflow: visible;
   }
->>>>>>> Stashed changes
 }
 
 .clients-slider-arrow{
