@@ -12,7 +12,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService, $timeout){
   metaTagsService.setMetaTags();
 
   $scope.getRecentPosts = function(){
-    blogService.getRecentEntries(3).then(function(entries){
+    blogService.getRecentEntries(6).then(function(entries){
       $scope.entries = entries;
       $scope.loadedPosts = true;
     });

@@ -1231,9 +1231,16 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .clients-slide .client-item .quote-icon{
   position: absolute;
+<<<<<<< Updated upstream
   left: -25px;
   top: 50%;
   font-size: 30px;
+=======
+  left: -5rem;
+  right: auto;
+  top: 50%;
+  font-size: 3rem;
+>>>>>>> Stashed changes
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1241,7 +1248,25 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 
 .clients-slide .client-item .quote-icon-right{
   left: auto;
+<<<<<<< Updated upstream
   right: -25px;
+=======
+  right: -5rem;
+}
+
+@media (min-width: 600px) and (max-width: 1334px) {
+  .quote-icon{
+    font-size: 2rem!important;
+    left: -1.5rem !important;
+    overflow: visible;
+  }
+  .quote-icon-right{
+    font-size: 2rem!important;
+    right: -1.5rem!important;
+    left: auto!important;
+    overflow: visible;
+  }
+>>>>>>> Stashed changes
 }
 
 .clients-slider-arrow{
@@ -1425,6 +1450,7 @@ input:-webkit-autofill {
     z-index: 1;
     position: relative;
     overflow: hidden;
+    min-height: 800px!important;
 }
 .news-wrapper-inner{
   padding: 0;
@@ -1436,6 +1462,7 @@ input:-webkit-autofill {
   background-position: center!important;
   color: #fff;
   min-height: 300px;
+  display: flex;
   text-align: center;
   padding: 10px;
   position: relative;
