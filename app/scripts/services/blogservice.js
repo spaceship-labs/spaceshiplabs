@@ -50,7 +50,7 @@ angular.module('spaceshiplabsApp')
     this.getSingleEntryQuery = function (postSlug) {
       var resource = '/posts';
       var entriesLimit = 1;
-      var query = baseUrl + resource + '?post_status=publish&filter[posts_per_page]=' + entriesLimit + '&filter[name]=' + postSlug;
+      var query = baseUrl + resource + '?post_status=publish&filter[posts_per_page]=' + entriesLimit + '&slug=' + postSlug;
       return query;
     };
 
