@@ -153,7 +153,7 @@ a,p,h1,h2,h3,h4,a[href],input,textarea,span{font-family: 'Roboto', sans-serif}
 .mentions-landing,
 .clients-landing,
 .contact-us{
-  min-height: 400px;
+  min-height: 700px!important;
 }
 .center-content{
   text-align: center
@@ -316,7 +316,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #CONTAINERS
 /*---------------*/
 .container{
-  padding: 40px 20px;
+  padding: 0 20px;
   position: relative;
 }
 .container-spacees{padding: 40px 40px !important;}
@@ -328,7 +328,13 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 .container h4,
 .container p{
   /*color:#666666;*/
-  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.container p {
+  margin-top: 0;
 }
 
 .container-xxlg{
@@ -337,7 +343,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 .container-xlg{
-  margin: 0 auto;
+  margin: 0px auto;
   max-width: 1000px;
 }
 .container-lg{
@@ -1026,6 +1032,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   /*url(../images/mockup.png) right center no-repeat;*/
   position: relative;
   overflow: hidden;
+  min-height: 600px;
 }
 .spacees-landing img{
   margin-bottom: 12px;
@@ -1035,7 +1042,12 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   margin: 0;
   margin-left: 12%;
 }
-.spacees-landing h2{margin-bottom: 8px}
+
+.spacees-landing-content p {
+  margin-top: 0;
+}
+
+.spacees-landing h2{margin-bottom: 15px}
 .spacees-landing p{
   font-size: 18px;
   font-weight: 300;
@@ -1054,7 +1066,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 .mentions-landing-content h1{
   color: #7C7C7C;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .mention-landing-item{
   min-height: 200px;
@@ -1398,6 +1410,10 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   color: #00c5d8;
 }
 
+.contact-form {
+  margin: 50px auto;
+}
+
 .contact-form-message{
   margin-top: 6px!important;
   font-size: 14px;
@@ -1443,7 +1459,7 @@ input:-webkit-autofill {
     z-index: 1;
     position: relative;
     overflow: hidden;
-    min-height: 800px!important;
+    min-height: 850px!important;
 }
 .news-wrapper-inner{
   padding: 0;
@@ -1838,7 +1854,7 @@ input:-webkit-autofill {
 .info-wrap-service .info-block-branding{
   /*background: transparent url(../images/branding.png) center 250% no-repeat;
   background-attachment: fixed;*/
-  padding-bottom: 304px!important;
+  padding-bottom: 450px!important;
 }
 .info-wrap-service .fixed-img{
   position: absolute;
@@ -2758,6 +2774,7 @@ input:-webkit-autofill {
 .pagination-blog{
   list-style: none;
   padding-left: 0;
+  margin-bottom: 30px;
 }
 .pagination-blog a{
   background-color: #3E3E3E;
