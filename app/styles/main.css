@@ -316,7 +316,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
   #CONTAINERS
 /*---------------*/
 .container{
-  padding: 0 20px;
+  padding: 40px 20px;
   position: relative;
 }
 .container-spacees{padding: 40px 40px !important;}
