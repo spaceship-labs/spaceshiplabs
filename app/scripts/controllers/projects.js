@@ -21,6 +21,123 @@ function ProjectsCtrl($scope, metaTagsService){
   $scope.allProjects = [
     {
       type:'UI/UX Design & Software',
+      slug: 'bcjb',
+      category: 'ui-ux',
+      name:'Border Center for Journalists and Bloggers (BCJB)',
+      description:'ONG y sin fines de lucro que busca mejorar la calidad periodística, promover prácticas seguras y fomentar la cooperación e innovación entre fronteras. Desarrollamos la página web, y la plataforma completa donde se suben oportunidades como talleres o cursos, notas y datos periodísticas, así como información de interés para periodistas. El diseño es responsive, la plataforma es ágil y compatible con navegadores.',
+      url: 'https://www.bordercenter.net/',
+      images:['images/projects/bordercenter1.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'econopet',
+      category: 'ui-ux',
+      name:'Econopet',
+      description:'Realizamos el diseño web y creación de tienda en línea para productos de mascotas (comida, accesorios, medicamentos, etc.). La tienda en línea está integrada con Shopify, una de las mejores plataformas de ecommerce del mundo, donde pueden llevar un control de las ventas, gestión de pagos y analíticas (entre otros beneficios). Es una página web responsive, ágil y compatible con todos los navegadores.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/econopet1.jpg','images/projects/econopet2.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'rcd-analytics',
+      category: 'ui-ux',
+      name:'RCD Analytics',
+      description:'Realizamos el diseño web y desarrollo de software analítico y de inteligencia para RCD Hotels. El objetivo de dicha plataforma es registrar la data de las operaciones de los diversos hoteles de la cadena, y así ver las gráficas y reportes de crecimiento y rendimiento en tiempo real, o por fechas establecidas,  de cada hotel.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/rcdanalytics1.jpg','images/projects/rcdanalytics2.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'actual-group',
+      category: 'ui-ux',
+      name:'Actual Group',
+      description:'Cluster de mueblerías en la Península de Yucatán. Este proyecto está compuesto por el diseño y desarrollo de frontend y backend: diseñamos y desarrollamos desde la plataforma de ventas, inventarios, registro de personal para control interno, así como las diversas páginas webs de las marcas: Actual Studio, Actual Home, Actual Kids.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/actual1.png']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'reparakit',
+      category: 'ui-ux',
+      name:'Reparakit',
+      description:'Una aplicación que une a usuarios con proveedores de servicios. Reparakit es una base de datos de plomeros, electricistas, personal de limpieza desde la cual puedes solicitar un servicio, agendarlo y pagar en la app. Cuenta con un sistema de reviews, pago seguro, formas de contacto directo en la app, entre otros beneficios tanto para proveedores de servicio como clientes.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/reparakit1.png']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'day-tour-bacalar',
+      category: 'ui-ux',
+      name:'Day Tour Bacalar',
+      description:'Agencia de tours en la zona de Bacalar y alrededores. Realizamos el branding de la marca con diversas aplicaciones -tanto impresas como digitales-, diseño y desarrollo web, con ecommerce. Hicimos la integración del sistema de reservas y pagos en línea en la página, de tal manera que el usuario puede tanto visualizar la información, reservar y pagar directo.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/daytourbacalar1.png','images/projects/daytourbacalar2.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'interjet',
+      category: 'ui-ux',
+      name:'Interjet',
+      description:'Desarrollamos y diseñamos un administrador de transportación terrestre en todo México para Interjet, el cual permite que los choferes vean -en tiempo real- la información sobre rutas y pasajeros. Asimismo, incluye un sistema de reportes de ingresos para el control de los mismos.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/interjet1.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'ascentec',
+      category: 'ui-ux',
+      name:'Ascentec',
+      description:'Empresa líder en el ramo de la tecnología vertical: ascensores, escaleras y rampas eléctricas, montacoches, montacamas. Realizamos el diseño y desarrollo web, mismo que incluye el catálogo de productos, formularios de contacto, descripciones y contenido audiovisual. La página web es ágil, responsive, y adaptada a diversos navegadores y plataformas.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/ascentec1.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'david-vazquez',
+      category: 'ui-ux',
+      name:'David Vázquez',
+      description:'Diseñador industrial con amplia trayectoria, quien diseña y crea mobiliario y carpintería para showrooms, edificios, proyectos de renovación urbana y casas privadas, así como interiores de tiendas, oficinas, cafeterías y restaurantes. Realizamos el diseño y desarrollo web, con el fin de mostrar sus trabajos, por lo que es una plataforma 100% visual. Es ágil, responsiva, adaptada para diversos navegadores y con suficientes formularios de contacto para clientes potenciales.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/davidvazquez1.jpg','images/projects/davidvazquez2.jpg']
+    },
+    {
+      type:'Branding',
+      slug: 'tripbu',
+      category: 'branding',
+      name:'TRIPBU',
+      description:'Empresa dedicada a las rentas vacacionales. Tripbu administra las propiedades de diversas personas, y al mismo tiempo cuenta con un catálogo de rentas vacacionales para viajeros y turistas. Realizamos el branding completo para Tripbu: diseño de logo, gráficos, colores, catálogos, tarjetas de presentación, para diversas aplicaciones tanto impresas como digitales.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/tripbu1.jpg','images/projects/tripbu2.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'dezain',
+      category: 'ui-ux',
+      name:'DEZAIN',
+      description:'Tienda de muebles de madera fina para el hogar y oficina. Realizamos el diseño y desarrollo web de la página, la cual cuenta con ecommerce mediante la integración con Shopify -una de las mejores plataformas de ecommerce del mundo, para procesamiento de pagos, registro de ventas y analíticas. La página web es responsive, ágil y compatible con todos los navegadores.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/dezain1.jpg','images/projects/dezain2.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'ment',
+      category: 'ui-ux',
+      name:'MENT',
+      description:'Marca de ropa deportiva personalizada. Realizamos el diseño de la página web y tienda en línea, misma que incluye el catálogo de productos, gestión de pagos y registro de ventas. La página web es responsive, ágil y compatible con todos los navegadores.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/ment1.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'treign',
+      category: 'ui-ux',
+      name:'TREIGN',
+      description:'Desarrollamos una plataforma ágil, responsive y compatible con todos los navegadores para Treign, una marca que se dedica a la venta de entrenamientos y planes alimenticios en línea. Dicho sitio web incluye el catálogo de productos de la empresa, ropa deportiva, planes de entrenamiento y alimentación y pagos en línea.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/treign1.jpg','images/projects/treign2.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
       slug: 'mejora-tu-escuela',
       category: 'ui-ux',
       name:'Mejora tu escuela',

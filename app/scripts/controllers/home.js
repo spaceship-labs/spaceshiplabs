@@ -50,53 +50,57 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService, $timeout){
   $scope.projects = [
     {
       type:'UI/UX Design & Software',
-      slug: 'mejora-tu-escuela',
+      slug: 'bcjb',
       category: 'ui-ux',
-      name:'Mejora tu escuela',
-      description:'Plataforma de participación ciudadana para transformar la educación. Desarrollamos un sitio web en el cual es posible buscar, comparar y calificar todas las escuelas de México.',
-      url: 'https://www.mejoratuescuela.org/',
-      images:['images/projects/mejoratuescuela2.jpg','images/projects/mejoratuescuela3.jpg','images/projects/mejoratuescuela4.jpg']
+      name:'Border Center for Journalists and Bloggers (BCJB)',
+      description:'ONG y sin fines de lucro que busca mejorar la calidad periodística, promover prácticas seguras y fomentar la cooperación e innovación entre fronteras. Desarrollamos la página web, y la plataforma completa donde se suben oportunidades como talleres o cursos, notas y datos periodísticas, así como información de interés para periodistas. El diseño es responsive, la plataforma es ágil y compatible con navegadores.',
+      url: 'https://www.bordercenter.net/',
+      images:['images/projects/bordercenter1.jpg']
     },
     {
       type:'UI/UX Design & Software',
-      name:'Viajes Claros',
-      slug:'viajesclaros',
+      slug: 'econopet',
       category: 'ui-ux',
-      description:'Es un proyecto del IFAI donde se manejan datos abiertos para mostrar los viajes y gastos de los servidores púbicos. Fuimos ganadores del 1er lugar en el desarrollo del sitio web el cual permite; buscar, comparar y accesar a dicha información.',
-      images:['images/projects/viajesclaros2.jpg','images/projects/viajesclaros3.jpg', 'images/projects/viajesclaros4.jpg']
-    },
-    {
-      type:'Branding',
-      name:'Justiti',
-      slug:'justiti-branding',
-      category: 'branding',
-      description:'Es un proyecto para facilitar el acceso a la justicia a los ciudadanos. Implementamos el diseño de la marca y desarrollamos un sitio web que permite fácilmente el acceso a la justicia, mediante la búsqueda orientación y mensajería legal a los ciudadanos.',
-      images:['images/projects/justiti3.jpg','images/projects/justiti4.jpg','images/projects/justiti5.jpg']
-    },
-    {
-      type:'Branding',
-      name:'Travcy',
-      slug:'travcy',
-      category: 'branding',
-      description:'Elección de nombre y diseño de logotipo para herramienta web desarrollada a la medida para la administración y control comercial para empresas turísticas.',
-      images:['images/projects/travcy1.jpg', 'images/projects/travcy2.jpg', 'images/projects/travcy3.jpg']
+      name:'Econopet',
+      description:'Realizamos el diseño web y creación de tienda en línea para productos de mascotas (comida, accesorios, medicamentos, etc.). La tienda en línea está integrada con Shopify, una de las mejores plataformas de ecommerce del mundo, donde pueden llevar un control de las ventas, gestión de pagos y analíticas (entre otros beneficios). Es una página web responsive, ágil y compatible con todos los navegadores.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/econopet1.jpg','images/projects/econopet2.jpg']
     },
     {
       type:'UI/UX Design & Software',
-      name:'The Juicery Boutique',
-      slug:'the-juicery-boutique',
+      slug: 'rcd-analytics',
       category: 'ui-ux',
-      description:'Es una marca de Jugos cold pressed y productos naturales. Implementamos diseño y solución e-commerce para la venta de jugos, productos y paquetes detox.',
-      url: 'https://www.thejuiceryboutique.com/',
-      images:['images/projects/juicery2.jpg','images/projects/juicery1.jpg','images/projects/juicery3.jpg']
+      name:'RCD Analytics',
+      description:'Realizamos el diseño web y desarrollo de software analítico y de inteligencia para RCD Hotels. El objetivo de dicha plataforma es registrar la data de las operaciones de los diversos hoteles de la cadena, y así ver las gráficas y reportes de crecimiento y rendimiento en tiempo real, o por fechas establecidas,  de cada hotel.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/rcdanalytics1.jpg','images/projects/rcdanalytics2.jpg']
     },
     {
-      type:'Branding',
-      name:'AirportCab',
-      slug:'airportcab',
-      category: 'branding',
-      description:'Es una empresa de transportación turistica del Aeropuerto. Creamos la marca y desarrollamos su sitio web.',
-      images:['images/projects/airportcab1.jpg', 'images/projects/airportcab2.jpg', 'images/projects/airportcab3.jpg',  'images/projects/airportcab4.jpg', 'images/projects/airportcab6.jpg']
+      type:'UI/UX Design & Software',
+      slug: 'actual-group',
+      category: 'ui-ux',
+      name:'Actual Group',
+      description:'Cluster de mueblerías en la Península de Yucatán. Este proyecto está compuesto por el diseño y desarrollo de frontend y backend: diseñamos y desarrollamos desde la plataforma de ventas, inventarios, registro de personal para control interno, así como las diversas páginas webs de las marcas: Actual Studio, Actual Home, Actual Kids.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/actual1.png']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'reparakit',
+      category: 'ui-ux',
+      name:'Reparakit',
+      description:'Una aplicación que une a usuarios con proveedores de servicios. Reparakit es una base de datos de plomeros, electricistas, personal de limpieza desde la cual puedes solicitar un servicio, agendarlo y pagar en la app. Cuenta con un sistema de reviews, pago seguro, formas de contacto directo en la app, entre otros beneficios tanto para proveedores de servicio como clientes.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/reparakit1.png']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'day-tour-bacalar',
+      category: 'ui-ux',
+      name:'Day Tour Bacalar',
+      description:'Agencia de tours en la zona de Bacalar y alrededores. Realizamos el branding de la marca con diversas aplicaciones -tanto impresas como digitales-, diseño y desarrollo web, con ecommerce. Hicimos la integración del sistema de reservas y pagos en línea en la página, de tal manera que el usuario puede tanto visualizar la información, reservar y pagar directo.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/daytourbacalar1.png','images/projects/daytourbacalar2.jpg']
     },
   ];
 

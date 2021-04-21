@@ -106,7 +106,7 @@ angular.module('spaceshiplabsApp')
             movingOutIndex = selectedIndex - 1;
           }else{
             movingOutIndex = totalItems-1;
-          }
+          } 
 
           return movingOutIndex;
 
@@ -257,6 +257,12 @@ angular.module('spaceshiplabsApp')
             }
         );
 
+        scope.scrollTo = function (target) {
+          var height = 60;
+          $('html, body').animate({
+            scrollTop: $('#' + target).offset().top - height
+          }, 90);
+        };
       }
     };
   });
