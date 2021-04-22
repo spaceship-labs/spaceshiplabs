@@ -141,6 +141,18 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
     );
   };
 
+  $scope.softwareScrollTo = function (target) {
+    setTimeout(
+      function () {
+        var headerHeight = 200;
+        $('html, body').animate({
+          scrollTop: $('#' + target).offset().top - headerHeight
+        }, 600);
+      },
+      300
+    );
+  };
+
 
 
   $scope.getRange = function (n) {

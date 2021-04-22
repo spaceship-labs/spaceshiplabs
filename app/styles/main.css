@@ -1750,8 +1750,7 @@ input:-webkit-autofill {
 
 .service-menu-wrap-fixed{
   position: fixed;
-  z-index: 9999;
-  /*top: 9%;*/
+  z-index: 99999;
   top: 61px;
   width: 100%;
   left: 0;
