@@ -23,8 +23,8 @@ function ProjectsCtrl($scope, metaTagsService){
       type:'UI/UX Design & Software',
       slug: 'bcjb',
       category: 'ui-ux',
-      name:'Border Center for Journalists and Bloggers (BCJB)',
-      description:'ONG y sin fines de lucro que busca mejorar la calidad periodística, promover prácticas seguras y fomentar la cooperación e innovación entre fronteras. Desarrollamos la página web, y la plataforma completa donde se suben oportunidades como talleres o cursos, notas y datos periodísticas, así como información de interés para periodistas. El diseño es responsive, la plataforma es ágil y compatible con navegadores.',
+      name:'BCJB',
+      description:'Border Center for Journalists and Bloggers, ONG y sin fines de lucro que busca mejorar la calidad periodística, promover prácticas seguras y fomentar la cooperación e innovación entre fronteras. Desarrollamos la página web, y la plataforma completa donde se suben oportunidades como talleres o cursos, notas y datos periodísticas, así como información de interés para periodistas. El diseño es responsive, la plataforma es ágil y compatible con navegadores.',
       url: 'https://www.bordercenter.net/',
       images:['images/projects/bordercenter1.jpg']
     },

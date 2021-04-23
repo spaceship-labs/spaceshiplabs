@@ -5,7 +5,16 @@
       <source src="videos/spaceshiplabs.mp4" type="video/mp4">
     </video>
     <script>
-        document.getElementById('landing-video').play();
+      var playPromise = document.getElementById('landing-video').play(); 
+      
+      if (playPromise !== undefined) {
+        playPromise.then(function(){
+
+        })
+        .catch(function(error) {
+          console.log("Error en autoplay: ",error);
+        });
+      }
     </script>
     <div class="landing-content center-content">
      <h1 data-wow-duration="0.8s" class="wow fadeInUp">SpaceshipLabs</h1>
@@ -13,8 +22,8 @@
       AGENCIA DIGITAL
     </p>
   </div>
-  <div data-wow-delay="1.6s" data-wow-duration="0.8s" class="action-btn-wrap action-btn-cot-hero wow fadeInUp">
-    <a class="action-btn" href="/contacto">
+  <div class="action-btn-hero-wrap">
+    <a data-wow-delay="1.6s" data-wow-duration="0.8s"class="wow fadeInUp action-btn-hero" href="/contacto">
       SOLICITAR COTIZACIÓN
     </a>
   </div>
@@ -134,7 +143,7 @@
       tipo de organizaciones y empresas con usuarios web y generar información procesable y millones de 
       pesos en ventas. Asimismo, nos encargamos de posicionar marcas en Google y redes sociales, 
       así como publicidad para diversos clientes. Combinamos perfectamente la parte tecnológica, 
-      con diseño amigable y funcional, aterrizado en una interfaz amigable para todo tipo de usuario
+      con diseño amigable y funcional, aterrizado en una interfaz amigable para todo tipo de usuario.
     </p>
     <div
     class="services-items"

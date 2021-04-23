@@ -147,7 +147,7 @@
   color: #fff;
 }
 
-.projects-slide-content p{font-weight: 300}
+.projects-slide-content p{font-weight: 100}
 .projects-slide-content .project-link{
   color: #fff;
   display: inline-block;
@@ -252,8 +252,14 @@
   #PROJECTS-CATEGORIES
 /*-------------*/
 
+.projects-categories {
+  flex-direction: row-reverse;
+}
+
 .projects-categories-wrapper{
   position: absolute;
+  display: flex;
+  justify-content: space-between;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -287,9 +293,7 @@
   z-index: 2;
 }
 
-.projects-categories .project-category + .project-category{
-  border-left: 0;
-}
+
 
 .projects-categories .project-category span{
   position: relative;
@@ -397,6 +401,7 @@
   }
   .projects-categories-wrapper{
     top: 5%;
+    margin: 10px;
   }
 
 }

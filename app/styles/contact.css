@@ -257,3 +257,16 @@
   -o-animation:      upDown .4s forwards .7s;
   animation:         upDown .4s forwards .7s;*/
 }
+
+@media screen and (max-width: 600px) {
+  .contact-table .contact-table-cell h2{
+    font-size: 5vw;
+  }
+  
+  .contact-table .contact-table-cell strong{
+    font-size: 4vw;
+  }
+  .contact-table .contact-table-cell p{
+    font-size: 6.5vw;
+  }
+}
