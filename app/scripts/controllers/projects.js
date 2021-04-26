@@ -23,6 +23,15 @@ function ProjectsCtrl($scope, metaTagsService){
       type:'UI/UX Design & Software',
       slug: 'bcjb',
       category: 'ui-ux',
+      name:'AirBetter',
+      description:'Consiste en una plataforma de gestión de vacation rental properties, con un catálogo amplio de bienes raíces para rentas. Realizamos el diseño y desarrollo web de algunas secciones con el fin de mejorar el rendimiento del administrador de la plataforma. Esto, ayuda a agilizar el proceso interno de operación, consiguiendo así un portal más rápido, fluido y navegable para el usuario final.',
+      //url: 'https://www.bordercenter.net/',
+      images:['images/projects/airbetter1.jpg','images/projects/airbetter2.jpg']
+    },
+    {
+      type:'UI/UX Design & Software',
+      slug: 'bcjb',
+      category: 'ui-ux',
       name:'BCJB',
       description:'Border Center for Journalists and Bloggers, ONG y sin fines de lucro que busca mejorar la calidad periodística, promover prácticas seguras y fomentar la cooperación e innovación entre fronteras. Desarrollamos la página web, y la plataforma completa donde se suben oportunidades como talleres o cursos, notas y datos periodísticas, así como información de interés para periodistas. El diseño es responsive, la plataforma es ágil y compatible con navegadores.',
       url: 'https://www.bordercenter.net/',
