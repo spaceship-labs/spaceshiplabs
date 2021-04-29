@@ -230,6 +230,7 @@
   width: 60px;
   height: 60px;
   background: #05d3cf url(../images/flecha_proyectos3.png) center no-repeat;
+  background-size: auto!important;
   border-radius: 50%;
   left: 0;
   right: 0;
@@ -351,6 +352,9 @@
     justify-content: flex-start;
     min-height: 360px;
   }
+  .projects-slide-content-inner{
+    top: 6%;
+  }
   .projects-slide-content .container-sm{
     padding: 20px;
   }
@@ -359,7 +363,7 @@
     height: auto!important;
   }
 
-  .projects-slider-reel-wrapper{min-height: 460px}
+  .projects-slider-reel-wrapper{min-height: 525px}
   .projects-slide-image-inner{min-height: 420px;}
 
   .projects-slider-nav{
@@ -406,6 +410,35 @@
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 360px){
   .projects-slide{min-height: 530px;  }
+  .projects-categories-wrapper{
+    flex-direction: column;
+  }
+  .projects-categories .project-category{
+    font-size: 4vw;
+  }
+  .projects-categories-wrapper 
+    form, 
+    .md-auto-horizontal-margin{
+    max-width: 60%!important;
+    margin: 0 7px!important;
+  }
+  .projects-slide-content h3{
+    font-size: 4.5vw;
+    margin: 8px;
+  }
+  .projects-slide-content h1{
+    font-size: 10vw;
+    margin: 8px;
+  }
+  .projects-slide-content p{
+    font-size: 4vw;
+  }
+  .projects-slide-content.projects-slide-active{
+    min-height: 600px;
+  }
+  .projects-slide-content-inner{
+    top: 2%;
+  }
 }

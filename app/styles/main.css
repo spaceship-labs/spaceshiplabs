@@ -3237,6 +3237,14 @@ input:-webkit-autofill {
     margin-bottom: 46px;
   }
 
+  .action-btn-cot .action-btn {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 5px;
+    font-size: medium!important;
+  }
+
+
   .clients-landing{
     height: auto;
   }
@@ -3244,6 +3252,10 @@ input:-webkit-autofill {
   .logo {
     flex: 0 1 auto!important;
     max-width: 100%!important;
+  }
+
+  .mention-landing-row div,a{
+    background-size: 100px!important;
   }
 
   /*-----------/
@@ -3285,6 +3297,10 @@ input:-webkit-autofill {
     min-height: 400px;
   }
 
+  .news-wrapper-landing{
+    margin: 0;
+  }
+
   .services-item{
     margin-bottom: 20px;
     min-width: 116px;
@@ -3297,6 +3313,9 @@ input:-webkit-autofill {
     max-width: 100%;
     padding: 40px 10px;
     width: 90%;
+  }
+  .mention-landing-item {
+    background-size: cover;
   }
   .mention-landing-row{
     display: block;
