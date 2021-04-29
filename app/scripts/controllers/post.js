@@ -12,6 +12,7 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
   $scope.postSlug = $routeParams.slug || 'down-the-rabbit-hole';
   $scope.entries = [];
   $scope.entry = {};
+  $scope.postThumbnailStyle = {}
   $scope.postsLimit = 3;
   $scope.categories = [];
   $scope.loadedPost = false;
@@ -47,6 +48,8 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
         image: $scope.entryImg
       };
       metaTagsService.setMetaTags(meta);
+      $scope.getMainPostThumb();
+
     });
   };
 
@@ -70,21 +73,45 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
     });
   };
 
-  $scope.getMainPostThumb = function () {
-    var post = $scope.entry;
-    var style = {};
-    if (post.secondary_image && post.secondary_image['full']) {
+  var getStyle = function (size, mediaResult) {
+    var style = {}
+    const sizes = mediaResult.media_details.sizes;
+    console.log(sizes)
+    if (size === 'full' && !sizes[size]) {
       style = {
-        'background': 'url(' + blogService.blogUrl + post.secondary_image[size] + ') center no-repeat'
+        'background': 'url(' + blogService.blogUrl + sizes['large'].source_url + ') center no-repeat'
       };
     }
-    else if (post.featured_image) {
+    else if (size === 'large' && !sizes['large']) {
       style = {
-        'background': 'url(' + blogService.blogUrl + post.featured_image.source + ') center no-repeat'
+        'background': 'url(' + blogService.blogUrl + sizes['medium'].source_url + ') center no-repeat'
+      };
+    }
+    else {
+      style = {
+        'background': 'url(' + blogService.blogUrl + sizes[size].source_url + ') center no-repeat'
       };
     }
     return style;
   }
+  $scope.getMainPostThumb = function () {
+    var post = $scope.entry;
+    console.log('entry', $scope.entry)
+    var size = $rootScope.winSizeSingle || 'full';
+    
+    if (post.featured_media) {
+      return blogService.getSingleMedia(post.featured_media).then(function (mediaResult) {
+        const sizes = mediaResult.media_details.sizes;
+        if (size === 'full' || !sizes[size]) {
+          $scope.postThumbnailStyle = getStyle(size, mediaResult)
+        }
+        else {
+          $scope.postThumbnailStyle = getStyle(size, mediaResult)
+        }
+      });
+    }
+
+  };
   /* TODO: Check if this is needed
   $scope.getMainPostThumb = function(){
     var post = $scope.entry;
@@ -129,7 +156,6 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
   $scope.getPost();
   $scope.getRecentPosts();
   $scope.getCategories();
-
 }
 
 angular.module('spaceshiplabsApp').controller('PostCtrl', PostCtrl);

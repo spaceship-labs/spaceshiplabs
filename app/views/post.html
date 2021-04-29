@@ -35,9 +35,8 @@
 
   <div ng-show="loadedPost" class="blog">
 
-    <div class="single-thumb" ng-style="getMainPostThumb()">
+    <div class="single-thumb" ng-style="postThumbnailStyle">
     </div>
-
     <div class="single container container-xlg" layout="row" layout-sm="column" layout-align="space-between start">
 
       <div class="single-content" flex="70" flex-xs="100" itemid="/{{::entry.slug}}" itemscope

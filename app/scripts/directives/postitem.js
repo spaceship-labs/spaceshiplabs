@@ -27,24 +27,24 @@ angular.module('spaceshiplabsApp')
       },
       restrict: 'EA',
       scope:{
-        'entry':'=entry'
+        'entry':'=entry',
       },
       link: function postLink(scope) {
 
         scope.styleThumb = {};
+        scope.postThumbnailStyle = {};
 
         var getStyle = function (size, mediaResult) {
           var style = {}
-          //console.log('MEDIA', size, mediaResult)
           const sizes = mediaResult.media_details.sizes;
-          if (size === 'full' || !sizes[size]) {
+          if (size === 'full' && !sizes[size]) {
             style = {
-              'background': 'url(' + blogService.blogUrl + sizes['medium'].source_url + ') center no-repeat'
+              'background': 'url(' + blogService.blogUrl + sizes['large'].source_url + ') center no-repeat'
             };
           }
           else if (size === 'large' && !sizes['large']) {
             style = {
-              'background': 'url(' + blogService.blogUrl + sizes['full'].source_url + ') center no-repeat'
+              'background': 'url(' + blogService.blogUrl + sizes['medium'].source_url + ') center no-repeat'
             };
           }
           else {
@@ -64,40 +64,29 @@ angular.module('spaceshiplabsApp')
             });
           } else {
             blogService.getPostMedia(post.id).then(function (mediaResult) {
-              //console.log('MEDIA LIST', mediaResult)
               if (mediaResult[0])
                 scope.styleThumb = getStyle(size, mediaResult[0]);
             });
           }
         };
-
         scope.getMainPostThumb = function(){
           var post = scope.entry;
           var size = $rootScope.winSizeSingle || 'large';
-          var style = {};
           if( post.featured_media ) {
-            return style;
             return blogService.getSingleMedia(post.featured_media).then(function (mediaResult) { 
-            
-              //}else if(post.featured_image){
               const sizes = mediaResult.media_details.sizes;
               if(size === 'full' || !sizes[size]){
-                style = {
-                  'background': 'url(' + blogService.blogUrl + sizes['medium'].source_url + ') center no-repeat'
-                };
+                scope.postThumbnailStyle = getStyle(size,mediaResult)
               }
               else {
-                style = {
-                  'background': 'url(' + blogService.blogUrl + sizes[size].source_url + ') center no-repeat'
-                };
+                scope.postThumbnailStyle = getStyle(size,mediaResult)
               }
-              return style;
             });
           }
-          return style;
         };
+        
+        scope.getMainPostThumb()
         scope.getPostThumb()
-
       }
     };
   });

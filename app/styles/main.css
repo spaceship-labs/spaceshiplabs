@@ -2505,7 +2505,7 @@ input:-webkit-autofill {
 /*-------------*/
 .single-thumb{
   object-fit: cover;
-  max-height: 400px;
+  min-height: 400px;
   width: 100%;
 }
 .single-content h1{

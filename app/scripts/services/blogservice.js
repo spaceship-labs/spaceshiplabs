@@ -97,7 +97,6 @@ angular.module('spaceshiplabsApp')
       };
       //var formatEntry = this.formatEntry
       return $http(req).then(function (response) {
-        console.log(response);
         if (response.status === 200 && response.data.length > 0) {
           return formatEntry(response.data[0]);
         } else {
