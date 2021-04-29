@@ -21,7 +21,7 @@ function ProjectsCtrl($scope, metaTagsService){
   $scope.allProjects = [
     {
       type:'UI/UX Design & Software',
-      slug: 'bcjb',
+      slug: 'airbetter',
       category: 'ui-ux',
       name:'AirBetter',
       description:'Consiste en una plataforma de gestión de vacation rental properties, con un catálogo amplio de bienes raíces para rentas. Realizamos el diseño y desarrollo web de algunas secciones con el fin de mejorar el rendimiento del administrador de la plataforma. Esto, ayuda a agilizar el proceso interno de operación, consiguiendo así un portal más rápido, fluido y navegable para el usuario final.',

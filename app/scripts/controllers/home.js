@@ -50,7 +50,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService, $timeout){
   $scope.projects = [
     {
       type:'UI/UX Design & Software',
-      slug: 'bcjb',
+      slug: 'airbetter',
       category: 'ui-ux',
       name:'AirBetter',
       description:'Consiste en una plataforma de gestión de vacation rental properties, con un catálogo amplio de bienes raíces para rentas. Realizamos el diseño y desarrollo web de algunas secciones con el fin de mejorar el rendimiento del administrador de la plataforma. Esto, ayuda a agilizar el proceso interno de operación, consiguiendo así un portal más rápido, fluido y navegable para el usuario final.',
@@ -64,7 +64,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService, $timeout){
       name:'BCJB',
       description:'Border Center for Journalists and Bloggers, ONG y sin fines de lucro que busca mejorar la calidad periodística, promover prácticas seguras y fomentar la cooperación e innovación entre fronteras. Desarrollamos la página web, y la plataforma completa donde se suben oportunidades como talleres o cursos, notas y datos periodísticas, así como información de interés para periodistas. El diseño es responsive, la plataforma es ágil y compatible con navegadores.',
       url: 'https://www.bordercenter.net/',
-      images:['images/projects/bordercenter1.jpg']
+      images:['images/projects/bordercenter1.jpg','images/projects/bordercenter1.jpg']
     },
     {
       type:'UI/UX Design & Software',
@@ -91,7 +91,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService, $timeout){
       name:'Actual Group',
       description:'Cluster de mueblerías en la Península de Yucatán. Este proyecto está compuesto por el diseño y desarrollo de frontend y backend: diseñamos y desarrollamos desde la plataforma de ventas, inventarios, registro de personal para control interno, así como las diversas páginas webs de las marcas: Actual Studio, Actual Home, Actual Kids.',
       //url: 'https://www.bordercenter.net/',
-      images:['images/projects/actual1.png']
+      images:['images/projects/actual1.png','images/projects/actual1.png']
     },
     {
       type:'UI/UX Design & Software',
@@ -100,7 +100,7 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService, $timeout){
       name:'Reparakit',
       description:'Una aplicación que une a usuarios con proveedores de servicios. Reparakit es una base de datos de plomeros, electricistas, personal de limpieza desde la cual puedes solicitar un servicio, agendarlo y pagar en la app. Cuenta con un sistema de reviews, pago seguro, formas de contacto directo en la app, entre otros beneficios tanto para proveedores de servicio como clientes.',
       //url: 'https://www.bordercenter.net/',
-      images:['images/projects/reparakit1.png']
+      images:['images/projects/reparakit1.png','images/projects/reparakit1.png']
     },
     {
       type:'UI/UX Design & Software',
