@@ -1475,7 +1475,7 @@ input:-webkit-autofill {
   #NEWS-ITEM
 /*------------*/
 .news-wrapper{
-    background-color: #fff;
+    background-color: #FAFAFA;
     z-index: 1;
     position: relative;
     overflow: hidden;
