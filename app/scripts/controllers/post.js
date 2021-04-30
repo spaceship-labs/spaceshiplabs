@@ -25,7 +25,6 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
       }
       $scope.entry = entry;
       if (entry.content) {
-        entry.content = $scope.formatImageSrc(entry.content);
         $scope.entry.content = $sce.trustAsHtml(entry.content);
       } else {
         console.log('no hay entry');
@@ -53,13 +52,16 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
     });
   };
 
+  /* Doesn't needed after updated wordpress to 5.7.1
   $scope.formatImageSrc = function (content) {
     var find = '/wp-content/';
     var url = 'https://blog.spaceshiplabs.com/wp-content/';
     var re = new RegExp(find, 'g');
     var res = content.replace(re, url);
+    console.log("Res: ",res);
     return res;
   };
+  */
 
   $scope.getRecentPosts = function () {
     blogService.getRecentEntries($scope.postsLimit).then(function (entries) {
@@ -76,27 +78,25 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
   var getStyle = function (size, mediaResult) {
     var style = {}
     const sizes = mediaResult.media_details.sizes;
-    console.log(sizes)
     if (size === 'full' && !sizes[size]) {
       style = {
-        'background': 'url(' + blogService.blogUrl + sizes['large'].source_url + ') center no-repeat'
+        'background': 'url(' + sizes['large'].source_url + ') center no-repeat'
       };
     }
     else if (size === 'large' && !sizes['large']) {
       style = {
-        'background': 'url(' + blogService.blogUrl + sizes['medium'].source_url + ') center no-repeat'
+        'background': 'url(' + sizes['medium'].source_url + ') center no-repeat'
       };
     }
     else {
       style = {
-        'background': 'url(' + blogService.blogUrl + sizes[size].source_url + ') center no-repeat'
+        'background': 'url(' + sizes[size].source_url + ') center no-repeat'
       };
     }
     return style;
   }
   $scope.getMainPostThumb = function () {
     var post = $scope.entry;
-    console.log('entry', $scope.entry)
     var size = $rootScope.winSizeSingle || 'full';
     
     if (post.featured_media) {

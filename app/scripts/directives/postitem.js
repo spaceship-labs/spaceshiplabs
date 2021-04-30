@@ -37,19 +37,19 @@ angular.module('spaceshiplabsApp')
         var getStyle = function (size, mediaResult) {
           var style = {}
           const sizes = mediaResult.media_details.sizes;
-          if (size === 'full' && !sizes[size]) {
+          if (size === 'full' || !sizes[size]) {
             style = {
-              'background': 'url(' + blogService.blogUrl + sizes['large'].source_url + ') center no-repeat'
+              'background': 'url(' + sizes['full'].source_url + ') center no-repeat'
             };
           }
-          else if (size === 'large' && !sizes['large']) {
+          else if (size === 'large' || !sizes['large']) {
             style = {
-              'background': 'url(' + blogService.blogUrl + sizes['medium'].source_url + ') center no-repeat'
+              'background': 'url(' + sizes['large'].source_url + ') center no-repeat'
             };
           }
           else {
             style = {
-              'background': 'url(' + blogService.blogUrl + sizes[size].source_url + ') center no-repeat'
+              'background': 'url(' + sizes[size].source_url + ') center no-repeat'
             };
           }
           return style;

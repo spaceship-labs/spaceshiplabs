@@ -2504,9 +2504,9 @@ input:-webkit-autofill {
   #SINGLE
 /*-------------*/
 .single-thumb{
-  object-fit: cover;
-  min-height: 400px;
-  width: 100%;
+  background-size: cover!important;
+  background-attachment: fixed!important;
+  min-height: 300px;
 }
 .single-content h1{
   line-height: 1.1;
