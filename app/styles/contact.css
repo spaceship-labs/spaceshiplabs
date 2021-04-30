@@ -14,6 +14,9 @@
 
 .contact-form{position: relative;}
 
+table input{
+  background-color: #FAFAFA;
+}
 
 .contact-table-cell-half{width: 50%;}
 .contact-table-cell{
@@ -127,7 +130,6 @@
   border: 0;
   font-size: 16px;
   width: 100%;
-  background-color: #FAFAFA;
 }
 
 .contact-table-cell textarea:-webkit-autofill,
