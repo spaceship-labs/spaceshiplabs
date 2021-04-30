@@ -1479,11 +1479,15 @@ input:-webkit-autofill {
     z-index: 1;
     position: relative;
     overflow: hidden;
-    min-height: 850px!important;
 }
 .news-wrapper-inner{
   padding: 0;
   width: 100%;
+}
+
+.blog-thumbs-view {
+  margin-bottom: 2rem;
+
 }
 
 .news-item{
@@ -2725,6 +2729,7 @@ input:-webkit-autofill {
 .card-content .action-btn{
   font-size: 16px;
   font-weight: 300;
+  display: inline-block;
 }
 
 .blog-sidebar-collections{
@@ -3209,6 +3214,10 @@ input:-webkit-autofill {
   .design-slide{left: 16%;}
   .design-slider-bullets{left: -16%;}
 
+  .blog .single{
+    flex-direction: row;
+  }
+
 }
 
 @media screen and (max-width: 600px){
@@ -3256,6 +3265,14 @@ input:-webkit-autofill {
 
   .mention-landing-row div,a{
     background-size: 100px!important;
+  }
+
+  .blog .single{
+    flex-direction: column;
+  }
+
+  .blog-list-card .action-btn-wrap {
+    text-align: center;
   }
 
   /*-----------/
@@ -3414,6 +3431,9 @@ input:-webkit-autofill {
   .blog-list-card .card-thumb-circle{border-radius: 0;}
   /*.pagination-blog a{padding: 6px}*/
   .single-thumb{background-attachment: inherit!important;}
+  .pagination-blog {
+    flex-wrap: wrap;
+  }
 
   /*------------/
     #PROJECTS-SLIDER

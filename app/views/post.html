@@ -61,28 +61,29 @@
             </a>
           </p>
         </div>
-
         <div class="fb-comments" data-href="{{ getAbsUrl() }}" data-width="672" data-numposts="2"></div>
-
       </div>
 
       <div class="blog-sidebar" flex="25" flex-xs="100">
-
-        <div 
-          ng-repeat="entryItem in entries" 
-          class="blog-sidebar-card"
-        >
-
-          <div post-item entry="entryItem"/>
-
+        
+        <div>
+          <div 
+            ng-repeat="entryItem in entries" 
+            class="blog-sidebar-card"
+          >
+            <div post-item entry="entryItem"/>
+          </div>
         </div>
 
         <div class="blog-sidebar-collections">
           <h4>Categorías</h4>
           <div layout="row" layout-align="space-between start" layout-wrap>
-            <a ng-repeat="category in categories" flex="45" ng-href="/blog/category/{{::category.slug}}"
-              class="blog-sidebar-collection">{{::category.name}}</a>
-
+            <a 
+              ng-repeat="category in categories" 
+              flex="45" 
+              ng-href="/blog/category/{{::category.slug}}"
+              class="blog-sidebar-collection">{{::category.name}}
+            </a>
           </div>
         </div>
 
