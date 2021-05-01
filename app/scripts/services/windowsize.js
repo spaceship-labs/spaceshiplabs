@@ -33,8 +33,8 @@ angular.module('spaceshiplabsApp')
         winSizeSingle = "large";
       }
       else if(newValue.w > 300){
-        winSize = "blog";
-        winSizeSingle = "blog";
+        winSize = "medium";
+        winSizeSingle = "medium";
       }
 
       $rootScope.winSize = winSize;
