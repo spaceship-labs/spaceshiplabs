@@ -51,6 +51,40 @@ p{font-weight: 100;}
    100%{ bottom: 19%; }
 }
 
+
+/*
+  MOBILE
+*/
+@-webkit-keyframes topToBottomMobile {
+  0%{ bottom:3%; }
+  50%{bottom: 4%}
+  100%{ bottom: 3%; }
+}
+
+@-moz-keyframes topToBottomMobile {
+  0%{ bottom:3%; }
+  50%{bottom: 4%}
+  100%{ bottom: 3%; }
+}
+
+@-ms-keyframes topToBottomMobile {
+  0%{ bottom:3%; }
+  50%{bottom: 4%}
+  100%{ bottom: 3%; }
+}
+
+@-o-keyframes topToBottomMobile {
+  0%{ bottom:3%; }
+  50%{bottom: 4%}
+  100%{ bottom: 3%; }
+}
+
+@keyframes topToBottomMobile {
+  0%{ bottom:3%; }
+  50%{bottom: 4%}
+  100%{ bottom: 3%; }
+}
+
 /*-------------/
   #LEFTTORIGHT
 /*------------*/
@@ -1029,7 +1063,7 @@ md-backdrop{background: rgba(0,0,0,0.5)}
 }
 
 .services-item p{
-  font-size: 16px;
+  font-size: 18px!important;
   margin: 20px 0;
 }
 
@@ -3331,6 +3365,9 @@ input:-webkit-autofill {
     padding: 40px 10px;
     width: 90%;
   }
+  .mentions-landing-content p{
+    font-size: 10px!important;
+  }
   .mention-landing-item {
     background-size: cover;
   }
@@ -3372,6 +3409,12 @@ input:-webkit-autofill {
     #LANDING
   /*------------*/
   .landing-content h1{font-size: 38px;}
+  .move-arrow {
+    animation-name: topToBottomMobile;
+    -moz-animation-name: topToBottomMobile;
+    -webkit-animation-name: topToBottomMobile;
+    bottom: 4%;
+  }
   .spacees-landing .container-sm{
     margin: 0!important;
     padding: 10px 14px;
@@ -3382,6 +3425,7 @@ input:-webkit-autofill {
   .clients-slider-reel{min-height: 260px;}
   .clients-slider .client-item p{font-size: 16px;}
   .services-content{margin-top: 40px}
+  .services-content p{font-size: 10px}
   .services-items{margin-top: 0;}
   .services-items .services-item{
     border: none;
@@ -3563,40 +3607,18 @@ input:-webkit-autofill {
   transition: all 200ms linear;
 }
 
-.whatsapp-float path {
-  transition: fill 200ms ease-out;
-  transition: stroke 200ms ease-out;
-  transition: filter 200ms ease-out;
-  fill: #00C5D8;
-  filter: drop-shadow(0px 0px 8px #00000063);
-}  
-
-.whatsapp-float svg{
-  width: 80px;
-  height: 80px;
-}
-
 .whatsapp-float:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
-.whatsapp-float:hover path{
-  fill:#00C5D8;
-  filter: drop-shadow(0px 0px 10px #FAFAFA60);
-  stroke: #FAFAFA;
-  stroke-width: 2;
-}
+
 .weight-100{
   font-weight: 100;
 }
 
 @media screen and (max-width: 600px){
-  .whatsapp-float svg{
-    width: 60px;
-    height: 60px;
-  }
-
   .whatsapp-float {
-    bottom: 5px;
-    right: 5px;
+    bottom: 10px;
+    right: 10px;
+    width: 60px;
   }
 }

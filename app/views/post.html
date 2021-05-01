@@ -66,13 +66,12 @@
 
       <div class="blog-sidebar" flex="25" flex-xs="100">
         
-        <div>
-          <div 
-            ng-repeat="entryItem in entries" 
-            class="blog-sidebar-card"
-          >
-            <div post-item entry="entryItem"/>
-          </div>
+        
+        <div 
+          ng-repeat="entryItem in entries" 
+          class="blog-sidebar-card"
+        >
+          <div post-item entry="entryItem"></div>
         </div>
 
         <div class="blog-sidebar-collections">
