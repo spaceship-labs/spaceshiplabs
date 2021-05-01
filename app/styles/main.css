@@ -3365,9 +3365,6 @@ input:-webkit-autofill {
     padding: 40px 10px;
     width: 90%;
   }
-  .mentions-landing-content p{
-    font-size: 10px!important;
-  }
   .mention-landing-item {
     background-size: cover;
   }
@@ -3425,7 +3422,6 @@ input:-webkit-autofill {
   .clients-slider-reel{min-height: 260px;}
   .clients-slider .client-item p{font-size: 16px;}
   .services-content{margin-top: 40px}
-  .services-content p{font-size: 10px}
   .services-items{margin-top: 0;}
   .services-items .services-item{
     border: none;
