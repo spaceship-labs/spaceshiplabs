@@ -54,7 +54,7 @@ angular.module('spaceshiplabsApp')
           }
           else {
             style = {
-              'background': 'url(' + sizes[thumbnail].source_url + ') center no-repeat'
+              'background': 'url(' + sizes['full'].source_url + ') center no-repeat'
             };
           }
           return style;
