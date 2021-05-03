@@ -25,16 +25,16 @@ angular.module('spaceshiplabsApp')
       var winSizeSingle;
 
       if(newValue.w > 900){
-        winSize = "large";
+        winSize = "full";
         winSizeSingle = "full";
       }
       else if(newValue.w > 600){
         winSize = "large";
         winSizeSingle = "large";
       }
-      else if(newValue.w > 300){
-        winSize = "medium";
-        winSizeSingle = "medium";
+      else if(newValue.w > 200){
+        winSize = "large";
+        winSizeSingle = "large";
       }
 
       $rootScope.winSize = winSize;

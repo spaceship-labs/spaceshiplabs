@@ -78,19 +78,19 @@ function PostCtrl($scope, $sce, $rootScope, $routeParams, blogService, $location
   var getStyle = function (size, mediaResult) {
     var style = {}
     const sizes = mediaResult.media_details.sizes;
-    if (size === 'full' && !sizes[size]) {
+    if (!sizes[size] || size === 'full') {
+      style = {
+        'background': 'url(' + sizes['full'].source_url + ') center no-repeat'
+      };
+    }
+    else if (!sizes['large'] || size === 'large') {
       style = {
         'background': 'url(' + sizes['large'].source_url + ') center no-repeat'
       };
     }
-    else if (size === 'large' && !sizes['large']) {
-      style = {
-        'background': 'url(' + sizes['medium'].source_url + ') center no-repeat'
-      };
-    }
     else {
       style = {
-        'background': 'url(' + sizes[size].source_url + ') center no-repeat'
+        'background': 'url(' + sizes['large'].source_url + ') center no-repeat'
       };
     }
     return style;
