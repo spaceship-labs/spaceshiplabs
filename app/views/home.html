@@ -27,7 +27,10 @@
       SOLICITAR COTIZACIÓN
     </a>
   </div>
-  <a ng-click="scrollTo('menciones')" href="" class="move-arrow"><img src="images/flecha.png" alt=""></a>
+  <picture ng-click="scrollTo('menciones')" href="" class="move-arrow">
+    <source srcset="images/flecha.webp">
+    <img src="images/flecha.png" alt="arrow-down">
+  </picture>
 </div>
 
 <!--<div id="recent-news" class="container container-alt center-content">
@@ -222,7 +225,10 @@
   <div class="container container-xxlg" layout="row" layout-wrap>
     <div flex="50" flex-sm="100" flex-xs="100" layout-wrap layout-align="center center">
       <div class="spacees-landing-content">
-        <img src="images/spacees.png" alt="SpaceEs" />
+        <picture>
+          <source srcset="images/spacees.webp" alt="SpaceEs" />
+          <img src="images/spacees.png" alt="SpaceEs" />
+        </picture>
         <h2 data-wow-duration="0.8s" class="wow fadeInUp" itemprop="name">ENTERPRISE SOFTWARE</h2>
         <p itemprop="description">Plataforma para el manejo completo de la empresa desde recursos humanos, contabilidad, hasta la capacitación y canalización de ventas tanto electrónicas como análogas.</p>
         <div class="action-btn-wrap">
@@ -231,9 +237,18 @@
       </div>
     </div>
     <section class="mockups-wrapper" flex="50" flex-sm="100" flex-xs="100">
-      <img class="tablet-img wow slideInUp" data-wow-duration="1.6s" src="images/tablet-spacees.png" alt="SpaceEs tablet view">
-      <img class="cel-img wow slideInUp" data-wow-duration="2.4s" src="images/cel-spacees.png" alt="SpaceEs mobile view">
-      <img class="desktop-img wow slideInUp" data-wow-duration="3.2s" src="images/compu-spacees.png" alt="SpaceEs desktop view">
+      <picture>
+        <source class="tablet-img wow slideInUp" data-wow-duration="1.6s" srcset="images/tablet-spacees.webp" alt="SpaceEs tablet view">
+        <img class="tablet-img wow slideInUp" data-wow-duration="1.6s" src="images/tablet-spacees.png" alt="SpaceEs tablet view">
+      </picture>
+      <picture>
+        <source class="cel-img wow slideInUp" data-wow-duration="2.4s" srcset="images/cel-spacees.webp" alt="SpaceEs mobile view">
+        <img class="cel-img wow slideInUp" data-wow-duration="2.4s" src="images/cel-spacees.png" alt="SpaceEs mobile view">
+      </picture>
+      <picture>
+        <source class="desktop-img wow slideInUp" data-wow-duration="3.2s" srcset="images/compu-spacees.webp" alt="SpaceEs desktop view">
+        <img class="desktop-img wow slideInUp" data-wow-duration="3.2s" src="images/compu-spacees.png" alt="SpaceEs desktop view">
+      </picture>
     </section>
   </div>
 

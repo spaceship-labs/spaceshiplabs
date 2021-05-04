@@ -12,7 +12,10 @@
       </div>
 
       <a href="/" class='logo' flex='20' flex-xs='50' >
-        <img ng-if="!scrolled" src="images/logo.png" />
+        <picture>
+          <source ng-if="!scrolled" srcset="images/logo.webp" />
+          <img ng-if="!scrolled" src="images/logo.png" />
+        </picture>
         <!--<img ng-if="scrolled" src="images/nave.png" />-->
         <i ng-if="scrolled" class="icon-nave"></i>
       </a>
@@ -90,7 +93,12 @@
             <li><a href="/prensa">PRENSA</a></li>
             <li><a href="/blog">BLOG</a></li>
             <li>
-              <a href="/spacees"><img class="spacees-link-menu" src="images/spacees-menu.png" /></a>
+              <a href="/spacees">
+                <picture>
+                  <source class="spacees-link-menu" srcset="images/spacees-menu.webp" />
+                  <img class="spacees-link-menu" src="images/spacees-menu.png" />
+                </picture>
+              </a>
             </li>
             <li><a class="contact-menu-item" href="/contacto"><span>CONTACTO</span></a></li>
           </ul>
@@ -101,5 +109,8 @@
 </md-toolbar>
 
 <a href="http://wa.me/529981914861"> 
-  <img class="whatsapp-float" src="../images/whatsapp.png" width="80px"/>
+  <picture>
+    <source class="whatsapp-float" srcset="../images/whatsapp.webp" width="80px"/>
+    <img class="whatsapp-float" src="../images/whatsapp.png" width="80px"/>
+  </picture>
 </a>
