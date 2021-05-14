@@ -1,0 +1,48 @@
+<md-dialog aria-label="Software Form">
+    <form 
+      ng-controller="MainCtrl" 
+      name="softwareForm" 
+      autocomplete="off" 
+      novalidate 
+      ng-submit="modalContact(softwareForm)"
+    >
+        <div class="md-toolbar-tools">
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon md-svg-src="../../../images/x.svg" aria-label="Close dialog"></md-icon>
+          </md-button>
+        </div>
+  
+      <md-dialog-content>
+        <div class="md-dialog-content">
+          <h1>EL MOMENTO DE ARRANCAR ES HOY:</h1>
+          <div class="subtitle subtitle-software-modal">Nosotros te asesoramos y guiamos sobre<br>cómo empezar y gestionar tu negocio en línea.</div>
+          <div class="modal-text">
+            Regístrate y recibe una consultoría <span class="text-highlight">GRATIS </span> para tu proyecto. Déjanos tus datos y nos pondremos en contacto:
+          </div>
+        </div>
+      
+      <div class="modal-inputs">
+        <label for="name">Nombre*</label><br>
+        <input required type="text" ng-model="contactModal.name" name="name" placeholder="Nombre"><br>
+        <p ng-if="contactError" class="contact-form-message contact-form-message-error" ng-show="softwareForm.name.$error.required"><span>*Ingresa tu nombre.</span></p>
+        <label for="email">Mail*</label><br>
+        <input required type="email" ng-model="contactModal.email" name="email" placeholder="E-mail"><br>
+        <p ng-if="contactError" class="contact-form-message contact-form-message-error" ng-show="softwareForm.email.$error.email"><span>*Este e-mail no es valido.</span></p>
+        <p ng-if="contactError" class="contact-form-message contact-form-message-error" ng-show="softwareForm.email.$error.required"><span>*Ingresa tu email.</span></p>
+        <label for="phone">Cel/Whatsapp*</label><br>
+        <input required type="tel" ng-model="contactModal.phone" name="phone" maxlength="18" placeholder="Celular/Whatsapp" pattern="\+?[0-9]{5,18}"><br>
+        <p ng-if="contactError" class="contact-form-message contact-form-message-error" ng-show="softwareForm.phone.$error.required"><span>*Ingresa tu número de teléfono.</span></p>
+        <p ng-if="contactError" class="contact-form-message contact-form-message-error" ng-show="softwareForm.phone.$error.pattern"><span>*El número de teléfono debe ser de 5 a 18 números sin espacios.</span></p>
+
+        <label for="website">Sitio Web*</label><br>
+        <input required type="text" ng-model="contactModal.website" name="website" placeholder="Website"><br>
+        <p ng-if="contactError" class="contact-form-message contact-form-message-error" ng-show="softwareForm.website.$error.required"><span>*Ingresa tu página web.</span></p>
+        <input class="modal-submit" type="submit" name="submit" value="ENVIAR INFORMACIÓN">
+      </div>
+      <p class="contact-form-message contact-form-final-message" ng-show="emailSent"><span><i class="icon-about"></i> Gracias por enviar tu mensaje.</span></p>
+      <p class="contact-form-message contact-form-message-error contact-form-final-message" ng-show="contactError"><span>*Hubo un error al enviar tu mensaje, intentalo de nuevo.</span></p>
+    </form>
+  </md-dialog-content>
+  </md-dialog>
+  

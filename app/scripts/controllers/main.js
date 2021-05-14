@@ -13,6 +13,7 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
     $scope.emailSent = false;
     $scope.contactError = false;
     $scope.contactData = {};
+    $scope.contactModal = {};
     $scope.winSize = "medium";
     $scope.winSizeSingle = "medium";
     $scope.redirectCount = 0;
@@ -60,6 +61,20 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
       }
     };
 
+    var resetModalForm = function () {
+      $scope.contactError = false;
+      if ($scope.contactModal) {
+        $scope.contactModal = {
+          formPage: '',
+          name: '',
+          email: '',
+          phone: '',
+          website: '',
+          _gotcha: '',
+        };
+      }
+    };
+
     var customizeHeader = function () {
       if ($location.path() === '/') {
         $('.toolbar-head .menu').addClass('menu-home');
@@ -80,6 +95,7 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
     setTimeout(customizeHeader, 500);
     manageSidebar();
     resetContactForm();
+    resetModalForm();
 
   });
 
@@ -126,6 +142,50 @@ function MainCtrl($scope, $mdSidenav, $location, $routeParams, metaTagsService, 
       );
     } else {
       $scope.contactError = true;
+      $scope.emailSent = false;
+    }
+  };
+
+  $scope.modalContact = function (form) {
+    if (form.$valid) {
+      $scope.loadingContact = true;
+      $scope.contactError = false;
+      $scope.emailSent = false;
+      var params = $.param({
+        formPage: form.$name,
+        name: $scope.contactModal.name,
+        email: $scope.contactModal.email,
+        phone: $scope.contactModal.phone,
+        website: $scope.contactModal.website,
+      });
+      //params = JSON.stringify(params);
+      var req = {
+        url: 'https://blog.spaceshiplabs.com/wp-content/themes/spaceshiplabs/composerUtilities/marketing.php',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        data: params
+      };
+      $http(req).then(
+        function (response) {
+          console.log(response);
+          if (response.data === 'success') {
+            $scope.emailSent = true;
+            $scope.contactError = false;
+          } else {
+            $scope.contactError = true;
+          }
+          $scope.loadingContact = false;
+        }, function (err) {
+          $scope.contactError = true;
+          console.log(err);
+          $scope.loadingContact = false;
+        }
+      );
+    } else {
+      $scope.contactError = true;
+      $scope.emailSent = false;
     }
   };
 
