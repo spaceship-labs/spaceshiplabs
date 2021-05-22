@@ -145,6 +145,11 @@ angular
         controller: 'AdviceCtrl',
         controllerAs: 'advice'
       })
+      .when('/speed-analysis', {
+        templateUrl: 'views/speed-analysis.html',
+        controller: 'SpeedCtrl',
+        controllerAs: 'speed'
+      })
       .when('/:slug', {
         templateUrl: 'views/post.html',
         controller: 'PostCtrl',

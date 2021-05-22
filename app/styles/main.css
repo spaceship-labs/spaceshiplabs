@@ -20,6 +20,7 @@ p{font-weight: 100;}
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+md-content{overflow-x: hidden;}
 
 @-webkit-keyframes topToBottom {
    0%{ bottom:19%; }
@@ -3303,6 +3304,444 @@ md-dialog {
   */
 }
 
+/*-----------------------/
+  Speed Analysis Landing
+/*----------------------*/
+
+.speed-navbar{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding-bottom: 1rem;
+  width: 90%;
+  margin: auto;
+}
+
+.speed-header{
+  padding-top: 1rem;
+}
+
+.speed-logo-container{
+  position: relative;
+}
+
+.speed-logo{
+  float: left;
+  top: 30%;
+  left: 5px;
+  vertical-align: middle;
+}
+
+.speed-socials-container{
+  position: relative;
+}
+
+.speed-socials{
+  position: absolute;
+  font-size: .5rem;
+  float: right;
+  top: 30%;
+  right: 5px;
+  vertical-align: middle;
+}
+
+.speed-socials p{
+  margin:0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.speed-socials i{
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.speed-socials i:hover{
+  color: #4669C5;
+  transition: 200ms;
+  -moz-transition: 200ms;
+  -webkit-transition: 200ms;
+}
+
+.speed-socials a{
+  text-decoration: none;
+  color: white;
+}
+
+.speed-analysis-container{
+  background-color: #FAFAFA;
+}
+
+.speed-analysis-container section{
+  margin: 3rem 0;
+}
+
+.speed-analysis-container a{
+  color: black;
+  text-decoration-line: underline;
+}
+
+.speed-analysis-container p {
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.cursive {
+  font-style: italic;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.speed-analysis-container .title-alt {
+  margin: 2rem 0 3rem 0;
+}
+
+.speed-analysis-container h1{
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 3rem 0 2rem 0;
+}
+
+.speed-analysis-container h2{
+  font-size: 1.5rem;
+  color: #23D6D3;
+  font-weight: 400;
+  margin: 0 0 3rem 0;
+}
+
+.speed-analysis-container .highlight{
+  color: #4964BD;
+}
+
+.speed-analysis-container .highlight-clear{
+  color: #23D6D3;
+}
+
+.speed-analysis-container .speed-text{
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 1rem 0 1.8rem 0;
+}
+
+.speed-analysis-container .text-highlight{
+  color: #27D3D7;
+  font-weight: 800;
+}
+
+.speed-analysis-container .text-highlight-dark{
+  color: #4269C4;
+  font-weight: 800;
+}
+
+.speed-analysis-container hr{
+  background-color: #04D2CE;
+  height: 3px;
+  border-radius: 5px;
+  border: none;
+  width: 95%;
+  margin: 2rem 0;
+}
+
+.speed-section{
+  background-color: #FAFAFA;
+}
+
+.speed-section p{
+  font-size: 1.2rem;
+}
+
+.speed-analysis-container .speed-section-alt{
+  background-color: #f5f5f5;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 3rem 0;
+  overflow-x: hidden;
+}
+
+.bar { 
+  height: 40px;
+  position: relative;
+  background: transparent;
+  left: 15%;
+}
+
+.bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #4669C5;
+  position: relative;
+  overflow-x: visible;
+}
+
+.bar-grey { 
+  height: 40px;
+  position: relative;
+  background: transparent;
+  left: 15%;
+}
+
+.bar-grey > span {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #CCCACB;
+  position: relative;
+  overflow-x: visible;
+}
+
+.bar .speed-graphs-percent{
+  vertical-align: middle;
+  color: #4669C5;
+  font-style: normal;
+  margin-left: 102%;
+}
+
+.bar-grey .speed-graphs-percent-dark{
+  vertical-align: middle;
+  color: #CCCACB;
+  font-style: normal;
+  margin-left: 102%;
+}
+
+.speed-graphs .bounce-graphs-text p{
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+}
+
+.bounce-graphs-text span{
+  color:black;
+}
+
+.speed-graphs .bounce-bar{
+  left: 0;
+  height: 20px;
+}
+
+.bounce-cell{
+  margin-bottom: 2rem;
+}
+
+.speed-graphs{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  vertical-align: baseline;
+}
+
+.speed-graphs-container{
+  width: 75%;
+  margin: 0 auto;
+}
+
+.speed-graphs-container p{
+  color: #4669C6;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.speed-graphs-text {
+  text-align: left;
+}
+
+.speed-graphs-text-grey p{
+  color: #3D3D3D;
+}
+
+.percentage-row{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.percentage-circle{
+  padding: 2rem;
+}
+
+.speed-graphs .source p{
+  color: #29D9D9;
+  font-size: 1.2rem;
+  text-align: left;
+  margin: 0;
+}
+
+.google-logo{
+  position: relative;
+}
+
+.google-logo picture{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.action-btn-speed {
+  margin-top: 0;
+  text-align: center;
+  z-index: 99;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}
+
+.action-btn-speed a {
+  font-size: 18px!important;
+  font-weight: 600;
+  padding: 8px 20px;
+  display: block;
+}
+
+.action-btn-speed .action-btn{
+  border-color: #456AC3;
+  color: #456AC3;
+  text-decoration: none;
+}
+
+.action-btn-speed .action-btn:hover{
+  background-color: #04D2CE;
+  border-color: #04D2CE;
+  color: white;
+}
+
+.action-btn-speed-dark {
+  margin: 2rem 0 3rem 0;
+  text-align: center;
+  z-index: 99;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}
+
+.action-btn-speed-dark .action-btn:hover{
+  background-color: #04D2CE;
+  border-color: #04D2CE;
+}
+
+.action-btn-speed-dark a {
+  font-size: 18px!important;
+  font-weight: 600;
+  padding: 8px 20px;
+  display: block;
+}
+
+.action-btn-speed-dark .action-btn{
+  border-color: #456AC3;
+  color: #FAFAFA;
+  text-decoration: none;
+  background-color: #456AC3;
+}
+
+.speed-buttons {
+  display: inline-block;
+  width: 70%;
+  margin: 0;
+}
+
+@media screen and (max-width: 450px){
+  .speed-socials p{
+    font-size: 4vw;
+  }
+
+  .speed-socials i{
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .speed-graphs-container{
+    width: 90%;
+  }
+  
+  .speed-graphs-container p{
+    margin-bottom: .5rem;
+  }
+  
+  .speed-graphs{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .speed-graphs-text{
+    margin-top: 2rem;
+  }
+
+  .bar{
+    left: 0;
+  }
+
+  .bar-grey{
+    left: 0;
+  }
+
+  .source{
+    margin-top: 2rem;
+  }
+
+  .google-logo{
+    position: initial;
+    margin-top: 3rem;
+  }
+
+  .google-logo picture{
+    position: initial;
+    right: auto;
+    bottom: auto;
+    margin-top: 1rem;
+  }
+
+  .bounce-cell{
+    margin-bottom: 0rem;
+  }
+
+  .speed-analysis-container .title-alt{
+    margin: .5rem 0 1rem 0;
+    font-size: 7vw;
+  }
+
+  .percentage-circle{
+    padding: 1rem;
+  }
+
+  .speed-header{
+    padding-top: 1rem!important;
+  }
+
+  .speed-navbar{
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+
+  .speed-logo-container{
+    position: initial;
+  }
+  
+  .speed-logo{
+    float: initial;
+    top: auto;
+    left: auto;
+  }
+  
+  .speed-socials-container{
+    position: initial;
+  }
+  
+  .speed-socials{
+    padding: 2rem 0;
+    position: static;
+    float: initial;
+    top: auto;
+    right: auto;
+  }
+}
+
+
 @media screen and (max-width: 960px){
   /*-------/
     #TEAM
@@ -3341,6 +3780,7 @@ md-dialog {
   #button-menu-mobile{ display: block;}
 
   .section-title{padding-top: 78px}
+  .speed-header{padding-top:1rem}
   .section-title-blog{padding-bottom: 94px;}
 
   /*---------/
