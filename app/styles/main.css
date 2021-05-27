@@ -3588,6 +3588,7 @@ md-dialog {
   -o-transition: all .4s;
   -ms-transition: all .4s;
   transition: all .4s;
+  cursor: pointer;
 }
 
 .action-btn-speed a {
@@ -3618,6 +3619,7 @@ md-dialog {
   -o-transition: all .4s;
   -ms-transition: all .4s;
   transition: all .4s;
+  cursor: pointer;
 }
 
 .action-btn-speed-dark .action-btn:hover{

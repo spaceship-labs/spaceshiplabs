@@ -17,31 +17,6 @@ function MarketingCtrl($scope,metaTagsService,$mdDialog){
     metaTagsService.setMetaTags(meta);
 
     $scope.status = '  ';
-    
-    $scope.showAdvanced = function(ev) {
-      $mdDialog.show({
-        controller: DialogController,
-        templateUrl: 'views/templates/marketing.tmpl.html',
-        parent: angular.element(document.body),
-        targetEvent: ev,
-        clickOutsideToClose:true,
-        fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
-      })
-    };
-  
-    function DialogController($scope, $mdDialog) {
-      $scope.hide = function() {
-        $mdDialog.hide();
-      };
-  
-      $scope.cancel = function() {
-        $mdDialog.cancel();
-      };
-  
-      $scope.answer = function(answer) {
-        $mdDialog.hide(answer);
-      };
-    }  
 
   };
 
