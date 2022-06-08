@@ -1,28 +1,29 @@
 <div class="landing-wrapper" layout="column" layout-align="center center" ng-style="style()" full-screen-wrapper>
   <div class="dots"></div>
-    <video autoplay loop="true" preload="none" autoplay="autoplay" poster="images/videobg.png" id="landing-video">
-      <source src="videos/spaceshiplabs.webm" type="video/webm">
-      <source src="videos/spaceshiplabs.mp4" type="video/mp4">
-    </video>
-    <script>
-      var playPromise = document.getElementById('landing-video').play(); 
-      
-      if (playPromise !== undefined) {
-        playPromise.then(function(){
+  <video autoplay loop="true" preload="none" autoplay="autoplay" poster="images/videobg.png" id="landing-video">
+    <source src="videos/spaceshiplabs.webm" type="video/webm">
+    <source src="videos/spaceshiplabs.mp4" type="video/mp4">
+  </video>
+  <script>
+    var playPromise = document.getElementById('landing-video').play();
 
-        })
-        .catch(function(error) {
-          console.log("Error en autoplay: ",error);
+    if (playPromise !== undefined) {
+      playPromise.then(function () {
+
+      })
+        .catch(function (error) {
+          console.log("Error en autoplay: ", error);
         });
-      }
-    </script>
-    <div class="landing-content center-content">
-     <h1 data-wow-duration="0.8s" class="wow fadeInUp">SpaceshipLabs</h1>
-     <p data-wow-delay="0.8s" data-wow-duration="0.8s" class="wow fadeInUp hero-title">
+    }
+  </script>
+  <div class="landing-content center-content">
+    <h1 data-wow-duration="0.8s" class="wow fadeInUp">SpaceshipLabs</h1>
+    <p data-wow-delay="0.8s" data-wow-duration="0.8s" class="wow fadeInUp hero-title">
       AGENCIA DIGITAL
     </p>
   </div>
-  <div data-wow-delay="1.6s" data-wow-duration="0.8s" class="action-btn-wrap action-btn-cot action-btn-hero wow fadeInUp">
+  <div data-wow-delay="1.6s" data-wow-duration="0.8s"
+    class="action-btn-wrap action-btn-cot action-btn-hero wow fadeInUp">
     <a data-wow-delay="1.6s" data-wow-duration="0.8s" class="action-btn wow fadeInUp" href="/contacto">
       SOLICITAR COTIZACIÓN
     </a>
@@ -37,101 +38,48 @@
  <h1 data-wow-duration="0.8s" class="wow fadeInUp">Noticias recientes</h1>
 </div>-->
 
-<div id="menciones" class="mentions-landing" layout="column" layout-align="center center" ng-style="style()" full-screen-wrapper>
+<div id="menciones" class="mentions-landing" layout="column" layout-align="center center" ng-style="style()"
+  full-screen-wrapper>
   <div class="mentions-landing-content container container-xlg center-content">
     <h1 data-wow-duration="0.8s" class="wow fadeInUp">Menciones</h1>
     <p class="container">
-      A lo largo de una década, hemos desarrollado software y soluciones digitales 
-      para todo tipo de plataformas y dispositivos de la mano de diversos organismos 
-      privados y gubernamentales, así como ONG’s. Gracias a ello, medios locales y 
+      A lo largo de una década, hemos desarrollado software y soluciones digitales
+      para todo tipo de plataformas y dispositivos de la mano de diversos organismos
+      privados y gubernamentales, así como ONG’s. Gracias a ello, medios locales y
       nacionales de renombre han reconocido nuestra labor.
     </p>
     <div class="mention-landing-row" layout-wrap layout="row" layout-sm="column">
-      <a
-      href="https://imco.org.mx/capital_humano/conferencia-de-prensa-mejora-tu-escuela/"
-      target="_blank"
-      class="mention-landing-item wow fadeIn"
-      style="background: url(images/imco.png) center no-repeat;"
-      flex="20"
-      flex-sm="33"
-      data-wow-duration="0.2s"
-      flex-xs="100"></a>
-      <a
-      href="https://www.youtube.com/watch?v=lJWqpp09oDY&feature=youtu.be"
-      target="_blank"
-      class="mention-landing-item wow fadeIn"
-      style="background: url(images/cnn.png) center no-repeat;"
-      flex="20"
-      flex-sm="33"
-      data-wow-delay="0.1s" data-wow-duration="0.2s"
-      flex-xs="100"></a>
-      <div
-      class="mention-landing-item wow fadeIn"
-      style="background: url(images/telemundo.png) center no-repeat;"
-      flex="20"
-      flex-sm="33"
-      data-wow-delay="0.3s" data-wow-duration="0.2s"
-      flex-xs="100"></div>
-      <a
-      href="https://noticieros.televisa.com/foro-tv-fractal/1409/imco-mejora-tu-escuela/"
-      target="_blank"
-      class="mention-landing-item wow fadeIn"
-      style="background: url(images/televisa.png) center no-repeat;"
-      flex="20"
-      flex-sm="33"
-      data-wow-delay="0.5s" data-wow-duration="0.2s"
-      flex-xs="100"></a>
-      <a
-      href="https://www.eluniversal.com.mx/blogs/colectivo-mexico-informate/2015/07/8/el-gobierno-como-plataforma"
-      target="_blank"
-      class="mention-landing-item wow fadeIn"
-      style="background: url(images/eluniversal.png) center no-repeat;"
-      flex="20"
-      flex-sm="33"
-      data-wow-delay="0.7s" data-wow-duration="0.2s"
-      flex-xs="100"></a>
+      <a href="https://imco.org.mx/capital_humano/conferencia-de-prensa-mejora-tu-escuela/" target="_blank"
+        class="mention-landing-item wow fadeIn" style="background: url(images/imco.png) center no-repeat;" flex="20"
+        flex-sm="33" data-wow-duration="0.2s" flex-xs="100"></a>
+      <a href="https://www.youtube.com/watch?v=lJWqpp09oDY&feature=youtu.be" target="_blank"
+        class="mention-landing-item wow fadeIn" style="background: url(images/cnn.png) center no-repeat;" flex="20"
+        flex-sm="33" data-wow-delay="0.1s" data-wow-duration="0.2s" flex-xs="100"></a>
+      <div class="mention-landing-item wow fadeIn" style="background: url(images/telemundo.png) center no-repeat;"
+        flex="20" flex-sm="33" data-wow-delay="0.3s" data-wow-duration="0.2s" flex-xs="100"></div>
+      <a href="https://noticieros.televisa.com/foro-tv-fractal/1409/imco-mejora-tu-escuela/" target="_blank"
+        class="mention-landing-item wow fadeIn" style="background: url(images/televisa.png) center no-repeat;" flex="20"
+        flex-sm="33" data-wow-delay="0.5s" data-wow-duration="0.2s" flex-xs="100"></a>
+      <a href="https://www.eluniversal.com.mx/blogs/colectivo-mexico-informate/2015/07/8/el-gobierno-como-plataforma"
+        target="_blank" class="mention-landing-item wow fadeIn"
+        style="background: url(images/eluniversal.png) center no-repeat;" flex="20" flex-sm="33" data-wow-delay="0.7s"
+        data-wow-duration="0.2s" flex-xs="100"></a>
 
-      <div
-      class="mention-landing-item wow fadeIn"
-      style="background: url(images/excelsor.png) center no-repeat;"
-      flex="20"
-      flex-sm="33"
-      data-wow-delay="0.9s" data-wow-duration="0.2s"
-      flex-xs="100"></div>
-      <div
-      class="mention-landing-item wow fadeIn"
-      style="background: url(images/lajornada.png) center no-repeat;"
-      flex="20"
-      flex-sm="33"
-      data-wow-delay="1.1s" data-wow-duration="0.2s"
-      flex-xs="100"></div>
-      <a
-      href="https://www.animalpolitico.com/click-necesario/pide-tus-legisladores-cambiar-la-leytelecom/"
-      target="_blank"
-      class="mention-landing-item wow fadeIn"
-      style="background: url(images/animalpolitico.png) center no-repeat;"
-      flex="20"
-      flex-sm="33"
-      data-wow-delay="1.3s" data-wow-duration="0.2s"
-      flex-xs="100"></a>
-      <a
-      href="https://www.opendata500.com/mx/list/"
-      target="_blank"
-      class="mention-landing-item wow fadeIn"
-      style="background: url(images/opendata.png) center no-repeat;"
-      flex="20"
-      flex-sm="33"
-      data-wow-delay="1.5s" data-wow-duration="0.2s"
-      flex-xs="100"></a>
-      <a
-      href="https://sipse.com/novedades/lanzan-aplicacion-de-mapa-interactivo-de-gasolineras-en-el-pais-98763.html"
-      target="_blank"
-      class="mention-landing-item wow fadeIn"
-      style="background: url(images/sipse.png) center no-repeat;"
-      flex="20"
-      flex-sm="33"
-      data-wow-delay="1.7s" data-wow-duration="0.2s"
-      flex-xs="100"></a>
+      <div class="mention-landing-item wow fadeIn" style="background: url(images/excelsor.png) center no-repeat;"
+        flex="20" flex-sm="33" data-wow-delay="0.9s" data-wow-duration="0.2s" flex-xs="100"></div>
+      <div class="mention-landing-item wow fadeIn" style="background: url(images/lajornada.png) center no-repeat;"
+        flex="20" flex-sm="33" data-wow-delay="1.1s" data-wow-duration="0.2s" flex-xs="100"></div>
+      <a href="https://www.animalpolitico.com/click-necesario/pide-tus-legisladores-cambiar-la-leytelecom/"
+        target="_blank" class="mention-landing-item wow fadeIn"
+        style="background: url(images/animalpolitico.png) center no-repeat;" flex="20" flex-sm="33"
+        data-wow-delay="1.3s" data-wow-duration="0.2s" flex-xs="100"></a>
+      <a href="https://www.opendata500.com/mx/list/" target="_blank" class="mention-landing-item wow fadeIn"
+        style="background: url(images/opendata.png) center no-repeat;" flex="20" flex-sm="33" data-wow-delay="1.5s"
+        data-wow-duration="0.2s" flex-xs="100"></a>
+      <a href="https://sipse.com/novedades/lanzan-aplicacion-de-mapa-interactivo-de-gasolineras-en-el-pais-98763.html"
+        target="_blank" class="mention-landing-item wow fadeIn"
+        style="background: url(images/sipse.png) center no-repeat;" flex="20" flex-sm="33" data-wow-delay="1.7s"
+        data-wow-duration="0.2s" flex-xs="100"></a>
     </div>
 
   </div>
@@ -142,74 +90,69 @@
   <div class="services-content container container-xlg container-no-padding center-content">
     <h1 data-wow-duration="0.8s" class="wow fadeInUp">Nuestros servicios</h1>
     <p class="container">
-      Desarrollamos software y aplicaciones usando un amplio rango de tecnologías para conectar a todo 
-      tipo de organizaciones y empresas con usuarios web y generar información procesable y millones de 
-      pesos en ventas. Asimismo, nos encargamos de posicionar marcas en Google y redes sociales, 
-      así como publicidad para diversos clientes. Combinamos perfectamente la parte tecnológica, 
+      Desarrollamos software y aplicaciones usando un amplio rango de tecnologías para conectar a todo
+      tipo de organizaciones y empresas con usuarios web y generar información procesable y millones de
+      pesos en ventas. Asimismo, nos encargamos de posicionar marcas en Google y redes sociales,
+      así como publicidad para diversos clientes. Combinamos perfectamente la parte tecnológica,
       con diseño amigable y funcional, aterrizado en una interfaz amigable para todo tipo de usuario.
     </p>
-    <div
-    class="services-items"
-    layout="row"
-    layout-align="center center"
-    layout-wrap
-    >
+    <div class="services-items" layout="row" layout-align="center center" layout-wrap>
       <div class="services-item" flex="33" flex-xs="100" itemscope itemtype="https://schema.org/Service">
-          <a href="/ui-ux" class="absolute-link"></a>
-          <div class="service">
-            <i class="icon-iu"></i>
-            <h5 itemprop="name">UI/UX &amp; Design</h5>
-            <hr>
+        <a href="/ui-ux" class="absolute-link"></a>
+        <div class="service">
+          <i class="icon-iu"></i>
+          <h5 itemprop="name">UI/UX &amp; Design</h5>
+          <hr>
+        </div>
+        <div class="service service-hover">
+          <i class="icon-iu"></i>
+          <h5 itemprop="name">UI/UX &amp; Design</h5>
+          <hr>
+          <p itemprop="description">
+            Un buen software debe ir acompañado de una buena interfaz y una buena marca de una buena imagen visual.
+          </p>
+          <div class="action btn-wrap">
+            <a href="/ui-uix" class="action-btn" itemprop="url">Leer más</a>
           </div>
-          <div class="service service-hover">
-            <i class="icon-iu"></i>
-            <h5 itemprop="name">UI/UX &amp; Design</h5>
-            <hr>
-            <p itemprop="description">
-              Un buen software debe ir acompañado de una buena interfaz y una buena marca de una buena imagen visual.
-            </p>
-            <div class="action btn-wrap">
-              <a href="/ui-uix" class="action-btn" itemprop="url">Leer más</a>
-            </div>
-          </div>
+        </div>
       </div>
       <div class="services-item" flex="33" flex-xs="100" itemscope itemtype="https://schema.org/Service">
-          <a href="/marketing" class="absolute-link"></a>
-          <div class="service">
-            <i class="icon-marketing"></i>
-            <h5 itemprop="name">Marketing</h5>
-            <hr>
+        <a href="/marketing" class="absolute-link"></a>
+        <div class="service">
+          <i class="icon-marketing"></i>
+          <h5 itemprop="name">Marketing</h5>
+          <hr>
+        </div>
+        <div class="service service-hover">
+          <i class="icon-marketing"></i>
+          <h5 itemprop="name">Marketing</h5>
+          <hr>
+          <p itemprop="description">
+            SEO, Social Media, Branding y campañas creativas para tu empresa.
+          </p>
+          <div class="action btn-wrap">
+            <a href="/marketing" class="action-btn" itemprop="url">Leer más</a>
           </div>
-          <div class="service service-hover">
-            <i class="icon-marketing"></i>
-            <h5 itemprop="name">Marketing</h5>
-            <hr>
-            <p itemprop="description">
-              SEO, Social Media, Branding y campañas creativas para tu empresa.
-            </p>
-            <div class="action btn-wrap">
-              <a href="/marketing" class="action-btn" itemprop="url">Leer más</a>
-            </div>
-          </div>
+        </div>
       </div>
       <div class="services-item" flex="33" flex-xs="100" itemscope itemtype="https://schema.org/Service">
-          <a href="/software" class="absolute-link"></a>
-          <div class="service">
-            <i class="icon-software"></i>
-            <h5 itemprop="name">Software</h5>
-            <hr>
+        <a href="/software" class="absolute-link"></a>
+        <div class="service">
+          <i class="icon-software"></i>
+          <h5 itemprop="name">Software</h5>
+          <hr>
+        </div>
+        <div class="service service-hover">
+          <i class="icon-software"></i>
+          <h5 itemprop="name">Software</h5>
+          <hr>
+          <p itemprop="description">
+            Desarrollo de software usando metodologías ágiles en constante comunicacion con el cliente.
+          </p>
+          <div class="action btn-wrap">
+            <a href="/software" class="action-btn" itemprop="url">Leer más</a>
           </div>
-          <div class="service service-hover">
-            <i class="icon-software"></i>
-            <h5 itemprop="name">Software</h5>
-            <hr>
-            <p itemprop="description">
-              Desarrollo de software usando metodologías ágiles en constante comunicacion con el cliente.
-            </p>
-            <div class="action btn-wrap">
-              <a href="/software" class="action-btn" itemprop="url">Leer más</a>
-            </div>
-          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -220,7 +163,8 @@
   </div>
 </div>
 
-<div class="spacees-landing container-alt" layout="row" layout-align="start center" ng-style="style()" full-screen-wrapper itemscope itemtype="https://schema.org/Service">
+<div class="spacees-landing container-alt" layout="row" layout-align="start center" ng-style="style()"
+  full-screen-wrapper itemscope itemtype="https://schema.org/Service">
 
   <div class="container container-xxlg" layout="row" layout-wrap>
     <div flex="50" flex-sm="100" flex-xs="100" layout-wrap layout-align="center center">
@@ -230,7 +174,8 @@
           <img src="images/spacees.png" alt="SpaceEs" />
         </picture>
         <h2 data-wow-duration="0.8s" class="wow fadeInUp" itemprop="name">ENTERPRISE SOFTWARE</h2>
-        <p itemprop="description">Plataforma para el manejo completo de la empresa desde recursos humanos, contabilidad, hasta la capacitación y canalización de ventas tanto electrónicas como análogas.</p>
+        <p itemprop="description">Plataforma para el manejo completo de la empresa desde recursos humanos, contabilidad,
+          hasta la capacitación y canalización de ventas tanto electrónicas como análogas.</p>
         <div class="action-btn-wrap">
           <a href="/spacees" itemprop="url" class="action-btn">VER</a>
         </div>
@@ -238,16 +183,22 @@
     </div>
     <section class="mockups-wrapper" flex="50" flex-sm="100" flex-xs="100">
       <picture>
-        <source class="tablet-img wow slideInUp" data-wow-duration="1.6s" srcset="images/tablet-spacees.webp" type="image/webp" alt="SpaceEs tablet view">
-        <img class="tablet-img wow slideInUp" data-wow-duration="1.6s" src="images/tablet-spacees.png" alt="SpaceEs tablet view">
+        <source class="tablet-img wow slideInUp" data-wow-duration="1.6s" srcset="images/tablet-spacees.webp"
+          type="image/webp" alt="SpaceEs tablet view">
+        <img class="tablet-img wow slideInUp" data-wow-duration="1.6s" src="images/tablet-spacees.png"
+          alt="SpaceEs tablet view">
       </picture>
       <picture>
-        <source class="cel-img wow slideInUp" data-wow-duration="2.4s" srcset="images/cel-spacees.webp" type="image/webp" alt="SpaceEs mobile view">
-        <img class="cel-img wow slideInUp" data-wow-duration="2.4s" src="images/cel-spacees.png" alt="SpaceEs mobile view">
+        <source class="cel-img wow slideInUp" data-wow-duration="2.4s" srcset="images/cel-spacees.webp"
+          type="image/webp" alt="SpaceEs mobile view">
+        <img class="cel-img wow slideInUp" data-wow-duration="2.4s" src="images/cel-spacees.png"
+          alt="SpaceEs mobile view">
       </picture>
       <picture>
-        <source class="desktop-img wow slideInUp" data-wow-duration="3.2s" srcset="images/compu-spacees.webp" type="image/webp" alt="SpaceEs desktop view">
-        <img class="desktop-img wow slideInUp" data-wow-duration="3.2s" src="images/compu-spacees.png" alt="SpaceEs desktop view">
+        <source class="desktop-img wow slideInUp" data-wow-duration="3.2s" srcset="images/compu-spacees.webp"
+          type="image/webp" alt="SpaceEs desktop view">
+        <img class="desktop-img wow slideInUp" data-wow-duration="3.2s" src="images/compu-spacees.png"
+          alt="SpaceEs desktop view">
       </picture>
     </section>
   </div>
@@ -259,33 +210,20 @@
 
 
 
-<div id="recent-news" class="news-wrapper news-wrapper-landing container container-xxlg" layout="row" layout-align="center center" ng-style="style()" full-screen-wrapper>
+<div id="recent-news" class="news-wrapper news-wrapper-landing container container-xxlg" layout="row"
+  layout-align="center center" ng-style="style()" full-screen-wrapper>
 
   <div class="news-wrapper-inner" flex>
     <h1 data-wow-duration="0.8s" class="wow fadeInUp"><i class="icon-noticias"></i></h1>
     <h1 data-wow-duration="0.8s" class="wow fadeInUp">Noticias recientes</h1>
 
-    <div 
-      ng-show="!loadedPosts" 
-      class="container" 
-      layout="row" 
-      layout-sm="column" 
-      layout-align="center center"
-    >
+    <div ng-show="!loadedPosts" class="container" layout="row" layout-sm="column" layout-align="center center">
       <!--<md-progress-circular md-mode="indeterminate"></md-progress-circular>-->
       <img src="images/loader.gif" alt="">
     </div>
 
-    <div 
-      ng-show="loadedPosts" 
-      class="news-row" 
-      layout="row" 
-      layout-wrap
-    >
-      <div
-        ng-repeat="entry in entries | limitTo: 6"
-        flex="33"
-        flex-xs="100">
+    <div ng-show="loadedPosts" class="news-row" layout="row" layout-wrap>
+      <div ng-repeat="entry in entries | limitTo: 6" flex="33" flex-xs="100">
 
         <div post-item post-type="home" entry="entry"></div>
 
@@ -301,10 +239,7 @@
     <!--<h1><span count-to="200" value="0" duration="2" ></span> Clientes felices</h1>-->
     <h1>Testimonios</h1>
     <slick dots="true" autoplay="true" autoplaySpeed="6000" infinite="true" speed="800" class="clients-slider">
-      <div
-        class="clients-slide"
-        ng-repeat="client in clients track by $index"
-        >
+      <div class="clients-slide" ng-repeat="client in clients track by $index">
 
         <div class="client-item container container-lg">
           <p>
@@ -313,7 +248,12 @@
             <i class="icon-comilla2 quote-icon quote-icon-right"></i>
           </p>
           <h5>{{client.name}}</h5>
-          <h6>{{client.company}}</h6>
+          <h6>
+            <a ng-if="client.companyUrl" style="color:#fff; text-decoration: underline;"
+              href="{{client.companyUrl}}" target="_blank">{{client.company}}
+            </a>
+            <span ng-if="!client.companyUrl"> {{client.company}}</span>
+          </h6>
         </div>
 
       </div>
