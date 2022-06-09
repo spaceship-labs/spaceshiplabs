@@ -18,39 +18,34 @@ function HomeCtrl($scope, $rootScope, blogService, metaTagsService, $timeout) {
     });
   };
   $scope.renderCompanyUrl = function (company) {
-    console.log({ company });
     return company.companyUrl ? true : false;
   }
   $scope.init = function () {
-    try {
-      $scope.loadedPosts = false;
-      $scope.getRecentPosts();
-      var windowDimensions = $rootScope.windowSize();
-      if (windowDimensions.w > 600) {
-        var video = document.getElementById('landing-video');
-        var videoLimit = 8;
-        video.play();
-        video.addEventListener('timeupdate', function () {
-          if (video.currentTime > videoLimit) {
-            video.currentTime = 1;
-          }
-        }, false);
+    $scope.loadedPosts = false;
+    $scope.getRecentPosts();
+    var windowDimensions = $rootScope.windowSize();
+    if (windowDimensions.w > 600) {
+      var video = document.getElementById('landing-video');
+      var videoLimit = 8;
+      video.play();
+      video.addEventListener('timeupdate', function () {
+        if (video.currentTime > videoLimit) {
+          video.currentTime = 1;
+        }
+      }, false);
 
-        //Fix for safari
-        var $video = $('#landing-video');
-        $video.on('canplaythrough', function () {
-          this.play();
-        });
+      //Fix for safari
+      var $video = $('#landing-video');
+      $video.on('canplaythrough', function () {
+        this.play();
+      });
 
-      } else {
-        $('#landing-video').remove();
-      }
-      $timeout(function () {
-        $('.clients-slider').addClass('timeout')
-      }, 1000)
-    } catch (ex) {
-      console.log(ex)
+    } else {
+      $('#landing-video').remove();
     }
+    $timeout(function () {
+      $('.clients-slider').addClass('timeout')
+    }, 1000)
   };
 
 
